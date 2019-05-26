@@ -25,13 +25,21 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
+              "src/assets/css/fontawesome-stars.css",
+              "src/assets/css/meanmenu.css",
+              "src/assets/css/slick.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/venobox.css",
+              "src/assets/css/nice-select.css",
+              "src/assets/css/magnific-popup.css",
               "src/assets/css/helper.css",
-              "src/styles.css",
-              "src/assets/css/responsive.css"
+              "src/assets/css/style.css",
+              "src/assets/css/responsive.css",
+              "src/styles.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/jquery-ui-dist/jquery-ui.css"
             ],
             "es5BrowserSupport": true
           },
