@@ -1236,3 +1236,29 @@ textarea:focus {
 #scrollUp:hover i {
 	animation: liSlideInUp 1s infinite;
 }
+/*******************************************/
+.product-active-3 .owl-nav button,.pos-product-active .owl-nav button,.latest-blog-active .owl-nav button{
+  font-size: 22px !important;
+  position: absolute;
+  right: 15px;
+  top: -55px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.product-active-3 .owl-nav button.owl-prev,.pos-product-active .owl-nav button.owl-prev,.latest-blog-active .owl-nav button.owl-prev {
+  right: 35px;
+}
+.product-active-3 .owl-nav button:hover,.pos-product-active .owl-nav button,.latest-blog-active .owl-nav button:hover {
+  color: #fed700;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.product-active-3 .owl-nav button.owl-next,.pos-product-active .owl-nav button.owl-next,.latest-blog-active .owl-nav button.owl-next{
+  background: #ffffff none repeat scroll 0 0;
+  padding: 0 0 0 10px !important;
+}
+.product-active-3 .owl-nav button.owl-prev,.pos-product-active .owl-nav button.owl-prev,.latest-blog-active .owl-nav button.owl-prev{
+  background: #ffffff none repeat scroll 0 0;
+  padding: 0 0 0 15px !important;
+}
