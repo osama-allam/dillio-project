@@ -37,8 +37,7 @@
               "src/assets/css/helper.css",
               "src/assets/css/default.css",
               "src/assets/css/style.css",
-              "src/assets/css/responsive.css",
-              "src/styles.css"
+              "src/assets/css/responsive.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
