@@ -24,9 +24,15 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              "src/assets/css/helper.css",
+              "src/styles.css",
+              "src/assets/css/responsive.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
