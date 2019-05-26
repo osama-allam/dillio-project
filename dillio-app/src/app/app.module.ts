@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { SideFilterComponent } from './features/side-filter/side-filter.component';
 import { FilterResultComponent } from './features/filter-result/filter-result.component';
+import { CategoryMenuComponent } from './shared/category-menu/category-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SideFilterComponent,
-    FilterResultComponent
+    FilterResultComponent,
+    CategoryMenuComponent
   ],
   imports: [
     BrowserModule,
