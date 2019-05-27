@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { OwlModule } from 'ngx-owl-carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { CategoryService } from './services/category.service';
 import { SubcategoryService } from './services/subcategory.service';
 import { ProductService } from './services/product.service';
 import { ProductImagesComponent } from './shared/product-images/product-images.component';
+import { SingleProductWrapComponent } from './shared/single-product-wrap/single-product-wrap.component';
+import { ProductAreaComponent } from './shared/product-area/product-area.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +22,14 @@ import { ProductImagesComponent } from './shared/product-images/product-images.c
     SideFilterComponent,
     FilterResultComponent,
     CategoryMenuComponent,
-    ProductImagesComponent
+    ProductImagesComponent,
+    SingleProductWrapComponent,
+    ProductAreaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OwlModule
   ],
   providers: [CategoryService,
               SubcategoryService,
