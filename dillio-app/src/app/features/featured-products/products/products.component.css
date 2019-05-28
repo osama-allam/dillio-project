@@ -1,0 +1,80 @@
+.featured-pro-with-banner {
+	background: #f7f7f7;
+	padding: 50px 0 30px;
+	margin-top: 50px;
+}
+.featured-product-img {
+	width: 38%;
+	float: left;
+	padding: 15px;
+}
+.featured-manufacturer {
+	color: #a4a4a4;
+	font-size: 13px;
+	margin-top: 9px;
+	font-weight: 400;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+}
+.featured-product-active .owl-item {
+	padding: 15px;
+}
+.featured-pro-wrapper {
+	display: inline-block;
+	width: 100%;
+	background: #fff;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-transition: all 300ms ease-in;
+	-moz-transition: all 300ms ease-in;
+	-ms-transition: all 300ms ease-in;
+	-o-transition: all 300ms ease-in;
+	transition: all 300ms ease-in;
+}
+.featured-pro-wrapper:hover {
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+}
+.featured-pro-wrapper .product-img {
+	float: left;
+	width: 38%;
+	padding: 18.2px;
+}
+.featured-pro-wrapper .featured-pro-content {
+	float: right;
+	width: 62%;
+	padding: 18.2px;
+}
+.featured-pro-content h4 a {
+	font-size: 14px;
+	font-weight: 500;
+	color: #0363cd;
+}
+.featured-pro-content h4:hover {
+	text-decoration: underline;
+	color: #0363cd;
+}
+.featured-pro-content .rating-box {
+	padding-top: 5px;
+}
+.featured-pro-wrapper:hover .featured-price-box {
+	opacity: 0;
+}
+.featured-product-action .add-actions-link {
+	margin-top: 0;
+	padding-top: 0;
+}
+.featured-product-action {
+	position: relative;
+	top: 20px;
+	transition: all 0.5s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+}
+.featured-pro-wrapper:hover .featured-product-action {
+	top: 0;
+	opacity: 1;
+	visibility: visible;
+}
+.featured-price-box {
+	transition: all 0.5s ease-in-out;
+}
