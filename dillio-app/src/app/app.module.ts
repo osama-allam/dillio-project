@@ -21,6 +21,7 @@ import { StoresComponent } from './core/stores/stores.component';
 import { StoreDetailsComponent } from './core/stores/store-details/store-details.component';
 import { StoresListComponent } from './core/stores/stores-list/stores-list.component';
 import { ImagesGalleryComponent } from './features/images-gallery/images-gallery.component';
+import { BlogGallerySliderComponent } from './features/blog-gallery-slider/blog-gallery-slider.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ImagesGalleryComponent } from './features/images-gallery/images-gallery
     StoresComponent,
     StoreDetailsComponent,
     StoresListComponent,
-    ImagesGalleryComponent
+    ImagesGalleryComponent,
+    BlogGallerySliderComponent
   ],
   imports: [
     BrowserModule,
