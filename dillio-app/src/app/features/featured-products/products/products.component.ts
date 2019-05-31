@@ -17,10 +17,10 @@ export class ProductsComponent implements OnInit {
   productFeaturedActivator(): void {
     $('.featured-product-active').owlCarousel({
       loop: true,
-      nav: true,
+      // nav: true,
       autoplay: false,
       autoplayTimeout: 5000,
-      navText: ['<i class="ion-ios-arrow-back"></i>', '<i class="ion-ios-arrow-forward"></i>'],
+      // navText: ['<i class="ion-ios-arrow-back"></i>', '<i class="ion-ios-arrow-forward"></i>'],
       item: 3,
       responsive: {
          0: {
