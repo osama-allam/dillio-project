@@ -22,6 +22,11 @@ import { StoreDetailsComponent } from './core/stores/store-details/store-details
 import { StoresListComponent } from './core/stores/stores-list/stores-list.component';
 import { ImagesGalleryComponent } from './features/images-gallery/images-gallery.component';
 import { BlogGallerySliderComponent } from './features/blog-gallery-slider/blog-gallery-slider.component';
+import { BlogPostComponent } from './features/blog-post/blog-post.component';
+import { PostListingComponent } from './features/blog-post/post-listing/post-listing.component';
+import { PostAddComponent } from './features/blog-post/post-add/post-add.component';
+import { PostDetailsComponent } from './features/blog-post/post-details/post-details.component';
+import { PostComponent } from './features/blog-post/post/post.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,12 @@ import { BlogGallerySliderComponent } from './features/blog-gallery-slider/blog-
     StoreDetailsComponent,
     StoresListComponent,
     ImagesGalleryComponent,
-    BlogGallerySliderComponent
+    BlogGallerySliderComponent,
+    BlogPostComponent,
+    PostListingComponent,
+    PostAddComponent,
+    PostDetailsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
