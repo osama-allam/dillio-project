@@ -12,6 +12,7 @@ export class ImagesGalleryComponent implements OnInit {
 
   ngOnInit() {
     this.imagesGalleryActivator();
+    this.venoboxActivator();
   }
  imagesGalleryActivator() {
 
@@ -67,5 +68,12 @@ $('.product-details-thumbs').each(function(){
         asNavFor: $details,
     });
     });
+
  }
+ venoboxActivator() {
+  $('.venobox').venobox({
+    spinner:'wave',
+    spinColor:'#cb9a00',
+});
+}
 }

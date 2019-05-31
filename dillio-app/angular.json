@@ -30,7 +30,7 @@
               "node_modules/slick-carousel/slick/slick.css",
               "node_modules/slick-carousel/slick/slick-theme.css",
               "src/assets/css/animate.css",
-              "src/assets/css/venobox.css",
+              "node_modules/venobox/venobox/venobox.css",
               "node_modules/jquery-nice-select/css/nice-select.css",
               "src/assets/css/magnific-popup.css",
               "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
@@ -45,7 +45,8 @@
               "node_modules/owl.carousel/dist/owl.carousel.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
-              "node_modules/slick-carousel/slick/slick.min.js"
+              "node_modules/slick-carousel/slick/slick.min.js",
+              "node_modules/venobox/venobox/venobox.min.js"
             ],
             "es5BrowserSupport": true
           },
