@@ -16,6 +16,7 @@ import { FilterResultComponent } from './features/filter-result/filter-result.co
 import { CategoryMenuComponent } from './shared/category-menu/category-menu.component';
 import { SingleProductWrapComponent } from './shared/single-product-wrap/single-product-wrap.component';
 import { ProductAreaComponent } from './shared/product-area/product-area.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProductAreaComponent } from './shared/product-area/product-area.compone
     FilterResultComponent,
     CategoryMenuComponent,
     SingleProductWrapComponent,
-    ProductAreaComponent
+    ProductAreaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
