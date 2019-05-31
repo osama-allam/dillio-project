@@ -1,0 +1,17 @@
+.limupa-counter {
+	padding-bottom: 90px;
+	padding-top: 90px;
+	text-align: center;
+	width: 100%;
+}
+.counter-img {
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+.counter-info {
+	color: #444;
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}

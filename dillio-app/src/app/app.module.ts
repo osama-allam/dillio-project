@@ -17,6 +17,12 @@ import { CategoryMenuComponent } from './shared/category-menu/category-menu.comp
 import { SingleProductWrapComponent } from './shared/single-product-wrap/single-product-wrap.component';
 import { ProductAreaComponent } from './shared/product-area/product-area.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { AboutusComponent } from './features/aboutus/aboutus.component';
+import { OurTeamComponent } from './features/aboutus/our-team/our-team.component';
+import { ContactusComponent } from './features/contactus/contactus.component';
+import { TermsConditionComponent } from './features/terms-condition/terms-condition.component';
+import { CounterComponent } from './features/aboutus/counter/counter.component';
+import { AboutContentComponent } from './features/aboutus/about-content/about-content.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { FooterComponent } from './core/footer/footer.component';
     CategoryMenuComponent,
     SingleProductWrapComponent,
     ProductAreaComponent,
-    FooterComponent
+    FooterComponent,
+    AboutusComponent,
+    OurTeamComponent,
+    ContactusComponent,
+    TermsConditionComponent,
+    CounterComponent,
+    AboutContentComponent
   ],
   imports: [
     BrowserModule,
