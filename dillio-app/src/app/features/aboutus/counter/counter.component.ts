@@ -12,11 +12,11 @@ export class CounterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.productFeaturedActivator();
+    this.aboutCounterActivator();
   }
 
 
-  productFeaturedActivator(): void {
+  aboutCounterActivator(): void {
     $('.counter').each(function() {
       var $this = $(this),
           countTo = $this.attr('data-count');

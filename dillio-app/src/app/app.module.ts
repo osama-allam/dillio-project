@@ -23,6 +23,8 @@ import { ContactusComponent } from './features/contactus/contactus.component';
 import { TermsConditionComponent } from './features/terms-condition/terms-condition.component';
 import { CounterComponent } from './features/aboutus/counter/counter.component';
 import { AboutContentComponent } from './features/aboutus/about-content/about-content.component';
+import { ContactFormComponent } from './features/contactus/contact-form/contact-form.component';
+import { ContactContentComponent } from './features/contactus/contact-content/contact-content.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { AboutContentComponent } from './features/aboutus/about-content/about-co
     ContactusComponent,
     TermsConditionComponent,
     CounterComponent,
-    AboutContentComponent
+    AboutContentComponent,
+    ContactFormComponent,
+    ContactContentComponent
   ],
   imports: [
     BrowserModule,
