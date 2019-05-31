@@ -19,8 +19,7 @@ posts: post[];
       { postName: 'Post5' ,name: 'Admin' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 10 , date: 22-4-2019 ,imageUrl: '../../../../assets/images/blog-banner/5.jpg'},
       { postName: 'Post6' ,name: 'Member' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 20 , date: 22-4-2019 ,imageUrl: '../../../../assets/images/blog-banner/6.jpg'},
       { postName: 'Post7' ,name: 'Admin' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 9 , date: 22-4-2019 ,imageUrl: '../../../../assets/images/blog-banner/2.jpg'},
-      { postName: 'Post8' ,name: 'Member' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 2 , date: 22-4-2019 ,imageUrl: '../../../../assets/images/blog-banner/1.jpg'},
-      { postName: 'Post9' ,name: 'Admin' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 1 , date: 22-4-2019 ,imageUrl: '../../../../assets/images/blog-banner/3.jpg'},
+      { postName: 'Post8' ,name: 'Member' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 2 , date: 22-4-2019 ,imageUrl: '../../../../assets/images/blog-banner/1.jpg'}
 
     ]
   }
