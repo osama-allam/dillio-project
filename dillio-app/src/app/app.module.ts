@@ -21,6 +21,7 @@ import { BlogPostComponent } from './features/blog-post/blog-post.component';
 import { PostListingComponent } from './features/blog-post/post-listing/post-listing.component';
 import { PostAddComponent } from './features/blog-post/post-add/post-add.component';
 import { PostDetailsComponent } from './features/blog-post/post-details/post-details.component';
+import { PostComponent } from './features/blog-post/post/post.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PostDetailsComponent } from './features/blog-post/post-details/post-det
     BlogPostComponent,
     PostListingComponent,
     PostAddComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
