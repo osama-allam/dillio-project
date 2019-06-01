@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
+import { RouterModule } from '@angular/router';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,17 @@ import { CategoryMenuComponent } from './shared/category-menu/category-menu.comp
 import { SingleProductWrapComponent } from './shared/single-product-wrap/single-product-wrap.component';
 import { ProductAreaComponent } from './shared/product-area/product-area.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { StoresComponent } from './core/stores/stores.component';
+import { StoreDetailsComponent } from './core/stores/store-details/store-details.component';
+import { StoresListComponent } from './core/stores/stores-list/stores-list.component';
+import { ImagesGalleryComponent } from './features/images-gallery/images-gallery.component';
+import { BlogGallerySliderComponent } from './features/blog-gallery-slider/blog-gallery-slider.component';
+import { BlogPostComponent } from './features/blog-post/blog-post.component';
+import { PostListingComponent } from './features/blog-post/post-listing/post-listing.component';
+import { PostAddComponent } from './features/blog-post/post-add/post-add.component';
+import { PostDetailsComponent } from './features/blog-post/post-details/post-details.component';
+import { PostComponent } from './features/blog-post/post/post.component';
+import { postService } from './features/blog-post/post.service';
 
 @NgModule({
   declarations: [
@@ -34,14 +47,33 @@ import { FooterComponent } from './core/footer/footer.component';
     CategoryMenuComponent,
     SingleProductWrapComponent,
     ProductAreaComponent,
-    FooterComponent
+    FooterComponent,
+    StoresComponent,
+    StoreDetailsComponent,
+    StoresListComponent,
+    ImagesGalleryComponent,
+    BlogGallerySliderComponent,
+    BlogPostComponent,
+    PostListingComponent,
+    PostAddComponent,
+    PostDetailsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OwlModule
+    OwlModule,
+    RouterModule.forRoot([
+      { path : 'blog' , component: BlogPostComponent },
+      { path : 'blog/listing' , component: BlogPostComponent },
+      { path : 'blog/add' , component: PostAddComponent },
+      { path : 'blog/:id/edit' , component: PostAddComponent },
+      { path : 'blog/:id/details' , component: PostDetailsComponent },
+      { path : 'home' , component: BlogPostComponent },
+      { path : '' , redirectTo: 'home' , pathMatch: 'full' },
+    ])
   ],
-  providers: [],
+  providers: [postService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
