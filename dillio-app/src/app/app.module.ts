@@ -27,6 +27,7 @@ import { PostListingComponent } from './features/blog-post/post-listing/post-lis
 import { PostAddComponent } from './features/blog-post/post-add/post-add.component';
 import { PostDetailsComponent } from './features/blog-post/post-details/post-details.component';
 import { PostComponent } from './features/blog-post/post/post.component';
+import { postService } from './features/blog-post/post.service';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { PostComponent } from './features/blog-post/post/post.component';
     AppRoutingModule,
     OwlModule
   ],
-  providers: [],
+  providers: [postService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

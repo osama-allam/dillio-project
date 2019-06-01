@@ -5,15 +5,16 @@ import { postService } from './post.service';
 @Component({
   selector: 'app-blog-post',
   templateUrl: './blog-post.component.html',
-  styleUrls: ['./blog-post.component.css']
+  styleUrls: ['./blog-post.component.css'],
+  providers:[postService]
 })
 export class BlogPostComponent implements OnInit {
  posts: post[];
-  constructor() { }
+
+ constructor(public pb: postService) { }
 
   ngOnInit() {
-    const bp = new postService();
-    this.posts = bp.getAll();
+    this.posts = this.pb.getAll();
   }
 
 }
