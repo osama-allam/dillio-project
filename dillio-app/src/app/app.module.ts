@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
+import { RouterModule } from '@angular/router';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -60,7 +62,16 @@ import { postService } from './features/blog-post/post.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OwlModule
+    OwlModule,
+    RouterModule.forRoot([
+      { path : 'blog' , component: BlogPostComponent },
+      { path : 'blog/listing' , component: BlogPostComponent },
+      { path : 'blog/add' , component: PostAddComponent },
+      { path : 'blog/:id/edit' , component: PostAddComponent },
+      { path : 'blog/:id/details' , component: PostDetailsComponent },
+      { path : 'home' , component: BlogPostComponent },
+      { path : '' , redirectTo: 'home' , pathMatch: 'full' },
+    ])
   ],
   providers: [postService],
   bootstrap: [AppComponent]
