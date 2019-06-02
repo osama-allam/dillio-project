@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
-
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { NavComponent } from './core/nav/nav.component';
@@ -61,7 +61,8 @@ import { postService } from './features/blog-post/post.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OwlModule
+    OwlModule,
+    FormsModule
   ],
   providers: [postService],
   bootstrap: [AppComponent]

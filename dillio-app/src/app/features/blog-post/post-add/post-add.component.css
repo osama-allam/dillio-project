@@ -1,0 +1,31 @@
+.invalid
+{
+    color: #ed5348;
+    
+}
+.invalid::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 700;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    bottom: .725rem;
+    right: .725rem;
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #ed5348;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+ }
+.invalid .form-control 
+{
+    border-color: #ed5348;
+    position: relative;
+ }
