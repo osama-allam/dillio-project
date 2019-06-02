@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,12 @@ import { ProductService } from './services/product.service';
 import { ProductImagesComponent } from './shared/product-images/product-images.component';
 import { SingleProductWrapComponent } from './shared/single-product-wrap/single-product-wrap.component';
 import { ProductAreaComponent } from './shared/product-area/product-area.component';
+import { SingleProductDetailsComponent } from './features/single-product-details/single-product-details.component';
+import { ProductDetailsComponent } from './core/product-details/product-details.component';
+import { ProductFormReviewComponent } from './features/product-form-review/product-form-review.component';
+import { ProductReviewService } from './services/product-review.service';
+import { StoresService } from './services/stores.service';
+import { StoreListingComponent } from './features/store/store-listing/store-listing.component';
 
 @NgModule({
   declarations: [
@@ -24,16 +31,23 @@ import { ProductAreaComponent } from './shared/product-area/product-area.compone
     CategoryMenuComponent,
     ProductImagesComponent,
     SingleProductWrapComponent,
-    ProductAreaComponent
+    ProductAreaComponent,
+    SingleProductDetailsComponent,
+    ProductDetailsComponent,
+    ProductFormReviewComponent,
+    StoreListingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OwlModule
+    OwlModule,
+    FormsModule
   ],
   providers: [CategoryService,
               SubcategoryService,
-              ProductService],
+              ProductService,
+              ProductReviewService,
+              StoresService],
               
   bootstrap: [AppComponent]
 })

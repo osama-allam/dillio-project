@@ -1,24 +1,7 @@
-<div class="content-wraper">
-  <div class="container">
-      <div class="row single-product-area">
-          <div class="col-lg-5 col-md-6">
-             <!-- Product Details Left -->
-              <div class="product-details-left">
-                  <div class="product-details-images slider-navigation-1">
-                      <div *ngFor="let pro of products.largeimageUrl" class="lg-image">
-                          <a class="popup-img venobox vbox-item" href="{{pro}}" data-gall="myGallery">
-                              <img src="{{pro}}" alt="product image">
-                          </a>
-                      </div>                    
-                  </div>
-                  <div class="product-details-thumbs slider-thumbs-1">                                        
-                      <div *ngFor="let pro of products.smallimageUrl" class="sm-image"><img src="{{pro}}"></div>
-                     
-                  </div>
-              </div>
-              <!--// Product Details Left -->
-          </div>
-
-      </div>
-  </div>
-</div>
+<owl-carousel [options]="mySlideOptions" [items]="products.smallimageUrl" [carouselClasses]="['owl-theme', 'sliding']" >
+    <div class="item" *ngFor="let image of products.largeimageUrl;let i = index">
+     <div>
+       <img src={{image}}/>
+     </div>
+    </div>
+   </owl-carousel>
