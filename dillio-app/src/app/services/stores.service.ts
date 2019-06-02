@@ -36,6 +36,10 @@ storeDetails: IStoreDetails;
       {id:22,name:'The Giftery',image:'./assets/images/stores/iwatchstores.png'},
       {id:23,name:'The Makan',image:'./assets/images/stores/themakan.png'},
       {id:24,name:'One Roof Store',image:'./assets/images/stores/applianceeg.png'},
+
+
+
+      
   ];
   }
 
