@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { Stores } from '../_models/stores';
 import { getAllDebugNodes } from '@angular/core/src/debug/debug_node';
 import { store } from '@angular/core/src/render3';
+import { IStoreDetails } from '../_models/store-details';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StoresService {
 stores:Stores[];
+storeDetails: IStoreDetails;
   constructor() { 
     this.stores=[
       {id:1,name:'town team',image:'./assets/images/stores/applianceeg.png'},
@@ -40,4 +42,6 @@ stores:Stores[];
 getAll():Stores[]{
   return this.stores.slice();
 }
+  
+
 }

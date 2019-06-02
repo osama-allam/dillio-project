@@ -1,7 +1,4 @@
-
-/*----------------------------------------*/
-/*  2.4 Product-area css
-/*----------------------------------------*/
+/*
 .li-product-menu {
 	position: relative;
 	display: inline-block;
@@ -384,7 +381,7 @@
   visibility: visible;
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-} */
+}
 .section-title-2 {
   margin-bottom: 25px;
   position: relative;
@@ -469,9 +466,7 @@
   padding: 0 0 0 15px !important;
 }
 
-/*----------------------------------------*/
-/*  2.8 Li's Trending Products
-/*----------------------------------------*/
+
 .li-trending-product-tab {
 	width: 100%;
 	display: inline-block;
@@ -521,4 +516,4 @@
 .li-product-menu > li > a span::before,
 .li-product-menu > li > a.active span::before {
 	bottom: -12px;
-}
+} */
