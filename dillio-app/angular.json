@@ -26,6 +26,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
               "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.theme.default.css",
               "src/assets/css/fontawesome-stars-o.css",
               "src/assets/css/meanmenu.css",
               "node_modules/slick-carousel/slick/slick.css",
@@ -38,7 +40,7 @@
               "src/assets/css/default.css",
               "src/assets/css/style.css",
               "src/assets/css/responsive.css"
-              
+
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
