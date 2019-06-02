@@ -1,3 +1,4 @@
+import { ViewActivatorService } from './../../../services/view-activator.service';
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
 @Component({
@@ -7,15 +8,11 @@ declare var $: any;
 })
 export class StoreDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewActivator: ViewActivatorService) { }
 
   ngOnInit() {
-
-    $(()=> {
-      $('.star-rating').barrating({
-        theme: 'fontawesome-stars'
-    });
-});
+    this.viewActivator.starsRatingEditActivator();
+    this.viewActivator.starsRatingReadonlyActivator();
   }
 
 }
