@@ -38,8 +38,6 @@ storeDetails: IStoreDetails;
       {id:24,name:'One Roof Store',image:'./assets/images/stores/applianceeg.png'},
 
 
-
-      
   ];
   }
 
