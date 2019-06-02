@@ -4431,6 +4431,9 @@ thead {
 .li-comment-section ul li .comment-body .reply-btn {
 	float: right;
 }
+.li-comment-section ul li .comment-body .customer-rating {
+	float: right;
+}
 .li-comment-section ul li .comment-body .reply-btn a {
 	color: #fed700;
 	font-size: 12px;

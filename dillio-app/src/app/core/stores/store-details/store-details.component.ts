@@ -11,7 +11,8 @@ export class StoreDetailsComponent implements OnInit {
   constructor(private viewActivator: ViewActivatorService) { }
 
   ngOnInit() {
-    this.viewActivator.starsRatingActivator();
+    this.viewActivator.starsRatingEditActivator();
+    this.viewActivator.starsRatingReadonlyActivator();
   }
 
 }

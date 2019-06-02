@@ -35,13 +35,24 @@ export class ViewActivatorService {
 
       $('.nice-select').toggleClass('open');
     }
-    starsRatingActivator(): void {
+    starsRatingEditActivator(): void {
         $(()=> {
-          $('.star-rating').barrating({
-            theme: 'fontawesome-stars'
+          $('.star-rating-edit').barrating('show',{
+            theme: 'fontawesome-stars-o',
+            initialRating: -1,
+            showSelectedRating: true
         });
       });
     }
+    starsRatingReadonlyActivator(): void {
+      $(()=> {
+        $('.star-rating-readonly').barrating({
+          theme: 'fontawesome-stars-o',
+          readonly: true
+
+      });
+    });
+  }
 
   blogGallerySliderActivator(): void {
 
