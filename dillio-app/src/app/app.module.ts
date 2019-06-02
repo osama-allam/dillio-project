@@ -25,6 +25,7 @@ import { CounterComponent } from './features/aboutus/counter/counter.component';
 import { AboutContentComponent } from './features/aboutus/about-content/about-content.component';
 import { ContactFormComponent } from './features/contactus/contact-form/contact-form.component';
 import { ContactContentComponent } from './features/contactus/contact-content/contact-content.component';
+import { FaqComponent } from './features/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ContactContentComponent } from './features/contactus/contact-content/co
     CounterComponent,
     AboutContentComponent,
     ContactFormComponent,
-    ContactContentComponent
+    ContactContentComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
