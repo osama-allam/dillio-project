@@ -203,11 +203,15 @@
                       <p class="feedback-form-author feedback-form-email">
                         <label for="email">Email</label>
                         <input formControlName="email" id="email" name="email" value="" size="30" aria-required="true"
-                          type="text">
-                        <span *ngIf="!feedbackForm.get('email').valid && feedbackForm.get('email').touched"
-                          class="help-block">
-                          Please enter a valid email!
-                        </span>
+                          type="email">
+                          <span *ngIf="feedbackForm.get('email').errors?.required && feedbackForm.get('email').touched"
+                            class="help-block">
+                            Email is required!
+                          </span>
+                          <span *ngIf="feedbackForm.get('email').errors?.email && feedbackForm.get('email').touched"
+                            class="help-block">
+                            Please enter a valid email!
+                          </span>
                       </p>
                       <div class="feedback-btn">
                         <button class="close" (click)="resetForm()" data-dismiss="modal" aria-label="Close">Close</button>
