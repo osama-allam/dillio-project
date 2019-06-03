@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { post } from 'src/app/_models/post';
+import { IPost } from 'src/app/_models/post';
 
 @Component({
   selector: 'app-post',
@@ -7,7 +7,7 @@ import { post } from 'src/app/_models/post';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
- @Input() post: post;
+ @Input() post: IPost;
  @Output() myEvent: EventEmitter<string>;
  
   constructor() { 
