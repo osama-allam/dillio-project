@@ -28,6 +28,7 @@
               "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
               "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
               "node_modules/owl.carousel/dist/assets/owl.theme.default.css",
+              "node_modules/css-star-rating/css/star-rating.css",
               "src/assets/css/fontawesome-stars-o.css",
               "src/assets/css/meanmenu.css",
               "node_modules/slick-carousel/slick/slick.css",
