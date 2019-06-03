@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 declare var $: any;
 @Injectable({
   providedIn: 'root'
 })
 export class ViewActivatorService {
-
+  selectedRating: number;
+  selectedEditRatingChanged = new Subject<number>();
   constructor() { }
   footerActivator(): void {
     $('.product-action a, .social-link a').tooltip({
@@ -35,25 +37,37 @@ export class ViewActivatorService {
 
       $('.nice-select').toggleClass('open');
     }
-    starsRatingEditActivator(): void {
-        $(()=> {
-          $('.star-rating-edit').barrating('show',{
+    starsRatingEditActivator(selector: string = '.star-rating-edit', initialValue: number = -1): void {
+      this.selectedRating = initialValue;
+      $(() => {
+          $(selector).barrating('show', {
             theme: 'fontawesome-stars-o',
-            initialRating: -1,
-            showSelectedRating: true
+            initialRating: initialValue,
+            showSelectedRating: true,
+            onSelect: function(value, text, event) {
+              if (typeof(event) !== 'undefined') {
+                // rating was selected by a user
+                this.selectedRating = value;
+                console.log(this.selectedRating);
+              }
+            }
         });
       });
     }
-    starsRatingReadonlyActivator(): void {
-      $(()=> {
-        $('.star-rating-readonly').barrating({
+    starsRatingReadonlyActivator(selector: string = '.star-rating-readonly', initialValue: number = -1): void {
+      $(() => {
+        $(selector).barrating({
           theme: 'fontawesome-stars-o',
-          readonly: true
-
+          readonly: true,
+          initialRating: initialValue
       });
     });
   }
-
+  starsRatingSetValue(selector: string = '.star-rating-readonly', value: number = -1): void {
+      $(() => {
+        $(selector).barrating('set', value);
+    });
+  }
   blogGallerySliderActivator(): void {
 
     const gallery = $('.li-blog-gallery-slider');
@@ -105,11 +119,11 @@ export class ViewActivatorService {
     });
   }
 
- imagesGalleryActivator():void {
+ imagesGalleryActivator(): void {
 
-  $('.product-details-images').each(function(){
-   var $this = $(this);
-   var $thumb = $this.siblings('.product-details-thumbs, .tab-style-left');
+  $('.product-details-images').each(function() {
+   let $this = $(this);
+   let $thumb = $this.siblings('.product-details-thumbs, .tab-style-left');
    $this.slick({
       arrows: false,
       slidesToShow: 1,
@@ -123,7 +137,7 @@ export class ViewActivatorService {
       asNavFor: $thumb,
   });
  });
-  $('.product-details-thumbs').each(function(){
+  $('.product-details-thumbs').each(function() {
        const $this = $(this);
        const $details = $this.siblings('.product-details-images');
        $this.slick({
@@ -141,9 +155,9 @@ export class ViewActivatorService {
          asNavFor: $details,
      });
      });
-  $('.tab-style-left, .tab-style-right').each(function(){
-       var $this = $(this);
-       var $details = $this.siblings('.product-details-images');
+  $('.tab-style-left, .tab-style-right').each(function() {
+       let $this = $(this);
+       let $details = $this.siblings('.product-details-images');
        $this.slick({
          slidesToShow: 3,
          slidesToScroll: 1,
@@ -161,15 +175,15 @@ export class ViewActivatorService {
      });
 
   }
-  venoboxActivator():void {
+  venoboxActivator(): void {
     $('.venobox').venobox({
-      spinner:'wave',
-      spinColor:'#cb9a00',
+      spinner: 'wave',
+      spinColor: '#cb9a00',
   });
  }
 
  productAreaActivator(): void {
-  $(".product-active").owlCarousel({
+  $('.product-active').owlCarousel({
     loop: true,
     rewind: true,
     nav: false,
