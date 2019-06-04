@@ -11,7 +11,7 @@ declare var $: any;
 })
 export class StoreDetailsComponent implements OnInit, OnDestroy {
 
-  // subscription: Subscription;
+  submitted: boolean = false;
   storeDetails: IStoreDetails;
   feedbackForm: FormGroup;
   constructor(private viewActivator: ViewActivatorService) {
@@ -75,12 +75,28 @@ export class StoreDetailsComponent implements OnInit, OnDestroy {
     });
   }
   onSubmit() {
+    if (this.feedbackForm.valid) {
+      console.log('form submitted');
+    } else {
+      this.validateAllFormFields(this.feedbackForm);
+    }
     console.log(this.feedbackForm);
+
     // this.resetForm();
   }
   resetForm() {
     this.feedbackForm.reset({
       customerRating: '',
+    });
+  }
+  validateAllFormFields(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(field => {
+      const control = formGroup.get(field);
+      if (control instanceof FormControl) {
+        control.markAsTouched({ onlySelf: true });
+      } else if (control instanceof FormGroup) {
+        this.validateAllFormFields(control);
+      }
     });
   }
   ngOnDestroy(): void {
