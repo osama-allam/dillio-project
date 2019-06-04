@@ -40,6 +40,7 @@ import { PostAddComponent } from './features/blog-post/post-add/post-add.compone
 import { PostDetailsComponent } from './features/blog-post/post-details/post-details.component';
 import { PostComponent } from './features/blog-post/post/post.component';
 import { postService } from './features/blog-post/post.service';
+import { FeedbackFormModalComponent } from './shared/feedback-form-modal/feedback-form-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +72,8 @@ import { postService } from './features/blog-post/post.service';
     PostListingComponent,
     PostAddComponent,
     PostDetailsComponent,
-    PostComponent
+    PostComponent,
+    FeedbackFormModalComponent
   ],
   imports: [
     BrowserModule,
