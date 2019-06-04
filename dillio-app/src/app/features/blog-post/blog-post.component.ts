@@ -17,6 +17,7 @@ export class BlogPostComponent implements OnInit {
  constructor(private postService: postService) { }
 
   ngOnInit() {
+    debugger;
     this.posts = this.postService.getPosts();
     this.subscription = this.postService.postsChanged
     .subscribe(

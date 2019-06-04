@@ -9,7 +9,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-12 mb-20 invalid" [ngClass]="{'invalid': postName.invalid && postName.touched}" >
                                     <label>post Name</label>
-                                    <input #postName="ngModel" required minlength="10" [(ngModel)]="post.postName" name="postName" class=" form-control mb-0" type="text" placeholder="Post Name">
+                                    <input #postName="ngModel" required minlength="10" [(ngModel)]="post.postName" name="postName" value="postName" class=" form-control mb-0" type="text" placeholder="Post Name">
                                     <div *ngIf= "postName.invalid && postName.touched && postName.errors['required']"> Post Name Required</div>
                                     <div *ngIf= "postName.invalid && postName.touched && postName.errors['minlength']"> Min Length Must Be {{postName.errors['minlength']['requiredLength']}} Characters </div>
                                 </div>
@@ -29,10 +29,10 @@
                                 </div>
                                 <div class="col-md-12 mb-20">
                                     <label>date</label>
-                                    <input class="mb-0" [(ngModel)]="post.date" name="date" type="date" placeholder="Email Address">{{post.date}}
+                                    <input class="mb-0" [(ngModel)]="post.date" name="date" type="date" placeholder="Email Address">
                                 </div>
                                 <div class="col-3">
-                                    <button type="submit" [disabled]="!f.valid" class="register-button mt-0">{{ editMode ? 'Update' : 'Add' }}</button>
+                                    <button type="submit"  class="register-button mt-0">add</button>
                                 </div>
                                 <div class="col-3">
                                     <button type="reset" routerLink="/blog/listing" class="register-button mt-0"

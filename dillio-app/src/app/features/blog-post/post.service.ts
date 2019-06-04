@@ -19,8 +19,42 @@ export class postService
       
           ];
     }
+    getPosts() {
+        return this.posts;
+      }
+    getPost(index: number) {
+        return this.posts[index];
+      }
+    
+      addPost(posts: IPost) {
+        console.log("bgfdhgfjhgjhg");
 
-    // getAll() : post[]
+        this.posts.push(posts);
+        console.log(this.posts);
+        this.postsChanged.next(this.posts);
+        debugger;
+      }
+    
+      addPosts(posts: IPost[]) {
+        this.posts.push(...posts);
+        this.postsChanged.next(this.posts.slice());
+      }
+    
+      updatePost(index: number, newPost: IPost) {
+        this.posts[index] = newPost;
+        this.postsChanged.next(this.posts.slice());
+      }
+    
+      deletePost(index: number) {
+        this.posts.splice(index, 1);
+        this.postsChanged.next(this.posts.slice());
+      }
+
+
+
+
+
+       // getAll() : post[]
     // {
     //     return this.posts.slice();
     // }
@@ -62,34 +96,4 @@ export class postService
     //     }
     //     return result;
     // }
-    getPosts() {
-        return this.posts.slice();
-      }
-    getPost(index: number) {
-        return this.posts[index];
-      }
-    
-      addPost(ingredient: IPost) {
-        this.posts.push(ingredient);
-        this.postsChanged.next(this.posts.slice());
-      }
-    
-      addPosts(ingredients: IPost[]) {
-        // for (let ingredient of ingredients) {
-        //   this.addIngredient(ingredient);
-        // }
-        this.posts.push(...ingredients);
-        this.postsChanged.next(this.posts.slice());
-      }
-    
-      updatePost(index: number, newIngredient: IPost) {
-        this.posts[index] = newIngredient;
-        this.postsChanged.next(this.posts.slice());
-      }
-    
-      deletePost(index: number) {
-        this.posts.splice(index, 1);
-        this.postsChanged.next(this.posts.slice());
-      }
-
 }
