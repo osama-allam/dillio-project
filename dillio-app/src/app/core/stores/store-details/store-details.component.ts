@@ -1,20 +1,21 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { IStoreDetails } from 'src/app/_models/store-details';
 import { ViewActivatorService } from './../../../services/view-activator.service';
-import { Subscription } from 'rxjs';
+import { IFeedbackModalData, IFeedbackData } from 'src/app/_models/feedback-form';
 declare var $: any;
 @Component({
   selector: 'app-store-details',
   templateUrl: './store-details.component.html',
   styleUrls: ['./store-details.component.css']
 })
-export class StoreDetailsComponent implements OnInit, OnDestroy {
+export class StoreDetailsComponent implements OnInit {
 
   submitted: boolean = false;
-  storeDetails: IStoreDetails;
   feedbackForm: FormGroup;
-  constructor(private viewActivator: ViewActivatorService) {
+  storeDetails: IStoreDetails;
+  formData: IFeedbackModalData;
+  constructor() {
     this.storeDetails = {
       name: 'souq.com',
       description: '100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom.' +
@@ -64,43 +65,25 @@ export class StoreDetailsComponent implements OnInit, OnDestroy {
       }]
     };
 
-   }
+    this.formData = {
+      logoUrl: 'https://www.logosvgpng.com/wp-content/uploads/2018/04/souq-com-logo-vector.png',
+      siteUrl: 'https://egypt.souq.com/eg-en/',
+      description: '100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom.' +
+      ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis,' +
+      ' earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.',
+      title: 'souq.com',
+      feedbackData: {
+        rating: 0,
+        userReview: '',
+        username: '',
+        email: ''
+      }
+    };
+  }
 
   ngOnInit() {
-    this.feedbackForm = new FormGroup({
-      customerRating: new FormControl('', Validators.required),
-      userReview: new FormControl(null, Validators.required),
-      name: new FormControl(null, Validators.required),
-      email: new FormControl(null, [Validators.required, Validators.email])
-    });
   }
-  onSubmit() {
-    if (this.feedbackForm.valid) {
-      console.log('form submitted');
-    } else {
-      this.validateAllFormFields(this.feedbackForm);
-    }
-    console.log(this.feedbackForm);
-
-    // this.resetForm();
-  }
-  resetForm() {
-    this.feedbackForm.reset({
-      customerRating: '',
-    });
-  }
-  validateAllFormFields(formGroup: FormGroup) {
-    Object.keys(formGroup.controls).forEach(field => {
-      const control = formGroup.get(field);
-      if (control instanceof FormControl) {
-        control.markAsTouched({ onlySelf: true });
-      } else if (control instanceof FormGroup) {
-        this.validateAllFormFields(control);
-      }
-    });
-  }
-  ngOnDestroy(): void {
-    // this.subscription.unsubscribe();
-
+  onModalFormSubmitted(event: IFeedbackData) {
+    console.log(event);
   }
 }
