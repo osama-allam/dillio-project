@@ -1,3 +1,26 @@
-<p>
-  stores-list works!
-</p>
+<div class="footer-static-top footer-static-top-3 pt-xs-50 pb-xs-10">
+    <div class="container">
+        <!-- Begin Footer Shipping Area -->
+        <div class="footer-shipping pb-xs-0">
+            <div class="row">
+                <!-- Begin Li's Shipping Inner Box Area -->
+                <div *ngFor="let store of stores" class="col-lg-2 col-md-2 col-sm-6 pb-xs-45">
+                    <div class="li-shipping-inner-box card">
+                        <div class="shipping-icon">
+                            <img src="{{store.image}}" alt="Shipping Icon">
+                        </div>
+                        <div class="shipping-text">
+                            <h2>{{store.name}}</h2>
+                            <star-rating *ngIf="store.rating > 0 && store.rating else addRating" [starType]="'svg'" [showHalfStars]="true" [readOnly]="true" staticColor="ok"
+                            rating="{{store.rating}}"></star-rating>
+                            <ng-template #addRating>
+                                <p >Be the first to review</p>
+                            </ng-template>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Stores } from 'src/app/_models/stores';
+import { StoresService } from 'src/app/services/stores.service';
 
 @Component({
   selector: 'app-stores-list',
@@ -6,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stores-list.component.css']
 })
 export class StoresListComponent implements OnInit {
-
-  constructor() { }
+  @Input() stores: Stores[];
+  constructor(private storeService: StoresService) { }
 
   ngOnInit() {
+    this.stores = this.storeService.getAll();
   }
-
 }
