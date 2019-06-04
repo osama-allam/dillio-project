@@ -1,3 +1,5 @@
+import { SigninComponent } from './core/signin/signin.component';
+import { LoginComponent } from './core/login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BlogPostComponent } from './features/blog-post/blog-post.component';
@@ -11,6 +13,7 @@ const routes: Routes = [
   { path : 'blog/:id/edit' , component: PostAddComponent },
   { path : 'blog/:id/details' , component: PostDetailsComponent },
   { path : 'home' , component: BlogPostComponent },
+  { path : 'signin', component:SigninComponent},
   { path : '' , redirectTo: 'home' , pathMatch: 'full' },
 ];
 
