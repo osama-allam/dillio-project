@@ -11,7 +11,7 @@ declare var $: any;
 })
 export class StoreDetailsComponent implements OnInit, OnDestroy {
 
-  // subscription: Subscription;
+  submitted: boolean = false;
   storeDetails: IStoreDetails;
   feedbackForm: FormGroup;
   constructor(private viewActivator: ViewActivatorService) {
@@ -22,7 +22,7 @@ export class StoreDetailsComponent implements OnInit, OnDestroy {
       ' earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.',
       logoUrl: 'https://www.logosvgpng.com/wp-content/uploads/2018/04/souq-com-logo-vector.png',
       siteUrl: 'https://egypt.souq.com/eg-en/',
-      emails: ['email@souq.com','email2@souq.com'],
+      emails: ['email@souq.com', 'email2@souq.com'],
       branches: [{
         name: 'Cairo',
         address: 'Building No.2, Cairo, Egypt',
@@ -40,7 +40,7 @@ export class StoreDetailsComponent implements OnInit, OnDestroy {
         answer: 'All products can be returned in their original condition free of charge.'
       }, {
         question: 'Will I be refunded or given a store credit to buy something else from Cairo Sales?',
-        answer: 'You can either receive full refund for your entire order,'+
+        answer: 'You can either receive full refund for your entire order,' +
         ' or receive store credit which can be used to buy any products at a later date with no expiration date.'
       }],
       customerReviews: [{
@@ -68,19 +68,35 @@ export class StoreDetailsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.feedbackForm = new FormGroup({
-      'customerRating': new FormControl('', Validators.required),
-      'userReview': new FormControl(null, Validators.required),
-      'name': new FormControl(null, Validators.required),
-      'email': new FormControl(null, [Validators.required, Validators.email])
+      customerRating: new FormControl('', Validators.required),
+      userReview: new FormControl(null, Validators.required),
+      name: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email])
     });
   }
   onSubmit() {
+    if (this.feedbackForm.valid) {
+      console.log('form submitted');
+    } else {
+      this.validateAllFormFields(this.feedbackForm);
+    }
     console.log(this.feedbackForm);
-    this.resetForm();
+
+    // this.resetForm();
   }
   resetForm() {
     this.feedbackForm.reset({
-      'customerRating': '',
+      customerRating: '',
+    });
+  }
+  validateAllFormFields(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(field => {
+      const control = formGroup.get(field);
+      if (control instanceof FormControl) {
+        control.markAsTouched({ onlySelf: true });
+      } else if (control instanceof FormGroup) {
+        this.validateAllFormFields(control);
+      }
     });
   }
   ngOnDestroy(): void {
