@@ -57,6 +57,7 @@
 			6.19 Single Product Tab Style Right Page
 			6.20 Single Product Gallery Left Page
 			6.21 Error 404 Page
+		07. Angular Form Validation
 
 -----------------------------------------------------------------------------------*/
 
@@ -2896,6 +2897,9 @@ textarea:focus {
 .facebook {
 	background: #3c5b9b;
 }
+.official-site {
+	background: #000000;
+}
 .youtube {
 	background: #c72982;
 }
@@ -4431,6 +4435,9 @@ thead {
 .li-comment-section ul li .comment-body .reply-btn {
 	float: right;
 }
+.li-comment-section ul li .comment-body .customer-rating {
+	float: right;
+}
 .li-comment-section ul li .comment-body .reply-btn a {
 	color: #fed700;
 	font-size: 12px;
@@ -5229,6 +5236,28 @@ span.required {
 .feedback-btn a:hover {
 	background: #fed700;
 }
+.feedback-btn .close,
+.feedback-btn .submit {
+	background: #242424;
+	color: #fff !important;
+	width: 80px;
+	font-size: 14px;
+	height: 30px;
+	text-align: center;
+	left: 110px;
+	right: auto;
+	top: 0;
+	display: block;
+  transition: all 0.3s ease-in-out;
+
+  border: 0;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.feedback-btn .close:hover,
+.feedback-btn .submit:hover {
+	background: #fed700;
+}
 /*----------------------------------------*/
 /* 6.13 Single Product Carousel Page
 /*----------------------------------------*/
@@ -5462,6 +5491,13 @@ span.required {
     background-color: #e4e3e3; }
 		.slider__indicator:hover, .slider__indicator.active {
       background-color: #0088CC; }
+/*----------------------------------------*/
+/*  07. Angular Form Validation
+/*----------------------------------------*/
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
 /*----------------------------------------------------------------------------------------------------*/
 /*------------------------------------------> The End <-----------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------*/

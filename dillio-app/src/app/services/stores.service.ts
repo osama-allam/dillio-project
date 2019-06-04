@@ -9,8 +9,7 @@ import { IStoreDetails } from '../_models/store-details';
 })
 export class StoresService {
 stores:Stores[];
-storeDetails: IStoreDetails;
-  constructor() { 
+  constructor() {
     this.stores=[
       {id:1,name:'town team',image:'./assets/images/stores/applianceeg.png'},
       {id:2,name:'Imedia Stores',image:'./assets/images/stores/rizkalla.png'},
@@ -36,12 +35,14 @@ storeDetails: IStoreDetails;
       {id:22,name:'The Giftery',image:'./assets/images/stores/iwatchstores.png'},
       {id:23,name:'The Makan',image:'./assets/images/stores/themakan.png'},
       {id:24,name:'One Roof Store',image:'./assets/images/stores/applianceeg.png'},
+
+
   ];
   }
 
 getAll():Stores[]{
   return this.stores.slice();
 }
-  
+
 
 }
