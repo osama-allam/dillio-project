@@ -8,8 +8,8 @@ export class CategoryService {
 categories:Category[];
   constructor() {
     this.categories=[
-      {id:1,name:'Arts & Crafts'},
-      {id:2,name:'Baby'},
+      {id:1,name:'Laptop'},
+      {id:2,name:'TV & Audio'},
       {id:3,name:'Books'},
       {id:4,name:'Eletronics'},
       {id:5,name:'Womens Fashion'},
