@@ -7,3 +7,7 @@
 *.props
 DillioAPI/.vs/DillioAPI/v15/.suo
 *.cache
+*.ide
+*.ide-shm
+*.ide-wal
+DillioAPI/.vs/DillioAPI/v15/.suo
