@@ -10,3 +10,7 @@
 *.ide-wal
 *.cache
 *.ide-shm
+DillioAPI/.vs/DillioAPI/v15/.suo
+*.ide
+*.props
+*.json
