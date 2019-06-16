@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI\\GP\\Dillio BackEnd\\DAL Dillio Project\\DAL Dillio Project\\DillioProjectRepository.csproj",
+      "projectUniqueName": "D:\\ITI\\GP\\dillio-project\\DAL Dillio Project\\DAL Dillio Project\\DillioProjectRepository.csproj",
       "projectName": "DillioProjectRepository",
-      "projectPath": "D:\\ITI\\GP\\Dillio BackEnd\\DAL Dillio Project\\DAL Dillio Project\\DillioProjectRepository.csproj",
+      "projectPath": "D:\\ITI\\GP\\dillio-project\\DAL Dillio Project\\DAL Dillio Project\\DillioProjectRepository.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI\\GP\\Dillio BackEnd\\DAL Dillio Project\\DAL Dillio Project\\obj\\",
+      "outputPath": "D:\\ITI\\GP\\dillio-project\\DAL Dillio Project\\DAL Dillio Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
