@@ -6,3 +6,4 @@
 *.cache
 *.props
 DillioAPI/.vs/DillioAPI/v15/.suo
+*.cache
