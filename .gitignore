@@ -9,5 +9,4 @@
 *.json
 *.ide-wal
 DillioAPI/.vs/DillioAPI/v15/.suo
-*.ide
 *.props
