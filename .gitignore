@@ -1,3 +1,6 @@
 ﻿*.lock
 /dillio-app/node_modules
 *.ide-shm
+*.ide
+*.ide-shm
+*.ide-wal
