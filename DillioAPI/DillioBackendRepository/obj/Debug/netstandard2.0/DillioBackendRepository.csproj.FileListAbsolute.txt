@@ -14,3 +14,7 @@ D:\ITI\GP\dillio-project\DillioAPI\DillioBackendRepository\obj\Debug\netstandard
 D:\ITI\GP\dillio-project\DillioAPI\DillioBackendRepository\bin\Debug\netstandard2.0\DillioBackendRepository.pdb
 D:\ITI\GP\dillio-project\DillioAPI\DillioBackendRepository\obj\Debug\netstandard2.0\DillioBackendRepository.dll
 D:\ITI\GP\dillio-project\DillioAPI\DillioBackendRepository\obj\Debug\netstandard2.0\DillioBackendRepository.pdb
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioBackendRepository\bin\Debug\netstandard2.0\DillioBackendRepository.dll.config
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioBackendRepository\bin\Debug\netstandard2.0\DillioBackendRepository.pdb
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioBackendRepository\obj\Debug\netstandard2.0\DillioBackendRepository.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioBackendRepository\obj\Debug\netstandard2.0\DillioBackendRepository.pdb

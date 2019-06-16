@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Text;
-using DAL_Dillio_Project.Core.Domain;
+﻿using DAL_Dillio_Project.Core.Domain;
 using DAL_Dillio_Project.Core.Repositories;
+
+
 
 namespace DAL_Dillio_Project.Persistence.Repository
 {
