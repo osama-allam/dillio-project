@@ -1,3 +1,9 @@
 ﻿*.lock
 /dillio-app/node_modules
 *.ide-shm
+*.ide-wal
+*.ide-shm
+*.cache
+*.props
+DillioAPI/.vs/DillioAPI/v15/.suo
+*.cache
