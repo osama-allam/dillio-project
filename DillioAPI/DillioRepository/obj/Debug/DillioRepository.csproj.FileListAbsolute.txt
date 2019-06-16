@@ -1,0 +1,12 @@
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\DillioRepository.dll.config
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\DillioRepository.dll
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\DillioRepository.pdb
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\EntityFramework.dll
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\EntityFramework.SqlServer.dll
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\EntityFramework.xml
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\EntityFramework.SqlServer.xml
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.csprojAssemblyReference.cache
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.csproj.CoreCompileInputs.cache
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.csproj.CopyComplete
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.dll
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.pdb
