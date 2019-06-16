@@ -7,7 +7,7 @@ using DAL_Dillio_Project.Core.Repositories;
 
 namespace DAL_Dillio_Project.Persistence.Repository
 {
-    public class Repository<TEntity>:IRepository<TEntity> where TEntity:class
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly DbContext Context;
         protected readonly DbSet<TEntity> _entities;

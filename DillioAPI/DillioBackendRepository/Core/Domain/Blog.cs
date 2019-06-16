@@ -5,8 +5,16 @@ using DAL_Dillio_Project.Core.Domain;
 
 namespace DillioBackendRepository.Core.Domain
 {
+    [Serializable]
     public class Blog
     {
+
+        public Blog()
+        {
+            Comments = new HashSet<Comment>();
+            Likes = new HashSet<Like>();
+        }
+
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

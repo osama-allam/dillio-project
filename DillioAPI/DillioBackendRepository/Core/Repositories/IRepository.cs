@@ -14,6 +14,6 @@ namespace DAL_Dillio_Project.Core.Repositories
         void AddRange(IEnumerable<TEntity> entities);
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
-        
+
     }
 }

@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
 using System.Text;
 
-namespace DAL_Dillio_Project.Persistence.EntityConfigurations
+namespace DillioBackendRepository.Persistence.EntityConfigurations
 {
-    public class ProductConfiguration:EntityTypeConfiguration<Product>
+    public class ImageConfiguration:EntityTypeConfiguration<Image>
     {
-        public ProductConfiguration()
+        public ImageConfiguration()
         {
 
         }
