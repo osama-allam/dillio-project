@@ -7,3 +7,6 @@
 *.cache
 *.props
 *.json
+*.ide-wal
+*.cache
+*.ide-shm
