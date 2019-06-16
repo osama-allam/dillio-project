@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { post } from 'src/app/_models/post';
+import { IPost } from 'src/app/_models/post';
 
 @Component({
   selector: 'app-post-listing',
@@ -7,7 +7,7 @@ import { post } from 'src/app/_models/post';
   styleUrls: ['./post-listing.component.css']
 })
 export class PostListingComponent implements OnInit {
-@Input() posts: post[]; 
+@Input() posts: IPost[]; 
   constructor() { 
     // this.posts=[
     //   { postName: 'Post1' ,name: 'Admin' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 4 , date: 22-4-2019 ,imageUrl: '../../../../assets/images/blog-banner/1.jpg'},

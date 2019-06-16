@@ -1,0 +1,3 @@
+﻿*.lock
+/dillio-app/node_modules
+*.ide-shm

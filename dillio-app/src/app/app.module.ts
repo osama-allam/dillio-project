@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-
+import { StarRatingModule } from 'angular-star-rating';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
@@ -40,6 +40,10 @@ import { PostAddComponent } from './features/blog-post/post-add/post-add.compone
 import { PostDetailsComponent } from './features/blog-post/post-details/post-details.component';
 import { PostComponent } from './features/blog-post/post/post.component';
 import { postService } from './features/blog-post/post.service';
+import { LoginComponent } from './core/login/login.component';
+import { RegisterComponent } from './core/register/register.component';
+import { SigninComponent } from './core/signin/signin.component';
+import { ListingProductsComponent } from './features/listing-products/listing-products.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,13 +75,19 @@ import { postService } from './features/blog-post/post.service';
     PostListingComponent,
     PostAddComponent,
     PostDetailsComponent,
-    PostComponent
+    PostComponent,
+    LoginComponent,
+    RegisterComponent,
+    SigninComponent,
+    ListingProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     OwlModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    StarRatingModule.forRoot()
   ],
   providers: [CategoryService,
               SubcategoryService,
@@ -85,7 +95,7 @@ import { postService } from './features/blog-post/post.service';
               ProductReviewService,
               StoresService,
               postService],
-              
+
 
   bootstrap: [AppComponent]
 })

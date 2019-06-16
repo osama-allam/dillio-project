@@ -15,6 +15,7 @@ export class ProductAreaComponent implements OnInit {
    }
   ngOnInit() {
     this.viewActivator.productAreaActivator();
+
   }
 
 }
