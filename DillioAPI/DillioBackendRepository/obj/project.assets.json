@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "EntityFramework/6.2.0": {
+      "EntityFramework/6.3.0-preview6-19304-03": {
         "type": "package",
         "compile": {
           "lib/net45/EntityFramework.SqlServer.dll": {},
@@ -40,17 +40,17 @@
     }
   },
   "libraries": {
-    "EntityFramework/6.2.0": {
-      "sha512": "ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+    "EntityFramework/6.3.0-preview6-19304-03": {
+      "sha512": "kS5oLaxK2VR3AaVDKn7yNWlwIULWV5NJUaBz5n1saYCT/G4quL6ezwv+2vEOTUXtusM3bBGlbhx1Q2gciUBl8Q==",
       "type": "package",
-      "path": "entityframework/6.2.0",
+      "path": "entityframework/6.3.0-preview6-19304-03",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "content/net40/App.config.transform",
         "content/net40/Web.config.transform",
-        "entityframework.6.2.0.nupkg.sha512",
+        "entityframework.6.3.0-preview6-19304-03.nupkg.sha512",
         "entityframework.nuspec",
         "lib/net40/EntityFramework.SqlServer.dll",
         "lib/net40/EntityFramework.SqlServer.xml",
@@ -60,6 +60,10 @@
         "lib/net45/EntityFramework.SqlServer.xml",
         "lib/net45/EntityFramework.dll",
         "lib/net45/EntityFramework.xml",
+        "lib/netstandard2.1/EntityFramework.SqlServer.dll",
+        "lib/netstandard2.1/EntityFramework.SqlServer.xml",
+        "lib/netstandard2.1/EntityFramework.dll",
+        "lib/netstandard2.1/EntityFramework.xml",
         "tools/EntityFramework.PowerShell.Utility.dll",
         "tools/EntityFramework.PowerShell.dll",
         "tools/EntityFramework.psd1",
@@ -71,11 +75,12 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -215,28 +220,28 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "EntityFramework >= 6.2.0",
+      "EntityFramework >= 6.3.0-preview6-19304-03",
       "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tarek Hesham\\.nuget\\packages\\": {},
+    "C:\\Users\\DELL\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ITI Courses\\GP\\dillio-project\\DillioAPI\\DillioBackendRepository\\DillioBackendRepository.csproj",
+      "projectUniqueName": "D:\\ITI\\GP\\dillio-project\\DillioAPI\\DillioBackendRepository\\DillioBackendRepository.csproj",
       "projectName": "DillioBackendRepository",
-      "projectPath": "E:\\ITI Courses\\GP\\dillio-project\\DillioAPI\\DillioBackendRepository\\DillioBackendRepository.csproj",
-      "packagesPath": "C:\\Users\\Tarek Hesham\\.nuget\\packages\\",
-      "outputPath": "E:\\ITI Courses\\GP\\dillio-project\\DillioAPI\\DillioBackendRepository\\obj\\",
+      "projectPath": "D:\\ITI\\GP\\dillio-project\\DillioAPI\\DillioBackendRepository\\DillioBackendRepository.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\ITI\\GP\\dillio-project\\DillioAPI\\DillioBackendRepository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tarek Hesham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -262,7 +267,7 @@
         "dependencies": {
           "EntityFramework": {
             "target": "Package",
-            "version": "[6.2.0, )"
+            "version": "[6.3.0-preview6-19304-03, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
@@ -281,16 +286,10 @@
   },
   "logs": [
     {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\ITI Courses\\GP\\dillio-project\\DillioAPI\\DillioBackendRepository\\obj\\DillioBackendRepository.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
-    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'EntityFramework 6.2.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'EntityFramework 6.3.0-preview6-19304-03' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "EntityFramework",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"

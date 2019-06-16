@@ -1,5 +1,8 @@
-﻿namespace DAL_Dillio_Project.Core.Domain
+﻿using System;
+
+namespace DAL_Dillio_Project.Core.Domain
 {
+    [Serializable]
     public class Image
     {
         public int Id { get; set; }
