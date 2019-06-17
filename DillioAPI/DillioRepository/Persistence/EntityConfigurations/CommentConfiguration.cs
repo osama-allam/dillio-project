@@ -10,6 +10,15 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
     {
         public CommentConfiguration()
         {
+            ToTable("Comments");
+
+            HasKey(c => c.Id);
+
+            Property(c => c.Text)
+                .HasColumnType("nvarchar")
+                .HasMaxLength(50)
+                .IsRequired();
+
 
         }
     }
