@@ -68,6 +68,10 @@
     <Compile Include="Core\Repositories\IRepository.cs" />
     <Compile Include="Core\Repositories\IReviewRepository.cs" />
     <Compile Include="Core\Repositories\IStoreRepository.cs" />
+    <Compile Include="Migrations\201906171310317_DBInit.cs" />
+    <Compile Include="Migrations\201906171310317_DBInit.Designer.cs">
+      <DependentUpon>201906171310317_DBInit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\DillioContext.cs" />
     <Compile Include="Persistence\EntityConfigurations\BlogConfiguration.cs" />
@@ -94,6 +98,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906171310317_DBInit.resx">
+      <DependentUpon>201906171310317_DBInit.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
