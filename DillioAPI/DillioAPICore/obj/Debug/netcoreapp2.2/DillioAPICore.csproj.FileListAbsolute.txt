@@ -1,0 +1,14 @@
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\bin\Debug\netcoreapp2.2\DillioAPICore.deps.json
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\bin\Debug\netcoreapp2.2\DillioAPICore.runtimeconfig.json
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\bin\Debug\netcoreapp2.2\DillioAPICore.runtimeconfig.dev.json
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\bin\Debug\netcoreapp2.2\DillioAPICore.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\bin\Debug\netcoreapp2.2\DillioAPICore.pdb
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\obj\Debug\netcoreapp2.2\DillioAPICore.csprojAssemblyReference.cache
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\obj\Debug\netcoreapp2.2\DillioAPICore.csproj.CoreCompileInputs.cache
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\obj\Debug\netcoreapp2.2\DillioAPICore.RazorAssemblyInfo.cache
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\obj\Debug\netcoreapp2.2\DillioAPICore.RazorAssemblyInfo.cs
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\obj\Debug\netcoreapp2.2\DillioAPICore.AssemblyInfoInputs.cache
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\obj\Debug\netcoreapp2.2\DillioAPICore.AssemblyInfo.cs
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\obj\Debug\netcoreapp2.2\DillioAPICore.RazorTargetAssemblyInfo.cache
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\obj\Debug\netcoreapp2.2\DillioAPICore.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioAPICore\obj\Debug\netcoreapp2.2\DillioAPICore.pdb
