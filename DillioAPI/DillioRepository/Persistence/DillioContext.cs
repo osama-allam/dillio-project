@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Text;
+using DillioRepository.Core.Domain;
 
 namespace DAL_Dillio_Project.Persistence
 {
@@ -23,6 +24,8 @@ namespace DAL_Dillio_Project.Persistence
         public virtual DbSet<Like> Likes { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Store> Stores { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
