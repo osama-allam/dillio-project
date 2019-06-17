@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAL_Dillio_Project.Core
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         IBlogRepository Blogs { get; }
         ICategoryRepository Categories { get; }
@@ -14,6 +14,7 @@ namespace DAL_Dillio_Project.Core
         ILikeRepository Likes { get; }
         IProductRepository Products { get; }
         IStoreRepository Stores { get; }
+        IReviewRepository ReviewRepository { get; }
 
         int Complete();
     }

@@ -2,15 +2,18 @@
 using DAL_Dillio_Project.Core.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Text;
+using DAL_Dillio_Project.Persistence.Repository;
 
 namespace DAL_Dillio_Project.Persistence
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public UnitOfWork()
+        private DillioContext _context;
+        public UnitOfWork(DillioContext _context)
         {
-
+            this._context = _context;
         }
 
         public IBlogRepository Blogs { get; }
@@ -27,9 +30,17 @@ namespace DAL_Dillio_Project.Persistence
 
         public IStoreRepository Stores { get; }
 
+        public IReviewRepository ReviewRepository { get; }
+
+
         public int Complete()
         {
-            throw new NotImplementedException();
+            return _context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
         }
     }
 }
