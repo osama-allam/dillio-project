@@ -32,9 +32,7 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
                 .HasForeignKey(m => m.BlogId)
                 .WillCascadeOnDelete(true);
 
-            HasOptional(b => b.Image)
-                .WithOptionalPrincipal(c => c.Blog)
-                .WillCascadeOnDelete(true);
+            
                 
         }
     }
