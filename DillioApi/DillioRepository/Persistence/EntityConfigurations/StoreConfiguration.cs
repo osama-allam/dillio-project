@@ -10,7 +10,18 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
     {
         public StoreConfiguration()
         {
+            ToTable("Store");
 
+            HasKey(s =>s.Id);
+
+
+            Property(s => s.Name)
+                .HasColumnType("nvarchar")
+                .HasMaxLength(50)
+                .IsRequired();
+
+            
+            
         }
     }
 }

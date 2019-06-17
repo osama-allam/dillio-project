@@ -11,6 +11,16 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
         public ImageConfiguration()
         {
 
+
+
+
+
+
+
+
+            HasRequired(i => i.Store)
+                .WithRequiredPrincipal(i => i.Image);
+
         }
     }
 }
