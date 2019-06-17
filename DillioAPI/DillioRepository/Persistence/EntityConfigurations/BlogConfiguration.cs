@@ -10,7 +10,7 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
     {
         public BlogConfiguration()
         {
-            ToTable("Blogs");
+            ToTable("Blog");
             HasKey(b => b.Id);
             HasMany(b => b.Comments)
                 .WithRequired(c => c.Blog)

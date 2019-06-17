@@ -10,3 +10,5 @@ D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.c
 D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.csproj.CopyComplete
 D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.dll
 D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.pdb
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.Migrations.DBInit.resources
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.csproj.GenerateResource.cache
