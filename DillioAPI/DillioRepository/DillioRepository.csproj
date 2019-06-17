@@ -76,6 +76,7 @@
     <Compile Include="Persistence\EntityConfigurations\ImageConfiguration.cs" />
     <Compile Include="Persistence\EntityConfigurations\LikeConfiguration.cs" />
     <Compile Include="Persistence\EntityConfigurations\ProductConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\ReviewConfigurations.cs" />
     <Compile Include="Persistence\EntityConfigurations\StoreConfiguration.cs" />
     <Compile Include="Persistence\Repository\BlogRepository.cs" />
     <Compile Include="Persistence\Repository\CategoryRepository.cs" />
