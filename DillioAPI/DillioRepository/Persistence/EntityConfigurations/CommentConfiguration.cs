@@ -10,7 +10,7 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
     {
         public CommentConfiguration()
         {
-            ToTable("Comments");
+            ToTable("Comment");
 
             HasKey(c => c.Id);
 

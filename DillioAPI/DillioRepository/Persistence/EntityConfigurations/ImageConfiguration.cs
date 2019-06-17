@@ -10,7 +10,7 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
     {
         public ImageConfiguration()
         {
-            ToTable("Images");
+            ToTable("Image");
 
             HasKey(i => i.Id);
 

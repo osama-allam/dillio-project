@@ -10,7 +10,7 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
     {
         public LikeConfiguration()
         {
-            ToTable("Likes");
+            ToTable("Like");
 
             HasKey(l => l.Id);
 
