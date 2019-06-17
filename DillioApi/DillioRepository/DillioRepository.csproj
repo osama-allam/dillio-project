@@ -53,7 +53,9 @@
     <Compile Include="Core\Domain\Comment.cs" />
     <Compile Include="Core\Domain\Image.cs" />
     <Compile Include="Core\Domain\Like.cs" />
+    <Compile Include="Core\Domain\Order.cs" />
     <Compile Include="Core\Domain\Product.cs" />
+    <Compile Include="Core\Domain\Review.cs" />
     <Compile Include="Core\Domain\Store.cs" />
     <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Core\Repositories\IBlogRepository.cs" />
