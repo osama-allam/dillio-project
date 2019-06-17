@@ -10,16 +10,26 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
     {
         public ImageConfiguration()
         {
+            ToTable("Images");
+
+            HasKey(i => i.Id);
+
+            Property(i=>i.Url)
+                .HasColumnType("nvarchar")
+                .HasMaxLength(100)
+                .IsRequired();
+
+            
 
 
+            HasOptional(i => i.Store)
+                .WithOptionalDependent(i => i.Image)
+                .WillCascadeOnDelete(true);
 
+            HasOptional(b => b.Blog)
+                .WithOptionalDependent(c => c.Image)
+                .WillCascadeOnDelete(true);
 
-
-
-
-
-            HasRequired(i => i.Store)
-                .WithRequiredPrincipal(i => i.Image);
 
         }
     }

@@ -63,6 +63,7 @@
     <Compile Include="Core\Repositories\ICommentRepository.cs" />
     <Compile Include="Core\Repositories\IImageRepository.cs" />
     <Compile Include="Core\Repositories\ILikeRepository.cs" />
+    <Compile Include="Core\Repositories\IOrderRepository.cs" />
     <Compile Include="Core\Repositories\IProductRepository.cs" />
     <Compile Include="Core\Repositories\IRepository.cs" />
     <Compile Include="Core\Repositories\IReviewRepository.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Persistence\Repository\CommentRepository.cs" />
     <Compile Include="Persistence\Repository\ImageRepository.cs" />
     <Compile Include="Persistence\Repository\LikeRepository.cs" />
+    <Compile Include="Persistence\Repository\OrderRepository.cs" />
     <Compile Include="Persistence\Repository\ProductRepository.cs" />
     <Compile Include="Persistence\Repository\Repository.cs" />
     <Compile Include="Persistence\Repository\ReviewRepository.cs" />
