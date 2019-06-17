@@ -10,7 +10,20 @@ namespace DillioBackendRepository.Persistence.EntityConfigurations
     {
         public CategoryConfiguration()
         {
+            ToTable("Category");
 
+            HasKey(c => c.Id);
+
+
+            Property(p => p.Name)
+                .HasColumnType("nvarchar")
+                .HasMaxLength(50)
+                .IsRequired();
+
+            HasMany(c => c.Products)
+                .WithRequired(p => p.Category)
+                .HasForeignKey(p => p.FK_CategoryId)
+                .WillCascadeOnDelete(false);
         }
     }
 }
