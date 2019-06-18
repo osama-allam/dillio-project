@@ -16,7 +16,7 @@ namespace Dillio_Backend.BLL.Core
         ILikeRepository Likes { get; }
         IProductRepository Products { get; }
         IStoreRepository Stores { get; }
-        IReviewRepository ReviewRepository { get; }
+        IReviewRepository Reviews { get; }
         int Complete();
     }
 }
