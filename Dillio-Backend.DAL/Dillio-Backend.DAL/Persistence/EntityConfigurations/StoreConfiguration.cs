@@ -19,6 +19,17 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
                 .HasMaxLength(50)
                 .IsRequired();
 
-            }
+
+
+            builder.HasOne(i => i.Image)
+                .WithOne(i => i.Store)
+                .HasForeignKey<Image>(i => i.StoreId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+        }
+
+
+
+
     }
 }

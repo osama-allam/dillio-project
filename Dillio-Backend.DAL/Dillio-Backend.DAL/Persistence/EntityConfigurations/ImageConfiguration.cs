@@ -18,13 +18,6 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
                 .IsRequired();
 
 
-            builder.HasOne(i => i.Store)
-                .WithOne(i => i.Image)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasOne(b => b.Blog)
-                .WithOne(c => c.Image)
-                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
