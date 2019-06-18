@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dillio-Backend.BLL", "Dilli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dillio-Backend.API", "Dillio-Backend.API\Dillio-Backend.API.csproj", "{611EC6BB-9C5A-4DF7-AE8D-5A7CBC6CAC3C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dillio-Backend.Entities", "Dillio-Backend.Entities\Dillio-Backend.Entities.csproj", "{026E685E-730B-4D4D-8B0F-C3E894AEDFB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dillio-Backend.Entities", "Dillio-Backend.Entities\Dillio-Backend.Entities.csproj", "{026E685E-730B-4D4D-8B0F-C3E894AEDFB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
