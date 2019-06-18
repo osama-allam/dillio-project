@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Dillio_Backend.BLL.Core.Domain;
+using Dillio_Backend.DAL.Persistence.EntityConfigurations;
 
 namespace Dillio_Backend.DAL
 {
@@ -35,6 +36,22 @@ namespace Dillio_Backend.DAL
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server =.; Database = DillioDB; Trusted_Connection = True; MultipleActiveResultSets = true;");
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+
+            builder.ApplyConfiguration(new BlogConfiguration());
+            builder.ApplyConfiguration(new CategoryConfiguration());
+            builder.ApplyConfiguration(new CommentConfiguration());
+            builder.ApplyConfiguration(new ImageConfiguration());
+            builder.ApplyConfiguration(new LikeConfiguration());
+            builder.ApplyConfiguration(new ProductConfiguration());
+            builder.ApplyConfiguration(new ReviewConfigurations());
+            builder.ApplyConfiguration(new StoreConfiguration());
+            builder.ApplyConfiguration(new UserConfiguration());
         }
     }
 }

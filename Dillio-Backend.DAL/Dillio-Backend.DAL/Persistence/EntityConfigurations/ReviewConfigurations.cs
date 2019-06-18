@@ -14,7 +14,8 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
             builder.HasKey(r => r.Id);
 
             builder.Property(r => r.Name)
-                .HasColumnType("nvarchar");
+                .HasColumnType("nvarchar")
+                .HasMaxLength(250);
 
         }
     }

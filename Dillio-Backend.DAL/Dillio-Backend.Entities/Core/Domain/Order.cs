@@ -13,7 +13,7 @@ namespace Dillio_Backend.BLL.Core.Domain
         public int Id { get; set; }
         public ICollection<Product> Products { get; set; }
         public DateTime DateOfOrder { get; set; }
-        public int FK_UserId { get; set; }
+        public string FK_UserId { get; set; }
         public ApplicationUser User{ get; set; }
     }
 }

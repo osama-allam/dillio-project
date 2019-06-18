@@ -20,7 +20,7 @@ namespace Dillio_Backend.BLL.Core.Domain
         public DateTime TimeOfBLog { get; set; }
         public ICollection<Comment> Comments { get; set; }
         public ICollection<Like> Likes { get; set; }
-        public int FK_UserId { get; set; }
+        public string FK_UserId { get; set; }
         public ApplicationUser User{ get; set; }
 
         //cutomer and customer fk

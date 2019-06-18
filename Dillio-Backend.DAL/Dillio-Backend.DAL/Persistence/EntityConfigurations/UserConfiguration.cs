@@ -20,27 +20,27 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
             builder.HasMany(u => u.Blogs)
                 .WithOne(b => b.User)
                 .HasForeignKey(b => b.FK_UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(u => u.Reviews)
                 .WithOne(b => b.User)
                 .HasForeignKey(b => b.FK_UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(u => u.Comments)
                 .WithOne(b => b.User)
                 .HasForeignKey(b => b.FK_UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(u => u.Likes)
                 .WithOne(b => b.User)
                 .HasForeignKey(b => b.FK_UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(u => u.Orders)
                 .WithOne(b => b.User)
                 .HasForeignKey(b => b.FK_UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }
