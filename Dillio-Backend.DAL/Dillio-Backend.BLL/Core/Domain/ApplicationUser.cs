@@ -11,6 +11,8 @@ namespace Dillio_Backend.BLL.Core.Domain
     /// </summary>
   public class ApplicationUser : IdentityUser
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         
 
     }

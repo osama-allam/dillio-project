@@ -12,3 +12,17 @@ D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netc
 D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorTargetAssemblyInfo.cache
 D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.dll
 D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.deps.json
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.json
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.dev.json
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.dll
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csprojAssemblyReference.cache
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CoreCompileInputs.cache
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cache
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cs
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfoInputs.cache
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfo.cs
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorTargetAssemblyInfo.cache
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.dll
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
