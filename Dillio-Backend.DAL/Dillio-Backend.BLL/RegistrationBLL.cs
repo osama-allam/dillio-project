@@ -12,7 +12,10 @@ namespace Dillio_Backend.BLL
 {
     class RegistrationBLL
     {
-        private UnitOfWork uw = new UnitOfWork(new ApplicationDbContext());
+        
+
+
+        
 
 
 
