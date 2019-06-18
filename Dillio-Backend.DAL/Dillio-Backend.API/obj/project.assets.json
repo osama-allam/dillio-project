@@ -12097,11 +12097,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GP final project backend\\Dillio-Backend.DAL\\Dillio-Backend.API\\Dillio-Backend.API.csproj",
+      "projectUniqueName": "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.API\\Dillio-Backend.API.csproj",
       "projectName": "Dillio-Backend.API",
-      "projectPath": "D:\\GP final project backend\\Dillio-Backend.DAL\\Dillio-Backend.API\\Dillio-Backend.API.csproj",
+      "projectPath": "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.API\\Dillio-Backend.API.csproj",
       "packagesPath": "C:\\Users\\Ahmad Essam El-Din\\.nuget\\packages\\",
-      "outputPath": "D:\\GP final project backend\\Dillio-Backend.DAL\\Dillio-Backend.API\\obj\\",
+      "outputPath": "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
