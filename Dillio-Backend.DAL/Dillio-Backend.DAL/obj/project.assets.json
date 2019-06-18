@@ -1342,14 +1342,14 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "Dillio-Backend.BLL/1.0.0": {
+      "Dillio-Backend.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "compile": {
-          "bin/placeholder/Dillio-Backend.BLL.dll": {}
+          "bin/placeholder/Dillio-Backend.Entities.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Dillio-Backend.BLL.dll": {}
+          "bin/placeholder/Dillio-Backend.Entities.dll": {}
         }
       }
     }
@@ -4502,15 +4502,15 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Dillio-Backend.BLL/1.0.0": {
+    "Dillio-Backend.Entities/1.0.0": {
       "type": "project",
-      "path": "../Dillio-Backend.BLL/Dillio-Backend.BLL.csproj",
-      "msbuildProject": "../Dillio-Backend.BLL/Dillio-Backend.BLL.csproj"
+      "path": "../Dillio-Backend.Entities/Dillio-Backend.Entities.csproj",
+      "msbuildProject": "../Dillio-Backend.Entities/Dillio-Backend.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Dillio-Backend.BLL >= 1.0.0",
+      "Dillio-Backend.Entities >= 1.0.0",
       "Microsoft.AspNet.Identity.Core >= 2.2.2",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.2.0",
@@ -4550,8 +4550,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.BLL\\Dillio-Backend.BLL.csproj": {
-              "projectPath": "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.BLL\\Dillio-Backend.BLL.csproj"
+            "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj": {
+              "projectPath": "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj"
             }
           }
         }
