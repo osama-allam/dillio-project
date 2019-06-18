@@ -8,7 +8,7 @@ using Dillio_Backend.DAL.Persistence.Repository;
 
 namespace Dillio_Backend.DAL.Persistence
 {
-    class UnitOfWork : IUnitOfWork
+   public class UnitOfWork : IUnitOfWork
     {
         #region ReadOnlyMemberVariables
 
