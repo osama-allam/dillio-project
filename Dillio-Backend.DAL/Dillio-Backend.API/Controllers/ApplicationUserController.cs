@@ -29,19 +29,19 @@ namespace Dillio_Backend.API.Controllers
 
         #region Actions
 
-        [HttpPost]
-        [Route("Register")]
-        public IActionResult RegisterNewUser(ApplicationUserRegistrationModel model)
-        {
-            var newUser = new ApplicationUser()
-            {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                Email = model.EmailAddress,
+        //[HttpPost]
+        //[Route("Register")]
+        //public IActionResult RegisterNewUser(ApplicationUserRegistrationModel model)
+        //{
+        //    var newUser = new ApplicationUser()
+        //    {
+        //        FirstName = model.FirstName,
+        //        LastName = model.LastName,
+        //        Email = model.EmailAddress,
 
-            };
+        //    };
 
-        }
+        //}
 
         #endregion
 
