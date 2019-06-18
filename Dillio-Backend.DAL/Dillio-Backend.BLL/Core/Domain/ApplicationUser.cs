@@ -6,7 +6,7 @@ using System.Text;
 namespace Dillio_Backend.BLL.Core.Domain
 {
     /// <summary>
-    /// This Class is responisble for adding any additional fields in the user
+    /// This Class is responsible for adding any additional fields in the user
     /// table
     /// </summary>
   public class ApplicationUser : IdentityUser
