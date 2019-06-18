@@ -9,5 +9,6 @@ namespace Dillio_Backend.BLL.Core.Domain
         public string Text { get; set; }
         public int BlogId { get; set; }
         public Blog Blog { get; set; }
+        public ApplicationUser User{ get; set; }
     }
 }

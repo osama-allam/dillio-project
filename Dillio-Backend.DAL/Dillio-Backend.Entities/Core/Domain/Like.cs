@@ -9,6 +9,6 @@ namespace Dillio_Backend.BLL.Core.Domain
         public int BlogId { get; set; }
         public Blog Blog { get; set; }
 
-        //whoever made the like should be here
+        public ApplicationUser User{ get; set; }
     }
 }

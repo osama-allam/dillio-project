@@ -17,6 +17,19 @@ namespace Dillio_Backend.DAL
 
         // Add the DbSets for the application
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public virtual DbSet<Blog> Blogs { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
+        public virtual DbSet<Image> Images { get; set; }
+        public virtual DbSet<Like> Likes { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Store> Stores { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Review> Reviews { get; set; }
+
+
+
+
 
         //Configuring the database
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

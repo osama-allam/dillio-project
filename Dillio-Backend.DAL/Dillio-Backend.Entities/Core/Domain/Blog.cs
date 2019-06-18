@@ -21,6 +21,8 @@ namespace Dillio_Backend.BLL.Core.Domain
         public ICollection<Comment> Comments { get; set; }
         public ICollection<Like> Likes { get; set; }
 
+        public ApplicationUser User{ get; set; }
+
         //cutomer and customer fk
 
 

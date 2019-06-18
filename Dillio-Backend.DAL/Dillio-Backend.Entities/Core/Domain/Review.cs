@@ -8,8 +8,7 @@
         public string Email { get; set; }
         public Product Product { get; set; }
         public int FK_ProductId { get; set; }
-
-        //Icollection from customer
+        public ApplicationUser User{ get; set; }
 
     }
 }
