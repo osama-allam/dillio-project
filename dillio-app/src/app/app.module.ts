@@ -45,6 +45,7 @@ import { RegisterComponent } from './core/register/register.component';
 import { SigninComponent } from './core/signin/signin.component';
 import { ListingProductsComponent } from './features/listing-products/listing-products.component';
 import { FeedbackFormModalComponent } from './shared/feedback-form-modal/feedback-form-modal.component';
+import { ProductEditComponent } from './products/product-edit/product-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,7 +82,8 @@ import { FeedbackFormModalComponent } from './shared/feedback-form-modal/feedbac
     RegisterComponent,
     SigninComponent,
     ListingProductsComponent,
-    FeedbackFormModalComponent
+    FeedbackFormModalComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
