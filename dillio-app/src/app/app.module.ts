@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { AboutContentComponent } from './features/aboutus/about-content/about-co
 import { ContactFormComponent } from './features/contactus/contact-form/contact-form.component';
 import { ContactContentComponent } from './features/contactus/contact-content/contact-content.component';
 import { FaqComponent } from './features/faq/faq.component';
+import { ContactSubjectService } from './_services/icontactus-subject.service';
 
 @NgModule({
   declarations: [
@@ -57,9 +59,12 @@ import { FaqComponent } from './features/faq/faq.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     OwlModule
   ],
-  providers: [],
+  providers: [
+    ContactSubjectService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
