@@ -45,6 +45,19 @@ import { RegisterComponent } from './core/register/register.component';
 import { SigninComponent } from './core/signin/signin.component';
 import { ListingProductsComponent } from './features/listing-products/listing-products.component';
 import { FeedbackFormModalComponent } from './shared/feedback-form-modal/feedback-form-modal.component';
+import { AboutusComponent } from './features/aboutus/aboutus.component';
+import { OurTeamComponent } from './features/aboutus/our-team/our-team.component';
+import { ContactusComponent } from './features/contactus/contactus.component';
+import { TermsConditionComponent } from './features/terms-condition/terms-condition.component';
+import { CounterComponent } from './features/aboutus/counter/counter.component';
+import { AboutContentComponent } from './features/aboutus/about-content/about-content.component';
+import { ContactFormComponent } from './features/contactus/contact-form/contact-form.component';
+import { ContactContentComponent } from './features/contactus/contact-content/contact-content.component';
+import { FaqComponent } from './features/faq/faq.component';
+import { ContactSubjectService } from './services/icontactus-subject.service';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,7 +94,17 @@ import { FeedbackFormModalComponent } from './shared/feedback-form-modal/feedbac
     RegisterComponent,
     SigninComponent,
     ListingProductsComponent,
-    FeedbackFormModalComponent
+    FeedbackFormModalComponent,
+    FooterComponent,
+    AboutusComponent,
+    OurTeamComponent,
+    ContactusComponent,
+    TermsConditionComponent,
+    CounterComponent,
+    AboutContentComponent,
+    ContactFormComponent,
+    ContactContentComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
@@ -96,9 +119,9 @@ import { FeedbackFormModalComponent } from './shared/feedback-form-modal/feedbac
               ProductService,
               ProductReviewService,
               StoresService,
-              postService],
-
-
+              postService,
+              ContactSubjectService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
