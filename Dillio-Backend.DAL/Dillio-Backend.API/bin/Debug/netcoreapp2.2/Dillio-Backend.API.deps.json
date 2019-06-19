@@ -25,7 +25,6 @@
       "Dillio-Backend.API/1.0.0": {
         "dependencies": {
           "Dillio-Backend.BLL": "1.0.0",
-          "Dillio-Backend.Entities": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -3648,98 +3647,98 @@
     "Microsoft.EntityFrameworkCore/2.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aQ0sAe2mOtSp3StjKT2wDA/BO3k8BLfpIXIG1MOlGytjQWQOvW3BzDPfgXOhxbSa7Bhdsx97aYzZUGD3DQAQjQ==",
+      "sha512": "sha512-UgvhCfj2e0B1p83f4+juEhkvOP/8vRDZ3HEo2tkX9/wS6uWTPu2WBf5kudXI74ur0AJvHu5phLBIJ1Ob+kMXww==",
       "path": "microsoft.entityframeworkcore/2.2.4",
       "hashPath": "microsoft.entityframeworkcore.2.2.4.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Abstractions/2.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GjtIOANlpy7JcGK0Q169n52713hIHHfxUHq1+xoWlAZYSI0h/n2DrEWwCIsrnInU8FaLq4cIG7UgMTL0CnUUPw==",
+      "sha512": "sha512-4HzQsktwPyDJFUS7TMKP/5rR7DQzMNDfyKkTbOaV5I0K5eyG6+668kGQDU8BQVjAVqtBDFW9OTG2Nue+nVD2jg==",
       "path": "microsoft.entityframeworkcore.abstractions/2.2.4",
       "hashPath": "microsoft.entityframeworkcore.abstractions.2.2.4.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Analyzers/2.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cLJo6dikdFQd2j9cFHhC2M1rzUeYvJLR/m7cBcuKRI6ek5t5ZyGZ0hzEJwCQmKRDV4tAl5p+NIrfDjfqTK8POw==",
+      "sha512": "sha512-7rejM6oRqUqNrj1BK4ico0Fb6XMADNn6lqPgYGYg49vJqA0NWxbavLUkMPzcPR0AYznPbHFQPuNHqT6JfCM+kA==",
       "path": "microsoft.entityframeworkcore.analyzers/2.2.4",
       "hashPath": "microsoft.entityframeworkcore.analyzers.2.2.4.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Design/2.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4SfnD7wYxr+OzcPOZYlzPtKtL1cdXk+a8g4bKc8QcgaGhpvVOTK5ROTZaOe10tmvFXFEJVZSGtXpFAbgiDFtjg==",
+      "sha512": "sha512-A/erLygjDeavpkI0W5cqbfIqhm3qz34x1ObW3GQMatxyBEBzmja3P2JNvErWkdiHkojNTxDQADXVuf0YeMotUg==",
       "path": "microsoft.entityframeworkcore.design/2.2.4",
       "hashPath": "microsoft.entityframeworkcore.design.2.2.4.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/2.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ga+kJhoSBNYv8C2gQl2sB5bTBkWsLFn92CPjZA5ql/MyxJTWri6lf44/GSYEcOQj0tqF5HhMAaB1HxQMiIPBcQ==",
+      "sha512": "sha512-h+M/sXgQSXlcyKLYH5x+Ah7vKE+6JIh2IUPQi9lbUka5rBYIX+B6yBt3uY5/occAbrACVGK/9tU9hy9V01KgBg==",
       "path": "microsoft.entityframeworkcore.relational/2.2.4",
       "hashPath": "microsoft.entityframeworkcore.relational.2.2.4.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.SqlServer/2.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-e0rW3jJXunnwUCout+lQicDoyviO53qsuawZa/HZsfRoEF/bWGlGTJxUN0MPZVQkEd5Gx8ypdDSRbGHtrQp/SA==",
+      "sha512": "sha512-EyVS75Oyraa1OQ9evjHAABYDcvAx1kAH+5kFfvzYxla71Ka6EC09veQhst+WgA3roLRULQe2hQfcFRsk0GpjlQ==",
       "path": "microsoft.entityframeworkcore.sqlserver/2.2.4",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.2.2.4.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wc71c9HWTeXy9/w9O4Yr2LKmdJjVyIoJ/XQX8/6uma4EAVU25RLtUWlvhA0gpgFw9Kf1TkCv70x+CbKnRw/d8Q==",
+      "sha512": "sha512-vQ+SS/Uiqwj5QN63fC9vSX4A8FMne8mXytF4eZXaEJWbhvsficfdWSsnwSt/cMZWmU/NziyMZ64P+CSiFHiRAA==",
       "path": "microsoft.visualstudio.web.codegeneration/2.2.3",
       "hashPath": "microsoft.visualstudio.web.codegeneration.2.2.3.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wXlpxDfRD5aPypa0p0UE97tkRQvAz9D9FfA2GITzr+LlGIpybyGnxkwGVp0Vha1Ibr0kJG0HdnqfeHME/WuAcQ==",
+      "sha512": "sha512-45mPSkpo/yPDN/1lC45c/P/1jzn2XPEdU0WGqhh8WH06/5zXyt6dHMEFAYedTGb4E61tOGDlrwOcGuxqvQ4DIw==",
       "path": "microsoft.visualstudio.web.codegeneration.contracts/2.2.3",
       "hashPath": "microsoft.visualstudio.web.codegeneration.contracts.2.2.3.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Core/2.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-APdPavBUYcGPBaW4rjxBVRePWmg0ZzhIRymOzvLFWUtzfvJKw1+8PaCzsH7Uvl+felm0L1UVQwBx1Do0R7j7Xg==",
+      "sha512": "sha512-SPMf2FoO8aHE5iG1TXUht+V7mT6VTPqwyywMHETWOxM0sUEaVd35soQJYzpvJdZtviW/3KgM1qvUCpRYyQS8oQ==",
       "path": "microsoft.visualstudio.web.codegeneration.core/2.2.3",
       "hashPath": "microsoft.visualstudio.web.codegeneration.core.2.2.3.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Design/2.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xH50cYOU+infRq4KikBuu2qeXcwW4tE0D5TDfKLuLrEtDm90aXI+0qygPsqyISf+lOW7L7rQ64BH/dRYkK3c3Q==",
+      "sha512": "sha512-+R86lv7N5WmHi/5n7zOHqILNO81SXVo5YQZq74q1uz/GVHbDCY3lMhITFPuq8NwerJn+EDv/SfJzvD+wH7RXnw==",
       "path": "microsoft.visualstudio.web.codegeneration.design/2.2.3",
       "hashPath": "microsoft.visualstudio.web.codegeneration.design.2.2.3.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/2.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-N9S7TeFZjXzNY9OVbz4OFw9cM9oEeMaCnuLFhetNioy/wPwZbgglrctAEYxfDbvocQ17YCAVR2EMRbYHNDHyVg==",
+      "sha512": "sha512-f9hviZy8zUCOlZD26rXq/GVBR5lVoDfH7rOBFlaPK0VqlvS0vR2rY4iEQao3OjxSnpBJSWrCoACFq6tSiRLOkg==",
       "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/2.2.3",
       "hashPath": "microsoft.visualstudio.web.codegeneration.entityframeworkcore.2.2.3.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Templating/2.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sW2lHnOoL1xFnSm/2zSedeUoQPlbhPfWjSuUYsxYUj/N5QmLmH98ZLaqP26k6Om/heR6Gux/veXI96yM1Parow==",
+      "sha512": "sha512-5Tn3jTr7WZQQCPs42Im1tBXUwjgKvP1MlX8VJRzXLYECDv9S7Ucx02ucAx12NV0ViJuIpbMcnRafbGcgQ2rENQ==",
       "path": "microsoft.visualstudio.web.codegeneration.templating/2.2.3",
       "hashPath": "microsoft.visualstudio.web.codegeneration.templating.2.2.3.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Utils/2.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/r/y+XpOpbCwN/M/HopjfGTDRlmixTd4G6HG6FaBkD/YF3T1u+4WMRVtuB6zz7aw571HmX+6UokEa6HJSwkPDA==",
+      "sha512": "sha512-FbaNspRH4532EtTraeiSvdum56/l3jgGWHdMKktoDsAnwqjWtok2I0SyvNtdWyX5mdJHi3/MyMsU5jDJVYxT4Q==",
       "path": "microsoft.visualstudio.web.codegeneration.utils/2.2.3",
       "hashPath": "microsoft.visualstudio.web.codegeneration.utils.2.2.3.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/2.2.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0gVuA4KUCHFM4M/9SjG+7j7BzZ7SW/BufF97Q78i2VV8JBbQXc/5Rf6YUG1VGW2fwSEOl9+S26utEGS+86GGGw==",
+      "sha512": "sha512-AkANFfnAaW+ahOA2QzY7KZTz/oUXl9ahRkPdCQhguFyf1TPEXKD7dVKmWEcCOgAfq/s7ScoDm3ydxW31QRAADQ==",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/2.2.3",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.2.2.3.nupkg.sha512"
     },
@@ -5105,7 +5104,7 @@
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
+      "sha512": "sha512-/p8IQT2brFMDa7BHMH71LV+w5Tb3OxoLHxhn6+MGqN5xeqhM2HRHmj+7xQGJnaRn73d7ZTvp6yRCFMvolws4wA==",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
@@ -5119,7 +5118,7 @@
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
+      "sha512": "sha512-JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
@@ -5196,7 +5195,7 @@
     "System.Collections.Specialized/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "sha512-NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
       "path": "system.collections.specialized/4.3.0",
       "hashPath": "system.collections.specialized.4.3.0.nupkg.sha512"
     },

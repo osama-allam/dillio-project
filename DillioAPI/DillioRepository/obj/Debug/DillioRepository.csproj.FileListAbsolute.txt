@@ -1,0 +1,133 @@
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\DillioRepository.dll.config
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\DillioRepository.dll
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\DillioRepository.pdb
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\EntityFramework.dll
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\EntityFramework.SqlServer.dll
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\EntityFramework.xml
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\bin\Debug\EntityFramework.SqlServer.xml
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.csprojAssemblyReference.cache
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.csproj.CoreCompileInputs.cache
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.csproj.CopyComplete
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.dll
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.pdb
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.Migrations.DBInit.resources
+D:\ITI\GP\dillio-project\DillioApi\DillioRepository\obj\Debug\DillioRepository.csproj.GenerateResource.cache
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\obj\Debug\DillioRepository.csprojAssemblyReference.cache
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\obj\Debug\DillioRepository.Migrations.DBInit.resources
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\obj\Debug\DillioRepository.csproj.GenerateResource.cache
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\obj\Debug\DillioRepository.csproj.CoreCompileInputs.cache
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\obj\Debug\DillioRepository.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\obj\Debug\DillioRepository.pdb
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\DillioRepository.dll.config
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\DillioRepository.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\DillioRepository.pdb
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\Microsoft.Win32.Primitives.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\netstandard.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.AppContext.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Collections.Concurrent.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Collections.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Collections.NonGeneric.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Collections.Specialized.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.ComponentModel.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.ComponentModel.Primitives.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.ComponentModel.TypeConverter.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Console.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Data.Common.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Diagnostics.Contracts.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Diagnostics.Debug.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Diagnostics.Process.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Diagnostics.StackTrace.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Diagnostics.Tools.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Diagnostics.TraceSource.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Diagnostics.Tracing.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Drawing.Primitives.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Dynamic.Runtime.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Globalization.Calendars.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Globalization.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Globalization.Extensions.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.Compression.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.Compression.ZipFile.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.FileSystem.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.FileSystem.Primitives.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.FileSystem.Watcher.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.IsolatedStorage.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.MemoryMappedFiles.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.Pipes.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Linq.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Linq.Expressions.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Linq.Parallel.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Linq.Queryable.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.Http.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.NameResolution.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.NetworkInformation.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.Ping.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.Primitives.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.Requests.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.Security.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.Sockets.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.WebHeaderCollection.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.WebSockets.Client.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Net.WebSockets.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.ObjectModel.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Reflection.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Reflection.Extensions.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Reflection.Primitives.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Resources.Reader.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Resources.ResourceManager.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Resources.Writer.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.Extensions.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.Handles.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.InteropServices.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.Numerics.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.Serialization.Formatters.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.Serialization.Json.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.Serialization.Primitives.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Runtime.Serialization.Xml.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Security.Claims.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Security.Cryptography.Algorithms.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Security.Cryptography.Csp.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Security.Cryptography.Encoding.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Security.Cryptography.Primitives.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Security.Principal.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Security.SecureString.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Text.Encoding.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Text.Encoding.Extensions.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Text.RegularExpressions.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Threading.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Threading.Overlapped.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Threading.Tasks.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Threading.Tasks.Parallel.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Threading.Thread.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Threading.ThreadPool.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Threading.Timer.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.ValueTuple.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Xml.ReaderWriter.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Xml.XDocument.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Xml.XmlDocument.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Xml.XmlSerializer.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Xml.XPath.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Xml.XPath.XDocument.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\EntityFramework.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\EntityFramework.SqlServer.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\Microsoft.EntityFrameworkCore.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\System.Collections.Immutable.dll
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\EntityFramework.xml
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\EntityFramework.SqlServer.xml
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\bin\Debug\Microsoft.EntityFrameworkCore.xml
+E:\ITI Courses\GP\dillio-project\DillioAPI\DillioRepository\obj\Debug\DillioRepository.csproj.CopyComplete

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C923A9F-342C-4F37-9384-566B75C5DAC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DillioRepository</RootNamespace>
+    <AssemblyName>DillioRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>C:\Users\Tarek Hesham\.nuget\packages\microsoft.aspnet.identity.entityframework\2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.identity.entityframeworkcore\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore\2.2.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Domain\Blog.cs" />
+    <Compile Include="Core\Domain\Category.cs" />
+    <Compile Include="Core\Domain\Comment.cs" />
+    <Compile Include="Core\Domain\Image.cs" />
+    <Compile Include="Core\Domain\Like.cs" />
+    <Compile Include="Core\Domain\Order.cs" />
+    <Compile Include="Core\Domain\Product.cs" />
+    <Compile Include="Core\Domain\Review.cs" />
+    <Compile Include="Core\Domain\Store.cs" />
+    <Compile Include="Core\IUnitOfWork.cs" />
+    <Compile Include="Core\Repositories\IBlogRepository.cs" />
+    <Compile Include="Core\Repositories\ICategoryRepository.cs" />
+    <Compile Include="Core\Repositories\ICommentRepository.cs" />
+    <Compile Include="Core\Repositories\IImageRepository.cs" />
+    <Compile Include="Core\Repositories\ILikeRepository.cs" />
+    <Compile Include="Core\Repositories\IOrderRepository.cs" />
+    <Compile Include="Core\Repositories\IProductRepository.cs" />
+    <Compile Include="Core\Repositories\IRepository.cs" />
+    <Compile Include="Core\Repositories\IReviewRepository.cs" />
+    <Compile Include="Core\Repositories\IStoreRepository.cs" />
+    <Compile Include="Migrations\201906171310317_DBInit.cs" />
+    <Compile Include="Migrations\201906171310317_DBInit.Designer.cs">
+      <DependentUpon>201906171310317_DBInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Persistence\Class1.cs" />
+    <Compile Include="Persistence\DillioContext.cs" />
+    <Compile Include="Persistence\EntityConfigurations\BlogConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\CategoryConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\CommentConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\ImageConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\LikeConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\ProductConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\ReviewConfigurations.cs" />
+    <Compile Include="Persistence\EntityConfigurations\StoreConfiguration.cs" />
+    <Compile Include="Persistence\Repository\BlogRepository.cs" />
+    <Compile Include="Persistence\Repository\CategoryRepository.cs" />
+    <Compile Include="Persistence\Repository\CommentRepository.cs" />
+    <Compile Include="Persistence\Repository\ImageRepository.cs" />
+    <Compile Include="Persistence\Repository\LikeRepository.cs" />
+    <Compile Include="Persistence\Repository\OrderRepository.cs" />
+    <Compile Include="Persistence\Repository\ProductRepository.cs" />
+    <Compile Include="Persistence\Repository\Repository.cs" />
+    <Compile Include="Persistence\Repository\ReviewRepository.cs" />
+    <Compile Include="Persistence\Repository\StoreRepository.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906171310317_DBInit.resx">
+      <DependentUpon>201906171310317_DBInit.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

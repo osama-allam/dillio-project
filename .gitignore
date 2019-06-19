@@ -1,4 +1,23 @@
+﻿*.lock
+/dillio-app/node_modules
+*.ide-shm
+*.ide-wal
+*.ide-shm
+*.cache
+*.props
+DillioAPI/.vs/DillioAPI/v15/.suo
+*.cache
+*.ide
+*.ide-shm
+*.ide-wal
+DillioAPI/.vs/DillioAPI/v15/.suo
+/Dillio-Backend.DAL/.vs/Dillio-Backend.DAL/v15
 ﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/dillio-app/node_modules/.staging
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 

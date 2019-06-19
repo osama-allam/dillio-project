@@ -9,7 +9,14 @@ namespace Dillio_Backend.BLL.Core
     {
         //Repositories
         IApplicationUserRepository ApplicationUser { get; set; }
-
+        IBlogRepository Blogs { get; }
+        ICategoryRepository Categories { get; }
+        ICommentRepository Comments { get; }
+        IImageRepository Images { get; }
+        ILikeRepository Likes { get; }
+        IProductRepository Products { get; }
+        IStoreRepository Stores { get; }
+        IReviewRepository Reviews { get; }
         int Complete();
     }
 }
