@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { IStoreDetails } from 'src/app/_models/store-details';
-import { ViewActivatorService } from './../../../services/view-activator.service';
 import { IFeedbackModalData, IFeedbackData } from 'src/app/_models/feedback-form';
 declare var $: any;
 @Component({
@@ -11,12 +10,13 @@ declare var $: any;
 })
 export class StoreDetailsComponent implements OnInit {
 
-  submitted: boolean = false;
+  submitted = false;
   feedbackForm: FormGroup;
   storeDetails: IStoreDetails;
   formData: IFeedbackModalData;
   constructor() {
     this.storeDetails = {
+      id: 1,
       name: 'souq.com',
       description: '100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom.' +
       ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis,' +

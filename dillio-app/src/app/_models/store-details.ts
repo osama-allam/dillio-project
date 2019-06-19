@@ -2,6 +2,7 @@ import { IBranch } from './branch';
 import { ICustomerReview } from './customer-review';
 
 export interface IStoreDetails {
+  id: number;
   logoUrl: string;
   name: string;
   description: string;
