@@ -21,13 +21,12 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.Property(b => b.Title)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(50)
+                .HasColumnType("nvarchar(50)")               
                 .IsRequired();
 
             builder.Property(b => b.Description)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(200);
+                .HasColumnType("nvarchar(200)");
+               
 
 
             builder.HasMany(b => b.Likes)

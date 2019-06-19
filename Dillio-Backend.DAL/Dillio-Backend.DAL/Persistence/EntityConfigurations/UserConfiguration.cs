@@ -10,12 +10,10 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
         {
 
             builder.Property(u => u.FirstName)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(250);
+                .HasColumnType("nvarchar(250)");
 
             builder.Property(u => u.LastName)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(250);
+                .HasColumnType("nvarchar(250)");
 
             builder.HasMany(u => u.Blogs)
                 .WithOne(b => b.User)

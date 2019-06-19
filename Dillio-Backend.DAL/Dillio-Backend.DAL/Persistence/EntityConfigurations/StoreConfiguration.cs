@@ -15,8 +15,7 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
             builder.HasKey(s => s.Id);
 
             builder.Property(s => s.Name)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(50)
+                .HasColumnType("nvarchar(50)")
                 .IsRequired();
 
 
