@@ -293,3 +293,4 @@ __pycache__/
 *.dll
 Dillio-Backend.DAL/.vs/Dillio-Backend.DAL/v15/.suo
 Dillio-Backend.DAL/.vs/Dillio-Backend.DAL/v15/.suo
+*.ide-shm
