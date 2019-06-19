@@ -18,6 +18,7 @@ namespace Dillio_Backend.BLL.Core.Domain
         public string Description { get; set; }
         public Image Image { get; set; }
         public DateTime TimeOfBLog { get; set; }
+        public string ImageURL{ get; set; }
         public ICollection<Comment> Comments { get; set; }
         public ICollection<Like> Likes { get; set; }
         public string FK_UserId { get; set; }
