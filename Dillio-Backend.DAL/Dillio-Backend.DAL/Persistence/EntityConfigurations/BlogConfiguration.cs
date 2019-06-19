@@ -34,12 +34,6 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
                 .HasForeignKey(m => m.BlogId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-
-            builder.HasOne(b => b.Image)
-                .WithOne(c => c.Blog)
-                .HasForeignKey<Image>(b=>b.BlogId)
-                .OnDelete(DeleteBehavior.Cascade);
-
         }
 
         

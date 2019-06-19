@@ -12,67 +12,64 @@ namespace Dillio_Backend.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StoreController : ControllerBase
+    public class CategoryController : ControllerBase
     {
-
         readonly UnitOfWork _unitOfWork = new UnitOfWork(new ApplicationDbContext());
 
 
         [HttpGet]
         public IActionResult Get()
         {
-            IList<Store> store = null;
+            IList<Category> categories = null;
 
-            store = _unitOfWork.Stores.GetAll().ToList();
+            categories = _unitOfWork.Categories.GetAll().ToList();
 
-            if (store.Count == 0)
+            if (categories.Count == 0)
             {
                 return NotFound();
             }
 
-            return Ok(store);
+            return Ok(categories);
         }
 
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Store store = null;
+            Category category = null;
 
-            store = _unitOfWork.Stores.Get(id);
+            category = _unitOfWork.Categories.Get(id);
 
-            if (store == null)
+            if (category == null)
             {
                 return NotFound();
             }
 
-            return Ok(store);
+            return Ok(category);
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Store store)
+        public IActionResult Post([FromBody] Category category)
         {
-            if (store == null)
+            if (category == null)
             {
                 return BadRequest();
             }
 
-            _unitOfWork.Stores.Add(store);
+            _unitOfWork.Categories.Add(category);
             _unitOfWork.Complete();
             return Ok();
 
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Store store)
+        public IActionResult Put(int id, [FromBody] Category category)
         {
-            Store oldstore = _unitOfWork.Stores.Get(id);
+            Category oldcategory = _unitOfWork.Categories.Get(id);
 
-            if (oldstore != null)
+            if (oldcategory != null)
             {
-                oldstore.Name = store.Name;
-                oldstore.ImageURL = store.ImageURL;
-                
-
+                oldcategory.Name = category.Name;
+               //need to review this part again
                 _unitOfWork.Complete();
 
                 return Ok();
@@ -80,6 +77,5 @@ namespace Dillio_Backend.API.Controllers
 
             return NotFound();
         }
-
     }
 }

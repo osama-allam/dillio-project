@@ -4,14 +4,16 @@ using Dillio_Backend.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Dillio_Backend.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190619150144_editimagesofblogandstore")]
+    partial class editimagesofblogandstore
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,6 +32,8 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.Property<string>("FK_UserId");
 
+                    b.Property<int?>("ImageId");
+
                     b.Property<string>("ImageURL");
 
                     b.Property<DateTime>("TimeOfBLog");
@@ -41,6 +45,8 @@ namespace Dillio_Backend.DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("FK_UserId");
+
+                    b.HasIndex("ImageId");
 
                     b.ToTable("Blog");
                 });
@@ -393,6 +399,10 @@ namespace Dillio_Backend.DAL.Migrations
                         .WithMany("Blogs")
                         .HasForeignKey("FK_UserId")
                         .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Image", "Image")
+                        .WithMany()
+                        .HasForeignKey("ImageId");
                 });
 
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Comment", b =>
