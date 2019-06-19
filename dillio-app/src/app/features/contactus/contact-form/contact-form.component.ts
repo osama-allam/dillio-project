@@ -3,7 +3,8 @@ import { NgForm } from '@angular/forms';
 
 import { IContactUsSubject } from 'src/app/_model/icontactus-subject';
 import { IContactUs } from 'src/app/_model/icontactus';
-import { ContactSubjectService } from 'src/app/_services/icontactus-subject.service';
+import { ContactSubjectService } from 'src/app/services/icontactus-subject.service';
+
 
 @Component({
   selector: 'app-contact-form',
