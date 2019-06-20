@@ -11,4 +11,3 @@ E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.runtimeconfig.json
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.runtimeconfig.dev.json
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csprojAssemblyReference.cache
