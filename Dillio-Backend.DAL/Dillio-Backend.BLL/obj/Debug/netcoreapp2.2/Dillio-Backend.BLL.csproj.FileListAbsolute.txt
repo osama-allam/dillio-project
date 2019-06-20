@@ -36,3 +36,17 @@ E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.csproj.CopyComplete
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.dll
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\bin\Debug\netcoreapp2.2\Dillio-Backend.BLL.deps.json
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\bin\Debug\netcoreapp2.2\Dillio-Backend.BLL.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\bin\Debug\netcoreapp2.2\Dillio-Backend.BLL.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.csprojAssemblyReference.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.csproj.CoreCompileInputs.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.AssemblyInfoInputs.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.AssemblyInfo.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.csproj.CopyComplete
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.BLL\obj\Debug\netcoreapp2.2\Dillio-Backend.BLL.pdb

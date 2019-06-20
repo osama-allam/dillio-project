@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,7 +12,7 @@ namespace Dillio_Backend.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogController : ControllerBase
+    public class CommentController : ControllerBase
     {
         readonly UnitOfWork _unitOfWork = new UnitOfWork(new ApplicationDbContext());
 
@@ -21,43 +20,43 @@ namespace Dillio_Backend.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            IList<Blog> blo = null;
+            IList<Comment> com = null;
 
-            blo = _unitOfWork.Blogs.GetAll().ToList();
+            com = _unitOfWork.Comments.GetAll().ToList();
 
-            if (blo.Count == 0)
+            if (com.Count == 0)
             {
                 return NotFound();
             }
              
-            return Ok(blo);
+            return Ok(com);
         }
 
 
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Blog blo = null;
+            IList<Comment> com  = null;
 
-            blo = _unitOfWork.Blogs.Get(id);
+            com = _unitOfWork.Comments.GetCommentsOnBlog(id).ToList();
 
-            if (blo == null)
+            if (com == null)
             {
                 return NotFound();
             }
 
-            return Ok(blo);
+            return Ok(com);
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Blog blog)
+        public IActionResult Post([FromBody] Comment comment)
         {
-            if (blog == null)
+            if (comment == null)
             {
                 return BadRequest();
             }
 
-           _unitOfWork.Blogs.Add(blog);
+           _unitOfWork.Comments.Add(comment);
            _unitOfWork.Complete();
            return Ok();
 
@@ -65,20 +64,18 @@ namespace Dillio_Backend.API.Controllers
 
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Blog blog)
+        public IActionResult Put(int id, [FromBody] Comment comment)
         {
-            Blog blo = _unitOfWork.Blogs.Get(id);
+            Comment com = _unitOfWork.Comments.Get(id);
 
-            if (blo != null)
+            if (com != null)
             {
-                blo.Comments = blog.Comments;
-                blo.Description = blog.Description;
-                blo.FK_UserId = blog.FK_UserId;
-                blo.ImageURL = blog.ImageURL;
-                blo.Likes = blog.Likes;
-                blo.TimeOfBLog = blog.TimeOfBLog;
-                blo.Title = blog.Title;
-                blo.User = blog.User;
+                com.Blog = comment.Blog;
+                com.BlogId = comment.BlogId;
+                com.FK_UserId = comment.FK_UserId;
+                com.Text = comment.Text;
+                com.User = comment.User;
+                
 
                 _unitOfWork.Complete();
 
@@ -94,11 +91,11 @@ namespace Dillio_Backend.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            Blog blo = _unitOfWork.Blogs.Get(id);
+            Comment com = _unitOfWork.Comments.Get(id);
             
-            if (blo != null)
+            if (com != null)
             {
-                _unitOfWork.Blogs.Remove(blo);
+                _unitOfWork.Comments.Remove(com);
                 _unitOfWork.Complete();
 
                 return Ok();
@@ -106,6 +103,5 @@ namespace Dillio_Backend.API.Controllers
 
             return NotFound();
         }
-
     }
 }
