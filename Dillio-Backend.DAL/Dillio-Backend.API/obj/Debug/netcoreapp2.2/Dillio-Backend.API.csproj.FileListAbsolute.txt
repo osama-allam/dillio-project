@@ -47,3 +47,20 @@ E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorTargetAssemblyInfo.cache
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CopyComplete
+<<<<<<< HEAD
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.BLL.dll
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.BLL.pdb
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
+D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CopyComplete
+=======
+>>>>>>> origin/tarek-back
+D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.BLL.dll
+D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
+D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
+D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.BLL.pdb
+D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
+D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
+D:\GP final project backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CopyComplete

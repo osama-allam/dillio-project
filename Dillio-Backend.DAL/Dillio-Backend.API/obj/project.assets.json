@@ -13026,6 +13026,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Dillio-Backend.BLL >= 1.0.0",
+      "Dillio-Backend.Entities >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
@@ -13065,6 +13066,9 @@
           "projectReferences": {
             "E:\\ITI Courses\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.BLL\\Dillio-Backend.BLL.csproj": {
               "projectPath": "E:\\ITI Courses\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.BLL\\Dillio-Backend.BLL.csproj"
+            },
+            "E:\\ITI Courses\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj": {
+              "projectPath": "E:\\ITI Courses\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj"
             }
           }
         }
