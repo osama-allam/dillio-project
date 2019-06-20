@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/_models/product';
 import { PagingService } from 'src/app/services/paging.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-listing-products',
@@ -14,14 +15,60 @@ export class ListingProductsComponent implements OnInit {
   CurrentPage:number;
   totalpages:number;
   Arr = Array;
-  constructor(public productServices: ProductService,private pagerService: PagingService) {
+  constructor(
+    private productServices: ProductService,
+    private pagerService: PagingService,
+    private activatedRoute: ActivatedRoute) {
     
-    this.totalproducts = this.productServices.products;
+      // const txtsendS = this.activatedRoute.snapshot.paramMap.get("txtSearch");
+      // const curVal = this.activatedRoute.snapshot.paramMap.get("val");
+
+      // if(txtsendS != null && curVal !=null){
+        
+      //   this.totalproducts = this.searchFunc(parseInt( curVal) ,txtsendS );
+        
+      // }else{
+
+        this.totalproducts = this.productServices.products;
+      // }
+
     this.CurrentPage = 1;
     this.setPage(this.CurrentPage);
+
+
+    // console.log(txtsendS);
+    // console.log(curVal);
+
+    // this.activatedRoute.queryParams.subscribe(params => {
+    //   const txtsendS = params['txtSearch'];
+    //   debugger;
+    //   const curVal = params['val'];
+      
+    //   console.log(txtsendS + curVal);
+    //   console.log(curVal);
+      
+    // });
   }
   
   ngOnInit() {
+    //  debugger;
+    this.activatedRoute.url.subscribe(url =>{
+    //  debugger;
+
+      const txtsendS = this.activatedRoute.snapshot.paramMap.get("txtSearch");
+      const curVal = this.activatedRoute.snapshot.paramMap.get("val");
+      if(txtsendS != null && curVal !=null){
+      this.totalproducts = this.searchFunc(parseInt(curVal) ,txtsendS );
+      debugger;
+      if(!this.totalproducts[0].title){
+        this.totalproducts = this.productServices.products;
+        window.alert("your search wasn't found");
+
+      }
+      this.CurrentPage = 1;
+      this.setPage(this.CurrentPage);
+      }
+        });
   }
 
   pager: any = {};
@@ -45,6 +92,28 @@ export class ListingProductsComponent implements OnInit {
 
       window.scrollTo({ left: 0, top: 250, behavior: 'smooth' });
     }
+  }
+
+
+
+  searchFunc(cate:Number,txtS:string):Product[]{
+    let retArr:Product[];
+    retArr = [{}];
+    let Arr:Product[];
+    let i = 0;
+    Arr = this.productServices.products;
+    Arr.forEach(ele => {
+          if((ele.category.id == cate && (ele.title.toLowerCase().includes(txtS)||ele.description.toLowerCase().includes(txtS.toLowerCase())))
+           || (cate == -1 && (ele.title.toLowerCase().includes(txtS.toLowerCase())||ele.description.toLowerCase().includes(txtS.toLowerCase())))){
+            
+              retArr[i] =ele;
+              i++;
+            
+          }
+          
+    });
+
+    return retArr;
   }
 
 }
