@@ -62,6 +62,7 @@ namespace Dillio_Backend.API.Controllers
 
         }
 
+
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Store store)
         {
