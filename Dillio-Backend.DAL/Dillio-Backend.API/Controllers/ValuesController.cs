@@ -11,7 +11,7 @@ namespace Dillio_Backend.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        //[Authorize]
+        [Authorize]
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

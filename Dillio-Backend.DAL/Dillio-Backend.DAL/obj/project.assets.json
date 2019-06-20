@@ -4527,11 +4527,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GP final project backend\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj",
+      "projectUniqueName": "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj",
       "projectName": "Dillio-Backend.DAL",
-      "projectPath": "D:\\GP final project backend\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj",
+      "projectPath": "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj",
       "packagesPath": "C:\\Users\\Ahmad Essam El-Din\\.nuget\\packages\\",
-      "outputPath": "D:\\GP final project backend\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\obj\\",
+      "outputPath": "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4550,8 +4550,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\GP final project backend\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj": {
-              "projectPath": "D:\\GP final project backend\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj"
+            "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj": {
+              "projectPath": "D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj"
             }
           }
         }
