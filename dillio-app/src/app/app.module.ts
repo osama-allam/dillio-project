@@ -23,7 +23,6 @@ import { ProductImagesComponent } from './shared/product-images/product-images.c
 import { SingleProductWrapComponent } from './shared/single-product-wrap/single-product-wrap.component';
 import { ProductAreaComponent } from './shared/product-area/product-area.component';
 import { SingleProductDetailsComponent } from './features/single-product-details/single-product-details.component';
-import { ProductDetailsComponent } from './core/product-details/product-details.component';
 import { ProductFormReviewComponent } from './features/product-form-review/product-form-review.component';
 import { ProductReviewService } from './services/product-review.service';
 import { StoresService } from './services/stores.service';
@@ -64,7 +63,6 @@ import { ProductEditComponent } from './products/product-edit/product-edit.compo
     SingleProductWrapComponent,
     ProductAreaComponent,
     SingleProductDetailsComponent,
-    ProductDetailsComponent,
     ProductFormReviewComponent,
     StoreListingComponent,
     FooterComponent,
