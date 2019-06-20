@@ -11,3 +11,8 @@ DillioAPI/.vs/DillioAPI/v15/.suo
 *.ide-shm
 *.ide-wal
 DillioAPI/.vs/DillioAPI/v15/.suo
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/dillio-app/node_modules/.staging
