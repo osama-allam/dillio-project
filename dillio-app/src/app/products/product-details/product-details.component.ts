@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/_models/product';
 import { Review } from 'src/app/_models/product-review';
+import { ProductService } from 'src/app/services/product.service';
 import { ProductReviewService } from 'src/app/services/product-review.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { ProductReviewService } from 'src/app/services/product-review.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
+
 
   @Input()product:Product;
   @Input()reviews:Review[];
