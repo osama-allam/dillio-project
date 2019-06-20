@@ -19,6 +19,15 @@ namespace Dillio_Backend.BLL.Core.Domain
         public ICollection<Order> Orders{ get; set; }
         public ICollection<Review> Reviews{ get; set; }
 
+        public ApplicationUser()
+        {
+            Blogs = new HashSet<Blog>();
+            Comments = new HashSet<Comment>();
+            Likes = new HashSet<Like>();
+            Orders = new HashSet<Order>();
+            Reviews = new HashSet<Review>();
+        }
+
 
     }
 }
