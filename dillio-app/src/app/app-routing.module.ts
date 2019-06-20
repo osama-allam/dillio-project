@@ -19,7 +19,6 @@ const routes: Routes = [
   { path : 'signin', component: SigninComponent},
   { path : 'home/:txtSearch/:val' , component: ListingProductsComponent },
   { path : 'home' , component: ListingProductsComponent },
-  { path : 'signin', component:SigninComponent},
   { path : '' , redirectTo: 'home' , pathMatch: 'full' },
   { path : '**' , redirectTo: 'home' , pathMatch: 'full' },
 ];
