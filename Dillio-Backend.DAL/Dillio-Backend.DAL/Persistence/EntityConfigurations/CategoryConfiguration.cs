@@ -16,8 +16,7 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 
 
             builder.Property(p => p.Name)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(50)
+                .HasColumnType("nvarchar(50)")          
                 .IsRequired();
 
             builder.HasMany(c => c.Products)

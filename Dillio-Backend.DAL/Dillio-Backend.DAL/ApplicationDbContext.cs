@@ -14,7 +14,11 @@ namespace Dillio_Backend.DAL
         {
             
         }
-        public ApplicationDbContext(DbContextOptions options) : base(options) { }
+
+        public ApplicationDbContext(DbContextOptions options) : base(options)
+        {
+            
+        }
 
         // Add the DbSets for the application
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -23,7 +27,7 @@ namespace Dillio_Backend.DAL
         public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<Image> Images { get; set; }
         public virtual DbSet<Like> Likes { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
         public virtual DbSet<Store> Stores { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }

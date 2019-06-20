@@ -21,24 +21,17 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.Property(b => b.Title)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(50)
+                .HasColumnType("nvarchar(50)")               
                 .IsRequired();
 
             builder.Property(b => b.Description)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(200);
+                .HasColumnType("nvarchar(200)");
+               
 
 
             builder.HasMany(b => b.Likes)
                 .WithOne(l => l.Blog)
                 .HasForeignKey(m => m.BlogId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-
-            builder.HasOne(b => b.Image)
-                .WithOne(c => c.Blog)
-                .HasForeignKey<Image>(b=>b.BlogId)
                 .OnDelete(DeleteBehavior.Cascade);
 
         }

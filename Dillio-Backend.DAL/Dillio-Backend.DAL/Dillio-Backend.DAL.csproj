@@ -9,6 +9,7 @@
     <Compile Remove="Migrations\20190618231332_newrepositoryanditisconfigurations.cs" />
     <Compile Remove="Migrations\20190618231416_newrepositoryanditisconfigurations.cs" />
     <Compile Remove="Migrations\20190618231845_newrepositoryanditisconfigurations.cs" />
+    <Compile Remove="Migrations\20190619085138_repositoriesandconfigurations.cs" />
   </ItemGroup>
 
   <ItemGroup>

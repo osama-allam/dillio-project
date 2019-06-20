@@ -15,16 +15,10 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
             builder.HasKey(s => s.Id);
 
             builder.Property(s => s.Name)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(50)
+                .HasColumnType("nvarchar(50)")
                 .IsRequired();
 
 
-
-            builder.HasOne(i => i.Image)
-                .WithOne(i => i.Store)
-                .HasForeignKey<Image>(i => i.StoreId)
-                .OnDelete(DeleteBehavior.Cascade);
 
         }
 

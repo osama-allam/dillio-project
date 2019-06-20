@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dillio_Backend.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190618232142_newrepositoryanditisconfigurations")]
-    partial class newrepositoryanditisconfigurations
+    [Migration("20190619150144_editimagesofblogandstore")]
+    partial class editimagesofblogandstore
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,21 +28,25 @@ namespace Dillio_Backend.DAL.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(200);
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("FK_UserId");
+
+                    b.Property<int?>("ImageId");
+
+                    b.Property<string>("ImageURL");
 
                     b.Property<DateTime>("TimeOfBLog");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("FK_UserId");
+
+                    b.HasIndex("ImageId");
 
                     b.ToTable("Blog");
                 });
@@ -55,8 +59,7 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
@@ -75,8 +78,7 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.Property<string>("Text")
                         .IsRequired()
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
@@ -93,26 +95,15 @@ namespace Dillio_Backend.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BlogId");
-
                     b.Property<int>("ProductId");
-
-                    b.Property<int>("StoreId");
 
                     b.Property<string>("Url")
                         .IsRequired()
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(100);
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BlogId")
-                        .IsUnique();
-
                     b.HasIndex("ProductId");
-
-                    b.HasIndex("StoreId")
-                        .IsUnique();
 
                     b.ToTable("Image");
                 });
@@ -165,8 +156,7 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int?>("OrderId");
 
@@ -194,8 +184,7 @@ namespace Dillio_Backend.DAL.Migrations
                     b.Property<string>("FK_UserId");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(250);
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("ReviewDescription");
 
@@ -214,12 +203,11 @@ namespace Dillio_Backend.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("FK_ImageId");
+                    b.Property<string>("ImageURL");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
@@ -397,12 +385,10 @@ namespace Dillio_Backend.DAL.Migrations
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(250);
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar")
-                        .HasMaxLength(250);
+                        .HasColumnType("nvarchar(250)");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
@@ -413,6 +399,10 @@ namespace Dillio_Backend.DAL.Migrations
                         .WithMany("Blogs")
                         .HasForeignKey("FK_UserId")
                         .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Image", "Image")
+                        .WithMany()
+                        .HasForeignKey("ImageId");
                 });
 
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Comment", b =>
@@ -430,19 +420,9 @@ namespace Dillio_Backend.DAL.Migrations
 
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Image", b =>
                 {
-                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Blog", "Blog")
-                        .WithOne("Image")
-                        .HasForeignKey("Dillio_Backend.BLL.Core.Domain.Image", "BlogId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Store", "Store")
-                        .WithOne("Image")
-                        .HasForeignKey("Dillio_Backend.BLL.Core.Domain.Image", "StoreId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
