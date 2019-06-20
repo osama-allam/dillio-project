@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dillio_Backend.API.ViewModel;
 using Dillio_Backend.BLL.Core.Domain;
 using Dillio_Backend.DAL;
 using Dillio_Backend.DAL.Persistence;
@@ -21,32 +22,59 @@ namespace Dillio_Backend.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            IList<Product> pro = null;
-
-            pro = _unitOfWork.Products.GetAll().ToList();
-
+          
+            IList<Product> pro = _unitOfWork.Products.GetAll().ToList();
+            foreach (var product in pro)
+            {
+                IList<Image> images = _unitOfWork.Images.GetAll().Where(i => i.ProductId == product.Id).ToList();
+                    foreach (var proimage in images)
+                    {
+                        product.Images.Add(proimage);
+                    }                          
+            }
             if (pro.Count == 0)
             {
                 return NotFound();
             }
-             
-            return Ok(pro);
-        }
+            IList<ProductViewModel> pvm = pro.Select(p => new ProductViewModel
+            {
+                Price = p.Price,
+                Discount = p.Discount,
+                Name = p.Name,
+                Description = p.Description,
+                Image = p.Images.FirstOrDefault(),
+                Images = p.Images.ToList()
 
+            }).ToList();
+            return Ok(pvm);
+        }
 
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Product pro = null;
-
-            pro = _unitOfWork.Products.Get(id);
+            Product pro = _unitOfWork.Products.Get(id);
 
             if (pro == null)
             {
                 return NotFound();
             }
 
-            return Ok(pro);
+            
+            IList<Image> images = _unitOfWork.Images.GetAll().Where(i => i.ProductId == id).ToList();
+            pro.Images = images;
+
+          
+
+            ProductViewModel pvm = new ProductViewModel()
+            {
+                Price = pro.Price,
+                Discount = pro.Discount,
+                Name = pro.Name,
+                Description = pro.Description,
+                Images = pro.Images.ToList()
+            };
+
+            return Ok(pvm);
         }
 
         [HttpPost]
@@ -65,19 +93,16 @@ namespace Dillio_Backend.API.Controllers
 
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Product product)
+        public IActionResult Put(int id, [FromBody] ProductViewModel pvm)
         {
             Product pro = _unitOfWork.Products.Get(id);
 
             if (pro != null)
             {
-                pro.Name = product.Name;
-                pro.Discount = product.Discount;
-                pro.Price = product.Price;
-                pro.Category = product.Category;
-                pro.Images = product.Images;
-                pro.Reviews = product.Reviews;
-
+                pro.Name = pvm.Name;
+                pro.Discount = pvm.Discount;
+                pro.Price = pvm.Price;
+ 
                 _unitOfWork.Complete();
 
                 return Ok();
