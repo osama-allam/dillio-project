@@ -4,15 +4,14 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Dillio_Backend.DAL.Migrations
 {
-    public partial class newrepositoryanditisconfigurations : Migration
+    public partial class repositoriesandconfigurations : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<string>(
                 name: "LastName",
                 table: "AspNetUsers",
-                type: "nvarchar",
-                maxLength: 250,
+                type: "nvarchar(250)",
                 nullable: true,
                 oldClrType: typeof(string),
                 oldNullable: true);
@@ -20,8 +19,7 @@ namespace Dillio_Backend.DAL.Migrations
             migrationBuilder.AlterColumn<string>(
                 name: "FirstName",
                 table: "AspNetUsers",
-                type: "nvarchar",
-                maxLength: 250,
+                type: "nvarchar(250)",
                 nullable: true,
                 oldClrType: typeof(string),
                 oldNullable: true);
@@ -32,8 +30,8 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Title = table.Column<string>(type: "nvarchar", maxLength: 50, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar", maxLength: 200, nullable: true),
+                    Title = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(200)", nullable: true),
                     TimeOfBLog = table.Column<DateTime>(nullable: false),
                     FK_UserId = table.Column<string>(nullable: true)
                 },
@@ -54,7 +52,7 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "nvarchar", maxLength: 50, nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -87,7 +85,7 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "nvarchar", maxLength: 50, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     FK_ImageId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -101,7 +99,7 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Text = table.Column<string>(type: "nvarchar", maxLength: 50, nullable: false),
+                    Text = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     BlogId = table.Column<int>(nullable: false),
                     FK_UserId = table.Column<string>(nullable: true)
                 },
@@ -154,7 +152,7 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "nvarchar", maxLength: 50, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     Price = table.Column<float>(nullable: false),
                     Discount = table.Column<float>(nullable: false),
                     FK_CategoryId = table.Column<int>(nullable: false),
@@ -183,7 +181,7 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Url = table.Column<string>(type: "nvarchar", maxLength: 100, nullable: false),
+                    Url = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     ProductId = table.Column<int>(nullable: false),
                     StoreId = table.Column<int>(nullable: false),
                     BlogId = table.Column<int>(nullable: false)
@@ -218,7 +216,7 @@ namespace Dillio_Backend.DAL.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ReviewDescription = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(type: "nvarchar", maxLength: 250, nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(250)", nullable: true),
                     Email = table.Column<string>(nullable: true),
                     FK_ProductId = table.Column<int>(nullable: false),
                     FK_UserId = table.Column<string>(nullable: true)
@@ -342,8 +340,7 @@ namespace Dillio_Backend.DAL.Migrations
                 table: "AspNetUsers",
                 nullable: true,
                 oldClrType: typeof(string),
-                oldType: "nvarchar",
-                oldMaxLength: 250,
+                oldType: "nvarchar(250)",
                 oldNullable: true);
 
             migrationBuilder.AlterColumn<string>(
@@ -351,8 +348,7 @@ namespace Dillio_Backend.DAL.Migrations
                 table: "AspNetUsers",
                 nullable: true,
                 oldClrType: typeof(string),
-                oldType: "nvarchar",
-                oldMaxLength: 250,
+                oldType: "nvarchar(250)",
                 oldNullable: true);
         }
     }

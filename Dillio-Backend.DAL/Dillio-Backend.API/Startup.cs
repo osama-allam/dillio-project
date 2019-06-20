@@ -90,6 +90,12 @@ namespace Dillio_Backend.API
 
             app.UseHttpsRedirection();
 
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+
             app.UseStaticFiles();
 
             app.UseCors("SPA");

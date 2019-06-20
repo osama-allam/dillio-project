@@ -4,14 +4,16 @@ using Dillio_Backend.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Dillio_Backend.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190619085301_repositoriesandconfigurations")]
+    partial class repositoriesandconfigurations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,8 +31,6 @@ namespace Dillio_Backend.DAL.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("FK_UserId");
-
-                    b.Property<string>("ImageURL");
 
                     b.Property<DateTime>("TimeOfBLog");
 
@@ -89,7 +89,11 @@ namespace Dillio_Backend.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("BlogId");
+
                     b.Property<int>("ProductId");
+
+                    b.Property<int>("StoreId");
 
                     b.Property<string>("Url")
                         .IsRequired()
@@ -97,7 +101,13 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BlogId")
+                        .IsUnique();
+
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("StoreId")
+                        .IsUnique();
 
                     b.ToTable("Image");
                 });
@@ -143,8 +153,6 @@ namespace Dillio_Backend.DAL.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description");
 
                     b.Property<float>("Discount");
 
@@ -199,7 +207,7 @@ namespace Dillio_Backend.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ImageURL");
+                    b.Property<int>("FK_ImageId");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -412,9 +420,19 @@ namespace Dillio_Backend.DAL.Migrations
 
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Image", b =>
                 {
+                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Blog", "Blog")
+                        .WithOne("Image")
+                        .HasForeignKey("Dillio_Backend.BLL.Core.Domain.Image", "BlogId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Store", "Store")
+                        .WithOne("Image")
+                        .HasForeignKey("Dillio_Backend.BLL.Core.Domain.Image", "StoreId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
