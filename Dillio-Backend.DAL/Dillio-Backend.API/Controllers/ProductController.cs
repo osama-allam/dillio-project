@@ -7,6 +7,7 @@ using Dillio_Backend.API.ViewModel;
 using Dillio_Backend.BLL.Core.Domain;
 using Dillio_Backend.DAL;
 using Dillio_Backend.DAL.Persistence;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,12 +15,14 @@ namespace Dillio_Backend.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class ProductController : ControllerBase
     {
         readonly UnitOfWork _unitOfWork = new UnitOfWork(new ApplicationDbContext());
 
 
         [HttpGet]
+      
         public IActionResult Get()
         {
           
