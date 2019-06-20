@@ -79,7 +79,7 @@
                   <form action="" class="hm-searchbox">
                       <div (click)="toggleDrop()" class="nice-select select-search-category" tabindex="0"><span class="current">{{currentCatSearch.name}}</span>
                         <ul class="list">
-                          <li data-value="-1" class="option" [class.selected]="currentCatSearch.val == -1">All</li>
+                          <li data-value="-1" class="option" [class.selected]="currentCatSearch.val == -1" (click)="drpsearchclick({id:-1,name:'All'})">All</li>
                           <li *ngFor="let cat of categories" name="cl" [class.selected]="cat.id == currentCatSearch.val" (click)="drpsearchclick(cat)" data-value="{{cat.id}}" class="option">{{cat.name}}</li>
                           
                          
