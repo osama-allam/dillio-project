@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
+using Dillio_Backend.BLL.Core;
+using Dillio_Backend.DAL;
+using Dillio_Backend.DAL.Persistence;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -63,6 +66,10 @@ namespace Dillio_Backend.API
                     .RequireAuthenticatedUser()
                     .Build();
             });
+
+            services.AddDbContext<ApplicationDbContext>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddMvc();
 
             services.AddCors(options =>
             {
