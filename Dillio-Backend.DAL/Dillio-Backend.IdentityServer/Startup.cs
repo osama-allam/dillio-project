@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Dillio_Backend.BLL.Core.Domain;
 //using Dillio_Backend.BLL.Core.Domain;
@@ -12,6 +13,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Dillio_Backend.IdentityServer
 {
@@ -23,24 +25,27 @@ namespace Dillio_Backend.IdentityServer
         {
             
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+            //services.AddIdentity<ApplicationUser, IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //    .AddDefaultTokenProviders();
 
             services.AddMvc();
 
-            services.AddIdentityServer(options =>
-                {
-                    options.Events.RaiseErrorEvents = true;
-                    options.Events.RaiseInformationEvents = true;
-                    options.Events.RaiseFailureEvents = true;
-                    options.Events.RaiseSuccessEvents = true;
-                })
+            services.AddIdentityServer(
+                //    options =>
+                //{
+                //    options.Events.RaiseErrorEvents = true;
+                //    options.Events.RaiseInformationEvents = true;
+                //    options.Events.RaiseFailureEvents = true;
+                //    options.Events.RaiseSuccessEvents = true;
+                //}
+                    )
                 .AddDeveloperSigningCredential()
-                .AddInMemoryIdentityResources(IdentityServerConfig.GetIdentityResources())
+                .AddSigningCredential(new X509Certificate2(@"D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.IdentityServer\dillio.pfx",""))
+                //.AddInMemoryIdentityResources(IdentityServerConfig.GetIdentityResources())
                 .AddInMemoryClients(IdentityServerConfig.GetClients())
-                //.AddTestUsers(IdentityServerConfig.GetUsers())
-                .AddAspNetIdentity<ApplicationUser>()
+                .AddTestUsers(IdentityServerConfig.GetUsers().ToList()) 
+                //.AddAspNetIdentity<ApplicationUser>()
                 .AddInMemoryApiResources(IdentityServerConfig.GetApiResources());
 
         }
@@ -58,12 +63,15 @@ namespace Dillio_Backend.IdentityServer
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            
 
-            AccountOptions.ShowLogoutPrompt = false;
-            AccountOptions.AutomaticRedirectAfterSignOut = true;
+            
+
+            //AccountOptions.ShowLogoutPrompt = false;
+            //AccountOptions.AutomaticRedirectAfterSignOut = true;
 
             app.UseIdentityServer();
+            app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
         }
     }

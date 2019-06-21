@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Dillio_Backend.IdentityServer
 {
-    public class Program
+    public class Program 
     {
         public static void Main(string[] args)
         {
@@ -19,6 +19,11 @@ namespace Dillio_Backend.IdentityServer
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                
+                //.UseKestrel()
+                //.UseContentRoot(Directory.GetCurrentDirectory())
+                //.UseIISIntegration()
+                .UseStartup<Startup>()
+                .UseUrls("http://localhost:59418");
     }
 }
