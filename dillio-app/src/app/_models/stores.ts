@@ -3,4 +3,5 @@ export interface Stores {
     name?: string;
     image?: string;
     rating?: number;
+    description?:string;
 }

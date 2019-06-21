@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+
 import { StarRatingModule } from 'angular-star-rating';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -54,6 +55,7 @@ import { StoresComponent } from './features/stores/stores.component';
 import { ProductDetailsComponent } from './features/products/product-details/product-details.component';
 import { ProductListingComponent } from './features/products/product-listing/product-listing.component';
 import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
+import { StoreAddComponent } from './features/stores/store-add/store-add.component';
 
 
 
@@ -102,7 +104,8 @@ import { ProductEditComponent } from './features/products/product-edit/product-e
     FaqComponent,
     ProductDetailsComponent,
     ProductEditComponent,
-    ProductListingComponent
+    ProductListingComponent,
+    StoreAddComponent
   ],
   imports: [
     BrowserModule,
