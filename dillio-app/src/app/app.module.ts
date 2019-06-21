@@ -54,8 +54,7 @@ import { StoresComponent } from './features/stores/stores.component';
 import { ProductDetailsComponent } from './features/products/product-details/product-details.component';
 import { ProductListingComponent } from './features/products/product-listing/product-listing.component';
 import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
-
-
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -106,11 +105,12 @@ import { ProductEditComponent } from './features/products/product-edit/product-e
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     OwlModule,
     FormsModule,
     ReactiveFormsModule,
-    StarRatingModule.forRoot()
+    StarRatingModule.forRoot(),
+    MaterialModule,
+    AppRoutingModule,
   ],
   providers: [CategoryService,
               SubcategoryService,
