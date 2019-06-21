@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/_models/product';
+import { ProductService } from 'src/app/services/product.service';
 import { PagingService } from 'src/app/services/paging.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-listing-products',
-  templateUrl: './listing-products.component.html',
-  styleUrls: ['./listing-products.component.css']
+  selector: 'app-product-listing',
+  templateUrl: './product-listing.component.html',
+  styleUrls: ['./product-listing.component.css']
 })
-export class ListingProductsComponent implements OnInit {
+export class ProductListingComponent implements OnInit {
+
   totalproducts: Product[];
   products: Product[];
   CurrentPage:number;
@@ -19,14 +20,14 @@ export class ListingProductsComponent implements OnInit {
     private productServices: ProductService,
     private pagerService: PagingService,
     private activatedRoute: ActivatedRoute) {
-    
+
       // const txtsendS = this.activatedRoute.snapshot.paramMap.get("txtSearch");
       // const curVal = this.activatedRoute.snapshot.paramMap.get("val");
 
       // if(txtsendS != null && curVal !=null){
-        
+
       //   this.totalproducts = this.searchFunc(parseInt( curVal) ,txtsendS );
-        
+
       // }else{
 
         this.totalproducts = this.productServices.products;
@@ -43,13 +44,13 @@ export class ListingProductsComponent implements OnInit {
     //   const txtsendS = params['txtSearch'];
     //   debugger;
     //   const curVal = params['val'];
-      
+
     //   console.log(txtsendS + curVal);
     //   console.log(curVal);
-      
+
     // });
   }
-  
+
   ngOnInit() {
     //  debugger;
     this.activatedRoute.url.subscribe(url =>{
@@ -92,28 +93,25 @@ export class ListingProductsComponent implements OnInit {
 
       window.scrollTo({ left: 0, top: 250, behavior: 'smooth' });
     }
-  }
+}
 
+searchFunc(cate:Number,txtS:string):Product[]{
+  let retArr:Product[];
+  retArr = [{}];
+  let Arr:Product[];
+  let i = 0;
+  Arr = this.productServices.products;
+  Arr.forEach(ele => {
+        if((ele.category.id == cate && (ele.title.toLowerCase().includes(txtS)||ele.description.toLowerCase().includes(txtS.toLowerCase())))
+         || (cate == -1 && (ele.title.toLowerCase().includes(txtS.toLowerCase())||ele.description.toLowerCase().includes(txtS.toLowerCase())))){
 
+            retArr[i] =ele;
+            i++;
 
-  searchFunc(cate:Number,txtS:string):Product[]{
-    let retArr:Product[];
-    retArr = [{}];
-    let Arr:Product[];
-    let i = 0;
-    Arr = this.productServices.products;
-    Arr.forEach(ele => {
-          if((ele.category.id == cate && (ele.title.toLowerCase().includes(txtS)||ele.description.toLowerCase().includes(txtS.toLowerCase())))
-           || (cate == -1 && (ele.title.toLowerCase().includes(txtS.toLowerCase())||ele.description.toLowerCase().includes(txtS.toLowerCase())))){
-            
-              retArr[i] =ele;
-              i++;
-            
-          }
-          
-    });
+        }
 
-    return retArr;
-  }
+  });
 
+  return retArr;
+}
 }
