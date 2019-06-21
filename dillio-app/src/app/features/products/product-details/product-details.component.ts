@@ -11,7 +11,6 @@ import { ProductReviewService } from 'src/app/services/product-review.service';
 })
 export class ProductDetailsComponent implements OnInit {
 
-
   @Input()product:Product;
   @Input()reviews:Review[];
 

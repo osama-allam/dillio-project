@@ -7,7 +7,6 @@ import { StarRatingModule } from 'angular-star-rating';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
-import { NavComponent } from './core/nav/nav.component';
 import { MiddleHeaderComponent } from './core/header/middle-header/middle-header.component';
 import { BottomHeaderComponent } from './core/header/bottom-header/bottom-header.component';
 import { ProductsComponent } from './features/featured-products/products/products.component';
@@ -22,15 +21,10 @@ import { ProductService } from './services/product.service';
 import { ProductImagesComponent } from './shared/product-images/product-images.component';
 import { SingleProductWrapComponent } from './shared/single-product-wrap/single-product-wrap.component';
 import { ProductAreaComponent } from './shared/product-area/product-area.component';
-import { SingleProductDetailsComponent } from './features/single-product-details/single-product-details.component';
 import { ProductFormReviewComponent } from './features/product-form-review/product-form-review.component';
 import { ProductReviewService } from './services/product-review.service';
 import { StoresService } from './services/stores.service';
-import { StoreListingComponent } from './features/store/store-listing/store-listing.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { StoresComponent } from './core/stores/stores.component';
-import { StoreDetailsComponent } from './core/stores/store-details/store-details.component';
-import { StoresListComponent } from './core/stores/stores-list/stores-list.component';
 import { ImagesGalleryComponent } from './features/images-gallery/images-gallery.component';
 import { BlogGallerySliderComponent } from './features/blog-gallery-slider/blog-gallery-slider.component';
 import { BlogPostComponent } from './features/blog-post/blog-post.component';
@@ -42,9 +36,7 @@ import { PostComponent } from './features/blog-post/post/post.component';
 import { LoginComponent } from './core/login/login.component';
 import { RegisterComponent } from './core/register/register.component';
 import { SigninComponent } from './core/signin/signin.component';
-import { ListingProductsComponent } from './features/listing-products/listing-products.component';
 import { FeedbackFormModalComponent } from './shared/feedback-form-modal/feedback-form-modal.component';
-import { ProductEditComponent } from './products/product-edit/product-edit.component';
 import { AboutusComponent } from './features/aboutus/aboutus.component';
 import { OurTeamComponent } from './features/aboutus/our-team/our-team.component';
 import { ContactusComponent } from './features/contactus/contactus.component';
@@ -55,6 +47,13 @@ import { ContactFormComponent } from './features/contactus/contact-form/contact-
 import { ContactContentComponent } from './features/contactus/contact-content/contact-content.component';
 import { FaqComponent } from './features/faq/faq.component';
 import { ContactSubjectService } from './services/icontactus-subject.service';
+import { StoreEditComponent } from './features/stores/store-edit/store-edit.component';
+import { StoreListingComponent } from './features/stores/store-listing/store-listing.component';
+import { StoreDetailsComponent } from './features/stores/store-details/store-details.component';
+import { StoresComponent } from './features/stores/stores.component';
+import { ProductDetailsComponent } from './features/products/product-details/product-details.component';
+import { ProductListingComponent } from './features/products/product-listing/product-listing.component';
+import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
 
 
 
@@ -62,7 +61,6 @@ import { ContactSubjectService } from './services/icontactus-subject.service';
   declarations: [
     AppComponent,
     DropdownComponent,
-    NavComponent,
     HeaderComponent,
     MiddleHeaderComponent,
     BottomHeaderComponent,
@@ -75,13 +73,12 @@ import { ContactSubjectService } from './services/icontactus-subject.service';
     ProductImagesComponent,
     SingleProductWrapComponent,
     ProductAreaComponent,
-    SingleProductDetailsComponent,
     ProductFormReviewComponent,
-    StoreListingComponent,
     FooterComponent,
     StoresComponent,
     StoreDetailsComponent,
-    StoresListComponent,
+    StoreListingComponent,
+    StoreEditComponent,
     ImagesGalleryComponent,
     BlogGallerySliderComponent,
     BlogPostComponent,
@@ -92,9 +89,7 @@ import { ContactSubjectService } from './services/icontactus-subject.service';
     LoginComponent,
     RegisterComponent,
     SigninComponent,
-    ListingProductsComponent,
     FeedbackFormModalComponent,
-    ProductEditComponent,
     FooterComponent,
     AboutusComponent,
     OurTeamComponent,
@@ -104,7 +99,10 @@ import { ContactSubjectService } from './services/icontactus-subject.service';
     AboutContentComponent,
     ContactFormComponent,
     ContactContentComponent,
-    FaqComponent
+    FaqComponent,
+    ProductDetailsComponent,
+    ProductEditComponent,
+    ProductListingComponent
   ],
   imports: [
     BrowserModule,
