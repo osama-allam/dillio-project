@@ -86,7 +86,7 @@ export class ProductEditComponent implements OnInit {
   initializeUploader() {
     this.uploader = new FileUploader({
       url: '', //api url
-      authToken: 'Bearer', // append token here
+      authToken: 'Bearer ', // append token here
       isHTML5: true,
       allowedFileType: ['image'],
       removeAfterUpload: true,
