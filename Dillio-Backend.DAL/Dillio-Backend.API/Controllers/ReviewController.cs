@@ -76,5 +76,20 @@ namespace Dillio_Backend.API.Controllers
             return NotFound();
 
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            Review review = _unitOfWork.Reviews.Get(id);
+
+            if (review == null)
+            {               
+                return NotFound();
+            }
+            
+            _unitOfWork.Reviews.Remove(review);
+            _unitOfWork.Complete();
+            return Ok(review);
+        }
     }
 }
