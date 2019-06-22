@@ -3,11 +3,12 @@ import { Stores } from 'src/app/_models/stores';
 import { StoresService } from 'src/app/services/stores.service';
 
 @Component({
-  selector: 'app-stores-list',
-  templateUrl: './stores-list.component.html',
-  styleUrls: ['./stores-list.component.css']
+  selector: 'app-store-listing',
+  templateUrl: './store-listing.component.html',
+  styleUrls: ['./store-listing.component.css']
 })
-export class StoresListComponent implements OnInit {
+export class StoreListingComponent implements OnInit {
+
   @Input() stores: Stores[];
   constructor(private storeService: StoresService) { }
 

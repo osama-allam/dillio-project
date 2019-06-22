@@ -16,7 +16,7 @@ export class postService
             { id: 6 ,postName: 'Post6' ,name: 'Member' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 20 , date: 22-4-2019 ,imageUrls: ['../../../../assets/images/blog-banner/2.jpg']},
             { id: 7 ,postName: 'Post7' ,name: 'Admin' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 9 , date: 22-4-2019 ,imageUrls: ['../../../../assets/images/blog-banner/3.jpg']},
             { id: 8 ,postName: 'Post8' ,name: 'Member' , description: 'Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex.' ,commentNumber: 2 , date: 22-4-2019 ,imageUrls: ['../../../../assets/images/blog-banner/5.jpg']}
-      
+
           ];
     }
     getPosts() {
@@ -25,7 +25,7 @@ export class postService
     getPost(index: number) {
         return this.posts[index];
       }
-    
+
       addPost(posts: IPost) {
         console.log("bgfdhgfjhgjhg");
 
@@ -34,17 +34,17 @@ export class postService
         this.postsChanged.next(this.posts);
         debugger;
       }
-    
+
       addPosts(posts: IPost[]) {
         this.posts.push(...posts);
         this.postsChanged.next(this.posts.slice());
       }
-    
+
       updatePost(index: number, newPost: IPost) {
         this.posts[index] = newPost;
         this.postsChanged.next(this.posts.slice());
       }
-    
+
       deletePost(index: number) {
         this.posts.splice(index, 1);
         this.postsChanged.next(this.posts.slice());
