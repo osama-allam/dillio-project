@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Stores } from 'src/app/_models/stores';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-store-add',
@@ -12,6 +13,10 @@ export class StoreAddComponent implements OnInit {
 
   ngOnInit() {
     this.store={};
+  }
+
+  save(myform:NgForm){
+    console.log(this.store);
   }
 
 }
