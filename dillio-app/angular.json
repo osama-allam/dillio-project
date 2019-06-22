@@ -41,7 +41,8 @@
               "src/assets/css/helper.css",
               "src/assets/css/default.css",
               "src/assets/css/style.css",
-              "src/assets/css/responsive.css"
+              "src/assets/css/responsive.css",
+              "src/assets/css/material-custom-theme.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

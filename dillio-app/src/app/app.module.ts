@@ -55,6 +55,7 @@ import { ProductDetailsComponent } from './features/products/product-details/pro
 import { ProductListingComponent } from './features/products/product-listing/product-listing.component';
 import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
 import { MaterialModule } from './material.module';
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [
@@ -110,6 +111,7 @@ import { MaterialModule } from './material.module';
     ReactiveFormsModule,
     StarRatingModule.forRoot(),
     MaterialModule,
+    FileUploadModule,
     AppRoutingModule,
   ],
   providers: [CategoryService,
