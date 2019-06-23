@@ -103,7 +103,14 @@ namespace Dillio_Backend.IdentityServer
                     //Defines the flow that you are going to give to the app
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
                     //Defines the scope that this client could access
-                    AllowedScopes = new[] { "Dillio-Backend.API" }
+                    AllowedScopes = new[] { "Dillio-Backend.API",
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile
+                    },
+                    AllowOfflineAccess = true,
+                    RedirectUris = { "http://localhost:59418/signin-oidc" },
+                    PostLogoutRedirectUris = {"http://localhost:59418/signout-callback-oidc"},
+                    RequireConsent = false
                 }
                 
             };

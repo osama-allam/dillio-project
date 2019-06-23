@@ -47,7 +47,7 @@ namespace Dillio_Backend.API
 
             }).AddJwtBearer(opt =>
             {
-                opt.Authority = "http://localhost:59418";
+                opt.Authority = "http://localhost:5000";
                 opt.Audience = "Dillio-Backend.API";
                 opt.RequireHttpsMetadata = false;
             });
@@ -89,7 +89,7 @@ namespace Dillio_Backend.API
             {
                 options.AddPolicy("SPA", policy =>
                 {
-                    policy.WithOrigins("https://localhost:44343")
+                    policy.WithOrigins("https://localhost:4200")
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });

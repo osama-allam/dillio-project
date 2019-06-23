@@ -16,7 +16,7 @@ namespace Dillio_Backend.DAL.Persistence.Repository
     {
         #region MemberVariable
         //the main class members needed to deal with the database
-        private readonly ApplicationDbContext context;
+        protected readonly ApplicationDbContext context;
         protected readonly DbSet<TEntity> _entities;
         #endregion
 
