@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 import { StarRatingModule } from 'angular-star-rating';
@@ -56,6 +57,7 @@ import { ProductDetailsComponent } from './features/products/product-details/pro
 import { ProductListingComponent } from './features/products/product-listing/product-listing.component';
 import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
 import { StoreAddComponent } from './features/stores/store-add/store-add.component';
+import { HttpClient } from 'selenium-webdriver/http';
 
 
 
@@ -112,7 +114,9 @@ import { StoreAddComponent } from './features/stores/store-add/store-add.compone
     AppRoutingModule,
     OwlModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
+    
     StarRatingModule.forRoot()
   ],
   providers: [CategoryService,

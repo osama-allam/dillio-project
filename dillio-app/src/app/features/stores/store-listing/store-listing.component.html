@@ -7,12 +7,12 @@
               <div *ngFor="let store of stores" class="col-lg-2 col-md-2 col-sm-6 pb-xs-45">
                   <div class="li-shipping-inner-box card">
                       <div class="shipping-icon">
-                          <img src="{{store.image}}" alt="Shipping Icon">
+                          <img src={{store.description}} alt="Shipping Icon">
                       </div>
                       <div class="shipping-text">
                           <h2>{{store.name}}</h2>
-                          <star-rating *ngIf="store.rating > 0 && store.rating else addRating" [starType]="'svg'" [showHalfStars]="true" [readOnly]="true" staticColor="ok"
-                          rating="{{store.rating}}"></star-rating>
+                          <star-rating *ngIf="store.Rating > 0 && store.Rating else addRating" [starType]="'svg'" [showHalfStars]="true" [readOnly]="true" staticColor="ok"
+                          rating="{{store.Rating}}"></star-rating>
                           <ng-template #addRating>
                               <p >Be the first to review</p>
                           </ng-template>
