@@ -77,7 +77,7 @@ namespace Dillio_Backend.API.Controllers
             if (oldstore != null)
             {
                 oldstore.Name = store.Name;
-                oldstore.ImageURL = store.ImageURL;
+                oldstore.Url = store.Url;
                 
 
                 _unitOfWork.Complete();

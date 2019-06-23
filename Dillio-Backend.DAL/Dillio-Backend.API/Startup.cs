@@ -67,6 +67,7 @@ namespace Dillio_Backend.API
                     .Build();
             });
 
+
             services.AddDbContext<ApplicationDbContext>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
