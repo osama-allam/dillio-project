@@ -19,6 +19,7 @@ namespace Dillio_Backend.API.Controllers
 
     public class ProductController : ControllerBase
     {
+        readonly UnitOfWork _unitOfWork = new UnitOfWork(new ApplicationDbContext());
 
         private readonly IUnitOfWork _unitOfWork;
 
@@ -55,8 +56,8 @@ namespace Dillio_Backend.API.Controllers
                 Image = p.Images.FirstOrDefault(),
                 Images = p.Images.ToList()
 
-            }).ToList();
-            return Ok(pvm);
+                }).ToList();
+                return Ok(pvm);
         }
 
         [HttpGet("{id}")]

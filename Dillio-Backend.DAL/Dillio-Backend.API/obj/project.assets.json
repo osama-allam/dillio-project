@@ -2,6 +2,95 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "AutoMapper/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "IdentityModel/3.10.6": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.1",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.dll": {}
+        }
+      },
+      "IdentityServer4/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "3.10.6",
+          "IdentityServer4.Storage": "2.4.0",
+          "Microsoft.AspNetCore.Authentication": "2.1.0",
+          "Microsoft.AspNetCore.Authentication.Cookies": "2.1.0",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "2.1.0",
+          "Microsoft.AspNetCore.Authorization": "2.1.0",
+          "Microsoft.AspNetCore.Cors": "2.1.0",
+          "Microsoft.Extensions.Caching.Memory": "2.1.0",
+          "Microsoft.Extensions.Logging": "2.1.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "2.1.0",
+          "System.IdentityModel.Tokens.Jwt": "5.2.4",
+          "System.Security.Cryptography.Cng": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityServer4.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityServer4.dll": {}
+        }
+      },
+      "IdentityServer4.EntityFramework/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "IdentityServer4": "2.4.0",
+          "IdentityServer4.EntityFramework.Storage": "2.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityServer4.EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityServer4.EntityFramework.dll": {}
+        }
+      },
+      "IdentityServer4.EntityFramework.Storage/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "IdentityServer4.Storage": "2.4.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityServer4.EntityFramework.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityServer4.EntityFramework.Storage.dll": {}
+        }
+      },
+      "IdentityServer4.Storage/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel": "3.10.6",
+          "Microsoft.AspNetCore.Authentication.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityServer4.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityServer4.Storage.dll": {}
+        }
+      },
       "Microsoft.AspNet.Identity.Core/2.2.2": {
         "type": "package",
         "compile": {
@@ -4749,6 +4838,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Dillio-Backend.Entities": "1.0.0",
+          "IdentityServer4.EntityFramework": "2.4.0",
           "Microsoft.AspNet.Identity.Core": "2.2.2",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
@@ -4776,6 +4866,99 @@
     }
   },
   "libraries": {
+    "AutoMapper/8.0.0": {
+      "sha512": "px8ZMtIq84dxciB29V+ZYOtsRLZP4JlflDDMW13LyeRdwsnIInzlcSHSxpWmVD6U3bbOl2FeLlgomnVtm0jvXw==",
+      "type": "package",
+      "path": "automapper/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.8.0.0.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.pdb",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.pdb",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "IdentityModel/3.10.6": {
+      "sha512": "hSAk4fzuqIY9UEoE9LpUnCNn4QXz2X5byoeJNiOuVM6MW18dmWqK4gRQkNr6f89EX5hiDHdfjcHm2OcYHf5EMg==",
+      "type": "package",
+      "path": "identitymodel/3.10.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "identitymodel.3.10.6.nupkg.sha512",
+        "identitymodel.nuspec",
+        "lib/net452/IdentityModel.dll",
+        "lib/net452/IdentityModel.pdb",
+        "lib/net452/IdentityModel.xml",
+        "lib/netstandard1.4/IdentityModel.dll",
+        "lib/netstandard1.4/IdentityModel.pdb",
+        "lib/netstandard1.4/IdentityModel.xml",
+        "lib/netstandard2.0/IdentityModel.dll",
+        "lib/netstandard2.0/IdentityModel.pdb",
+        "lib/netstandard2.0/IdentityModel.xml"
+      ]
+    },
+    "IdentityServer4/2.4.0": {
+      "sha512": "YjIMDcw9xOwkCp3+5Ad0Q7RbO/Ep5uf8/K7wrqwmReHeZTnxVdmhVoM1SWfb8PhNgKBQ2tSZVsFT6VxFRYdvUQ==",
+      "type": "package",
+      "path": "identityserver4/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "identityserver4.2.4.0.nupkg.sha512",
+        "identityserver4.nuspec",
+        "lib/netstandard2.0/IdentityServer4.dll",
+        "lib/netstandard2.0/IdentityServer4.pdb",
+        "lib/netstandard2.0/IdentityServer4.xml"
+      ]
+    },
+    "IdentityServer4.EntityFramework/2.4.0": {
+      "sha512": "ejA1UGAQBjsWJpXZlGJfzRPbHjWOM7IYMEN+wpML75R2S6lfrhMOru2PaplsRXuZhD+BVln4BCruF/3JZXB5Vw==",
+      "type": "package",
+      "path": "identityserver4.entityframework/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "identityserver4.entityframework.2.4.0.nupkg.sha512",
+        "identityserver4.entityframework.nuspec",
+        "lib/netstandard2.0/IdentityServer4.EntityFramework.dll",
+        "lib/netstandard2.0/IdentityServer4.EntityFramework.pdb",
+        "lib/netstandard2.0/IdentityServer4.EntityFramework.xml"
+      ]
+    },
+    "IdentityServer4.EntityFramework.Storage/2.4.0": {
+      "sha512": "Ak4mRRVWWpxuz7rpvlQ/W3AK1XUWRBqz9XRMn/9Lab7aBCGTnxIHRG6kKw7pLcf1Dl7v1q9qYZQK6Ez7f9qRrQ==",
+      "type": "package",
+      "path": "identityserver4.entityframework.storage/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "identityserver4.entityframework.storage.2.4.0.nupkg.sha512",
+        "identityserver4.entityframework.storage.nuspec",
+        "lib/netstandard2.0/IdentityServer4.EntityFramework.Storage.dll",
+        "lib/netstandard2.0/IdentityServer4.EntityFramework.Storage.pdb",
+        "lib/netstandard2.0/IdentityServer4.EntityFramework.Storage.xml"
+      ]
+    },
+    "IdentityServer4.Storage/2.4.0": {
+      "sha512": "E6ALogkuHYu2vCBihoZnXC1KvtUMXaz3tcQaSMO+sdTZLRbEhN2Kd2oSEPh16Sluqkm89oKHx1Pqjf1oY2hzSw==",
+      "type": "package",
+      "path": "identityserver4.storage/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "identityserver4.storage.2.4.0.nupkg.sha512",
+        "identityserver4.storage.nuspec",
+        "lib/netstandard2.0/IdentityServer4.Storage.dll",
+        "lib/netstandard2.0/IdentityServer4.Storage.pdb",
+        "lib/netstandard2.0/IdentityServer4.Storage.xml"
+      ]
+    },
     "Microsoft.AspNet.Identity.Core/2.2.2": {
       "sha512": "aZoXAqqisAQlEdeMwcn204m7ErUeYXJuoZ4YqvV85OPeB0w8o8kW8Ww5o5ZTZFx3mrLmmtfWKjt4nLqfjzjXEw==",
       "type": "package",
