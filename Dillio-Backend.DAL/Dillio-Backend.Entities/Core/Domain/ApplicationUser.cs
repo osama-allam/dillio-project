@@ -9,7 +9,7 @@ namespace Dillio_Backend.BLL.Core.Domain
     /// This Class is responsible for adding any additional fields in the user
     /// table
     /// </summary>
-  public class ApplicationUser 
+  public class ApplicationUser : IdentityUser
     {
         public string Id { get; set; }
         public string FirstName { get; set; }
