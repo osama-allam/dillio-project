@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { StarRatingModule } from 'angular-star-rating';
 import { AppRoutingModule } from './app-routing.module';
@@ -113,6 +115,7 @@ import { FileUploadModule } from 'ng2-file-upload';
     MaterialModule,
     FileUploadModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [CategoryService,
               SubcategoryService,
