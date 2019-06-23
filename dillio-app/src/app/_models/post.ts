@@ -1,4 +1,4 @@
-export interface post
+export interface IPost
 {
     id?: number;
     postName?: string;
@@ -6,5 +6,7 @@ export interface post
     description?: string;
     commentNumber?: number;
     date?: number;
-    imageUrl?: string;
+    imageUrls?: string[];
+    
 }
+
