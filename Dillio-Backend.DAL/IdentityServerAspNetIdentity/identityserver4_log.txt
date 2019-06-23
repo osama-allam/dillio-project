@@ -1,0 +1,781 @@
+2019-06-22 15:26:04.643 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 15:26:04.683 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 15:26:04.686 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 15:26:04.686 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 15:26:04.686 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 15:26:04.688 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 15:26:04.688 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 15:26:05.542 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 15:26:05.546 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 15:26:05.546 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 15:26:05.546 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 15:26:05.546 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 15:26:05.546 +02:00 [DBG] Error Url: /home/error
+2019-06-22 15:26:05.546 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 15:26:18.063 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2019-06-22 15:26:23.318 +02:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'IdentityServerAspNetIdentity.Data.ApplicationDbContext'.
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+2019-06-22 15:26:23.324 +02:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'IdentityServerAspNetIdentity.Data.ApplicationDbContext'.
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+2019-06-22 15:26:23.767 +02:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateReadOnlyConnection()
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.ExistsAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+2019-06-22 15:26:23.769 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.PasswordSignInAsync(String userName, String password, Boolean isPersistent, Boolean lockoutOnFailure)
+   at IdentityServer4.Quickstart.UI.AccountController.Login(LoginInputModel model, String button) in D:\GP Project\dillio-project\Dillio-Backend.DAL\IdentityServerAspNetIdentity\Quickstart\Account\AccountController.cs:line 107
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 72
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-22 15:27:51.213 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 15:27:51.248 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 15:27:51.251 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 15:27:51.251 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 15:27:51.251 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 15:27:51.251 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 15:27:51.251 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 15:27:51.814 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 15:27:51.816 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 15:27:51.816 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 15:27:51.816 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 15:27:51.817 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 15:27:51.817 +02:00 [DBG] Error Url: /home/error
+2019-06-22 15:27:51.817 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 15:27:58.537 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2019-06-22 15:28:00.692 +02:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'IdentityServerAspNetIdentity.Data.ApplicationDbContext'.
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+2019-06-22 15:28:00.697 +02:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'IdentityServerAspNetIdentity.Data.ApplicationDbContext'.
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+2019-06-22 15:28:00.788 +02:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateReadOnlyConnection()
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.ExistsAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+2019-06-22 15:28:00.790 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.PasswordSignInAsync(String userName, String password, Boolean isPersistent, Boolean lockoutOnFailure)
+   at IdentityServer4.Quickstart.UI.AccountController.Login(LoginInputModel model, String button) in D:\GP Project\dillio-project\Dillio-Backend.DAL\IdentityServerAspNetIdentity\Quickstart\Account\AccountController.cs:line 107
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events) in C:\local\identity\server4\IdentityServer4\src\Hosting\IdentityServerMiddleware.cs:line 72
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-06-22 15:58:04.095 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 15:58:04.127 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 15:58:04.131 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 15:58:04.131 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 15:58:04.131 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 15:58:04.131 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 15:58:04.131 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 15:58:04.616 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 15:58:04.618 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 15:58:04.618 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 15:58:04.618 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 15:58:04.618 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 15:58:04.618 +02:00 [DBG] Error Url: /home/error
+2019-06-22 15:58:04.618 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 15:58:08.071 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2019-06-22 15:58:11.059 +02:00 [INF] {"Username":"Alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLNN36IPIVT6:00000003","TimeStamp":"2019-06-22T13:58:11.0000000Z","ProcessId":17672,"LocalIpAddress":"127.0.0.1:20481","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-06-22 15:58:24.946 +02:00 [INF] {"Username":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLNN36IPIVT4:00000004","TimeStamp":"2019-06-22T13:58:24.0000000Z","ProcessId":17672,"LocalIpAddress":"127.0.0.1:20481","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-06-22 15:58:37.812 +02:00 [INF] {"Username":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Failure","EventType":"Failure","Id":1001,"Message":"invalid credentials","ActivityId":"0HLNN36IPIVT7:00000003","TimeStamp":"2019-06-22T13:58:37.0000000Z","ProcessId":17672,"LocalIpAddress":"127.0.0.1:20481","RemoteIpAddress":"::1","$type":"UserLoginFailureEvent"}
+2019-06-22 16:01:39.013 +02:00 [FTL] Application startup exception
+System.ArgumentException: Keyword not supported: 'server'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteRelationalConnection.CreateReadOnlyConnection()
+   at Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal.SqliteDatabaseCreator.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.HistoryRepository.Exists()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at IdentityServerAspNetIdentity.SeedData.EnsureSeedData(String connectionString) in D:\GP Project\dillio-project\Dillio-Backend.DAL\IdentityServerAspNetIdentity\SeedData.cs:line 34
+   at IdentityServerAspNetIdentity.Startup.Configure(IApplicationBuilder app) in D:\GP Project\dillio-project\Dillio-Backend.DAL\IdentityServerAspNetIdentity\Startup.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+2019-06-22 16:03:06.734 +02:00 [FTL] Application startup exception
+System.AggregateException: One or more errors occurred. (An error occurred while updating the entries. See the inner exception for details.) ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Id', table 'Dillio.IDentity.DB.dbo.AspNetUserClaims'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.UpdateAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.UpdateUserAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddClaimsAsync(TUser user, IEnumerable`1 claims)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at IdentityServerAspNetIdentity.SeedData.EnsureSeedData(String connectionString) in D:\GP Project\dillio-project\Dillio-Backend.DAL\IdentityServerAspNetIdentity\SeedData.cs:line 83
+   at IdentityServerAspNetIdentity.Startup.Configure(IApplicationBuilder app) in D:\GP Project\dillio-project\Dillio-Backend.DAL\IdentityServerAspNetIdentity\Startup.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+---> (Inner Exception #0) Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Id', table 'Dillio.IDentity.DB.dbo.AspNetUserClaims'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.UpdateAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.UpdateUserAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddClaimsAsync(TUser user, IEnumerable`1 claims)<---
+
+2019-06-22 16:26:03.238 +02:00 [FTL] Application startup exception
+System.InvalidOperationException: To change the IDENTITY property of a column, the column needs to be dropped and recreated.
+   at Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.Generate(AlterColumnOperation operation, IModel model, MigrationCommandListBuilder builder)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.<>c.<.cctor>b__72_4(MigrationsSqlGenerator g, MigrationOperation o, IModel m, MigrationCommandListBuilder b)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.Generate(MigrationOperation operation, IModel model, MigrationCommandListBuilder builder)
+   at Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.Generate(MigrationOperation operation, IModel model, MigrationCommandListBuilder builder)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.Generate(IReadOnlyList`1 operations, IModel model)
+   at Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.Generate(IReadOnlyList`1 operations, IModel model)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.GenerateUpSql(Migration migration)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<>c__DisplayClass13_2.<GetMigrationCommandLists>b__2()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at IdentityServerAspNetIdentity.SeedData.EnsureSeedData(String connectionString) in D:\GP Project\dillio-project\Dillio-Backend.DAL\IdentityServerAspNetIdentity\SeedData.cs:line 34
+   at IdentityServerAspNetIdentity.Startup.Configure(IApplicationBuilder app) in D:\GP Project\dillio-project\Dillio-Backend.DAL\IdentityServerAspNetIdentity\Startup.cs:line 91
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISSetupFilter.<>c__DisplayClass4_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+2019-06-22 16:27:08.722 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 16:27:08.751 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 16:27:08.753 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 16:27:08.753 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 16:27:08.753 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 16:27:08.753 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 16:27:08.753 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 16:27:09.265 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 16:27:09.267 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 16:27:09.267 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 16:27:09.267 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 16:27:09.267 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 16:27:09.267 +02:00 [DBG] Error Url: /home/error
+2019-06-22 16:27:09.267 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 16:27:11.896 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2019-06-22 16:27:21.947 +02:00 [DBG] Augmenting SignInContext
+2019-06-22 16:27:21.949 +02:00 [DBG] Adding idp claim with value: local
+2019-06-22 16:27:21.949 +02:00 [DBG] Adding amr claim with value: pwd
+2019-06-22 16:27:21.949 +02:00 [DBG] Adding auth_time claim with value: 1561213641
+2019-06-22 16:27:21.962 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-06-22 16:27:22.012 +02:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"cb5c3b69-3198-4295-b801-f73eab68c6bd","DisplayName":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLNN3MQOFL9G:00000004","TimeStamp":"2019-06-22T14:27:22.0000000Z","ProcessId":12448,"LocalIpAddress":"127.0.0.1:10590","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-06-22 17:28:23.426 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 17:28:23.456 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 17:28:23.459 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 17:28:23.459 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 17:28:23.459 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 17:28:23.459 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 17:28:23.459 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 17:28:23.897 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 17:28:23.899 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 17:28:23.899 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 17:28:23.899 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 17:28:23.899 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 17:28:23.899 +02:00 [DBG] Error Url: /home/error
+2019-06-22 17:28:23.899 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 17:29:25.313 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:29:25.327 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:29:25.328 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:29:25.333 +02:00 [DBG] Start token request.
+2019-06-22 17:29:25.338 +02:00 [DBG] Start client validation
+2019-06-22 17:29:25.342 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:29:25.345 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:29:25.358 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:29:25.358 +02:00 [DBG] Secret id found: DillioFront
+2019-06-22 17:29:25.395 +02:00 [INF] {"ClientId":"DillioFront","Category":"Authentication","Name":"Client Authentication Failure","EventType":"Failure","Id":1011,"Message":"Unknown client","ActivityId":"0HLNN4P1S8QGB:00000001","TimeStamp":"2019-06-22T15:29:25.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"ClientAuthenticationFailureEvent"}
+2019-06-22 17:29:25.408 +02:00 [ERR] No client with id 'DillioFront' found. aborting
+2019-06-22 17:30:53.721 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:30:53.740 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:30:53.740 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:30:53.740 +02:00 [DBG] Start token request.
+2019-06-22 17:30:53.741 +02:00 [DBG] Start client validation
+2019-06-22 17:30:53.741 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:30:53.741 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:30:53.741 +02:00 [DBG] client id without secret found
+2019-06-22 17:30:53.741 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:30:53.741 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:30:53.749 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:30:53.749 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:30:53.750 +02:00 [DBG] Client validation success
+2019-06-22 17:30:53.750 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN4P1S8QGC:00000001","TimeStamp":"2019-06-22T15:30:53.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:30:53.758 +02:00 [DBG] Start token request validation
+2019-06-22 17:30:53.768 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 17:30:53.777 +02:00 [ERR] No validator is registered for the grant type: ["implicit"], request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"implicit","username":"alice","password":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:30:53.781 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN4P1S8QGC:00000001","TimeStamp":"2019-06-22T15:30:53.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:31:51.588 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:31:51.588 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:31:51.588 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:31:51.589 +02:00 [DBG] Start token request.
+2019-06-22 17:31:51.589 +02:00 [DBG] Start client validation
+2019-06-22 17:31:51.589 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:31:51.589 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:31:51.590 +02:00 [DBG] client id without secret found
+2019-06-22 17:31:51.590 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:31:51.590 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:31:51.591 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:31:51.591 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:31:51.591 +02:00 [DBG] Client validation success
+2019-06-22 17:31:51.591 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN4P1S8QGC:00000002","TimeStamp":"2019-06-22T15:31:51.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:31:51.591 +02:00 [DBG] Start token request validation
+2019-06-22 17:31:51.591 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 17:31:51.592 +02:00 [ERR] ["spa"] does not have the custom grant type in the allowed list, therefore requested grant is not allowed, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"Implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"Implicit","username":"alice","password":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:31:51.592 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"Implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN4P1S8QGC:00000002","TimeStamp":"2019-06-22T15:31:51.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:32:30.599 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:32:30.600 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:32:30.600 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:32:30.600 +02:00 [DBG] Start token request.
+2019-06-22 17:32:30.600 +02:00 [DBG] Start client validation
+2019-06-22 17:32:30.600 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:32:30.600 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:32:30.601 +02:00 [DBG] client id without secret found
+2019-06-22 17:32:30.601 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:32:30.601 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:32:30.601 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:32:30.601 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:32:30.601 +02:00 [DBG] Client validation success
+2019-06-22 17:32:30.601 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN4P1S8QGC:00000003","TimeStamp":"2019-06-22T15:32:30.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:32:30.601 +02:00 [DBG] Start token request validation
+2019-06-22 17:32:30.601 +02:00 [ERR] Grant type is missing, request details: []
+2019-06-22 17:32:30.602 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":null,"Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN4P1S8QGC:00000003","TimeStamp":"2019-06-22T15:32:30.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:33:36.249 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:33:36.250 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:33:36.250 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:33:36.250 +02:00 [DBG] Start token request.
+2019-06-22 17:33:36.250 +02:00 [DBG] Start client validation
+2019-06-22 17:33:36.250 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:33:36.250 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:33:36.251 +02:00 [DBG] client id without secret found
+2019-06-22 17:33:36.251 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:33:36.251 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:33:36.251 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:33:36.251 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:33:36.251 +02:00 [DBG] Client validation success
+2019-06-22 17:33:36.251 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN4P1S8QGD:00000001","TimeStamp":"2019-06-22T15:33:36.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:33:36.252 +02:00 [DBG] Start token request validation
+2019-06-22 17:33:36.252 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 17:33:36.252 +02:00 [ERR] ["spa"] does not have the custom grant type in the allowed list, therefore requested grant is not allowed, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"Implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"Implicit","username":"alice","password":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:33:36.252 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"Implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN4P1S8QGD:00000001","TimeStamp":"2019-06-22T15:33:36.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:34:23.992 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:34:23.992 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:34:23.992 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:34:23.992 +02:00 [DBG] Start token request.
+2019-06-22 17:34:23.992 +02:00 [DBG] Start client validation
+2019-06-22 17:34:23.992 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:34:23.992 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:34:23.993 +02:00 [DBG] client id without secret found
+2019-06-22 17:34:23.993 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:34:23.993 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:34:23.993 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:34:23.993 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:34:23.993 +02:00 [DBG] Client validation success
+2019-06-22 17:34:23.993 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN4P1S8QGD:00000002","TimeStamp":"2019-06-22T15:34:23.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:34:23.994 +02:00 [DBG] Start token request validation
+2019-06-22 17:34:23.994 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 17:34:23.994 +02:00 [ERR] ["spa"] does not have the custom grant type in the allowed list, therefore requested grant is not allowed, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"Implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"Implicit","username":"alice","password":"***REDACTED***","client_uri":"http://identityserver.io"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:34:23.994 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"Implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN4P1S8QGD:00000002","TimeStamp":"2019-06-22T15:34:23.0000000Z","ProcessId":10216,"LocalIpAddress":"127.0.0.1:30100","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:38:40.378 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 17:38:40.404 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 17:38:40.406 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 17:38:40.406 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 17:38:40.406 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 17:38:40.406 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 17:38:40.406 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 17:38:40.811 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 17:38:40.812 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 17:38:40.812 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 17:38:40.813 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 17:38:40.813 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 17:38:40.813 +02:00 [DBG] Error Url: /home/error
+2019-06-22 17:38:40.813 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 17:38:40.830 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:38:40.840 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:38:40.840 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:38:40.846 +02:00 [DBG] Start token request.
+2019-06-22 17:38:40.851 +02:00 [DBG] Start client validation
+2019-06-22 17:38:40.855 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:38:40.858 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:38:40.870 +02:00 [DBG] client id without secret found
+2019-06-22 17:38:40.871 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:38:40.871 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:38:40.880 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:38:40.881 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:38:40.881 +02:00 [DBG] Client validation success
+2019-06-22 17:38:40.890 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN4UPO6RLC:00000001","TimeStamp":"2019-06-22T15:38:40.0000000Z","ProcessId":13892,"LocalIpAddress":"127.0.0.1:11784","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:38:40.904 +02:00 [DBG] Start token request validation
+2019-06-22 17:38:40.911 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 17:38:40.917 +02:00 [ERR] ["spa"] does not have the custom grant type in the allowed list, therefore requested grant is not allowed, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"Implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"Implicit","username":"alice","password":"***REDACTED***","client_uri":"http://identityserver.io"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:38:40.921 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"Implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN4UPO6RLC:00000001","TimeStamp":"2019-06-22T15:38:40.0000000Z","ProcessId":13892,"LocalIpAddress":"127.0.0.1:11784","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:39:15.105 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 17:39:15.138 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 17:39:15.141 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 17:39:15.141 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 17:39:15.141 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 17:39:15.141 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 17:39:15.141 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 17:39:15.504 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 17:39:15.506 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 17:39:15.506 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 17:39:15.506 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 17:39:15.506 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 17:39:15.506 +02:00 [DBG] Error Url: /home/error
+2019-06-22 17:39:15.506 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 17:39:48.741 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:39:48.749 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:39:48.750 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:39:48.756 +02:00 [DBG] Start token request.
+2019-06-22 17:39:48.761 +02:00 [DBG] Start client validation
+2019-06-22 17:39:48.765 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:39:48.768 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:39:48.784 +02:00 [DBG] client id without secret found
+2019-06-22 17:39:48.785 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:39:48.785 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:39:48.795 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:39:48.795 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:39:48.795 +02:00 [DBG] Client validation success
+2019-06-22 17:39:48.811 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN4V42HJSA:00000003","TimeStamp":"2019-06-22T15:39:48.0000000Z","ProcessId":21432,"LocalIpAddress":"127.0.0.1:21407","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:39:48.823 +02:00 [DBG] Start token request validation
+2019-06-22 17:39:48.830 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 17:39:48.836 +02:00 [ERR] ["spa"] does not have the custom grant type in the allowed list, therefore requested grant is not allowed, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"Implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"Implicit","username":"alice","password":"***REDACTED***","client_uri":"http://identityserver.io"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:39:48.840 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"Implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN4V42HJSA:00000003","TimeStamp":"2019-06-22T15:39:48.0000000Z","ProcessId":21432,"LocalIpAddress":"127.0.0.1:21407","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:40:54.940 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:40:54.942 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:40:54.942 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:40:54.943 +02:00 [DBG] Start token request.
+2019-06-22 17:40:54.943 +02:00 [DBG] Start client validation
+2019-06-22 17:40:54.943 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:40:54.953 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:40:54.956 +02:00 [DBG] client id without secret found
+2019-06-22 17:40:54.965 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:40:54.965 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:40:54.975 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:40:54.975 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:40:54.975 +02:00 [DBG] Client validation success
+2019-06-22 17:40:54.975 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN4V42HJSC:00000001","TimeStamp":"2019-06-22T15:40:54.0000000Z","ProcessId":21432,"LocalIpAddress":"127.0.0.1:21407","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:40:54.976 +02:00 [DBG] Start token request validation
+2019-06-22 17:40:54.983 +02:00 [DBG] Start resource owner password token request validation
+2019-06-22 17:40:54.984 +02:00 [ERR] ["spa"] not authorized for resource owner flow, check the AllowedGrantTypes of client, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"password","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"password","username":"alice","password":"***REDACTED***","client_uri":"http://identityserver.io"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:40:54.984 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"password","Error":"unauthorized_client","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN4V42HJSC:00000001","TimeStamp":"2019-06-22T15:40:54.0000000Z","ProcessId":21432,"LocalIpAddress":"127.0.0.1:21407","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:41:24.565 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:41:24.565 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:41:24.565 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:41:24.566 +02:00 [DBG] Start token request.
+2019-06-22 17:41:24.566 +02:00 [DBG] Start client validation
+2019-06-22 17:41:24.566 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:41:24.566 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:41:24.566 +02:00 [DBG] client id without secret found
+2019-06-22 17:41:24.566 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:41:24.566 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:41:24.566 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:41:24.566 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:41:24.566 +02:00 [DBG] Client validation success
+2019-06-22 17:41:24.566 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN4V42HJSC:00000002","TimeStamp":"2019-06-22T15:41:24.0000000Z","ProcessId":21432,"LocalIpAddress":"127.0.0.1:21407","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:41:24.567 +02:00 [DBG] Start token request validation
+2019-06-22 17:41:24.567 +02:00 [DBG] Start resource owner password token request validation
+2019-06-22 17:41:24.567 +02:00 [ERR] ["spa"] not authorized for resource owner flow, check the AllowedGrantTypes of client, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"password","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"password","username":"alice","password":"***REDACTED***","client_uri":"http://identityserver.io"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:41:24.567 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"password","Error":"unauthorized_client","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN4V42HJSC:00000002","TimeStamp":"2019-06-22T15:41:24.0000000Z","ProcessId":21432,"LocalIpAddress":"127.0.0.1:21407","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:48:52.761 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 17:48:52.814 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 17:48:52.819 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 17:48:52.819 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 17:48:52.820 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 17:48:52.820 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 17:48:52.821 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 17:48:54.136 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 17:48:54.142 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 17:48:54.146 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 17:48:54.148 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 17:48:54.150 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 17:48:54.151 +02:00 [DBG] Error Url: /home/error
+2019-06-22 17:48:54.152 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 17:52:40.072 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:52:40.085 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:52:40.086 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:52:40.096 +02:00 [DBG] Start token request.
+2019-06-22 17:52:40.103 +02:00 [DBG] Start client validation
+2019-06-22 17:52:40.108 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:52:40.113 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:52:40.131 +02:00 [DBG] client id without secret found
+2019-06-22 17:52:40.132 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:52:40.132 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:52:40.147 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:52:40.148 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:52:40.148 +02:00 [DBG] Client validation success
+2019-06-22 17:52:40.167 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN54G9AI6P:00000001","TimeStamp":"2019-06-22T15:52:40.0000000Z","ProcessId":19040,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:52:40.189 +02:00 [DBG] Start token request validation
+2019-06-22 17:52:40.202 +02:00 [DBG] Start resource owner password token request validation
+2019-06-22 17:52:40.211 +02:00 [ERR] ["spa"] not authorized for resource owner flow, check the AllowedGrantTypes of client, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"password","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"password","username":"alice","password":"***REDACTED***","client_uri":"http://identityserver.io"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:52:40.220 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"password","Error":"unauthorized_client","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN54G9AI6P:00000001","TimeStamp":"2019-06-22T15:52:40.0000000Z","ProcessId":19040,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:53:42.289 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:53:42.292 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:53:42.293 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:53:42.294 +02:00 [DBG] Start token request.
+2019-06-22 17:53:42.294 +02:00 [DBG] Start client validation
+2019-06-22 17:53:42.295 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:53:42.295 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:53:42.296 +02:00 [DBG] client id without secret found
+2019-06-22 17:53:42.296 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:53:42.297 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:53:42.298 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:53:42.299 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:53:42.300 +02:00 [DBG] Client validation success
+2019-06-22 17:53:42.301 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN54G9AI6P:00000002","TimeStamp":"2019-06-22T15:53:42.0000000Z","ProcessId":19040,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:53:42.305 +02:00 [DBG] Start token request validation
+2019-06-22 17:53:42.315 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 17:53:42.316 +02:00 [ERR] ["spa"] does not have the custom grant type in the allowed list, therefore requested grant is not allowed, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"Implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"Implicit","username":"alice","password":"***REDACTED***","client_uri":"http://identityserver.io"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:53:42.320 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"Implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN54G9AI6P:00000002","TimeStamp":"2019-06-22T15:53:42.0000000Z","ProcessId":19040,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 17:54:00.768 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 17:54:00.772 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 17:54:00.773 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 17:54:00.773 +02:00 [DBG] Start token request.
+2019-06-22 17:54:00.774 +02:00 [DBG] Start client validation
+2019-06-22 17:54:00.774 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 17:54:00.775 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 17:54:00.775 +02:00 [DBG] client id without secret found
+2019-06-22 17:54:00.776 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 17:54:00.776 +02:00 [DBG] Secret id found: spa
+2019-06-22 17:54:00.777 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 17:54:00.777 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 17:54:00.778 +02:00 [DBG] Client validation success
+2019-06-22 17:54:00.779 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN54G9AI6P:00000003","TimeStamp":"2019-06-22T15:54:00.0000000Z","ProcessId":19040,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 17:54:00.782 +02:00 [DBG] Start token request validation
+2019-06-22 17:54:00.783 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 17:54:00.783 +02:00 [ERR] ["spa"] does not have the custom grant type in the allowed list, therefore requested grant is not allowed, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"Implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"Implicit"},"$type":"TokenRequestValidationLog"}
+2019-06-22 17:54:00.786 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"Implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN54G9AI6P:00000003","TimeStamp":"2019-06-22T15:54:00.0000000Z","ProcessId":19040,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 18:07:14.325 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 18:07:14.354 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 18:07:14.357 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 18:07:14.357 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 18:07:14.358 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 18:07:14.358 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 18:07:14.359 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 18:07:15.512 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 18:09:07.483 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 18:09:07.512 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 18:09:07.515 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 18:09:07.515 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 18:09:07.516 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 18:09:07.516 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 18:09:07.516 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 18:09:08.576 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 18:09:08.580 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 18:09:08.583 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 18:09:08.584 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 18:09:08.586 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 18:09:08.587 +02:00 [DBG] Error Url: /home/error
+2019-06-22 18:09:08.588 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 18:09:13.519 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 18:09:13.533 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 18:09:13.535 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 18:09:13.547 +02:00 [DBG] Start token request.
+2019-06-22 18:09:13.554 +02:00 [DBG] Start client validation
+2019-06-22 18:09:13.559 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 18:09:13.563 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 18:09:13.580 +02:00 [DBG] client id without secret found
+2019-06-22 18:09:13.580 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 18:09:13.581 +02:00 [DBG] Secret id found: spa
+2019-06-22 18:09:13.593 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 18:09:13.596 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 18:09:13.597 +02:00 [DBG] Client validation success
+2019-06-22 18:09:13.618 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN5FQA1HU2:00000001","TimeStamp":"2019-06-22T16:09:13.0000000Z","ProcessId":16768,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 18:09:13.635 +02:00 [DBG] Start token request validation
+2019-06-22 18:09:13.643 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 18:09:13.651 +02:00 [ERR] ["spa"] does not have the custom grant type in the allowed list, therefore requested grant is not allowed, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"Implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"Implicit","username":"alice","password":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2019-06-22 18:09:13.667 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"Implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN5FQA1HU2:00000001","TimeStamp":"2019-06-22T16:09:13.0000000Z","ProcessId":16768,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 18:09:23.686 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 18:09:23.691 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 18:09:23.693 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 18:09:23.696 +02:00 [DBG] Start token request.
+2019-06-22 18:09:23.697 +02:00 [DBG] Start client validation
+2019-06-22 18:09:23.702 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 18:09:23.703 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 18:09:23.706 +02:00 [DBG] client id without secret found
+2019-06-22 18:09:23.707 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 18:09:23.709 +02:00 [DBG] Secret id found: spa
+2019-06-22 18:09:23.714 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 18:09:23.716 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 18:09:23.718 +02:00 [DBG] Client validation success
+2019-06-22 18:09:23.719 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN5FQA1HU2:00000002","TimeStamp":"2019-06-22T16:09:23.0000000Z","ProcessId":16768,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 18:09:23.732 +02:00 [DBG] Start token request validation
+2019-06-22 18:09:23.738 +02:00 [DBG] Start resource owner password token request validation
+2019-06-22 18:09:23.741 +02:00 [ERR] ["spa"] not authorized for resource owner flow, check the AllowedGrantTypes of client, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"password","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"password","username":"alice","password":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2019-06-22 18:09:23.751 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"password","Error":"unauthorized_client","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN5FQA1HU2:00000002","TimeStamp":"2019-06-22T16:09:23.0000000Z","ProcessId":16768,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-06-22 18:12:42.395 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-06-22 18:12:42.426 +02:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-06-22 18:12:42.428 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-06-22 18:12:42.428 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-06-22 18:12:42.429 +02:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-06-22 18:12:42.429 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-06-22 18:12:42.430 +02:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-06-22 18:12:43.401 +02:00 [DBG] Login Url: /Account/Login
+2019-06-22 18:12:43.406 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-06-22 18:12:43.408 +02:00 [DBG] Logout Url: /Account/Logout
+2019-06-22 18:12:43.409 +02:00 [DBG] ConsentUrl Url: /consent
+2019-06-22 18:12:43.410 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-06-22 18:12:43.410 +02:00 [DBG] Error Url: /home/error
+2019-06-22 18:12:43.411 +02:00 [DBG] Error Id Parameter: errorId
+2019-06-22 18:12:46.056 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-06-22 18:12:46.076 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-06-22 18:12:46.077 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-06-22 18:12:46.086 +02:00 [DBG] Start token request.
+2019-06-22 18:12:46.091 +02:00 [DBG] Start client validation
+2019-06-22 18:12:46.099 +02:00 [DBG] Start parsing Basic Authentication secret
+2019-06-22 18:12:46.104 +02:00 [DBG] Start parsing for secret in post body
+2019-06-22 18:12:46.143 +02:00 [DBG] client id without secret found
+2019-06-22 18:12:46.144 +02:00 [DBG] Parser found secret: PostBodySecretParser
+2019-06-22 18:12:46.145 +02:00 [DBG] Secret id found: spa
+2019-06-22 18:12:46.157 +02:00 [DBG] client configuration validation for client spa succeeded.
+2019-06-22 18:12:46.159 +02:00 [DBG] Public Client - skipping secret validation success
+2019-06-22 18:12:46.159 +02:00 [DBG] Client validation success
+2019-06-22 18:12:46.182 +02:00 [INF] {"ClientId":"spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLNN5HQBD3B1:00000001","TimeStamp":"2019-06-22T16:12:46.0000000Z","ProcessId":20760,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-06-22 18:12:46.196 +02:00 [DBG] Start token request validation
+2019-06-22 18:12:46.210 +02:00 [DBG] Start validation of custom grant token request
+2019-06-22 18:12:46.223 +02:00 [ERR] ["spa"] does not have the custom grant type in the allowed list, therefore requested grant is not allowed, request details: {"ClientId":"spa","ClientName":"SPA Client","GrantType":"Implicit","Scopes":null,"AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"spa","grant_type":"Implicit","username":"alice","password":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2019-06-22 18:12:46.231 +02:00 [INF] {"ClientId":"spa","ClientName":"SPA Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":null,"GrantType":"Implicit","Error":"unsupported_grant_type","ErrorDescription":null,"Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLNN5HQBD3B1:00000001","TimeStamp":"2019-06-22T16:12:46.0000000Z","ProcessId":20760,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}

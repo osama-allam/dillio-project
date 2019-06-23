@@ -25,9 +25,9 @@ namespace Dillio_Backend.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            IList<Category> categories = null;
+            //IList<Category> categories = new List<Category>();
 
-            categories = _unitOfWork.Categories.GetAll().ToList();
+          var categories = _unitOfWork.Categories.GetAll().ToList();
 
             if (categories.Count == 0)
             {
@@ -40,9 +40,9 @@ namespace Dillio_Backend.API.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Category category = null;
+            //Category category = null;
 
-            category = _unitOfWork.Categories.Get(id);
+           var category = _unitOfWork.Categories.Get(id);
 
             if (category == null)
             {

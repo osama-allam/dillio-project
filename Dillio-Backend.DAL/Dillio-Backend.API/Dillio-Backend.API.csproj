@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Dillio-Backend.BLL\Dillio-Backend.BLL.csproj" />
+    <ProjectReference Include="..\Dillio-Backend.DAL\Dillio-Backend.DAL.csproj" />
     <ProjectReference Include="..\Dillio-Backend.Entities\Dillio-Backend.Entities.csproj" />
   </ItemGroup>
 

@@ -22,12 +22,12 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 
             builder.HasMany(u => u.Reviews)
                 .WithOne(b => b.User)
-                .HasForeignKey(b => b.FK_UserId)
+                .HasForeignKey(b => b.UserId)
                 .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(u => u.Comments)
                 .WithOne(b => b.User)
-                .HasForeignKey(b => b.FK_UserId)
+                .HasForeignKey(b => b.UserId)
                 .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(u => u.Likes)

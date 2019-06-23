@@ -38,7 +38,23 @@ namespace Dillio_Backend.API
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddDbContext<ApplicationDbContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(opt =>
+            {
+                opt.Authority = "http://localhost:5000";
+                opt.Audience = "Dillio-Backend.API";
+                opt.RequireHttpsMetadata = false;
+            });
+
 
 
             //services.AddAuthentication(options =>
@@ -55,20 +71,22 @@ namespace Dillio_Backend.API
             //        options.TokenValidationParameters.NameClaimType = "name";
             //    }).AddCookie(); 
 
-            services.AddAuthentication()
-                .AddJwtBearer(options =>
-                {
-                    options.Authority = "https://localhost:44371";
-                    options.Audience = "DemoApi";
-                    options.TokenValidationParameters.NameClaimType = "client_id";
-                });
+            //services.AddAuthentication()
+            //    .AddJwtBearer(options =>
+            //    {
+            //        options.Authority = "https://localhost:44371";
+            //        options.Audience = "DemoApi";
+            //        options.TokenValidationParameters.NameClaimType = "client_id";
+            //    });
 
-            services.AddAuthorization(options =>
-            {
-                options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
-                    .RequireAuthenticatedUser()
-                    .Build();
-            });
+            //services.AddAuthorization(options =>
+            //{
+            //    options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
+            //        .RequireAuthenticatedUser()
+            //        .Build();
+            //});
+
+            
 
 
             services.AddDbContext<ApplicationDbContext>();
@@ -79,7 +97,7 @@ namespace Dillio_Backend.API
             {
                 options.AddPolicy("SPA", policy =>
                 {
-                    policy.WithOrigins("https://localhost:44343")
+                    policy.WithOrigins("https://localhost:4200")
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
@@ -99,24 +117,28 @@ namespace Dillio_Backend.API
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
-            app.UseCors(builder => builder
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials());
+            //app.UseCors(builder => builder
+            //    .AllowAnyOrigin()
+            //    .AllowAnyMethod()
+            //    .AllowAnyHeader()
+            //    .AllowCredentials());
+
 
             app.UseStaticFiles(new StaticFileOptions()
             {
                 FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", Path.GetFileName(@"images"))),
                 RequestPath = new PathString("/images")
             });
+            app.UseAuthentication();
+            app.UseStaticFiles();
+
             app.UseCors("SPA");
             app.UseAuthentication();
-            
 
-            app.UseMvc();
+
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

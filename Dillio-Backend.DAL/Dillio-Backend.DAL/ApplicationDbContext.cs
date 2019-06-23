@@ -8,7 +8,7 @@ using Dillio_Backend.DAL.Persistence.EntityConfigurations;
 
 namespace Dillio_Backend.DAL
 {
-   public class ApplicationDbContext : IdentityDbContext
+   public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext()
         {

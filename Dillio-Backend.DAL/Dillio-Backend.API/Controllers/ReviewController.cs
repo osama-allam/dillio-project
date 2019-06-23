@@ -30,7 +30,7 @@ namespace Dillio_Backend.API.Controllers
         {
             IList<Review> reviews = null;
 
-            reviews = _unitOfWork.Reviews.GetAll().Where(r=>r.FK_ProductId == productId).ToList();
+            reviews = _unitOfWork.Reviews.GetAll().Where(r=>r.ProductId == productId).ToList();
 
             if (reviews.Count == 0)
             {
@@ -70,8 +70,8 @@ namespace Dillio_Backend.API.Controllers
                     Name = rvm.Name,
                     Email = rvm.Email,
                     ReviewDescription = rvm.ReviewDescription,
-                    FK_UserId = User.Identity.GetUserId(),
-                    FK_ProductId = productId
+                    UserId = User.Identity.GetUserId(),
+                    ProductId = productId
                 };
 
                 _unitOfWork.Reviews.Add(review);

@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 {
-    public class CategoryConfiguration: IEntityTypeConfiguration<Category>
+    public class CategoryConfiguration : IEntityTypeConfiguration<Category>
     {
-       
+
 
         public void Configure(EntityTypeBuilder<Category> builder)
         {
@@ -16,12 +16,12 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 
 
             builder.Property(p => p.Name)
-                .HasColumnType("nvarchar(50)")          
+                .HasColumnType("nvarchar(50)")
                 .IsRequired();
 
             builder.HasMany(c => c.Products)
                 .WithOne(p => p.Category)
-                .HasForeignKey(p => p.FK_CategoryId)
+                .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }
