@@ -7,7 +7,7 @@ namespace Dillio_Backend.BLL.Core.Domain
     {
         public Order()
         {
-
+            Products = new HashSet<Product>();
         }
 
         public int Id { get; set; }

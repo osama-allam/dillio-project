@@ -18,7 +18,7 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
             builder.HasMany(b => b.Comments)
                 .WithOne(c => c.Blog)
                 .HasForeignKey(d => d.BlogId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.Property(b => b.Title)
                 .HasColumnType("nvarchar(50)")               
@@ -31,7 +31,7 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 
             builder.HasMany(b => b.Likes)
                 .WithOne(l => l.Blog)
-                .HasForeignKey(m => m.BlogId)
+                .HasForeignKey(m => m.BlogId) 
                 .OnDelete(DeleteBehavior.Cascade);
 
         }
