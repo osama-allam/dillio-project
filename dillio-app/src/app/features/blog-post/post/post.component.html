@@ -1,0 +1,18 @@
+<div  class="li-blog-single-item pb-25 col-lg-11 ">
+        <div class="li-blog-banner">
+            <a routerLink="/blog/:id/details"><img class="img-full" src="{{post.imageUrl}}" alt=""></a>
+        </div>
+        <div class="li-blog-content">
+            <div class="li-blog-details">
+                <h3 class="li-blog-heading pt-25"><a href="blog-details-left-sidebar.html">{{post.postName}}</a></h3>
+                <div class="li-blog-meta">
+                    <a class="author" href="#"><i class="fa fa-user"></i>{{post.name}}</a>
+                    <a class="comment" href="#"><i class="fa fa-comment-o"></i> {{post.commentNumber}} comment</a>
+                    <a class="post-time" href="#"><i class="fa fa-calendar"></i> {{post.date}}</a>
+                    <a class="post-time" routerLink="/blog/add" ><i class="fa fa-edit"></i>edit</a>
+                </div>
+                <p>{{post.description}}</p>
+                <a class="read-more" href="blog-details-left-sidebar.html">Read More...</a>
+            </div>
+        </div>
+</div>

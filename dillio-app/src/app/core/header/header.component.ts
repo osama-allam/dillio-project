@@ -1,3 +1,4 @@
+import { ViewActivatorService } from './../../services/view-activator.service';
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
 @Component({
@@ -7,28 +8,12 @@ declare var $: any;
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewActivator: ViewActivatorService) { }
 
   ngOnInit() {
-    this.dropdownActivator();
-  }
-  dropdownActivator() {
-    $('.ht-setting-trigger, .ht-currency-trigger, .ht-language-trigger, .hm-minicart-trigger, .cw-sub-menu').on('click', function (e) {
-      e.preventDefault();
-      $(this).toggleClass('is-active');
-      $(this).siblings('.ht-setting, .ht-currency, .ht-language, .minicart, .cw-sub-menu li').slideToggle();
-    });
-    $('.ht-setting-trigger.is-active').siblings('.catmenu-body').slideDown();
-
-    $(window).on('scroll',function() {
-      if ($(this).scrollTop() > 300) {
-        $('.header-sticky').addClass("sticky");
-      } else {
-        $('.header-sticky').removeClass("sticky");
-      }
-    });
+    this.viewActivator.headerActivator();
   }
   toggleDrop() {
-    $('.nice-select').toggleClass('open');
+    this.viewActivator.niceSelectToggleDrop();
   }
 }

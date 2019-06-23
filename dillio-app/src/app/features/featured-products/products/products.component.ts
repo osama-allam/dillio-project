@@ -1,3 +1,4 @@
+import { ViewActivatorService } from './../../../services/view-activator.service';
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
 @Component({
@@ -7,10 +8,10 @@ declare var $: any;
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewActivator: ViewActivatorService) { }
 
   ngOnInit() {
-    this.productFeaturedActivator();
+    this.viewActivator.productFeaturedActivator();
   }
 
 
