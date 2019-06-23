@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Dillio_Backend.BLL.Core.Repositories;
+﻿using Dillio_Backend.BLL.Core.Repositories;
+using System;
 
 namespace Dillio_Backend.BLL.Core
 {
-    public interface IUnitOfWork: IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         //Repositories
         IApplicationUserRepository ApplicationUser { get; set; }
@@ -17,6 +15,7 @@ namespace Dillio_Backend.BLL.Core
         IProductRepository Products { get; }
         IStoreRepository Stores { get; }
         IReviewRepository Reviews { get; }
+        ISpecsRepository Specs { get; }
         int Complete();
     }
 }

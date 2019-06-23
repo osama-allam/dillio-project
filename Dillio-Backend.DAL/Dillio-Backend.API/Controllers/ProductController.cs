@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Dillio_Backend.API.ViewModel;
+﻿using Dillio_Backend.API.ViewModel;
 using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Domain;
-using Dillio_Backend.DAL;
-using Dillio_Backend.DAL.Persistence;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Dillio_Backend.API.Controllers
 {
@@ -19,7 +12,6 @@ namespace Dillio_Backend.API.Controllers
 
     public class ProductController : ControllerBase
     {
-        readonly UnitOfWork _unitOfWork = new UnitOfWork(new ApplicationDbContext());
 
         private readonly IUnitOfWork _unitOfWork;
 
@@ -29,8 +21,8 @@ namespace Dillio_Backend.API.Controllers
         }
 
         [HttpGet]
-      public IActionResult Get()
-        {        
+        public IActionResult Get()
+        {
             IList<Product> pro = _unitOfWork.Products.GetAll().ToList();
 
             if (pro.Count == 0)
@@ -41,12 +33,12 @@ namespace Dillio_Backend.API.Controllers
             foreach (var product in pro)
             {
                 IList<Image> images = _unitOfWork.Images.GetAll().Where(i => i.ProductId == product.Id).ToList();
-                    foreach (var productImage in images)
-                    {
-                        product.Images.Add(productImage);
-                    }                          
+                foreach (var productImage in images)
+                {
+                    product.Images.Add(productImage);
+                }
             }
-            
+
             IList<ProductViewModel> pvm = pro.Select(p => new ProductViewModel
             {
                 Price = p.Price,
@@ -56,8 +48,8 @@ namespace Dillio_Backend.API.Controllers
                 Image = p.Images.FirstOrDefault(),
                 Images = p.Images.ToList()
 
-                }).ToList();
-                return Ok(pvm);
+            }).ToList();
+            return Ok(pvm);
         }
 
         [HttpGet("{id}")]
@@ -70,11 +62,11 @@ namespace Dillio_Backend.API.Controllers
                 return NotFound();
             }
 
-            
+
             IList<Image> images = _unitOfWork.Images.GetAll().Where(i => i.ProductId == id).ToList();
             pro.Images = images;
 
-          
+
 
             ProductViewModel pvm = new ProductViewModel()
             {
@@ -96,9 +88,9 @@ namespace Dillio_Backend.API.Controllers
                 return BadRequest();
             }
 
-           _unitOfWork.Products.Add(product);
-           _unitOfWork.Complete();
-           return Ok();
+            _unitOfWork.Products.Add(product);
+            _unitOfWork.Complete();
+            return Ok();
 
         }
 
@@ -129,7 +121,7 @@ namespace Dillio_Backend.API.Controllers
         {
             IList<Product> categoryProducts =
                 _unitOfWork.Products.GetAll()
-                    .Where(s => s.FK_CategoryId == categoryId)
+                    .Where(s => s.CategoryId == categoryId)
                     .ToList();
 
             if (categoryProducts.Count == 0)
@@ -154,12 +146,12 @@ namespace Dillio_Backend.API.Controllers
                 Discount = s.Discount,
                 Images = s.Images.ToList(),
                 Image = s.Images.FirstOrDefault()
-                
+
             }).ToList();
 
             return Ok(pvm);
         }
 
-        }
+    }
 
 }

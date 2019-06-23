@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 {
-    public class CommentConfiguration:IEntityTypeConfiguration<Comment>
+    public class CommentConfiguration : IEntityTypeConfiguration<Comment>
     {
         public void Configure(EntityTypeBuilder<Comment> builder)
         {
@@ -15,6 +15,9 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
             builder.Property(c => c.Text)
                 .HasColumnType("nvarchar(50)")
                 .IsRequired();
+
+            builder.Property(c => c.UserId)
+                .HasColumnName("FK_UserId");
         }
     }
 }
