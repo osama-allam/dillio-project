@@ -58,6 +58,7 @@ import { ProductListingComponent } from './features/products/product-listing/pro
 import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
 import { StoreAddComponent } from './features/stores/store-add/store-add.component';
 import { HttpClient } from 'selenium-webdriver/http';
+import { UploadComponent } from './shared/upload/upload.component';
 
 
 
@@ -107,7 +108,8 @@ import { HttpClient } from 'selenium-webdriver/http';
     ProductDetailsComponent,
     ProductEditComponent,
     ProductListingComponent,
-    StoreAddComponent
+    StoreAddComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
