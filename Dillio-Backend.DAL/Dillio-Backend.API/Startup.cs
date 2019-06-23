@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Dillio_Backend.BLL.Core;
+using Dillio_Backend.BLL.Core.Domain;
 using Dillio_Backend.DAL;
 using Dillio_Backend.DAL.Persistence;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -15,12 +17,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Dillio_Backend.API
 {
@@ -41,55 +45,35 @@ namespace Dillio_Backend.API
             services.AddDbContext<ApplicationDbContext>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-
-            }).AddJwtBearer(opt =>
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
             {
-                opt.Authority = "http://localhost:5000";
-                opt.Audience = "Dillio-Backend.API";
-                opt.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidIssuer = "dillioApi",
+                    ValidAudience = "http://localhost:4200",
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("dillioAppSecretKey"))
+
+                };
             });
 
-
-
-            //services.AddAuthentication(options =>
-            //        {
-            //            options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
-            //            options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-            //            options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-            //        })
-            //    .AddOpenIdConnect(options =>
-            //    {
-            //        options.Authority = "https://localhost:44371";
-            //        options.ClientId = "AuthWeb";
-            //        options.SaveTokens = true;
-            //        options.TokenValidationParameters.NameClaimType = "name";
-            //    }).AddCookie(); 
-
-            //services.AddAuthentication()
-            //    .AddJwtBearer(options =>
-            //    {
-            //        options.Authority = "https://localhost:44371";
-            //        options.Audience = "DemoApi";
-            //        options.TokenValidationParameters.NameClaimType = "client_id";
-            //    });
-
-            //services.AddAuthorization(options =>
-            //{
-            //    options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
-            //        .RequireAuthenticatedUser()
-            //        .Build();
-            //});
-
+           
+            
             
 
 
-            services.AddDbContext<ApplicationDbContext>();
+            //services.AddDbContext<ApplicationDbContext>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
 
@@ -117,13 +101,7 @@ namespace Dillio_Backend.API
                 app.UseHsts();
             }
 
-            //app.UseHttpsRedirection();
-
-            //app.UseCors(builder => builder
-            //    .AllowAnyOrigin()
-            //    .AllowAnyMethod()
-            //    .AllowAnyHeader()
-            //    .AllowCredentials());
+           
 
 
             app.UseStaticFiles(new StaticFileOptions()
@@ -135,7 +113,7 @@ namespace Dillio_Backend.API
             app.UseStaticFiles();
 
             app.UseCors("SPA");
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
 
             app.UseMvcWithDefaultRoute();

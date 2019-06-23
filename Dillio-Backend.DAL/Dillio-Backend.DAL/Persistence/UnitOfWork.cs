@@ -19,7 +19,7 @@ namespace Dillio_Backend.DAL.Persistence
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
-            ApplicationUser = new ApplicationUserRepository(context);
+            //ApplicationUser = new ApplicationUserRepository(context);
             Blogs = new BlogRepository(context);
             Categories = new CategoryRepository(context);
             Comments = new CommentRepository(context);
@@ -34,7 +34,7 @@ namespace Dillio_Backend.DAL.Persistence
 
         #region Repositories Member Variables
 
-        public IApplicationUserRepository ApplicationUser { get; set; }
+        //public IApplicationUserRepository ApplicationUser { get; set; }
         public IBlogRepository Blogs { get; set; }
 
         public ICategoryRepository Categories { get; set; }
