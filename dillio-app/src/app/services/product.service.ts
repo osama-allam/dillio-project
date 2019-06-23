@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../_models/product';
 import { CategoryService } from './category.service';
+import { Productdetailsviewmodel } from '../_models/product-details-viewmodel';
 
 @Injectable({
   providedIn: 'root'
@@ -243,12 +244,41 @@ categories = new CategoryService().categories;
     ]
   
 }
-getall():Product[]{
+getall():Productdetailsviewmodel[]{
  return this.products.slice();
 }
 getById(id:number):Product{
   id=+id;
   return this.products.find(a => a.id === id);
 }
+
+// getPosts() {
+//   return this.posts;
+// }
+// getPost(index: number) {
+//   return this.posts[index];
+// }
+
+// addPost(posts: IPost) {
+
+//   this.posts.push(posts);
+//   console.log(this.posts);
+//   this.postsChanged.next(this.posts);
+// }
+
+// addPosts(posts: IPost[]) {
+//   this.posts.push(...posts);
+//   this.postsChanged.next(this.posts.slice());
+// }
+
+// updatePost(index: number, newPost: IPost) {
+//   this.posts[index] = newPost;
+//   this.postsChanged.next(this.posts.slice());
+// }
+
+// deletePost(index: number) {
+//   this.posts.splice(index, 1);
+//   this.postsChanged.next(this.posts.slice());
+// }
   }
 
