@@ -1,0 +1,53 @@
+<div class="contact-main-page mt-60 mb-40 mb-md-40 mb-sm-40 mb-xs-40">
+  
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">
+              <div class="contact-page-side-content">
+                  <h3 class="contact-page-title">Contact Us</h3>
+                  <p class="contact-page-message mb-25">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate fuga nihil dolores necessitatibus voluptate iste debitis consectetur optio, veniam fugit? Id dolorum eaque cumque tenetur saepe architecto? Doloribus, ullam!.</p>
+                  <div class="single-contact-block">
+                      <h4><i class="fa fa-fax"></i> Address</h4>
+                      <p>123 Main Street, Anytown, CA 12345 – USA</p>
+                  </div>
+                  <div class="single-contact-block">
+                      <h4><i class="fa fa-phone"></i> Phone</h4>
+                      <p>Mobile: (08) 123 456 789</p>
+                  </div>
+                  <div class="single-contact-block last-child">
+                      <h4><i class="fa fa-envelope-o"></i> Email</h4>
+                      <p>yourmail@domain.com</p>
+                  </div>
+              </div>
+          </div>
+<div class="col-lg-6 col-md-12 order-2 order-lg-1">
+  <div class="contact-form-content pt-sm-55 pt-xs-55">
+      <h3 class="contact-page-title">ADD Your Store !</h3>
+      <div class="contact-form">
+          <form #f="ngForm" id="contact-form" action="" method="post">
+              <div class="form-group">
+                  <label>Store Name <span class="required">*</span></label>
+                  <input [(ngModel)]="store.name" type="text" name="customerName" id="customername" required>
+              
+                </div>
+              
+              <div class="form-group">
+                  <label>Description</label>
+                  <input [(ngModel)]="store.description" type="text" name="contactSubject" id="contactSubject">
+              </div>
+              <div class="form-group">
+                <label>Image</label>
+              <input [(ngModel)]="store.Url" type="file" name="pic" accept="image/*">
+              </div>
+              <div class="form-group">
+                  <button type="submit" value="submit" id="submit" class="li-btn-3" name="submit" (click)= "OnAddStore(f)">Save</button>
+              </div>
+          </form>
+      </div>
+     
+  </div>
+</div>
+
+</div>
+</div>
+</div>
