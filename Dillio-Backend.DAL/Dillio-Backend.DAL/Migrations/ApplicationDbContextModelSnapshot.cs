@@ -84,17 +84,18 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.Property<int>("BlogId");
 
-                    b.Property<string>("FK_UserId");
-
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnName("FK_UserId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BlogId");
 
-                    b.HasIndex("FK_UserId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Comment");
                 });
@@ -105,7 +106,8 @@ namespace Dillio_Backend.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ProductId");
+                    b.Property<int>("ProductId")
+                        .HasColumnName("FK_ProductId");
 
                     b.Property<string>("Url")
                         .IsRequired()
@@ -160,11 +162,12 @@ namespace Dillio_Backend.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnName("FK_CategoryId");
+
                     b.Property<string>("Description");
 
                     b.Property<float>("Discount");
-
-                    b.Property<int>("FK_CategoryId");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -176,7 +179,7 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FK_CategoryId");
+                    b.HasIndex("CategoryId");
 
                     b.HasIndex("OrderId");
 
@@ -191,22 +194,43 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<int>("FK_ProductId");
-
-                    b.Property<string>("FK_UserId");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(250)");
 
+                    b.Property<int>("ProductId")
+                        .HasColumnName("FK_ProductId");
+
                     b.Property<string>("ReviewDescription");
+
+                    b.Property<string>("UserId")
+                        .HasColumnName("FK_UserId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FK_ProductId");
+                    b.HasIndex("ProductId");
 
-                    b.HasIndex("FK_UserId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Review");
+                });
+
+            modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Specs", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<string>("Value");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Specs");
                 });
 
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Store", b =>
@@ -243,11 +267,11 @@ namespace Dillio_Backend.DAL.Migrations
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Blog", "Blog")
                         .WithMany("Comments")
                         .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.ApplicationUser", "User")
                         .WithMany("Comments")
-                        .HasForeignKey("FK_UserId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.SetNull);
                 });
 
@@ -284,7 +308,7 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Category", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("FK_CategoryId")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Order")
@@ -296,13 +320,21 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Product", "Product")
                         .WithMany("Reviews")
-                        .HasForeignKey("FK_ProductId")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.ApplicationUser", "User")
                         .WithMany("Reviews")
-                        .HasForeignKey("FK_UserId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.SetNull);
+                });
+
+            modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Specs", b =>
+                {
+                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Product", "Product")
+                        .WithMany("Specs")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

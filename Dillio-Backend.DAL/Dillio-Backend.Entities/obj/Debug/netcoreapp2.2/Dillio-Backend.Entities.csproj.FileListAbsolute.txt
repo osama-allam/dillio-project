@@ -11,3 +11,17 @@ D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debu
 D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csproj.CopyComplete
 D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
 D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.deps.json
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.runtimeconfig.json
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.runtimeconfig.dev.json
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.dll
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.xml
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csproj.CoreCompileInputs.cache
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.AssemblyInfoInputs.cache
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.AssemblyInfo.cs
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csproj.CopyComplete
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csprojAssemblyReference.cache
