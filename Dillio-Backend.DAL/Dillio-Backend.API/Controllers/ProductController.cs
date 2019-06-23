@@ -4,6 +4,7 @@ using Dillio_Backend.BLL.Core.Domain;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Dillio_Backend.API.Controllers
 {
@@ -20,6 +21,7 @@ namespace Dillio_Backend.API.Controllers
             this._unitOfWork = unitOfWork;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
