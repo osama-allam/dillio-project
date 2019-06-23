@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Domain;
 using Dillio_Backend.DAL;
 using Dillio_Backend.DAL.Persistence;
@@ -15,7 +16,12 @@ namespace Dillio_Backend.API.Controllers
     public class StoreController : ControllerBase
     {
 
-        readonly UnitOfWork _unitOfWork = new UnitOfWork(new ApplicationDbContext());
+        private readonly IUnitOfWork _unitOfWork;
+
+        public StoreController(IUnitOfWork unitOfWork)
+        {
+            this._unitOfWork = unitOfWork;
+        }
 
 
         [HttpGet]
@@ -71,7 +77,7 @@ namespace Dillio_Backend.API.Controllers
             if (oldstore != null)
             {
                 oldstore.Name = store.Name;
-                oldstore.ImageURL = store.ImageURL;
+                oldstore.Url = store.Url;
                 
 
                 _unitOfWork.Complete();
