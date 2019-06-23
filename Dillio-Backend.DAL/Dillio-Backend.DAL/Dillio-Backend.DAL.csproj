@@ -6,13 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20190618231332_newrepositoryanditisconfigurations.cs" />
-    <Compile Remove="Migrations\20190618231416_newrepositoryanditisconfigurations.cs" />
-    <Compile Remove="Migrations\20190618231845_newrepositoryanditisconfigurations.cs" />
-    <Compile Remove="Migrations\20190619085138_repositoriesandconfigurations.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="IdentityServer4.EntityFramework" Version="2.4.0" />
     <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />

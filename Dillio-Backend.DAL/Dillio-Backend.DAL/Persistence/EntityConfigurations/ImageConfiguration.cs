@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 {
-    public class ImageConfiguration:IEntityTypeConfiguration<Image>
+    public class ImageConfiguration : IEntityTypeConfiguration<Image>
     {
         public void Configure(EntityTypeBuilder<Image> builder)
         {
@@ -16,6 +16,8 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
                 .HasColumnType("nvarchar(100)")
                 .IsRequired();
 
+            builder.Property(i => i.ProductId)
+                .HasColumnName("FK_ProductId");
 
         }
     }
