@@ -85,6 +85,11 @@ namespace Dillio_Backend.API
 
             
 
+
+            services.AddDbContext<ApplicationDbContext>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddMvc();
+
             services.AddCors(options =>
             {
                 options.AddPolicy("SPA", policy =>
