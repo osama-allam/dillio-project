@@ -7,7 +7,7 @@
               <div *ngFor="let store of stores" class="col-lg-2 col-md-2 col-sm-6 pb-xs-45">
                   <div class="li-shipping-inner-box card">
                       <div class="shipping-icon">
-                          <img src={{store.description}} alt="Shipping Icon">
+                          <img [src]="store.description" alt="Shipping Icon">
                       </div>
                       <div class="shipping-text">
                           <h2>{{store.name}}</h2>
@@ -21,6 +21,21 @@
                   </div>
               </div>
           </div>
+          
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pg-blue">
+              <li class="page-item ">
+                <a class="page-link" tabindex="-1">Previous</a>
+              </li>
+              <li *ngFor="let c of count; let i = index" class="page-item" [ngClass]="{'active': c ===page}">
+                  <a class="page-link">{{i+1}}</a>
+                </li>
+              <li  class="page-item">
+                <a class="page-link">Next</a>
+              </li>
+            </ul>
+          </nav>
+        
       </div>
   </div>
 </div>

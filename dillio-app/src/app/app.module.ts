@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-
+// import {MatPaginatorModule} from '@angular/material'
 
 import { StarRatingModule } from 'angular-star-rating';
 import { AppRoutingModule } from './app-routing.module';
@@ -109,7 +109,8 @@ import { UploadComponent } from './shared/upload/upload.component';
     ProductEditComponent,
     ProductListingComponent,
     StoreAddComponent,
-    UploadComponent
+    UploadComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -118,6 +119,7 @@ import { UploadComponent } from './shared/upload/upload.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    // MatPaginatorModule,
     
     StarRatingModule.forRoot()
   ],
