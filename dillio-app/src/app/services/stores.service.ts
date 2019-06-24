@@ -58,6 +58,7 @@ getById(id:number):Observable<Stores>{
   return this.http.get<Stores>(url).pipe(
     tap(data=> console.log('All :'+JSON.stringify(data))),
     catchError(this.handleError)
+    
   );
 }
 
