@@ -1,23 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Dillio_Backend.API.Helpers;
 using Dillio_Backend.BLL.Core;
 using Dillio_Backend.DAL;
 using Dillio_Backend.DAL.Persistence;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Dillio_Backend.API
 {
@@ -52,7 +44,19 @@ namespace Dillio_Backend.API
                 opt.RequireHttpsMetadata = false;
             });
 
+            //Cloudinary services settings
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
 
+            //AutoMapper
+
+            //var mappingConfig = new MapperConfiguration(mc =>
+            //{
+            //    mc.AddProfile(new AutoMapperProfiles());
+            //});
+
+            //IMapper mapper = mappingConfig.CreateMapper();
+            //services.AddSingleton(mapper);
+            services.AddAutoMapper(typeof(Startup).Assembly);
 
             //services.AddAuthentication(options =>
             //        {
@@ -83,22 +87,22 @@ namespace Dillio_Backend.API
             //        .Build();
             //});
 
-            
+
 
 
             services.AddDbContext<ApplicationDbContext>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("SPA", policy =>
-                {
-                    policy.WithOrigins("https://localhost:4200")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
-                });
-            });
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("SPA", policy =>
+            //    {
+            //        policy.WithOrigins()
+            //            .AllowAnyHeader()
+            //            .AllowAnyMethod();
+            //    });
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -126,7 +130,7 @@ namespace Dillio_Backend.API
             app.UseAuthentication();
             app.UseStaticFiles();
 
-            app.UseCors("SPA");
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
 
 

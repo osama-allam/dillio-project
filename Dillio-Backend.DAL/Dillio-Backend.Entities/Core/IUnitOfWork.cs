@@ -1,5 +1,6 @@
 ﻿using Dillio_Backend.BLL.Core.Repositories;
 using System;
+using System.Threading.Tasks;
 
 namespace Dillio_Backend.BLL.Core
 {
@@ -17,5 +18,6 @@ namespace Dillio_Backend.BLL.Core
         IReviewRepository Reviews { get; }
         ISpecsRepository Specs { get; }
         int Complete();
+        Task<int> CompleteAsync();
     }
 }

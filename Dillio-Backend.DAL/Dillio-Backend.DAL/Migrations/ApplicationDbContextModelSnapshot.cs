@@ -106,8 +106,12 @@ namespace Dillio_Backend.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime>("DateAdded");
+
                     b.Property<int>("ProductId")
                         .HasColumnName("FK_ProductId");
+
+                    b.Property<string>("PublicId");
 
                     b.Property<string>("Url")
                         .IsRequired()
