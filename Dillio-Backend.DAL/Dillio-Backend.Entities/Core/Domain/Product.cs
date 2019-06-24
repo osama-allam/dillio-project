@@ -20,6 +20,7 @@ namespace Dillio_Backend.BLL.Core.Domain
         public virtual ICollection<Image> Images { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
         public virtual ICollection<Specs> Specs { get; set; }
+        public virtual ICollection<ProductStore>ProductStores{ get; set; }
         public virtual Category Category { get; set; }
         public int CategoryId { get; set; }
     }

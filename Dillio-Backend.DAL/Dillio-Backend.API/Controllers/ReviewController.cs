@@ -40,6 +40,25 @@ namespace Dillio_Backend.API.Controllers
             return Ok(reviews);
         }
 
+        [HttpGet("store/{storeId}")]
+        [ActionName("Get")]
+        public IActionResult GetAllReviewOfStore(int storeId)
+        {
+            IList<Review> reviews = null;
+
+            reviews = _unitOfWork.Reviews.GetAll().Where(r => r.ProductId == storeId).ToList();
+
+            if (reviews.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(reviews);
+        }
+
+
+
+
 
         [HttpGet("{id}")]
         [ActionName("Get")]
@@ -59,7 +78,7 @@ namespace Dillio_Backend.API.Controllers
 
 
 
-        [HttpPost("{productId}")]
+        [HttpPost("product/{productId}")]
         public IActionResult Post([FromBody] ReviewViewModel rvm,int productId)
         {
 

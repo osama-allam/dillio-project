@@ -16,6 +16,9 @@ namespace Dillio_Backend.BLL.Core
         IStoreRepository Stores { get; }
         IReviewRepository Reviews { get; }
         ISpecsRepository Specs { get; }
+        IBranchRepository Branches { get; }
+        IProductStore ProductStore { get; }
+
         int Complete();
     }
 }

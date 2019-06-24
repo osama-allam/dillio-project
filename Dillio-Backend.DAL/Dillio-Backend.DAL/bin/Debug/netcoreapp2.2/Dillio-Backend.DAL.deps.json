@@ -1760,42 +1760,42 @@
     "AutoMapper/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-px8ZMtIq84dxciB29V+ZYOtsRLZP4JlflDDMW13LyeRdwsnIInzlcSHSxpWmVD6U3bbOl2FeLlgomnVtm0jvXw==",
+      "sha512": "sha512-kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
       "path": "automapper/8.0.0",
       "hashPath": "automapper.8.0.0.nupkg.sha512"
     },
     "IdentityModel/3.10.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hSAk4fzuqIY9UEoE9LpUnCNn4QXz2X5byoeJNiOuVM6MW18dmWqK4gRQkNr6f89EX5hiDHdfjcHm2OcYHf5EMg==",
+      "sha512": "sha512-PW6BBp9+HUU5E+LUyQC+36EX9k2Rg8aXvxaGwgAcSUl5+jkXq6OvH37TmeOEBDBKAjNWWi0isPs7vgdzXMnZ8w==",
       "path": "identitymodel/3.10.6",
       "hashPath": "identitymodel.3.10.6.nupkg.sha512"
     },
     "IdentityServer4/2.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YjIMDcw9xOwkCp3+5Ad0Q7RbO/Ep5uf8/K7wrqwmReHeZTnxVdmhVoM1SWfb8PhNgKBQ2tSZVsFT6VxFRYdvUQ==",
+      "sha512": "sha512-O5+wyGR+MXMZAxRzcq1B91bQNrMi66cHjjECvcZSAWdDEjo9FhMCdT9Q0UkULbBOInozkUuDVWdh9VRadWKrvw==",
       "path": "identityserver4/2.4.0",
       "hashPath": "identityserver4.2.4.0.nupkg.sha512"
     },
     "IdentityServer4.EntityFramework/2.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ejA1UGAQBjsWJpXZlGJfzRPbHjWOM7IYMEN+wpML75R2S6lfrhMOru2PaplsRXuZhD+BVln4BCruF/3JZXB5Vw==",
+      "sha512": "sha512-9TxZra1Ee8/KUGOFsjaT7Mtg5+aQV06FIOePD45cgpF4twLvRWm7/ibbftJE/FXw58GufbrtaKODaHh8ACQpGg==",
       "path": "identityserver4.entityframework/2.4.0",
       "hashPath": "identityserver4.entityframework.2.4.0.nupkg.sha512"
     },
     "IdentityServer4.EntityFramework.Storage/2.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ak4mRRVWWpxuz7rpvlQ/W3AK1XUWRBqz9XRMn/9Lab7aBCGTnxIHRG6kKw7pLcf1Dl7v1q9qYZQK6Ez7f9qRrQ==",
+      "sha512": "sha512-ZjCpEEq8IYPU3j13IWRTp5qWxOx0vkEVtE4FTXmWAuUua9xkfiTqa7Rk4gEO48kIO/FGJmo0tG/8MHdu7vl7/A==",
       "path": "identityserver4.entityframework.storage/2.4.0",
       "hashPath": "identityserver4.entityframework.storage.2.4.0.nupkg.sha512"
     },
     "IdentityServer4.Storage/2.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-E6ALogkuHYu2vCBihoZnXC1KvtUMXaz3tcQaSMO+sdTZLRbEhN2Kd2oSEPh16Sluqkm89oKHx1Pqjf1oY2hzSw==",
+      "sha512": "sha512-Qt48GO1yC2H0dfIUUojJLMoVoOPgyQ/2HU6IMVfeRM1l4ogezG5NR5XhwexzGGzHZ0bOTIhXBpyt0B2ipMDJ2g==",
       "path": "identityserver4.storage/2.4.0",
       "hashPath": "identityserver4.storage.2.4.0.nupkg.sha512"
     },
@@ -1837,28 +1837,28 @@
     "Microsoft.AspNetCore.Authentication.OAuth/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4CCwKg9LVEyqiJHuVshmqtcsMuE1Rqz5kMB+FV13BL0PO8RawT1pwV3HSOWP3+hNL/vYviHxolL0xOEdjcc1dw==",
+      "sha512": "sha512-A8e0ANSZyMEnKAdq5JYOth/4Z/zv9062onQy/LfFW/HfhmwYKHuTVoKO1eohyimAyZAgpXADykp5DVq7D+6SHg==",
       "path": "microsoft.aspnetcore.authentication.oauth/2.1.0",
       "hashPath": "microsoft.aspnetcore.authentication.oauth.2.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.OpenIdConnect/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8bRZDDv1mKFtdcJC/wrAytAYqSYxte1HXI/ce03trIYh5ODYZpL6FejGqPYN1M8gJUJ2louoK0UnhMPq9lm69g==",
+      "sha512": "sha512-e1ysJ72TxK/fLzyS65NFAtGedKCQu9yD3ltr9VX7ZO+zkB361S0/o5GHnzy9nmhyQ8dPIaxBmFES2nPWuaMgWA==",
       "path": "microsoft.aspnetcore.authentication.openidconnect/2.1.0",
       "hashPath": "microsoft.aspnetcore.authentication.openidconnect.2.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QUMtMVY7mQeJWlP8wmmhZf1HEGM/V8prW/XnYeKDpEniNBCRw0a3qktRb9aBU0vR+bpJwWZ0ibcB8QOvZEmDHQ==",
+      "sha512": "sha512-Ut6gfI9e6KmO0Vxxmu4ZnIi+lAh5b8ouhethHbP+aYT/18AIW3wOyN7B4B/sXS7rKEi4nRpLqrzSf37LFrLDcw==",
       "path": "microsoft.aspnetcore.authorization/2.1.0",
       "hashPath": "microsoft.aspnetcore.authorization.2.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cors/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YOsWdk6cdIWWdXS4kAEtWcIpbjSff56bnLYGAfZuWcYLrvj7+vLgu4hGAFyX8vHg44cqdpnFU3FGPM5TOruW4w==",
+      "sha512": "sha512-4HL9r5AIrWwqdRXkXpgiRjzPy1GRdGPDPLhgu+wk/U7rAIIa6ePGJ40GHfi61hJv/3PSqXUGpgC908RHhoUGew==",
       "path": "microsoft.aspnetcore.cors/2.1.0",
       "hashPath": "microsoft.aspnetcore.cors.2.1.0.nupkg.sha512"
     },
@@ -1998,7 +1998,7 @@
     "Microsoft.EntityFrameworkCore.SqlServer/2.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-e0rW3jJXunnwUCout+lQicDoyviO53qsuawZa/HZsfRoEF/bWGlGTJxUN0MPZVQkEd5Gx8ypdDSRbGHtrQp/SA==",
+      "sha512": "sha512-EyVS75Oyraa1OQ9evjHAABYDcvAx1kAH+5kFfvzYxla71Ka6EC09veQhst+WgA3roLRULQe2hQfcFRsk0GpjlQ==",
       "path": "microsoft.entityframeworkcore.sqlserver/2.2.4",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.2.2.4.nupkg.sha512"
     },
@@ -2110,7 +2110,7 @@
     "Microsoft.Extensions.Options.ConfigurationExtensions/2.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-w/MP147fSqlIcCymaNpLbjdJsFVkSJM9Sz+jbWMr1gKMDVxoOS8AuFjJkVyKU/eydYxHIR/K1Hn3wisJBW5gSg==",
+      "sha512": "sha512-kqYb+lqnM+pny7F/8ecLFcNN5pGrlmsNPG3Q4ywXNkGdQCyrDFRtHO1mjUOs/9WfKA9hxqtswmtXGXODGDeBgg==",
       "path": "microsoft.extensions.options.configurationextensions/2.1.0",
       "hashPath": "microsoft.extensions.options.configurationextensions.2.1.0.nupkg.sha512"
     },
@@ -2131,14 +2131,14 @@
     "Microsoft.IdentityModel.JsonWebTokens/5.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-494JCwsMINjjmrl/kOTdOtcsm3ESh8W16zg0b3nNJBgnpOu9eDgs8KDOtP3kRjSQtHcLrTsBI1XJ5FbhKm1TrA==",
+      "sha512": "sha512-Tk3W9g/TOBBPkL/RU1KgOdsCzXhjOAG1/g75OMueXQev+ImPiDheB68ByRBicqTR0R14BUux9+msbWaAzzwo5Q==",
       "path": "microsoft.identitymodel.jsonwebtokens/5.2.4",
       "hashPath": "microsoft.identitymodel.jsonwebtokens.5.2.4.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Logging/5.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-12iZoCdMrwcQ8yOvg0AlG9oz6dIqvCczWsrHdALICsMWcBNFCAEyA0LELUYD0FZ7FVGvh4Z/KrPMkBVqVnIg2A==",
+      "sha512": "sha512-RDA2J7T1xCcxWx/WBlgFory5DR70tLofODL/tJzWU2JvYmG/m2Az7sy3RFYZs8RE6aAG+i25h8ebb5Z8SDTkww==",
       "path": "microsoft.identitymodel.logging/5.2.4",
       "hashPath": "microsoft.identitymodel.logging.5.2.4.nupkg.sha512"
     },
@@ -2159,7 +2159,7 @@
     "Microsoft.IdentityModel.Tokens/5.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hVkEnZTnU23IQv5hsbBmlJgmr/NdDg1yU6QPSoVirbfK1z+sDSItzDpZuKDcLjE81v174BlChdezKfVOzpr2YA==",
+      "sha512": "sha512-Ui9gfQLq5FHmnJK0teAH3vkpsy1sU6PFN2c0RbpgHW34+NPISQ5FQAdik4JyT/IvQXI8ZmQU+g94NErwdKYZZg==",
       "path": "microsoft.identitymodel.tokens/5.2.4",
       "hashPath": "microsoft.identitymodel.tokens.5.2.4.nupkg.sha512"
     },
@@ -2271,7 +2271,7 @@
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
+      "sha512": "sha512-/p8IQT2brFMDa7BHMH71LV+w5Tb3OxoLHxhn6+MGqN5xeqhM2HRHmj+7xQGJnaRn73d7ZTvp6yRCFMvolws4wA==",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
@@ -2285,7 +2285,7 @@
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
+      "sha512": "sha512-JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
@@ -2362,7 +2362,7 @@
     "System.Collections.Specialized/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "sha512-NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
       "path": "system.collections.specialized/4.3.0",
       "hashPath": "system.collections.specialized.4.3.0.nupkg.sha512"
     },
@@ -2446,7 +2446,7 @@
     "System.IdentityModel.Tokens.Jwt/5.2.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IVIGJO1X8THAUfOIb3/KhPWALPOtXzpnP+36JBBM3BrQdnsE7kbi5m4Hpbax9JQVSdA5KG9cFeFoAtFOWfn90A==",
+      "sha512": "sha512-ZKFZ3JZxgdB0SGrEfFB5HZVUpsss+gPhLcQRjnYB2gCXVeaMI6y/xj0I4Y1sG2igQd+jhJNENM8CPtBBG7rYFg==",
       "path": "system.identitymodel.tokens.jwt/5.2.4",
       "hashPath": "system.identitymodel.tokens.jwt.5.2.4.nupkg.sha512"
     },

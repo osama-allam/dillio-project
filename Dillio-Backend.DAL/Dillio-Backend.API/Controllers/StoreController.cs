@@ -26,6 +26,7 @@ namespace Dillio_Backend.API.Controllers
 
         [HttpGet]
         public IActionResult Get()
+
         {
             IList<Store> store = null;
 

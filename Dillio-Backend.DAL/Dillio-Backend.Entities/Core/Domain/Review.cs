@@ -9,6 +9,8 @@
         public Product Product { get; set; }
         public int ProductId { get; set; }
         public string UserId { get; set; }
+        public Store Store { get; set; }
+        public int StoreId { get; set; }
         public ApplicationUser User { get; set; }
 
     }

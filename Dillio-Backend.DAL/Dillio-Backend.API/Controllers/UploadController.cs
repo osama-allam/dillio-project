@@ -19,8 +19,12 @@ namespace Dillio_Backend.API.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var folderName = Path.Combine("images", "stores");
-                var pathToSave = Path.Combine(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", folderName));
+                var folderName = Path.Combine("Resources", "Images");
+                var pathToSave = Path.Combine(Path.Combine(Directory.GetCurrentDirectory(), folderName));
+
+                //var folderName = Path.Combine("images", "stores");
+                //var pathToSave = Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", folderName);
+
 
                 if (file.Length > 0)
                 {
