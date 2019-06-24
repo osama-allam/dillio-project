@@ -6,6 +6,7 @@
     <p class="card-text">{{productForm.value | json}}</p>
   </div>
 </div> -->
+
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col-12">
@@ -104,99 +105,102 @@
             </ng-template>
             <!-- file uploader -->
             <div class="container">
-
-              <div class="row justify-content-center">
+              <div class="row">
                 <div class="col-md-8">
-
-                  <h3>Select files</h3>
-
-                  <div ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)"
-                    [uploader]="uploader" class="well my-drop-zone w-100">
-                    <div class="justify-content-center">
-                      <img class="dragImage" src="assets/images/icons/Download_512px.png" alt="">
-                    </div>
-                    <div class="pt-30">
-                      <button class="btn btn-warning" (click)="fileInput.click()">
-                        Browse files</button> or <strong>Drag</strong> it here
-                    </div>
-                  </div>
-
-                  <input hidden type="file" ng2FileSelect [uploader]="uploader" #fileInput multiple /><br />
-
-                </div>
-              </div>
-
-              <div class="row justify-content-center">
-                <div class="col-md-12" style="margin-bottom: 40px">
-
-                  <h3>Upload queue</h3>
-                  <p>Queue length: {{ uploader?.queue?.length }}</p>
-
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th width="50%">Name</th>
-                        <th>Size</th>
-                        <th>Progress</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let item of uploader.queue">
-                        <td><strong>{{ item?.file?.name }}</strong></td>
-                        <td *ngIf="uploader.options.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB
-                        </td>
-                        <td *ngIf="uploader.options.isHTML5">
-                          <div class="progress" style="margin-bottom: 0;">
-                            <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }">
-                            </div>
-                          </div>
-                        </td>
-                        <td class="text-center">
-                          <span *ngIf="item.isSuccess"><i class="fas fa-arrow-circle-up"></i></span>
-                          <span *ngIf="item.isCancel"><i class="fas fa-ban"></i></span>
-                          <span *ngIf="item.isError"><i class="fas fa-trash-alt"></i></span>
-                        </td>
-                        <td nowrap>
-                          <button type="button" class="btn btn-success btn-xs" (click)="item.upload()"
-                            [disabled]="item.isReady || item.isUploading || item.isSuccess">
-                            <i class="fas fa-arrow-circle-up"></i> Upload
-                          </button>
-                          <button type="button" class="btn btn-warning btn-xs" (click)="item.cancel()"
-                            [disabled]="!item.isUploading">
-                            <i class="fas fa-ban"></i> Cancel
-                          </button>
-                          <button type="button" class="btn btn-danger btn-xs" (click)="item.remove()">
-                            <i class="fas fa-trash-alt"></i> Remove
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <div>
-                    <div>
-                      Queue progress:
-                      <div class="progress" style="">
-                        <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }">
+                  <div class="row w-100">
+                      <h3>Select files</h3>
+                      <div ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)"
+                        [uploader]="uploader" class="well my-drop-zone w-100">
+                        <div class="justify-content-center">
+                          <img class="dragImage" src="assets/images/icons/Download_512px.png" alt="">
+                        </div>
+                        <div class="pt-30">
+                          <button class="btn btn-warning" (click)="fileInput.click()">
+                            Browse files</button> or <strong>Drag</strong> it here
                         </div>
                       </div>
-                    </div>
-                    <button type="button" class="btn btn-success btn-s " (click)="uploader.uploadAll()"
-                      [disabled]="!uploader.getNotUploadedItems().length">
-                      <i class="fas fa-arrow-circle-up"></i> Upload all
-                    </button>
-                    <button type="button" class="btn btn-warning btn-s ml-5" (click)="uploader.cancelAll()"
-                      [disabled]="!uploader.isUploading">
-                      <i class="fas fa-ban"></i> Cancel all
-                    </button>
-                    <button type="button" class="btn btn-danger btn-s ml-5" (click)="uploader.clearQueue()"
-                      [disabled]="!uploader.queue.length">
-                      <i class="fas fa-trash-alt"></i> Remove all
-                    </button>
+                      <input hidden type="file" ng2FileSelect [uploader]="uploader" #fileInput multiple /><br />
                   </div>
+                  <div class="row w-100" style="margin-bottom: 40px">
+                      <h3>Upload queue</h3>
+                      <p>Queue length: {{ uploader?.queue?.length }}</p>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th width="50%">Name</th>
+                            <th>Size</th>
+                            <th>Progress</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of uploader.queue">
+                            <td><strong>{{ item?.file?.name }}</strong></td>
+                            <td *ngIf="uploader.options.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB
+                            </td>
+                            <td *ngIf="uploader.options.isHTML5">
+                              <div class="progress" style="margin-bottom: 0;">
+                                <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }">
+                                </div>
+                              </div>
+                            </td>
+                            <td class="text-center">
+                              <span *ngIf="item.isSuccess"><i class="fa fa-arrow-circle-up"></i></span>
+                              <span *ngIf="item.isCancel"><i class="fa fa-ban"></i></span>
+                              <span *ngIf="item.isError"><i class="fa fa-trash-o"></i></span>
+                            </td>
+                            <td nowrap>
+                              <button type="button" class="btn btn-success btn-xs" (click)="item.upload()"
+                                [disabled]="item.isReady || item.isUploading || item.isSuccess">
+                                <i class="fa fa-arrow-circle-up"></i> Upload
+                              </button>
+                              <button type="button" class="btn btn-warning btn-xs" (click)="item.cancel()"
+                                [disabled]="!item.isUploading">
+                                <i class="fa fa-ban"></i> Cancel
+                              </button>
+                              <button type="button" class="btn btn-danger btn-xs" (click)="item.remove()">
+                                <i class="fa fa-trash-o"></i> Remove
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
 
+                      <div>
+                        <div>
+                          Queue progress:
+                          <div class="progress" style="">
+                            <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }">
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="btn btn-success btn-s " (click)="uploader.uploadAll()"
+                          [disabled]="!uploader.getNotUploadedItems().length">
+                          <i class="fa fa-arrow-circle-up"></i> Upload all
+                        </button>
+                        <button type="button" class="btn btn-warning btn-s ml-5" (click)="uploader.cancelAll()"
+                          [disabled]="!uploader.isUploading">
+                          <i class="fa fa-ban"></i> Cancel all
+                        </button>
+                        <button type="button" class="btn btn-danger btn-s ml-5" (click)="uploader.clearQueue()"
+                          [disabled]="!uploader.queue.length">
+                          <i class="fa fa-trash-o"></i> Remove all
+                        </button>
+                      </div>
+
+                  </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div *ngFor="let image of images" class="card border-warning mb-3 ml-5 mr-5 pl-5 pr-5" style="width: 10rem;">
+                            <img class="card-img-top" src="{{image.url}}" alt="Card image cap">
+                            <div class="card-body text-center">
+                              <button type="button" class="btn btn-danger btn-s"
+                              (click)="deleteImage(image.publicId)"><i class="fa fa-trash-o"></i> Delete</button>
+                            </div>
+                          </div>
+                      </div>
                 </div>
               </div>
 
