@@ -10,6 +10,9 @@ namespace Dillio_Backend.API.Helpers
         {
             CreateMap<Image, ImageCreationViewModel>().ReverseMap();
             CreateMap<Image, ImageToReturnViewModel>().ReverseMap();
+            CreateMap<Product, ProductEditViewModel>().ReverseMap();
+            CreateMap<Specs, SpecsViewModel>().ReverseMap();
+            CreateMap<Image, ImageCloudViewModel>().ReverseMap();
         }
     }
 }

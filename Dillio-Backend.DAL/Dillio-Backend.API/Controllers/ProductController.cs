@@ -1,10 +1,11 @@
-﻿using Dillio_Backend.API.ViewModel;
+﻿using AutoMapper;
+using Dillio_Backend.API.ViewModel;
 using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Dillio_Backend.API.Controllers
 {
@@ -15,10 +16,12 @@ namespace Dillio_Backend.API.Controllers
     {
 
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public ProductController(IUnitOfWork unitOfWork)
+        public ProductController(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            this._unitOfWork = unitOfWork;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         [Authorize]
@@ -57,29 +60,21 @@ namespace Dillio_Backend.API.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Product pro = _unitOfWork.Products.Get(id);
+            if (id == 0 || id == null)
+            {
+                return BadRequest();
+            }
 
-            if (pro == null)
+            var repoProduct = _unitOfWork.Products.GetSingleProductWithJoins(id);
+
+            if (repoProduct == null)
             {
                 return NotFound();
             }
 
+            ProductEditViewModel productToReturn = _mapper.Map<ProductEditViewModel>(repoProduct);
 
-            IList<Image> images = _unitOfWork.Images.GetAll().Where(i => i.ProductId == id).ToList();
-            pro.Images = images;
-
-
-
-            ProductViewModel pvm = new ProductViewModel()
-            {
-                Price = pro.Price,
-                Discount = pro.Discount,
-                Name = pro.Name,
-                Description = pro.Description,
-                Images = pro.Images.ToList()
-            };
-
-            return Ok(pvm);
+            return Ok(productToReturn);
         }
 
         [HttpPost]
@@ -142,6 +137,7 @@ namespace Dillio_Backend.API.Controllers
 
             IList<ProductViewModel> pvm = categoryProducts.Select(s => new ProductViewModel()
             {
+                Id = s.Id,
                 Name = s.Name,
                 Description = s.Description,
                 Price = s.Price,
