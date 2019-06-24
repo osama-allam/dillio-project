@@ -91,9 +91,9 @@ import { UploadComponent } from './shared/upload/upload.component';
     ContactContentComponent,
     FaqComponent,
     PageNotFoundComponent,
-    ProductDetailsComponent,
-    ProductEditComponent,
-    ProductListingComponent,
+    // ProductDetailsComponent,
+    // ProductEditComponent,
+    // ProductListingComponent,
     StoreAddComponent,
     UploadComponent,
     
