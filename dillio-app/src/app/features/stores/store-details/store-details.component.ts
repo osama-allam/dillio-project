@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { IStoreDetails } from 'src/app/_models/store-details';
 import { IFeedbackModalData, IFeedbackData } from 'src/app/_models/feedback-form';
+import { StoresService } from 'src/app/services/stores.service';
+import { Stores } from 'src/app/_models/stores';
+import { IBranch } from 'src/app/_models/branch';
+import { Reviews } from 'src/app/_models/Review';
 declare var $: any;
 @Component({
   selector: 'app-store-details',
@@ -12,9 +16,16 @@ export class StoreDetailsComponent implements OnInit {
 
   submitted = false;
   feedbackForm: FormGroup;
+  newStore:Stores;
+  branches:IBranch[];
+  errormessage:string;
   storeDetails: IStoreDetails;
   formData: IFeedbackModalData;
-  constructor() {
+  reviewArr:Reviews[];
+
+  constructor(private storeservice:StoresService) {
+    // this.branches=[{name:'',address:'',phones:['010123456789', '0111555888']}];
+    this.newStore={branches:[{phones:['010123456789', '0111555888']}]};
     this.storeDetails = {
       id: 1,
       name: 'souq.com',
@@ -82,8 +93,38 @@ export class StoreDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+
+this.storeservice.getBranchesOfStore(1).subscribe(
+  branch =>{
+    this.branches = branch
+  },
+  error =>this.errormessage = <any>error
+)
+
+  this.storeservice.getStore(1).subscribe(
+    stores =>{
+      this.newStore = {
+      name : stores.name,
+      description :stores.description,
+      Url:stores.Url,
+      Rating:stores.Rating,
+      branches:this.branches,
+    
+        }
+    },
+    error =>this.errormessage = <any>error
+  );
+
+this.storeservice.getReviewsOfStore(1).subscribe(
+  review=>{
+    this.reviewArr = review;
+  },
+  error =>this.errormessage = <any>error
+)
+
   }
   onModalFormSubmitted(event: IFeedbackData) {
     console.log(event);
   }
 }
+
