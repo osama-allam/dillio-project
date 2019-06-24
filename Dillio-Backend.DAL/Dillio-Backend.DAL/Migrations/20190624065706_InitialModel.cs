@@ -318,6 +318,8 @@ namespace Dillio_Backend.DAL.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Url = table.Column<string>(type: "nvarchar(100)", nullable: false),
+                    DateAdded = table.Column<DateTime>(nullable: false),
+                    PublicId = table.Column<string>(nullable: true),
                     FK_ProductId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
