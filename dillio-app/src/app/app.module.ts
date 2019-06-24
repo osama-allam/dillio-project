@@ -58,6 +58,7 @@ import { ProductListingComponent } from './features/products/product-listing/pro
 import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
 import { MaterialModule } from './material.module';
 import { FileUploadModule } from 'ng2-file-upload';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -114,6 +115,7 @@ import { FileUploadModule } from 'ng2-file-upload';
     StarRatingModule.forRoot(),
     MaterialModule,
     FileUploadModule,
+    HttpClientModule,
     AppRoutingModule,
     HttpClientModule,
   ],
