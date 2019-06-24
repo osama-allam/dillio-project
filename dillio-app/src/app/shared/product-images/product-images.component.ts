@@ -20,7 +20,7 @@ export class ProductImagesComponent implements OnInit {
   constructor(private productservice: ProductService) { }
 
   ngOnInit() {
-    this.products = this.productservice.getById(1);
+    // this.products = this.productservice.getById(1);
 
   }
 }

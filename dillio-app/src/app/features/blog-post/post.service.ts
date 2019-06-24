@@ -27,12 +27,10 @@ export class postService
       }
 
       addPost(posts: IPost) {
-        console.log("bgfdhgfjhgjhg");
 
         this.posts.push(posts);
         console.log(this.posts);
         this.postsChanged.next(this.posts);
-        debugger;
       }
 
       addPosts(posts: IPost[]) {

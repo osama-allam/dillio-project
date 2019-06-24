@@ -1,5 +1,6 @@
 export interface IBranch {
-  name: string;
-  address: string;
-  phones: string[];
+  name?: string;
+  address?: string;
+  phones?: string[];
+
 }
