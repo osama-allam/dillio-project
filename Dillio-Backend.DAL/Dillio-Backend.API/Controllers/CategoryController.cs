@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Domain;
 using Dillio_Backend.DAL;
 using Dillio_Backend.DAL.Persistence;
@@ -14,15 +15,19 @@ namespace Dillio_Backend.API.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
-        readonly UnitOfWork _unitOfWork = new UnitOfWork(new ApplicationDbContext());
+        private readonly IUnitOfWork _unitOfWork;
 
+        public CategoryController(IUnitOfWork unitOfWork)
+        {
+            this._unitOfWork = unitOfWork;
+        }
 
         [HttpGet]
         public IActionResult Get()
         {
-            IList<Category> categories = null;
+            //IList<Category> categories = new List<Category>();
 
-            categories = _unitOfWork.Categories.GetAll().ToList();
+          var categories = _unitOfWork.Categories.GetAll().ToList();
 
             if (categories.Count == 0)
             {
@@ -35,9 +40,9 @@ namespace Dillio_Backend.API.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Category category = null;
+            //Category category = null;
 
-            category = _unitOfWork.Categories.Get(id);
+           var category = _unitOfWork.Categories.Get(id);
 
             if (category == null)
             {

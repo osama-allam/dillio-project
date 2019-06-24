@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 {
-    public class ReviewConfigurations:IEntityTypeConfiguration<Review>
+    public class ReviewConfigurations : IEntityTypeConfiguration<Review>
     {
         public void Configure(EntityTypeBuilder<Review> builder)
         {
@@ -15,6 +15,12 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 
             builder.Property(r => r.Name)
                 .HasColumnType("nvarchar(250)");
+
+            builder.Property(r => r.ProductId)
+                .HasColumnName("FK_ProductId");
+
+            builder.Property(r => r.UserId)
+                .HasColumnName("FK_UserId");
 
         }
     }

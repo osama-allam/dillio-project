@@ -3148,23 +3148,29 @@
     ]
   },
   "packageFolders": {
+
     "C:\\Users\\DELL\\.nuget\\packages\\": {},
+
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+
       "projectUniqueName": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj",
       "projectName": "Dillio-Backend.Entities",
       "projectPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
       "outputPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\obj\\",
+
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

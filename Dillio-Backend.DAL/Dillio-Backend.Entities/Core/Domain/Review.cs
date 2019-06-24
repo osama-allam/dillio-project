@@ -7,9 +7,9 @@
         public string Name { get; set; }
         public string Email { get; set; }
         public Product Product { get; set; }
-        public int FK_ProductId { get; set; }
-        public string FK_UserId { get; set; }
-        public ApplicationUser User{ get; set; }
+        public int ProductId { get; set; }
+        public string UserId { get; set; }
+        public ApplicationUser User { get; set; }
 
     }
 }

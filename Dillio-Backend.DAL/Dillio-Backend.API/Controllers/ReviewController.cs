@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Dillio_Backend.API.ViewModel;
+using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Domain;
 using Dillio_Backend.DAL;
 using Dillio_Backend.DAL.Persistence;
@@ -17,14 +18,21 @@ namespace Dillio_Backend.API.Controllers
     public class ReviewController : ControllerBase
     {
 
-        readonly UnitOfWork _unitOfWork = new UnitOfWork(new ApplicationDbContext());
+        private readonly IUnitOfWork _unitOfWork;
+
+        public ReviewController(IUnitOfWork unitOfWork)
+        {
+            this._unitOfWork = unitOfWork;
+        }
+
+
 
         [HttpGet("product/{productId}")]
         public IActionResult Get(int productId)
         {
             IList<Review> reviews = null;
 
-            reviews = _unitOfWork.Reviews.GetAll().Where(r=>r.FK_ProductId == productId).ToList();
+            reviews = _unitOfWork.Reviews.GetAll().Where(r=>r.ProductId == productId).ToList();
 
             if (reviews.Count == 0)
             {
@@ -64,8 +72,8 @@ namespace Dillio_Backend.API.Controllers
                     Name = rvm.Name,
                     Email = rvm.Email,
                     ReviewDescription = rvm.ReviewDescription,
-                    FK_UserId = User.Identity.GetUserId(),
-                    FK_ProductId = productId
+                    UserId = User.Identity.GetUserId(),
+                    ProductId = productId
                 };
 
                 _unitOfWork.Reviews.Add(review);

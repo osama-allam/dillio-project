@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 {
-    public class ProductConfiguration:IEntityTypeConfiguration<Product>
+    public class ProductConfiguration : IEntityTypeConfiguration<Product>
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
@@ -17,9 +17,17 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
                 .HasColumnType("nvarchar(50)")
                 .IsRequired();
 
+            builder.Property(p => p.CategoryId)
+                .HasColumnName("FK_CategoryId");
+
+            builder.HasMany(p => p.Specs)
+                .WithOne(s => s.Product)
+                .HasForeignKey(s => s.ProductId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             builder.HasMany(p => p.Reviews)
                 .WithOne(r => r.Product)
-                .HasForeignKey(r => r.FK_ProductId)
+                .HasForeignKey(r => r.ProductId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(p => p.Images)

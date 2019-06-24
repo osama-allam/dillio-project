@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Dillio_Backend.BLL.Core;
-using Dillio_Backend.BLL.Core.Domain;
+﻿using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Repositories;
 using Dillio_Backend.DAL.Persistence.Repository;
+using System.Threading.Tasks;
 
 namespace Dillio_Backend.DAL.Persistence
 {
-   public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         #region ReadOnlyMemberVariables
 
@@ -16,14 +13,14 @@ namespace Dillio_Backend.DAL.Persistence
 
         #endregion
 
-        
+
 
         #region Constructor
 
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
-            ApplicationUser = new ApplicationUserRepository(context);
+            //ApplicationUser = new ApplicationUserRepository(context);
             Blogs = new BlogRepository(context);
             Categories = new CategoryRepository(context);
             Comments = new CommentRepository(context);
@@ -33,11 +30,12 @@ namespace Dillio_Backend.DAL.Persistence
             Stores = new StoreRepository(context);
             Reviews = new ReviewRepository(context);
             Orders = new OrderRepository(context);
+            Specs = new SpecsRepository(context);
         }
 
         #region Repositories Member Variables
 
-        public IApplicationUserRepository ApplicationUser { get; set; }
+        //public IApplicationUserRepository ApplicationUser { get; set; }
         public IBlogRepository Blogs { get; set; }
 
         public ICategoryRepository Categories { get; set; }
@@ -53,6 +51,7 @@ namespace Dillio_Backend.DAL.Persistence
         public IStoreRepository Stores { get; set; }
 
         public IReviewRepository Reviews { get; set; }
+        public ISpecsRepository Specs { get; }
 
         public IOrderRepository Orders { get; set; }
 
@@ -68,7 +67,12 @@ namespace Dillio_Backend.DAL.Persistence
         #region Methods
         public int Complete()
         {
-          return  _context.SaveChanges();
+            return _context.SaveChanges();
+        }
+
+        public Task<int> CompleteAsync()
+        {
+            return _context.SaveChangesAsync();
         }
 
         public void Dispose()
