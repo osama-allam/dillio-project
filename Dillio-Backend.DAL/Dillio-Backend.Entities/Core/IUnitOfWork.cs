@@ -7,7 +7,7 @@ namespace Dillio_Backend.BLL.Core
     public interface IUnitOfWork : IDisposable
     {
         //Repositories
-        IApplicationUserRepository ApplicationUser { get; set; }
+        //IApplicationUserRepository ApplicationUser { get; set; }
         IBlogRepository Blogs { get; }
         ICategoryRepository Categories { get; }
         ICommentRepository Comments { get; }

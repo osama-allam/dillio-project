@@ -25,6 +25,8 @@ namespace Dillio_Backend.API.Controllers
             this._unitOfWork = unitOfWork;
         }
 
+
+
         [HttpGet("product/{productId}")]
         public IActionResult Get(int productId)
         {
