@@ -117,15 +117,15 @@ namespace Dillio_Backend.API
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
 
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy("SPA", policy =>
-            //    {
-            //        policy.WithOrigins()
-            //            .AllowAnyHeader()
-            //            .AllowAnyMethod();
-            //    });
-            //});
+            services.AddCors(options =>
+            {
+                options.AddPolicy("SPA", policy =>
+                {
+                    policy.WithOrigins()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -144,11 +144,11 @@ namespace Dillio_Backend.API
            
 
 
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", Path.GetFileName(@"images"))),
-                RequestPath = new PathString("/images")
-            });
+            //app.UseStaticFiles(new StaticFileOptions()
+            //{
+            //    FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", Path.GetFileName(@"images"))),
+            //    RequestPath = new PathString("/images")
+            //});
             app.UseAuthentication();
             app.UseStaticFiles();
 

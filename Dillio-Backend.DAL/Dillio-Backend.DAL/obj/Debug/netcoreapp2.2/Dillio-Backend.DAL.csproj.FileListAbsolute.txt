@@ -12,5 +12,3 @@ D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcore
 D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.csproj.CopyComplete
 D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
 D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
-
-

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dillio_Backend.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190624065706_InitialModel")]
-    partial class InitialModel
+    [Migration("20190624160407_initDB")]
+    partial class initDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -70,18 +70,18 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.Property<int>("BlogId");
 
+                    b.Property<string>("FK_UserId")
+                        .HasColumnName("FK_UserId");
+
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("UserId")
-                        .HasColumnName("FK_UserId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BlogId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("FK_UserId");
 
                     b.ToTable("Comment");
                 });
@@ -440,7 +440,7 @@ namespace Dillio_Backend.DAL.Migrations
 
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.ApplicationUser", "User")
                         .WithMany("Comments")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("FK_UserId")
                         .OnDelete(DeleteBehavior.SetNull);
                 });
 

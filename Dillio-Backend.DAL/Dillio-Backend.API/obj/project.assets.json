@@ -6571,7 +6571,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.SqlServer/2.2.4": {
-      "sha512": "e0rW3jJXunnwUCout+lQicDoyviO53qsuawZa/HZsfRoEF/bWGlGTJxUN0MPZVQkEd5Gx8ypdDSRbGHtrQp/SA==",
+      "sha512": "EyVS75Oyraa1OQ9evjHAABYDcvAx1kAH+5kFfvzYxla71Ka6EC09veQhst+WgA3roLRULQe2hQfcFRsk0GpjlQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.sqlserver/2.2.4",
       "files": [
@@ -8596,7 +8596,7 @@
       ]
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
+      "sha512": "JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
       "type": "package",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -8959,7 +8959,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -13239,29 +13239,23 @@
     ]
   },
   "packageFolders": {
-
     "C:\\Users\\DELL\\.nuget\\packages\\": {},
-
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-
       "projectUniqueName": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.API\\Dillio-Backend.API.csproj",
       "projectName": "Dillio-Backend.API",
       "projectPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.API\\Dillio-Backend.API.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
       "outputPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.API\\obj\\",
-
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13274,10 +13268,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-
-            "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.BLL\\Dillio-Backend.BLL.csproj": {
-              "projectPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.BLL\\Dillio-Backend.BLL.csproj"
-
+            "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj": {
+              "projectPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj"
+            },
+            "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj": {
+              "projectPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj"
             }
           }
         }
