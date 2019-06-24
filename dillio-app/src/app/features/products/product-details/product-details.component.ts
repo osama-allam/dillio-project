@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Product } from 'src/app/_models/product';
 import { Review } from 'src/app/_models/product-review';
 import { ProductService } from 'src/app/services/product.service';
 import { ProductReviewService } from 'src/app/services/product-review.service';
+import { Productdetailsviewmodel } from 'src/app/_models/product-details-viewmodel';
 
 @Component({
   selector: 'app-product-details',
@@ -11,14 +11,14 @@ import { ProductReviewService } from 'src/app/services/product-review.service';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  @Input()product:Product;
+  @Input()productdetails:Productdetailsviewmodel;
   @Input()reviews:Review[];
 
   constructor(private productservice:ProductService,private reviewservice:ProductReviewService) { }
 
   ngOnInit() {
-    this.product=this.productservice.getById(1);
-    this.reviews=this.reviewservice.getReviewOfProduct(2);
+    // this.productdetails=this.productservice.getProduct(1);
+    // this.reviews=this.reviewservice.getReviewOfProduct(2);
   }
 
 }

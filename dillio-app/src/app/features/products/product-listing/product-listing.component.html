@@ -35,12 +35,12 @@
                       <div id="grid-view" class="tab-pane fade active show" role="tabpanel">
                           <div class="product-area shop-product-area">
                               <div class="row">
-                                  <div *ngFor='let product of products;let i = index;' class="col-lg-4 col-md-4 col-sm-6 mt-40">
+                                  <div *ngFor='let productlisting of products;let i = index;' class="col-lg-4 col-md-4 col-sm-6 mt-40">
                                       <!-- single-product-wrap start -->
                                       <div class="single-product-wrap">
                                           <div class="product-image">
                                               <a href="single-product.html">
-                                                  <img [src]="product.largeimageUrl[0]" alt="Li's Product Image">
+                                                  <img [src]="productlisting.largeimageUrl[0]" alt="Li's Product Image">
                                               </a>
                                               <!-- <span class="sticker">New</span> -->
                                           </div>
@@ -48,7 +48,7 @@
                                               <div class="product_desc_info">
                                                   <div class="product-review">
                                                       <h5 class="manufacturer">
-                                                          <a href="product-details.html">{{product.category.name}}</a>
+                                                          <a href="product-details.html">{{productlisting.category.name}}</a>
                                                       </h5>
                                                       <div class="rating-box">
                                                           <ul class="rating">
@@ -60,9 +60,9 @@
                                                           </ul>
                                                       </div>
                                                   </div>
-                                                  <h4><a class="product_name" href="single-product.html">{{product.title}}</a></h4>
+                                                  <h4><a class="product_name" href="single-product.html">{{productlisting.title}}</a></h4>
                                                   <div class="price-box">
-                                                      <span class="new-price">${{product.price}}</span>
+                                                      <span class="new-price">${{productlisting.price}}</span>
                                                   </div>
                                               </div>
                                               <div class="add-actions">
@@ -128,11 +128,11 @@
                                       </div>
                                   </div> -->
 
-                                  <div *ngFor='let product of products;let i = index;' class="row product-layout-list" [class.last-child]="i==products.length-1">
+                                  <div *ngFor='let productlisting of products;let i = index;' class="row product-layout-list" [class.last-child]="i==products.length-1">
                                       <div class="col-lg-3 col-md-5 ">
                                           <div class="product-image">
                                               <a href="single-product.html">
-                                                  <img [src]="product.largeimageUrl[0]" alt="Li's Product Image">
+                                                  <img [src]="productlisting.largeimageUrl[0]" alt="Li's Product Image">
                                               </a>
                                               <!-- <span class="sticker">New</span> -->
                                           </div>
@@ -142,7 +142,7 @@
                                               <div class="product_desc_info">
                                                   <div class="product-review">
                                                       <h5 class="manufacturer">
-                                                          <a href="product-details.html">{{product.category.name}}</a>
+                                                          <a href="product-details.html">{{productlisting.category.name}}</a>
                                                       </h5>
                                                       <div class="rating-box">
                                                           <ul class="rating">
@@ -154,11 +154,11 @@
                                                           </ul>
                                                       </div>
                                                   </div>
-                                                  <h4><a class="product_name" href="single-product.html">{{product.title}}</a></h4>
+                                                  <h4><a class="product_name" href="single-product.html">{{productlisting.title}}</a></h4>
                                                   <div class="price-box">
-                                                      <span class="new-price">${{product.price}}</span>
+                                                      <span class="new-price">${{productlisting.price}}</span>
                                                   </div>
-                                                  <p>{{product.description}}</p>
+                                                  <p>{{productlisting.description}}</p>
                                               </div>
                                           </div>
                                       </div>
