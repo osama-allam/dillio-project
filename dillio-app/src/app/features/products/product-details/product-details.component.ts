@@ -17,8 +17,8 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private productservice:ProductService,private reviewservice:ProductReviewService) { }
 
   ngOnInit() {
-    this.productdetails=this.productservice.getById(1);
-    this.reviews=this.reviewservice.getReviewOfProduct(2);
+    // this.productdetails=this.productservice.getProduct(1);
+    // this.reviews=this.reviewservice.getReviewOfProduct(2);
   }
 
 }

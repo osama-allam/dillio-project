@@ -1,3 +1,4 @@
+import { IProduct } from './../../../_models/product';
 import { AlertifyService } from './../../../services/alertify.service';
 import { Image } from './../../../_model/image';
 import { environment } from './../../../../environments/environment';
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
 import {FormBuilder, FormGroup, Validators, AbstractControl, FormArray} from '@angular/forms';
 import { ImageUploadService } from 'src/app/services/image-upload.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProductResolved } from 'src/app/_models/product';
 @Component({
   selector: 'app-product-edit',
   templateUrl: './product-edit.component.html',
@@ -19,6 +22,7 @@ export class ProductEditComponent implements OnInit {
   productForm: FormGroup;
   categories: Category[];
   uploader: FileUploader;
+  errorMessage: string;
   hasBaseDropZoneOver = false;
   baseUrl = environment.apiUrl;
   get formArray(): AbstractControl | null {
@@ -27,26 +31,59 @@ export class ProductEditComponent implements OnInit {
   get specsArray(): FormArray | null {
     return this.formArray.get([1]).get('specsArray') as FormArray;
   }
+  get isDirty(): boolean {
+    return JSON.stringify(this.originalProduct) !== JSON.stringify(this.currentProduct);
+  }
+
+  private currentProduct: IProduct;
+  private originalProduct: IProduct;
+
+  get product(): IProduct {
+    return this.currentProduct;
+  }
+  set product(value: IProduct) {
+    this.currentProduct = value;
+    // Clone the object to retain a copy
+    this.originalProduct = value ? { ...value } : null;
+  }
   constructor(private _formBuilder: FormBuilder,
               private _categoryService: CategoryService,
               private _imageUploadService: ImageUploadService,
-              private _alertify: AlertifyService) {
+              private _alertify: AlertifyService,
+              private route: ActivatedRoute,
+              private router: Router) {
     this.categories = _categoryService.getall();
-    // this.images.push({
-    //   id: 0,
-    //   url: 'https://res.cloudinary.com/dsrukgg4b/image/upload/v1561334886/wle1st4ao9v6f7tttego.png',
-    //   publicId: '',
-    //   dateAdded: '2019-06-24T00:00:00.2656491+02:00'
-    // });
-    // this.images.push({
-    //   id: 0,
-    //   url: 'https://res.cloudinary.com/dsrukgg4b/image/upload/v1561334603/sxpkfps9wb5cufhwnmuh.png',
-    //   publicId: '',
-    //   dateAdded: '2019-06-24T00:00:00.2656491+02:00'
-    // });
   }
 
   ngOnInit() {
+    this.initializeForm();
+    this.initializeUploader();
+    this.getProductResolvedData();
+  }
+  // Resolve Data
+  getProductResolvedData() {
+    this.route.data.subscribe(data => {
+      const resolvedData: ProductResolved = data['resolvedData'];
+      this.errorMessage = resolvedData.error;
+      this.onProductRetrieved(resolvedData.product);
+    });
+  }
+  onProductRetrieved(product: IProduct): void {
+    this.product = product;
+    if (!this.product) {
+      this.router.navigate(['/page-not-found']);
+    } else {
+      if (this.product.id === 0) {
+        // this.pageTitle = 'Add Product';
+      } else {
+        // this.pageTitle = `Edit Product: ${this.product.productName}`;
+        // fill form with data
+        console.log(JSON.stringify(product));
+      }
+    }
+  }
+  // Product Form Section
+  initializeForm() {
     this.productForm = this._formBuilder.group(
       {
         formArray: this._formBuilder.array(
@@ -58,9 +95,7 @@ export class ProductEditComponent implements OnInit {
             discountFormCtrl: [{value: '', disabled: true}, Validators.required],
             discountToggleFormCtrl: false,
             categoryFormCtrl: ['', Validators.required],
-            fileUploadFormCtrl: [null],
-            // storeFormCtrl: ['', Validators.required],
-            // uploaderFormCtrl: ['', Validators.required]
+            fileUploadFormCtrl: [null]
           }),
           // specs and description step
           this._formBuilder.group({
@@ -82,20 +117,27 @@ export class ProductEditComponent implements OnInit {
     discountToggleControl.valueChanges.subscribe(
       value => {
         value ? discountControl.enable() : discountControl.disable();
-
     }
     );
-    this.initializeUploader();
   }
+
   buildSpecsGroup(): FormGroup {
     return this._formBuilder.group({
       productSpecNameFormCtrl: ['', Validators.required],
       productSpecValueFormCtrl: ['', Validators.required]
     });
   }
+
   addSpecFormGroup(): void {
     this.specsArray.push(this.buildSpecsGroup());
   }
+
+  saveProduct() {
+
+  }
+  // End of product Form Section
+
+  // Image Uploader section
   deleteSpecFormGroup(index: number): void {
     this.specsArray.removeAt(index);
   }
@@ -131,17 +173,15 @@ export class ProductEditComponent implements OnInit {
         }
       };
   }
-    deleteImage(publicId: string): void {
-      this._alertify.confirm('Are you sure you want to delete this image?', () => {
-        this._imageUploadService.deleteImage(publicId).subscribe(() => {
-          this.images.splice(this.images.findIndex(i => i.publicId === publicId), 1);
-          this._alertify.success('image has been deleted');
-        }, error => {
-          this._alertify.error('Failed to delete the photo');
-        });
+  deleteImage(publicId: string): void {
+    this._alertify.confirm('Are you sure you want to delete this image?', () => {
+      this._imageUploadService.deleteImage(publicId).subscribe(() => {
+        this.images.splice(this.images.findIndex(i => i.publicId === publicId), 1);
+        this._alertify.success('image has been deleted');
+      }, error => {
+        this._alertify.error('Failed to delete the photo');
       });
-    }
-  saveProduct() {
-
+    });
   }
+  // End image Uploader section
 }
