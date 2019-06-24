@@ -6,7 +6,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 
 
-//import { StarRatingModule } from 'angular-star-rating';
+import { StarRatingModule } from 'angular-star-rating';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
@@ -130,7 +130,7 @@ import { UploadComponent } from './shared/upload/upload.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    // StarRatingModule.forRoot()
+    StarRatingModule.forRoot()
   ],
   providers: [CategoryService,
               SubcategoryService,

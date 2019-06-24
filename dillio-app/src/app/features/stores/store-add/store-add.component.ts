@@ -26,14 +26,6 @@ stores:Stores[];
       store=>this.stores.push(store)
     );
     console.log('done');
-
-  //    this.newstore = {name:this.store.name , description:this.store.description,Url:this.store.Url,Rating:3.5};
-  // //   if(this.editmode){
-  // //     this.storeservice.edit(this.store.id,this.newstore);
-  // //   }
-  // //   else {
-  //     this.storeservice.Add(this.newstore);
-  // //   }
    }
 
 
