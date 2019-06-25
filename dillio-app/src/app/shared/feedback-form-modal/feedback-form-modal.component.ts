@@ -50,8 +50,8 @@ export class FeedbackFormModalComponent implements OnInit {
     let data: IFeedbackData;
     data = {
       rating: form.value.customerRating,
-      userReview: form.value.userReview,
-      username: form.value.username,
+      description: form.value.userReview,
+      Name: form.value.username,
       email: form.value.email
     };
     return data;

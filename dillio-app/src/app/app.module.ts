@@ -47,6 +47,8 @@ import { StoreDetailsComponent } from './features/stores/store-details/store-det
 import { StoresComponent } from './features/stores/stores.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import { SharedModule } from './shared/shared.module';
+import { StoreAddComponent } from './features/stores/store-add/store-add.component';
+import { UploadComponent } from './shared/upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +84,9 @@ import { SharedModule } from './shared/shared.module';
     ContactFormComponent,
     ContactContentComponent,
     FaqComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    StoreAddComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
