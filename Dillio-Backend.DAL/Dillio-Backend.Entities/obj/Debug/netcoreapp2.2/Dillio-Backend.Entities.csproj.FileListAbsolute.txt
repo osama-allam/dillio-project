@@ -25,3 +25,4 @@ D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Bac
 D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
 D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
 D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csprojAssemblyReference.cache
+D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csprojAssemblyReference.cache
