@@ -115,14 +115,14 @@ namespace Dillio_Backend.API
                 .AllowCredentials());
 
             app.UseStaticFiles();
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                FileProvider = new PhysicalFileProvider(Path.Combine(Path.Combine(Directory.GetCurrentDirectory(), @"Resources"))),
-                RequestPath = new PathString("/Resources")
+            //app.UseStaticFiles(new StaticFileOptions()
+            //{
+            //    FileProvider = new PhysicalFileProvider(Path.Combine(Path.Combine(Directory.GetCurrentDirectory(), @"Resources"))),
+            //    RequestPath = new PathString("/Resources")
 
-                //FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", @"images")),
-                //RequestPath = new PathString("/images")
-            });
+            //    //FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", @"images")),
+            //    //RequestPath = new PathString("/images")
+            //});
          
 
             app.UseCors("SPA");
@@ -132,7 +132,7 @@ namespace Dillio_Backend.API
             app.UseMvcWithDefaultRoute();
 
             // this function is seeding the role table with the required roles and assigns the admin
-            SeedRolesDatabase.CreateRoles(serviceProvider, Configuration).Wait();
+            //SeedRolesDatabase.CreateRoles(serviceProvider, Configuration).Wait();
         }
     }
 }

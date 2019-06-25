@@ -40,3 +40,17 @@ E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.csproj.CopyComplete
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
 E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.deps.json
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.runtimeconfig.json
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.runtimeconfig.dev.json
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.csprojAssemblyReference.cache
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.csproj.CoreCompileInputs.cache
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.AssemblyInfoInputs.cache
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.AssemblyInfo.cs
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.csproj.CopyComplete
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
+F:\GP\backend\dillio-project\Dillio-Backend.DAL\Dillio-Backend.DAL\obj\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
