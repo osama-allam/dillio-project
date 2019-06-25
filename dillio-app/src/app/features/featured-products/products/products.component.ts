@@ -1,3 +1,4 @@
+import { ViewActivatorService } from './../../../services/view-activator.service';
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
 @Component({
@@ -7,20 +8,20 @@ declare var $: any;
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewActivator: ViewActivatorService) { }
 
   ngOnInit() {
-    this.productFeaturedActivator();
+    this.viewActivator.productFeaturedActivator();
   }
 
 
   productFeaturedActivator(): void {
     $('.featured-product-active').owlCarousel({
       loop: true,
-      nav: true,
+      // nav: true,
       autoplay: false,
       autoplayTimeout: 5000,
-      navText: ['<i class="ion-ios-arrow-back"></i>', '<i class="ion-ios-arrow-forward"></i>'],
+      // navText: ['<i class="ion-ios-arrow-back"></i>', '<i class="ion-ios-arrow-forward"></i>'],
       item: 3,
       responsive: {
          0: {
