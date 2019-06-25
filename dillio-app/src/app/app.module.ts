@@ -17,6 +17,7 @@ import { CategoryMenuComponent } from './shared/category-menu/category-menu.comp
 import { SingleProductWrapComponent } from './shared/single-product-wrap/single-product-wrap.component';
 import { ProductAreaComponent } from './shared/product-area/product-area.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { BlogDetailsComponent } from './features/blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FooterComponent } from './core/footer/footer.component';
     CategoryMenuComponent,
     SingleProductWrapComponent,
     ProductAreaComponent,
-    FooterComponent
+    FooterComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,
