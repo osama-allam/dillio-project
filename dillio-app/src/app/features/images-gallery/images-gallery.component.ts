@@ -17,7 +17,7 @@ export class ImagesGalleryComponent implements OnInit {
     this.viewActivator.imagesGalleryActivator();
     this.viewActivator.venoboxActivator();
 
-    this.products = this.productservice.getById(1);
+    //this.products = this.productservice.getById(1);
 
   }
 }

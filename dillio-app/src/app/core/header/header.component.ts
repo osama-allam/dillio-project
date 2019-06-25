@@ -28,17 +28,16 @@ txtSearch:string;
     const txtsendS = this.activatedRoute.snapshot.params.txtSearch;
     const curVal = this.activatedRoute.snapshot.params.val;
 
-    console.log(curVal );
 
     if(curVal != null){
       this.currentCatSearch.val = parseInt(curVal);
     }
-   
+
   }
 
   ngOnInit() {
     this.viewActivator.headerActivator();
-    this.txtSearch="";   
+    this.txtSearch="";
   }
   toggleDrop() {
     this.viewActivator.niceSelectToggleDrop();

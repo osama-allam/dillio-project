@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/_models/product';
 import { ProductService } from 'src/app/services/product.service';
 import { PagingService } from 'src/app/services/paging.service';
 import { ActivatedRoute } from '@angular/router';
+import { Productlisting } from 'src/app/_models/product-listing-viewmodel';
 
 @Component({
   selector: 'app-product-listing',
@@ -11,8 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductListingComponent implements OnInit {
 
-  totalproducts: Product[];
-  products: Product[];
+  totalproducts: Productlisting[];
+  products: Productlisting[];
   CurrentPage:number;
   totalpages:number;
   Arr = Array;
@@ -91,14 +91,14 @@ export class ProductListingComponent implements OnInit {
       this.setPage(this.CurrentPage);
       // window.scrollTo(0, 0);
 
-      window.scrollTo({ left: 0, top: 250, behavior: 'smooth' });
+      window.scrollTo({ left: 0, top: 300, behavior: 'smooth' });
     }
 }
 
-searchFunc(cate:Number,txtS:string):Product[]{
-  let retArr:Product[];
+searchFunc(cate:Number,txtS:string):Productlisting[]{
+  let retArr:Productlisting[];
   retArr = [{}];
-  let Arr:Product[];
+  let Arr:Productlisting[];
   let i = 0;
   Arr = this.productServices.products;
   Arr.forEach(ele => {
