@@ -23,4 +23,3 @@ describe('StoreAddComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-

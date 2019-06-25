@@ -23,4 +23,3 @@ describe('UploadComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
