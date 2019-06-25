@@ -40,7 +40,6 @@ public response;
       store=>this.stores.push(store)
     );
     console.log('done');
-
    }
 
 

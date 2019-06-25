@@ -1526,7 +1526,7 @@ textarea:focus {
 }
 .hm-minicart-trigger {
 		border-radius: 2px;
-		background: #e80f0f;
+		background: #000000;
 		color: #fff;
 		height: 45px;
 		cursor: pointer;
@@ -1534,8 +1534,9 @@ textarea:focus {
 		position: relative;
 		padding: 0 15px 0 55px;
 }
+
 .item-icon::before {
-		content: "\f291";
+		content: "\f007";
 		position: absolute;
 		font-family: fontawesome;
 		left: 10px;
@@ -1584,9 +1585,8 @@ textarea:focus {
 	display: none;
 	border: 1px solid #e5e5e5;
 	padding: 20px;
-	width: 290px;
+	width: 170px;
 	background: #ffffff;
-	text-align: left;
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -1608,6 +1608,9 @@ textarea:focus {
 }
 .minicart .minicart-product-list li:first-child {
 	padding-top: 0;
+}
+.minicart .minicart-product-list li:last-child{
+	border-bottom: none;
 }
 .minicart .minicart-product-list li .minicart-product-image {
 	display: inline-block;
@@ -1769,7 +1772,7 @@ textarea:focus {
 .hb-menu nav > ul > li:hover > a::after {
 		color: #ffffff;
 }
-.hb-menu nav > ul > li > a::after {
+.hb-menu nav > ul > li > a.dropdown-icon::after {
 	content: "\f107";
 	position: absolute;
 	top: 8px;

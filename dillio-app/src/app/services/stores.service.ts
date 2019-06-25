@@ -101,4 +101,15 @@ else{
 console.error(errorMessage);
 return throwError(errorMessage);
 }
+
+getById(id:number):Observable<Stores>{
+  const url = `${this.url}/${id}`;
+  return this.http.get<Stores>(url).pipe(
+    tap(data=> console.log('All :'+JSON.stringify(data))),
+    catchError(this.handleError)
+    
+  );
+}
+
+
 }
