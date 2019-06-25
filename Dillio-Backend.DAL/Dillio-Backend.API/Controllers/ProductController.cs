@@ -25,7 +25,7 @@ namespace Dillio_Backend.API.Controllers
             _mapper = mapper;
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Get()
         {
