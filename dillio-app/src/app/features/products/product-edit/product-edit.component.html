@@ -1,11 +1,11 @@
-<div class="card">
+<!-- <div class="card">
   <div class="card-body">
     <p class="card-text">Dirty: {{productForm.dirty}}</p>
     <p class="card-text">Touched: {{productForm.touched}}</p>
     <p class="card-text">Valid: {{productForm.valid}}</p>
     <p class="card-text">{{productForm.value | json}}</p>
   </div>
-</div>
+</div> -->
 
 <div class="container">
   <div class="row justify-content-md-center">
@@ -54,14 +54,14 @@
             <div>
               <button type="button" mat-button matStepperNext>Next</button>
             </div>
-            <div class="card">
+            <!-- <div class="card">
               <div class="card-body">
                 <p class="card-text">Dirty: {{productForm.dirty}}</p>
                 <p class="card-text">Touched: {{productForm.touched}}</p>
                 <p class="card-text">Valid: {{productForm.valid}}</p>
                 <p class="card-text">{{formArray.get([0]).value | json}}</p>
               </div>
-            </div>
+            </div> -->
           </mat-step>
           //specs and description step
           <mat-step formGroupName="1" [stepControl]="formArray?.get([1])">
@@ -106,14 +106,14 @@
               <button type="button" mat-button matStepperNext>Next</button>
             </div>
 
-            <div class="card">
+            <!-- <div class="card">
               <div class="card-body">
                 <p class="card-text">Dirty: {{productForm.dirty}}</p>
                 <p class="card-text">Touched: {{productForm.touched}}</p>
                 <p class="card-text">Valid: {{productForm.valid}}</p>
                 <p class="card-text">{{formArray.get([1]).value | json}}</p>
               </div>
-            </div>
+            </div> -->
           </mat-step>
           //upload product images step
           <mat-step >

@@ -10,4 +10,9 @@ export interface Reviews{
     Date?:string;
     rating?:number;
     // avatarUrl?:string;
-}   
+}
+
+export interface ReviewResolved {
+  reviews: Reviews[];
+  error?: any;
+}
