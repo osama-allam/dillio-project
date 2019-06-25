@@ -1,3 +1,4 @@
+import { Subscription } from 'rxjs/internal/Subscription';
 import { IProduct } from './../../../_models/product';
 import { AlertifyService } from './../../../services/alertify.service';
 import { Image } from './../../../_model/image';
@@ -10,6 +11,7 @@ import {FormBuilder, FormGroup, Validators, AbstractControl, FormArray} from '@a
 import { ImageUploadService } from 'src/app/services/image-upload.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductResolved } from 'src/app/_models/product';
+import { ProductService } from 'src/app/services/product.service';
 @Component({
   selector: 'app-product-edit',
   templateUrl: './product-edit.component.html',
@@ -22,9 +24,9 @@ export class ProductEditComponent implements OnInit {
   productForm: FormGroup;
   categories: Category[];
   uploader: FileUploader;
-  errorMessage: string;
   hasBaseDropZoneOver = false;
   baseUrl = environment.apiUrl;
+  private subscription: Subscription;
   get formArray(): AbstractControl | null {
     return this.productForm.get('formArray');
   }
@@ -48,6 +50,7 @@ export class ProductEditComponent implements OnInit {
   }
   constructor(private _formBuilder: FormBuilder,
               private _categoryService: CategoryService,
+              private _productService: ProductService,
               private _imageUploadService: ImageUploadService,
               private _alertify: AlertifyService,
               private route: ActivatedRoute,
@@ -62,9 +65,9 @@ export class ProductEditComponent implements OnInit {
   }
   // Resolve Data
   getProductResolvedData() {
-    this.route.data.subscribe(data => {
-      const resolvedData: ProductResolved = data['resolvedData'];
-      this.errorMessage = resolvedData.error;
+    this.subscription = this.route.data.subscribe(data => {
+      const resolvedData: ProductResolved = data.resolvedData;
+      // this._alertify.error(resolvedData.error);
       this.onProductRetrieved(resolvedData.product);
     });
   }
@@ -73,13 +76,7 @@ export class ProductEditComponent implements OnInit {
     if (!this.product) {
       this.router.navigate(['/page-not-found']);
     } else {
-      if (this.product.id === 0) {
-        // this.pageTitle = 'Add Product';
-      } else {
-        // this.pageTitle = `Edit Product: ${this.product.productName}`;
-        // fill form with data
-        console.log(JSON.stringify(product));
-      }
+      this.displayData(product);
     }
   }
   // Product Form Section
@@ -95,7 +92,6 @@ export class ProductEditComponent implements OnInit {
             discountFormCtrl: [{value: '', disabled: true}, Validators.required],
             discountToggleFormCtrl: false,
             categoryFormCtrl: ['', Validators.required],
-            fileUploadFormCtrl: [null]
           }),
           // specs and description step
           this._formBuilder.group({
@@ -123,23 +119,110 @@ export class ProductEditComponent implements OnInit {
 
   buildSpecsGroup(): FormGroup {
     return this._formBuilder.group({
-      productSpecNameFormCtrl: ['', Validators.required],
-      productSpecValueFormCtrl: ['', Validators.required]
+      name: ['', Validators.required],
+      value: ['', Validators.required]
     });
   }
-
+  mapFormDataToProduct(): IProduct {
+    let basicInfo: FormGroup = this.formArray.get([0]) as FormGroup;
+    let specsAndDesc: FormGroup = this.formArray.get([1]) as FormGroup;
+    const mappedProduct: IProduct = {
+      id: this.product.id,
+      name: basicInfo.get('productNameFormCtrl').value,
+      price: +basicInfo.get('priceFormCtrl').value,
+      discount: +basicInfo.get('discountFormCtrl').value,
+      categoryId: +basicInfo.get('categoryFormCtrl').value,
+      description: specsAndDesc.get('productDescriptionFormCtrl').value,
+      specs: specsAndDesc.get('specsArray').value,
+      images: this.images
+    }
+    return mappedProduct;
+  }
   addSpecFormGroup(): void {
     this.specsArray.push(this.buildSpecsGroup());
   }
+  displayData(product: IProduct): void {
 
+    if (this.productForm) {
+      this.productForm.reset();
+    }
+    if (this.product.id === 0) {
+      // add new product
+    } else {
+      // fill form with data
+      this.images = product.images;
+      const specs = new FormArray([]);
+      for (const spec of this.product.specs) {
+        specs.push(
+          this._formBuilder.group({
+            name: [spec.name, Validators.required],
+            value: [spec.value, Validators.required]
+          })
+        );
+      }
+      this.productForm = this._formBuilder.group(
+        {
+          formArray: this._formBuilder.array(
+          [
+            // basic information step
+            this._formBuilder.group({
+              productNameFormCtrl: [this.product.name, Validators.required],
+              priceFormCtrl: [this.product.price, Validators.required],
+              discountFormCtrl: [{value: this.product.discount, disabled: this.product.discount ? false : true}, Validators.required],
+              discountToggleFormCtrl: !this.product.discount ? false : true,
+              categoryFormCtrl: [this.product.categoryId, Validators.required],
+            }),
+            // specs and description step
+            this._formBuilder.group({
+              productDescriptionFormCtrl: [this.product.description, Validators.required],
+              specsArray: specs
+            })
+          ])
+        }
+      );
+    }
+  }
   saveProduct() {
+    if (this.productForm.valid) {
+      if (this.product.id === 0) {
+        this._productService.createProduct(this.mapFormDataToProduct())
+            .subscribe(
+              (res) => {
+                this.onSaveComplete( res, `The updated ${this.product.name} was saved`);
+            },
+              (error: any) => {
+                this._alertify.error(error);
+              }
+            );
+      } else {
+        this._productService.updateProduct(this.mapFormDataToProduct())
+        .subscribe(
+          (res) => {
+            this.onSaveComplete( res, `The updated ${this.product.name} was updated`);
+        },
+          (error: any) => {
+            this._alertify.error(error);
+          }
+        );
+      }
+    }
+  }
+  onSaveComplete(response: IProduct, message?: string): void {
+    if (message) {
+      this._alertify.success(message);
+    }
+    this.productForm.reset();
 
+    this.router.navigate(['/products', response.id]);
   }
   // End of product Form Section
 
   // Image Uploader section
   deleteSpecFormGroup(index: number): void {
     this.specsArray.removeAt(index);
+    if(this.product.id !== 0) {
+      this.product.specs.splice(index, 1);
+    }
   }
   fileOverBase(e: any): void {
     this.hasBaseDropZoneOver = e;
@@ -160,7 +243,6 @@ export class ProductEditComponent implements OnInit {
       if (response) {
         const res: Image = JSON.parse(response);
         const image = {
-          id: res.id,
           url: res.url,
           dateAdded: res.dateAdded,
           publicId: res.publicId,

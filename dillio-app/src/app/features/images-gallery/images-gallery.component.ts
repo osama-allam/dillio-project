@@ -1,7 +1,5 @@
 import { ViewActivatorService } from './../../services/view-activator.service';
-import { Component, OnInit, Input } from '@angular/core';
-import { Product } from 'src/app/_models/product';
-import { ProductService } from 'src/app/services/product.service';
+import { Component, OnInit } from '@angular/core';
 declare var $: any;
 
 @Component({
@@ -10,8 +8,8 @@ declare var $: any;
   styleUrls: ['./images-gallery.component.css']
 })
 export class ImagesGalleryComponent implements OnInit {
-  @Input() products: Product;
-  constructor(private viewActivator: ViewActivatorService,private productservice: ProductService) { }
+
+  constructor(private viewActivator: ViewActivatorService) { }
 
   ngOnInit() {
     this.viewActivator.imagesGalleryActivator();

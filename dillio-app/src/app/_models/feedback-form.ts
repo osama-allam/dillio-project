@@ -5,9 +5,11 @@ export interface IFeedbackModalData {
   description: string;
   feedbackData: IFeedbackData;
 }
-export interface IFeedbackData {
-  rating: number;
-  userReview: string;
-  username: string;
-  email: string;
+export class IFeedbackData {
+  description?:string;
+  Name?: string;
+  email?: string;
+  rating?: number;
+  
+
 }

@@ -14,9 +14,10 @@ export interface Product{
     category?:Category;
 }
 export interface Spec {
-  id: number;
   name: string;
   value: string;
+  ProductId: number;
+
 }
 export interface IProduct {
   id: number;
