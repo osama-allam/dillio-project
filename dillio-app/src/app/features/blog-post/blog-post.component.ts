@@ -18,7 +18,9 @@ export class BlogPostComponent implements OnInit {
 
   ngOnInit() {
     debugger;
-    this.posts = this.blogService.getPosts();
+    this.blogService.getPosts().subscribe(po=>{
+      this.posts = po;
+    });
     this.subscription = this.blogService.postsChanged
     .subscribe(
       (posts: IPost[]) => {

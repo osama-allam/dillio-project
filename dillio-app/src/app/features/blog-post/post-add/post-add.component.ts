@@ -30,7 +30,9 @@ export class PostAddComponent implements OnInit {
       (index: number) => {
         this.editedItemIndex = index;
         this.editMode = true;
-        this.editedItem = this.blogService.getPost(index);
+         this.blogService.getPost(index).subscribe(po =>{
+          this.editedItem =po;
+        });
         this.postForm.setValue({
           postName: this.editedItem.postName,
           description: this.editedItem.description,
