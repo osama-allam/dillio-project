@@ -794,7 +794,7 @@
   },
   "libraries": {
     "Microsoft.CSharp/4.6.0-preview6.19303.8": {
-      "sha512": "kolH1W6J7Kb/bUwqAW+Xj2wLrTQn5se/iE7tH+8jLsCnlqvSwa3i60CWfTRUX1zUv5eLQ+yk7kRjTeCZUYt/Ig==",
+      "sha512": "ZANDkon+VNvZincu39gUrbq5Gj3jOvemghLbH1LNBuFdzcMsfovrnlIoAM0l655avVAw0mA3pYSbwSJgK1vnoQ==",
       "type": "package",
       "path": "microsoft.csharp/4.6.0-preview6.19303.8",
       "files": [
@@ -863,7 +863,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore/3.0.0-preview6.19304.10": {
-      "sha512": "L6FSsnXnH139CEkv0NMiw2IJLqseZpl0ytiGQPaDY8HJaqPg8DjGTWwxcXo5i9nJvMgD17KoUtPxTpFDR2BRZQ==",
+      "sha512": "dl6+ymeUX8BK+TjmvP6VyvIlDuNDrWCxp4+xw5pc/TrvmXJg6wruz0Rcn1JmoPpiShdY5lOKUapvk7nuQWFT0w==",
       "type": "package",
       "path": "microsoft.entityframeworkcore/3.0.0-preview6.19304.10",
       "files": [
@@ -876,7 +876,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Abstractions/3.0.0-preview6.19304.10": {
-      "sha512": "gDu7wcWTLjjc8q64PuJv9TaJBZ/Y9W5xcNXaamEpKCmjnq4IB7YRgEpp/hmyMjit4vH8OrKcWshM1rtyX9Q2PA==",
+      "sha512": "38l+YFIvIZ3yTDG4X9oyo8uCPAVORbJ8bONScmR69ErGsiiSSanHga82XCqr/oYJlV9FvTBk1f3djn5J/z7n0A==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.abstractions/3.0.0-preview6.19304.10",
       "files": [
@@ -889,7 +889,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Analyzers/3.0.0-preview6.19304.10": {
-      "sha512": "lVNxx6evCmc/2zK+V+ZQgKErBhkcnIITkI4figDxdSyN3Ir3nSqrzOmpL8aD4MYbG2eJQsQ1TvGEYhns6udFZw==",
+      "sha512": "lCGWD53dKwvHb1DNxYalZVtf2LFGBTLsQDl5gVyJvvGI7MJ8dXK4ev1Rt5znps5vYoBxYWVQAt6+HuBvvZbohg==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.analyzers/3.0.0-preview6.19304.10",
       "files": [
@@ -901,7 +901,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Design/3.0.0-preview6.19304.10": {
-      "sha512": "u8BVSXH+myKWV3dyJDr6HRAELCMZeHRwoYimXQ8/VALdyyI96CJm6q58wShSmak+4B4z+TtBy/mjVb2u92noEw==",
+      "sha512": "9XMZFA9WUjNFmGnO7/bGr9IdE96hggUoR/5P24MEpdGwCgzkVtEnso3B6g5tedQx4RtxTZHfBpXdd/8P0wrGTw==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.design/3.0.0-preview6.19304.10",
       "files": [
@@ -916,7 +916,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/3.0.0-preview6.19304.10": {
-      "sha512": "ReGCztogVGKTKud6eCoB0XYIpj89Z4ov7o2GRkfSbVmrRpA6PKRaaeqDNML5zB/X6+Li2DnhxHcrwj1ug1li+Q==",
+      "sha512": "EC6zISDhPShNvvY+nGtQBVLnQ4c0QUUQntFJgElkokEq+B7Ymhgamp6tjibx1UBZgUCvyj8UxJHab17keLyj8w==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.relational/3.0.0-preview6.19304.10",
       "files": [
@@ -929,7 +929,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/3.0.0-preview6.19304.6": {
-      "sha512": "yfNN2QAbJAOJNsH0LHPebgzweLsRVarn+Z9KzW08AMs6lyd4AMY8PnBqGgv7A/KfpAsuQPa2f1jPKz2Bi8QzhQ==",
+      "sha512": "6j1tl/CyB87wRN8078F7AAw+AtGquXrq9OajwV1ckcjJFbVRKObiB2R0MlQzguB6pxumTNU0G6eTfMNYh4X1pA==",
       "type": "package",
       "path": "microsoft.extensions.caching.abstractions/3.0.0-preview6.19304.6",
       "files": [
@@ -942,7 +942,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Memory/3.0.0-preview6.19304.6": {
-      "sha512": "oNyReFgrLWkqSBPX6uMrmOmECyLFomnJQvOMAlbceZBkVEA+tJUs/wgaZ3y9vsvHDCT7gcJCz6ptiVtOoboyng==",
+      "sha512": "0VhhANPxsSdrREJ58E+jGZjUf0b/IvIqKqGf1ipcOWuBpq5AYsp66MmEtwgRdhJCV/4xuZiltgEigoYgtugrAw==",
       "type": "package",
       "path": "microsoft.extensions.caching.memory/3.0.0-preview6.19304.6",
       "files": [
@@ -955,7 +955,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration/3.0.0-preview6.19304.6": {
-      "sha512": "SX4Yj3/o3HQy9KkjQ3xr4lm8asSJyXGy8MPXYdkAazVUwhq6JY/DMp/eSigkUDc1+Jm1aEVOiEkCh57di3vXFA==",
+      "sha512": "ya3VvWSRRcbfr0WB3N3dmeZvm3vBqHxsvRIFQnEgn2oocolDP+lRJs2QkY2hrFrLOtOauYOi84wrODDko7wx7Q==",
       "type": "package",
       "path": "microsoft.extensions.configuration/3.0.0-preview6.19304.6",
       "files": [
@@ -968,7 +968,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Abstractions/3.0.0-preview6.19304.6": {
-      "sha512": "Jx8M2OfV2VGCWaa5bEJ5+P4MT5LPQa1/G/WQOl/VF6zgYH9F6hbxe7j17RSxciEzLviI9IiOEwCps2UZAAwMyQ==",
+      "sha512": "k/u1naeposXo+FFZ926JYtfpSnZRyf/eWrGKqNq2SVISBVFDVVeJQfTVX+KCQkID4osO5VBhpPZcN8ShXcoQZg==",
       "type": "package",
       "path": "microsoft.extensions.configuration.abstractions/3.0.0-preview6.19304.6",
       "files": [
@@ -981,7 +981,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Binder/3.0.0-preview6.19304.6": {
-      "sha512": "Z2sOZHYT8df7e7XDuMc0QfQjs1TwlcmVRqYkeYmnp2/7VdQFpUtSRSxzU1w4lm725zMus8gtFlrQib2LIG1qnQ==",
+      "sha512": "9YDqOo/m8TwyzyqLmLPniaRuyOTxcN2w9nadBxu/tJNUOaIgWRuAbzGGzIZsEL8SsgX+7tL/aNB4cUYkeoNV6w==",
       "type": "package",
       "path": "microsoft.extensions.configuration.binder/3.0.0-preview6.19304.6",
       "files": [
@@ -994,7 +994,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection/3.0.0-preview6.19304.6": {
-      "sha512": "Q+hAXRgBMMWmGY0nrLmjhf01q31yDJhVB5SQPeNas1H78/efGwC194q6M9PlJWUfm11uMVtb5ZfpMjZiHrHObA==",
+      "sha512": "NaWASEPtvCaZjXQCcGj+G/iHp8yWwQdF0A9dPdiETPSyB2V9iAKPme6UbifMF/LwM6xLp/DGv6qgZJT5jTUxDw==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/3.0.0-preview6.19304.6",
       "files": [
@@ -1011,7 +1011,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.0-preview6.19304.6": {
-      "sha512": "g2M6hgbjj+XFiohKnNBJ/7DjPhVfp4HEe+wbXIEVSfA1HkT40/aHiXY/7ynkndEXXBaTgj6OYtj89iDyTKSsEw==",
+      "sha512": "axs6h0X3VzM6Bm1jUF3696GRXHuKvKyWGUKu8w0oyxtFByVCn5+ccBtN0+unrxP5Dw4fXAhVllFRqXRHBZKEiA==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection.abstractions/3.0.0-preview6.19304.6",
       "files": [
@@ -1024,7 +1024,7 @@
       ]
     },
     "Microsoft.Extensions.Logging/3.0.0-preview6.19304.6": {
-      "sha512": "zgaHYRextGDB0VagjpKR+qX/kvM0Jy/64go7xudH97yHD7tV5osuxPfXYC+HyfXlWsktD7v1Ytz0SixTd2lv5Q==",
+      "sha512": "Xr4FqRCycsF3DcEmN6do8xY6ydCKiM9NgoVdAatTrXQO4BE/RJTPhNZ4xrKL1ZDmEpyz3h1meGgG3Ujc9MHKsQ==",
       "type": "package",
       "path": "microsoft.extensions.logging/3.0.0-preview6.19304.6",
       "files": [
@@ -1037,7 +1037,7 @@
       ]
     },
     "Microsoft.Extensions.Logging.Abstractions/3.0.0-preview6.19304.6": {
-      "sha512": "+KC09OoZbOlboVbrtdu3YP8qHl7Xzk3ROOdgtOgEzT0wB21REyuBHzgwht5lPm97dMJ7XJhEN0hzPyHgIYBz9Q==",
+      "sha512": "5qSw18cbTcJaJzXet7mdjk5VjvQgHtGLR1Gjz3E97cXBQSM1e+to5c6/Z0KkmOiitMMrzk4pt8BvQg7882K0Ng==",
       "type": "package",
       "path": "microsoft.extensions.logging.abstractions/3.0.0-preview6.19304.6",
       "files": [
@@ -1050,7 +1050,7 @@
       ]
     },
     "Microsoft.Extensions.Options/3.0.0-preview6.19304.6": {
-      "sha512": "KfCOcw5FcwZA+VXkWK9tVoFglHY8+mhV+Xbqlbu89hTy9xHSDMr0JwLWlf3pvvlz4+fASI1LQKp6QOHZTbfHeQ==",
+      "sha512": "LKcDtLGbnHDPoCFdWezY3zfFMrEWSoz00gvDvQVCjNXH/f/CjINTf7yV3axwt8/sPzdfBYdjE0rqWNYbGsDS4w==",
       "type": "package",
       "path": "microsoft.extensions.options/3.0.0-preview6.19304.6",
       "files": [
@@ -1063,7 +1063,7 @@
       ]
     },
     "Microsoft.Extensions.Primitives/3.0.0-preview6.19304.6": {
-      "sha512": "A7j/haTP/2UQj0R/4Rh24NAjViHd8+1OB1oXGSqKCDONIb5LCMKc6qhP+kN5cbYXHUfcUz97FS/BPRGaNxBLDg==",
+      "sha512": "yNy9V1ZoFHnlMHzonpDY5YYNoJnaNRy2fM+rPw7r/pXE1jqzWRhgo3/haDiHVeL4IGRTq4BKjdCWDTHF+Lw5EQ==",
       "type": "package",
       "path": "microsoft.extensions.primitives/3.0.0-preview6.19304.6",
       "files": [
@@ -1634,7 +1634,7 @@
       ]
     },
     "System.Collections.Immutable/1.6.0-preview6.19303.8": {
-      "sha512": "Bx8WXlTiZ+xJ7DCEVZaNNNu6cGBjN2e+3UrOjK+IeALNQfItiQYHCWvrPbreWA1KraPaT0A8Q9g2ypTPxUCVVQ==",
+      "sha512": "NTUZo+WsDwzKYXv+pFiFSd9fOd2x01rQ9d2xD2Oj8YSnM6TzT4B08yv7+Qi3pitGJFVPB4Vq0yRjG5j8cCooKQ==",
       "type": "package",
       "path": "system.collections.immutable/1.6.0-preview6.19303.8",
       "files": [
@@ -1657,7 +1657,7 @@
       ]
     },
     "System.ComponentModel.Annotations/4.6.0-preview6.19303.8": {
-      "sha512": "Q5NUReQpwGjPTm1uhKyNfvbVqNn9pQ46L4Lxkz/+hCoRsMJQkI3Acbh6E57SjJ1hn5hcTv4yy9bqqpDK06UPoQ==",
+      "sha512": "MMB8EuW1KWtW3lCeFa1qJBZ2YveJwoylQXjv18G7GO2QqkE7JuXSJUw6QlDW33Ttmeys7lGpsU0AB2BQKPbD+g==",
       "type": "package",
       "path": "system.componentmodel.annotations/4.6.0-preview6.19303.8",
       "files": [
@@ -1815,7 +1815,7 @@
       ]
     },
     "System.Diagnostics.DiagnosticSource/4.6.0-preview6.19303.8": {
-      "sha512": "WElUvzNEkZqSNPDNZ+qxldj4eXiSDqfI0tGNvzFzkokA9D+FGh1Am9VE9NxphnB2K9+yNj0Oopx2duSfQoO5zw==",
+      "sha512": "yLbM3eOLI2PgoIJ9wdhzTkym4VFMcS1/3R7F1jzhPvm3HG9C9US3Kwbp1SvQHaYaPaa3OeiCl3qdxQpPC9/27Q==",
       "type": "package",
       "path": "system.diagnostics.diagnosticsource/4.6.0-preview6.19303.8",
       "files": [
@@ -2220,7 +2220,7 @@
       ]
     },
     "System.Memory/4.5.2": {
-      "sha512": "fvq1GNmUFwbKv+aLVYYdgu/+gc8Nu9oFujOxIjPrsf+meis9JBzTPDL6aP/eeGOz9yPj6rRLUbOjKMpsMEWpNg==",
+      "sha512": "Ohf9h6em5CjPaAzupGtW/TWMzX6aVfIGPh7bq5KQmfvYJr+DqvOa0cRS9ggFKGIuvKTModCQEacGC/CwE8j7cg==",
       "type": "package",
       "path": "system.memory/4.5.2",
       "files": [
@@ -2797,7 +2797,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.6.0-preview6.19303.8": {
-      "sha512": "wfz/0mE6+PUKIfD0AbLxas9kH49AwSvwPi2m9ppU6cvrgib3r95MHIrmKNLnF8PNvRVurdUlatP6D8PEyEuzZQ==",
+      "sha512": "xkjHKNHJB5Un/Ckdph9z/xBgmTpuDf/zlEEpir1rBVGxUfTRLsH1Ejdkvn34ENsUkglSkjt+O3UqKU4ypH+mUA==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.6.0-preview6.19303.8",
       "files": [
@@ -3106,7 +3106,7 @@
       ]
     },
     "System.Threading.Tasks.Extensions/4.5.2": {
-      "sha512": "BG/TNxDFv0svAzx8OiMXDlsHfGw623BZ8tCXw4YLhDFDvDhNUEV58jKYMGRnkbJNm7c3JNNJDiN7JBMzxRBR2w==",
+      "sha512": "5HCu8V3QB+gouMZmGrA666weZ0UQRt+OTD16rSE3Hyhu4Qhlvxkf4nTPI0GLy52s0rxgi7C8t2ayFAzw7UK1og==",
       "type": "package",
       "path": "system.threading.tasks.extensions/4.5.2",
       "files": [
@@ -3148,23 +3148,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\osama\\.nuget\\packages\\": {},
+    "C:\\Users\\Tarek Hesham\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITI Graduation Project\\Dillio GP\\dillio backend\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj",
+      "projectUniqueName": "E:\\ITI Courses\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj",
       "projectName": "Dillio-Backend.Entities",
-      "projectPath": "D:\\ITI Graduation Project\\Dillio GP\\dillio backend\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj",
-      "packagesPath": "C:\\Users\\osama\\.nuget\\packages\\",
-      "outputPath": "D:\\ITI Graduation Project\\Dillio GP\\dillio backend\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\obj\\",
+      "projectPath": "E:\\ITI Courses\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj",
+      "packagesPath": "C:\\Users\\Tarek Hesham\\.nuget\\packages\\",
+      "outputPath": "E:\\ITI Courses\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\osama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tarek Hesham\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
