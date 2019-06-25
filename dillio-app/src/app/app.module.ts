@@ -23,7 +23,6 @@ import { StoresService } from './services/stores.service';
 import { FooterComponent } from './core/footer/footer.component';
 import { BlogGallerySliderComponent } from './features/blog-gallery-slider/blog-gallery-slider.component';
 import { BlogPostComponent } from './features/blog-post/blog-post.component';
-import { postService } from './features/blog-post/post.service';
 import { PostListingComponent } from './features/blog-post/post-listing/post-listing.component';
 import { PostAddComponent } from './features/blog-post/post-add/post-add.component';
 import { PostDetailsComponent } from './features/blog-post/post-details/post-details.component';
@@ -49,6 +48,12 @@ import { PageNotFoundComponent } from './features/page-not-found/page-not-found.
 import { SharedModule } from './shared/shared.module';
 import { StoreAddComponent } from './features/stores/store-add/store-add.component';
 import { UploadComponent } from './shared/upload/upload.component';
+import { ProductDetailsComponent } from './features/products/product-details/product-details.component';
+import { ProductListingComponent } from './features/products/product-listing/product-listing.component';
+import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
+import { MaterialModule } from './material.module';
+import { FileUploadModule } from 'ng2-file-upload';
+import { BlogService } from './services/blog.service';
 
 @NgModule({
   declarations: [
@@ -101,7 +106,7 @@ import { UploadComponent } from './shared/upload/upload.component';
               ProductService,
               ProductReviewService,
               StoresService,
-              postService,
+              BlogService,
               ContactSubjectService
   ],
   bootstrap: [AppComponent]
