@@ -7,5 +7,6 @@ namespace Dillio_Backend.BLL.Core.Repositories
     {
         IEnumerable<Product> GetAllProductsWithJoins();
         Product GetSingleProductWithJoins(object id);
+
     }
 }

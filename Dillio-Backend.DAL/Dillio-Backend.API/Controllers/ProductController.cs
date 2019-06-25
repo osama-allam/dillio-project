@@ -4,12 +4,13 @@ using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Dillio_Backend.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/product")]
     [ApiController]
 
     public class ProductController : ControllerBase
@@ -57,7 +58,7 @@ namespace Dillio_Backend.API.Controllers
             return Ok(pvm);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetProduct")]
         public IActionResult Get(int id)
         {
             if (id == 0 || id == null)
@@ -78,37 +79,76 @@ namespace Dillio_Backend.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Product product)
+        public IActionResult Post(ProductEditViewModel product)
         {
             if (product == null)
             {
                 return BadRequest();
             }
 
-            _unitOfWork.Products.Add(product);
-            _unitOfWork.Complete();
-            return Ok();
+            var productToAdd = _mapper.Map<Product>(product);
 
+            _unitOfWork.Products.Add(productToAdd);
+            if (_unitOfWork.Complete() > 0)
+            {
+                var productToReturn = _mapper.Map<ProductEditViewModel>(productToAdd);
+                return CreatedAtRoute("GetProduct", new { id = productToAdd.Id }, productToReturn);
+
+            }
+            return BadRequest("Couldn't add product");
         }
 
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] ProductViewModel pvm)
+        public IActionResult Put(int id, [FromBody] ProductEditViewModel product)
         {
-            Product pro = _unitOfWork.Products.Get(id);
-
-            if (pro != null)
+            var repoProduct = _unitOfWork.Products.Get(id);
+            if (repoProduct == null)
             {
-                pro.Name = pvm.Name;
-                pro.Discount = pvm.Discount;
-                pro.Price = pvm.Price;
-
-                _unitOfWork.Complete();
-
-                return Ok();
+                return BadRequest();
             }
 
-            return NotFound();
+            var repoSpecs = _unitOfWork.Specs.GetAll().Where(s => s.ProductId == id).ToList();
+            var repoImages = _unitOfWork.Images.GetAll().Where(i => i.ProductId == id).ToList();
+            _unitOfWork.Specs.RemoveRange(repoSpecs);
+            _unitOfWork.Images.RemoveRange(repoImages);
+
+            var productPartial = _mapper.Map<ProductPartialUpdate>(product);
+            var productToUpdate = _unitOfWork.Products.Get(id);
+            _mapper.Map(productPartial, productToUpdate,
+                typeof(ProductPartialUpdate), typeof(Product));
+
+            try
+            {
+                _unitOfWork.Complete();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Product not updated!");
+            }
+            var updateSpecs = _mapper.Map<IList<Specs>>(product.Specs);
+            var updateImages = _mapper.Map<IList<Image>>(product.Images);
+            foreach (var updateImage in updateImages)
+            {
+                updateImage.ProductId = id;
+            }
+            foreach (var updateSpec in updateSpecs)
+            {
+                updateSpec.ProductId = id;
+            }
+            _unitOfWork.Specs.AddRange(updateSpecs);
+            _unitOfWork.Images.AddRange(updateImages);
+
+            try
+            {
+                _unitOfWork.Complete();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Product not updated!");
+            }
+
+            return NoContent();
 
         }
 
