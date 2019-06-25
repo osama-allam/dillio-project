@@ -91,7 +91,7 @@ export class ProductListingComponent implements OnInit {
       this.setPage(this.CurrentPage);
       // window.scrollTo(0, 0);
 
-      window.scrollTo({ left: 0, top: 300, behavior: 'smooth' });
+      window.scrollTo({ left: 0, top: 250, behavior: 'smooth' });
     }
 }
 

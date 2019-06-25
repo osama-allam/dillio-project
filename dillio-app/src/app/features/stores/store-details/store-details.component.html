@@ -17,7 +17,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="row justify-content-center">
-          <img class="col-3 img-thumbnail" style="width: 200px; height: 200px;" [src]="newStore.url"
+          <img class="col-3 img-thumbnail" style="width: 200px; height: 200px;" src="{{storeDetails.logoUrl}}"
             alt="Li's Product Image">
         </div>
 
@@ -96,12 +96,14 @@
               <div class="comment-body pl-15">
                 <span class="customer-rating pt-15 pt-xs-5">
                   <star-rating [starType]="'svg'" [showHalfStars]="true" [readOnly]="true" staticColor="ok"
-                    rating={{review.rating}}></star-rating>
+                    rating="{{review.rating}}"></star-rating>
                 </span>
 
-                <!-- <h5 class="comment-author pt-15">{{review.}}</h5> -->
-                <div class="comment-post-date"> by: {{review.name}} | {{review.reviewDate}} </div>         
-                <p>{{review.reviewDescription}}</p>
+                <h5 class="comment-author pt-15">{{review.productName}}</h5>
+                <div class="comment-post-date">
+                  by: {{review.username}} | {{review.reviewDate}}
+                </div>
+                <p>{{review.description}}</p>
               </div>
             </li>
           </ul>

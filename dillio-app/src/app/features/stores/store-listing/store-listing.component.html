@@ -7,35 +7,20 @@
               <div *ngFor="let store of stores" class="col-lg-2 col-md-2 col-sm-6 pb-xs-45">
                   <div class="li-shipping-inner-box card">
                       <div class="shipping-icon">
-                          <img [src]="store.url" alt="Shipping Icon">
+                          <img src="{{store.image}}" alt="Shipping Icon">
                       </div>
                       <div class="shipping-text">
                           <h2>{{store.name}}</h2>
-                          <star-rating *ngIf="store.starRating > 0 && store.starRating else addRating" [starType]="'svg'" [showHalfStars]="true" [readOnly]="true" staticColor="ok"
-                          rating = {{store.starRating}} ></star-rating>
+                          <star-rating *ngIf="store.rating > 0 && store.rating else addRating" [starType]="'svg'" [showHalfStars]="true" [readOnly]="true" staticColor="ok"
+                          rating="{{store.rating}}"></star-rating>
                           <ng-template #addRating>
-                              <p>Be the first to review</p>
+                              <p >Be the first to review</p>
                           </ng-template>
 
                       </div>
                   </div>
               </div>
           </div>
-          
-          <nav aria-label="Page navigation example">
-            <ul class="pagination pg-blue">
-              <li class="page-item ">
-                <a class="page-link" tabindex="-1" (click)=changePage(CurrentPage-1)>Previous</a>
-              </li>
-              <li *ngFor="let c of Arr(pager.totalPages).fill(1); let i = index" class="page-item" [class.active]="CurrentPage == (i+1)">
-                  <a class="page-link" (click)=changePage(i+1)>{{i+1}}</a>
-                </li>
-              <li  class="page-item">
-                <a class="page-link" (click)=changePage(CurrentPage+1)>Next</a>
-              </li>
-            </ul>
-          </nav>
-        
       </div>
   </div>
 </div>

@@ -14,11 +14,7 @@ export class StoreDetailsComponent implements OnInit {
   feedbackForm: FormGroup;
   storeDetails: IStoreDetails;
   formData: IFeedbackModalData;
-  reviewArr:Reviews[];
-  count:number;
-
-  constructor(private storeservice:StoresService) {
-    this.newStore={branches:[]};
+  constructor() {
     this.storeDetails = {
       id: 1,
       name: 'souq.com',
@@ -78,39 +74,14 @@ export class StoreDetailsComponent implements OnInit {
       title: 'souq.com',
       feedbackData: {
         rating: 0,
-        description: '',
-        Name: '',
+        userReview: '',
+        username: '',
         email: ''
       }
     };
-    this.count = 0;
   }
 
   ngOnInit() {
-
-this.storeservice.getBranchesOfStore(1).subscribe(
-  branch =>{
-    this.branches = branch
-  },
-  error =>this.errormessage = <any>error
-)
-
-  this.storeservice.getStore(1).subscribe(
-    stores =>{
-      debugger;
-      this.newStore = stores;
-    },
-    error =>this.errormessage = <any>error
-  );
-
-this.storeservice.getReviewsOfStore(1).subscribe(
-  review=>{
-    debugger;
-    this.reviewArr = review;
-  },
-  error =>this.errormessage = <any>error
-)
-
   }
   onModalFormSubmitted(event: IFeedbackData) {
     console.log(event);
