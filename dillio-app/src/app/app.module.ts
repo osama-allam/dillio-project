@@ -55,6 +55,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { UploadComponent } from './shared/upload/upload.component';
 
 
+import { BlogDetailsComponent } from './features/blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -97,6 +98,11 @@ import { UploadComponent } from './shared/upload/upload.component';
     StoreAddComponent,
     UploadComponent,
     
+    CategoryMenuComponent,
+    SingleProductWrapComponent,
+    ProductAreaComponent,
+    FooterComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,
