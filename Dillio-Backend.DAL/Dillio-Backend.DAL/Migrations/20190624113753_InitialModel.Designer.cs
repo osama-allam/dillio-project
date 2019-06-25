@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dillio_Backend.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190623214236_InitialModel")]
+    [Migration("20190624113753_InitialModel")]
     partial class InitialModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,8 +92,12 @@ namespace Dillio_Backend.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime>("DateAdded");
+
                     b.Property<int>("ProductId")
                         .HasColumnName("FK_ProductId");
+
+                    b.Property<string>("PublicId");
 
                     b.Property<string>("Url")
                         .IsRequired()

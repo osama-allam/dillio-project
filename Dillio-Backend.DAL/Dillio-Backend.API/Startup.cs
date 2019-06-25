@@ -1,30 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Dillio_Backend.API.Helpers;
 using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Domain;
 using Dillio_Backend.DAL;
 using Dillio_Backend.DAL.Persistence;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Dillio_Backend.API
 {
@@ -69,32 +57,74 @@ namespace Dillio_Backend.API
                 };
             });
 
-           
-            
-            
+            //Cloudinary services settings
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
+
+            //AutoMapper
+
+            //var mappingConfig = new MapperConfiguration(mc =>
+            //{
+            //    mc.AddProfile(new AutoMapperProfiles());
+            //});
+
+            //IMapper mapper = mappingConfig.CreateMapper();
+            //services.AddSingleton(mapper);
+            services.AddAutoMapper(typeof(Startup).Assembly);
+
+            //services.AddAuthentication(options =>
+            //        {
+            //            options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+            //            options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //            options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            //        })
+            //    .AddOpenIdConnect(options =>
+            //    {
+            //        options.Authority = "https://localhost:44371";
+            //        options.ClientId = "AuthWeb";
+            //        options.SaveTokens = true;
+            //        options.TokenValidationParameters.NameClaimType = "name";
+            //    }).AddCookie(); 
+
+            //services.AddAuthentication()
+            //    .AddJwtBearer(options =>
+            //    {
+            //        options.Authority = "https://localhost:44371";
+            //        options.Audience = "DemoApi";
+            //        options.TokenValidationParameters.NameClaimType = "client_id";
+            //    });
+
+            //services.AddAuthorization(options =>
+            //{
+            //    options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
+            //        .RequireAuthenticatedUser()
+            //        .Build();
+            //});
+
+
 
 
             //services.AddDbContext<ApplicationDbContext>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("SPA", policy =>
-                {
-                    policy.WithOrigins("https://localhost:4200")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
-                });
-            });
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("SPA", policy =>
+            //    {
+            //        policy.WithOrigins()
+            //            .AllowAnyHeader()
+            //            .AllowAnyMethod();
+            //    });
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IUnitOfWork unitOfWork)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                unitOfWork.EnsureSeedDataForContext();
             }
             else
             {
@@ -102,7 +132,7 @@ namespace Dillio_Backend.API
                 app.UseHsts();
             }
 
-           
+
 
 
             //app.UseStaticFiles(new StaticFileOptions()
@@ -113,8 +143,8 @@ namespace Dillio_Backend.API
             app.UseAuthentication();
             app.UseStaticFiles();
 
-            app.UseCors("SPA");
-            //app.UseAuthentication();
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseAuthentication();
 
 
             app.UseMvcWithDefaultRoute();

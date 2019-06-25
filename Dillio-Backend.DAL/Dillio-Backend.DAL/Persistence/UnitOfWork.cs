@@ -1,6 +1,7 @@
 ﻿using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Repositories;
 using Dillio_Backend.DAL.Persistence.Repository;
+using System.Threading.Tasks;
 
 namespace Dillio_Backend.DAL.Persistence
 {
@@ -67,6 +68,11 @@ namespace Dillio_Backend.DAL.Persistence
         public int Complete()
         {
             return _context.SaveChanges();
+        }
+
+        public Task<int> CompleteAsync()
+        {
+            return _context.SaveChangesAsync();
         }
 
         public void Dispose()

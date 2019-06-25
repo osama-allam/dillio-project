@@ -1,16 +1,12 @@
 ﻿using System;
 
-namespace Dillio_Backend.BLL.Core.Domain
+namespace Dillio_Backend.API.ViewModel
 {
-    [Serializable]
-    public class Image
+    public class ImageToReturnViewModel
     {
         public int Id { get; set; }
         public string Url { get; set; }
         public DateTime DateAdded { get; set; }
         public string PublicId { get; set; }
-        public int ProductId { get; set; }
-        public virtual Product Product { get; set; }
-
     }
 }
