@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, ViewChild, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { postService } from '../post.service';
 import { IPost } from 'src/app/_models/post';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-post-add',
@@ -20,17 +20,17 @@ export class PostAddComponent implements OnInit {
 
 
 @Input() post: IPost;
-  constructor(private postService: postService) { 
+  constructor(private blogService: BlogService) { 
      this.post={};
   }
 
   ngOnInit() {
-    this.subscription = this.postService.startedEditing
+    this.subscription = this.blogService.startedEditing
     .subscribe(
       (index: number) => {
         this.editedItemIndex = index;
         this.editMode = true;
-        this.editedItem = this.postService.getPost(index);
+        this.editedItem = this.blogService.getPost(index);
         this.postForm.setValue({
           postName: this.editedItem.postName,
           description: this.editedItem.description,
@@ -46,8 +46,8 @@ export class PostAddComponent implements OnInit {
     // if (this.editMode) {
     //   this.postService.updatePost(this.editedItemIndex, newPost);
     // } else {
-      this.postService.addPost(newPost);
-      var poooo = this.postService.getPosts();
+      this.blogService.addPost(newPost);
+      var poooo = this.blogService.getPosts();
       debugger ;
     // }
     // this.editMode = false;
