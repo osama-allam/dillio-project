@@ -27,7 +27,8 @@ namespace Dillio_Backend.API.Controllers
         private readonly AppSettings _appSettings;
 
 
-        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager, IOptions<AppSettings> appSettings)
+        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
+            RoleManager<IdentityRole> roleManager, IOptions<AppSettings> appSettings)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -42,16 +43,21 @@ namespace Dillio_Backend.API.Controllers
         [Route("register")]
         public async Task<IActionResult> Register(ApplicationUserRegistrationModel model)
         {
-            ApplicationUser emailExists = await _userManager.FindByEmailAsync(model.EmailAddress);
+            //getting the user with its email
+            var emailExists = await _userManager.FindByEmailAsync(model.EmailAddress);
+            //getting a user with its username
             var usernameExist = await _userManager.FindByNameAsync(model.Username);
 
-
+            //checking if the user exists
             if (emailExists != null)
             {
+                //return the unacceptable status code because the email is already found
                 return StatusCode(406, "The Email You Entered is already found");
             }
+            //if both username and email are not assocated with any account we create a new one
             else if (emailExists == null && usernameExist == null)
             {
+                //setting the new instance of the user  
                 ApplicationUser user = new ApplicationUser()
                 {
                     UserName = model.Username,
@@ -61,18 +67,23 @@ namespace Dillio_Backend.API.Controllers
 
                 };
 
+                //waiting for the usermanager to add the user
                 var registerationResult = await _userManager.CreateAsync(user, model.Password);
 
+                //checking the registration results
                 if (registerationResult.Succeeded)
                 {
+                    //Setting the registered user as a member
+                    await _userManager.AddToRoleAsync(user, Role.Member);
                     return Ok(registerationResult);
 
                 }
 
+                //return the status code if an exception occurred
                 return StatusCode(500);
             }
 
-
+            //return the unacceptable status code because the username is already found
             return StatusCode(406, "The username You Entered is already found");
 
         }
@@ -84,9 +95,9 @@ namespace Dillio_Backend.API.Controllers
 
             // getting the user details from database
             var user = await _userManager.FindByEmailAsync(model.email);
-            
+
             //checking if the user exists or not and validating its login credentials
-            if (user != null && await _userManager.CheckPasswordAsync(user , model.Password))
+            if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
             {
                 //Getting the user role from database
                 var role = await _userManager.GetRolesAsync(user);
@@ -96,9 +107,9 @@ namespace Dillio_Backend.API.Controllers
                 //Setting the tokens claims
                 var claims = new ClaimsIdentity(new[]
                 {
-                    new Claim(ClaimTypes.Role,"Admin"),
-                    new Claim(ClaimTypes.Email,user.Email),
-                    new Claim(ClaimTypes.GivenName,user.UserName),
+                    new Claim(ClaimTypes.Role, role.FirstOrDefault()),
+                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim(ClaimTypes.GivenName, user.UserName),
                 });
 
                 //creating the instance from the token handler class that is responsible for creating the tokens
@@ -110,7 +121,8 @@ namespace Dillio_Backend.API.Controllers
                 {
                     Subject = claims,
                     Expires = DateTime.UtcNow.AddDays(1),
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),SecurityAlgorithms.HmacSha256Signature )
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                        SecurityAlgorithms.HmacSha256Signature)
                 };
                 //creating the token
                 var token = tokenHandler.CreateToken(tokenDescriptor);
@@ -125,56 +137,7 @@ namespace Dillio_Backend.API.Controllers
 
         }
 
-        //[HttpPost]
-        //[Route("Admin")]
-        //public async Task<IActionResult> SetAdmin(string email)
-        //{
-        //    var rolesCreated =  CreateRoles();
-        //    if (rolesCreated.IsCompletedSuccessfully )
-        //    {
-        //        var user = await _userManager.FindByEmailAsync(email);
 
-        //        if (user != null)
-        //        {
-        //          var roleAssigned = await  _userManager.AddToRoleAsync(user, "Admin");
-
-        //          if (roleAssigned.Succeeded)
-        //          {
-        //              return Ok();
-        //          }
-
-        //          return StatusCode(406,"The user you entered is not found ");
-        //        }
-        //    }
-
-        //    return StatusCode(500);
-        }
-
-        //public async Task<Object> CreateRoles()
-        //{
-        //    string[] roleNames = { "Admin", "User" };
-            
-
-        //    foreach (var roleName in roleNames)
-        //    {
-        //        var roleExist = await _roleManager.RoleExistsAsync(roleName);
-
-        //        if (!roleExist)
-        //        {
-        //         var result = await _roleManager.CreateAsync(new IdentityRole(roleName));
-        //         if (!result.Succeeded)
-        //         {
-        //             Console.WriteLine(result.Errors);
-        //         }
-                   
-        //        }
-        //    }
-
-        //    return Task.CompletedTask.IsCompletedSuccessfully;
-
-        //}
-    //}
-
-
+    }
 
 }

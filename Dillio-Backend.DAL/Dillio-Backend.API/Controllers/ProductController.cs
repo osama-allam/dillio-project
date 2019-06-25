@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Dillio_Backend.API.Configurations;
 
 namespace Dillio_Backend.API.Controllers
 {
@@ -25,7 +26,7 @@ namespace Dillio_Backend.API.Controllers
             _mapper = mapper;
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = Role.Admin)]
         [HttpGet]
         public IActionResult Get()
         {

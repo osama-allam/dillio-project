@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using Dillio_Backend.API.Configurations;
 using Dillio_Backend.API.Helpers;
 using Dillio_Backend.BLL.Core;
@@ -85,21 +86,15 @@ namespace Dillio_Backend.API
             //IMapper mapper = mappingConfig.CreateMapper();
             //services.AddSingleton(mapper);
             services.AddAutoMapper(typeof(Startup).Assembly);
-
-            
-
-
-
-
-            
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
+            
 
            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IUnitOfWork unitOfWork)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IUnitOfWork unitOfWork, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -130,6 +125,9 @@ namespace Dillio_Backend.API
 
 
             app.UseMvcWithDefaultRoute();
+
+            // this function is seeding the role table with the required roles and assigns the admin
+            SeedRolesDatabase.CreateRoles(serviceProvider, Configuration).Wait();
         }
     }
 }
