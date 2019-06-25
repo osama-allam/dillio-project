@@ -14,15 +14,29 @@ newstore:Stores;
 oldstore:Stores;
 editmode = false;
 stores:Stores[];
-  constructor(private storeservice:StoresService) { }
+public response;
+
+  constructor(private storeservice:StoresService) {
+  this.response={dbpath:''};
+   }
 
   ngOnInit() {
     this.store={};
-    
+    this.newstore={}; 
   }
 
+  public uploadFinished = (event) => {
+    this.response = event;
+  }
    OnAddStore(myform:NgForm){
-    this.storeservice.Add(this.store).subscribe(
+     
+     this.newstore={
+       name:this.store.name,
+       description:this.store.description,
+       Url:this.response.dbPath
+     }
+
+    this.storeservice.Add(this.newstore).subscribe(
       store=>this.stores.push(store)
     );
     console.log('done');
