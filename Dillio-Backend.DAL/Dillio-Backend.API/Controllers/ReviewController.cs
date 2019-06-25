@@ -48,7 +48,7 @@ namespace Dillio_Backend.API.Controllers
         {
             IList<Review> reviews = null;
 
-            reviews = _unitOfWork.Reviews.GetAll().Where(r => r.ProductId == storeId).ToList();
+            reviews = _unitOfWork.Reviews.GetAll().Where(r => r.StoreId == storeId).ToList();
 
             if (reviews.Count == 0)
             {
