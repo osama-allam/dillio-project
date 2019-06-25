@@ -38,7 +38,13 @@
               <p>
                 <span>"{{newStore.description}}"</span>
               </p>
+              <star-rating *ngIf="newStore.starRating > 0 && newStore.starRating else addRating" [starType]="'svg'" [showHalfStars]="true" [readOnly]="true" staticColor="ok"
+                rating = {{newStore.starRating}} ></star-rating>
+                <ng-template #addRating>
+                    <p>Be the first to review</p>
+                </ng-template>
             </div>
+            
             <div class="cart-quantity">
               <button class="add-to-cart mt-xs-30">See All Products</button>
             </div>

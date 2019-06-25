@@ -44,7 +44,7 @@ export class StoreListingComponent implements OnInit {
 
   setPage(page: number) {
     // debugger;
-    this.pager = this.pagerService.getPage(this.allstores.length, page,18);
+    this.pager = this.pagerService.getPage(this.allstores.length, page,15);
 
     this.stores = this.allstores.slice(this.pager.startIndex, this.pager.endIndex + 1);
 

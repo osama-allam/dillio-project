@@ -25,7 +25,7 @@ export class StoresService {
 private url = 'http://localhost:50202/api/store';
 private bUrl='http://localhost:50202/api/branch/store';
 private rUrl='http://localhost:50202/api/review/store';
-private srUrl='http://localhost:50202/api/review/store'
+private srUrl='http://localhost:50202/api/review/store';
 oldstore:Stores[];
 stores: Stores[];
 
@@ -65,10 +65,11 @@ AddReviewOnStore(newreview:IFeedbackData,id:number):Observable<Reviews>{
   const reviewUrl =`${this.srUrl}/${id}`;
   return this.http.post<Reviews>(reviewUrl,  
     {
-      ReviewDescription:newreview.description,
+      ReviewDescription:newreview.description,    
       Name:newreview.Name,
-      email:newreview.email,
+      email:newreview.email,  
       rating:newreview.rating,
+      StoreId:id
     }
     , httpOptions)
   .pipe(
