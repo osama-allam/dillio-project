@@ -1,5 +1,4 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using Dillio_Backend.API.Configurations;
 using Dillio_Backend.API.Helpers;
 using Dillio_Backend.BLL.Core;
@@ -9,11 +8,15 @@ using Dillio_Backend.DAL.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
+using System;
+using System.IO;
 using System.Text;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.Http;
@@ -51,7 +54,7 @@ namespace Dillio_Backend.API
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                
+
 
 
             }).AddJwtBearer(options =>
@@ -64,7 +67,7 @@ namespace Dillio_Backend.API
                     ValidateAudience = false,
                     ValidateIssuer = false,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
-                    
+
 
 
                 };
@@ -91,9 +94,9 @@ namespace Dillio_Backend.API
             services.AddAutoMapper(typeof(Startup).Assembly);
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
-            
 
-           
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -126,7 +129,7 @@ namespace Dillio_Backend.API
                 //FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", @"images")),
                 //RequestPath = new PathString("/images")
             });
-         
+
 
             //app.UseCors("SPA");
             app.UseAuthentication();
