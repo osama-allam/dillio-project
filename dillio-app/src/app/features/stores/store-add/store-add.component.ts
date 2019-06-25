@@ -25,6 +25,12 @@ public response;
     this.newstore={}; 
   }
 
+
+
+
+
+
+  
   public uploadFinished = (event) => {
     this.response = event;
   }
