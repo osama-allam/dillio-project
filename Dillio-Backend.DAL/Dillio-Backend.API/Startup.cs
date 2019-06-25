@@ -128,7 +128,7 @@ namespace Dillio_Backend.API
             });
          
 
-            app.UseCors("SPA");
+            //app.UseCors("SPA");
             app.UseAuthentication();
 
 

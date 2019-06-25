@@ -127,7 +127,11 @@ namespace Dillio_Backend.API.Controllers
                 //creating the token
                 var token = tokenHandler.CreateToken(tokenDescriptor);
                 //returning the status code and the token to user
-                return Ok(tokenHandler.WriteToken(token));
+                return Ok(new
+                {
+                    token = tokenHandler.WriteToken(token), user
+                    
+                });
 
 
             }
