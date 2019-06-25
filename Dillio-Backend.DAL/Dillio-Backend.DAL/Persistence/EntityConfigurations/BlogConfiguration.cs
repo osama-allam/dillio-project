@@ -15,24 +15,29 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 
             builder.HasKey(b => b.Id);
 
-            builder.HasMany(b => b.Comments)
-                .WithOne(c => c.Blog)
-                .HasForeignKey(d => d.BlogId)
-                .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Property(b => b.Title)
-                .HasColumnType("nvarchar(50)")               
-                .IsRequired();
+            builder.Property(b => b.PostName)
+                .HasColumnType("nvarchar(50)");
+
+            builder.Property(b => b.Name)
+                .HasColumnType("nvarchar(50)");
+
 
             builder.Property(b => b.Description)
                 .HasColumnType("nvarchar(200)");
+
+
+            builder.Property(b => b.CommentNumber)
+                .HasColumnType("int");
+
+
+            builder.Property(b => b.Date)
+                .HasColumnType("datetime");
+
+
+            builder.Property(b => b.ImageUrl)
+                .HasColumnType("nvarchar(100)");
                
-
-
-            builder.HasMany(b => b.Likes)
-                .WithOne(l => l.Blog)
-                .HasForeignKey(m => m.BlogId) 
-                .OnDelete(DeleteBehavior.Cascade);
 
         }
 
