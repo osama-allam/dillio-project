@@ -1,13 +1,11 @@
-﻿using System;
+﻿using Dillio_Backend.BLL.Core.Domain;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Dillio_Backend.BLL.Core.Domain;
 
 namespace Dillio_Backend.API.ViewModel
 {
     public class ProductViewModel
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public float Price { get; set; }
         public float Discount { get; set; }

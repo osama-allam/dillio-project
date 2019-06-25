@@ -8,7 +8,7 @@ using Dillio_Backend.DAL.Persistence.EntityConfigurations;
 
 namespace Dillio_Backend.DAL
 {
-   public class ApplicationDbContext : DbContext
+   public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext()
         {
@@ -17,10 +17,10 @@ namespace Dillio_Backend.DAL
 
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
-            
+
         }
 
-        // Add the DbSets for the application
+       // Add the DbSets for the application
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public virtual DbSet<Blog> Blogs { get; set; }
         public virtual DbSet<Category> Categories { get; set; }

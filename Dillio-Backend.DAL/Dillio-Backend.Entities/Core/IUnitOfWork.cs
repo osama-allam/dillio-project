@@ -1,12 +1,13 @@
 ﻿using Dillio_Backend.BLL.Core.Repositories;
 using System;
+using System.Threading.Tasks;
 
 namespace Dillio_Backend.BLL.Core
 {
     public interface IUnitOfWork : IDisposable
     {
         //Repositories
-        IApplicationUserRepository ApplicationUser { get; set; }
+        //IApplicationUserRepository ApplicationUser { get; set; }
         IBlogRepository Blogs { get; }
         ICategoryRepository Categories { get; }
         ICommentRepository Comments { get; }
@@ -20,5 +21,6 @@ namespace Dillio_Backend.BLL.Core
         IProductStore ProductStore { get; }
 
         int Complete();
+        Task<int> CompleteAsync();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Repositories;
 using Dillio_Backend.DAL.Persistence.Repository;
+using System.Threading.Tasks;
 
 namespace Dillio_Backend.DAL.Persistence
 {
@@ -19,7 +20,7 @@ namespace Dillio_Backend.DAL.Persistence
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
-            ApplicationUser = new ApplicationUserRepository(context);
+            //ApplicationUser = new ApplicationUserRepository(context);
             Blogs = new BlogRepository(context);
             Categories = new CategoryRepository(context);
             Comments = new CommentRepository(context);
@@ -36,7 +37,7 @@ namespace Dillio_Backend.DAL.Persistence
 
         #region Repositories Member Variables
 
-        public IApplicationUserRepository ApplicationUser { get; set; }
+        //public IApplicationUserRepository ApplicationUser { get; set; }
         public IBlogRepository Blogs { get; set; }
         public ICategoryRepository Categories { get; set; }
         public ICommentRepository Comments { get; set; }
@@ -59,6 +60,11 @@ namespace Dillio_Backend.DAL.Persistence
         public int Complete()
         {
             return _context.SaveChanges();
+        }
+
+        public Task<int> CompleteAsync()
+        {
+            return _context.SaveChangesAsync();
         }
 
         public void Dispose()
