@@ -116,6 +116,18 @@
           "lib/netstandard2.0/IdentityServer4.Storage.dll": {}
         }
       },
+      "LazZiya.TagHelpers/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.TagHelpers": "2.1.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/LazZiya.TagHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/LazZiya.TagHelpers.dll": {}
+        }
+      },
       "Microsoft.AspNet.Identity.Core/2.2.2": {
         "type": "package",
         "compile": {
@@ -4850,6 +4862,7 @@
         "dependencies": {
           "Dillio-Backend.Entities": "1.0.0",
           "IdentityServer4.EntityFramework": "2.4.0",
+          "LazZiya.TagHelpers": "1.0.2",
           "Microsoft.AspNet.Identity.Core": "2.2.2",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
@@ -4998,6 +5011,18 @@
         "lib/netstandard2.0/IdentityServer4.Storage.dll",
         "lib/netstandard2.0/IdentityServer4.Storage.pdb",
         "lib/netstandard2.0/IdentityServer4.Storage.xml"
+      ]
+    },
+    "LazZiya.TagHelpers/1.0.2": {
+      "sha512": "FVAvnieGE3AT2e6IscJTc+bJ15jHyBT1MV4/z42cmIrr4dwCgKPMBVUVQWydg3ZiHH/CcBhflcL1uNdPYi4m+g==",
+      "type": "package",
+      "path": "lazziya.taghelpers/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lazziya.taghelpers.1.0.2.nupkg.sha512",
+        "lazziya.taghelpers.nuspec",
+        "lib/netcoreapp2.1/LazZiya.TagHelpers.dll"
       ]
     },
     "Microsoft.AspNet.Identity.Core/2.2.2": {
@@ -13339,6 +13364,12 @@
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\GP Project\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.API\\obj\\Dillio-Backend.API.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",

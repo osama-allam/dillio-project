@@ -31,36 +31,28 @@ namespace Dillio_Backend.DAL.Persistence
             Reviews = new ReviewRepository(context);
             Orders = new OrderRepository(context);
             Specs = new SpecsRepository(context);
+            Branches=new BranchRepository(context);
+            ProductStore =new ProductStoreRepository(context);
         }
 
         #region Repositories Member Variables
 
         //public IApplicationUserRepository ApplicationUser { get; set; }
         public IBlogRepository Blogs { get; set; }
-
         public ICategoryRepository Categories { get; set; }
-
         public ICommentRepository Comments { get; set; }
-
         public IImageRepository Images { get; set; }
-
         public ILikeRepository Likes { get; set; }
-
         public IProductRepository Products { get; set; }
-
         public IStoreRepository Stores { get; set; }
-
         public IReviewRepository Reviews { get; set; }
         public ISpecsRepository Specs { get; }
-
         public IOrderRepository Orders { get; set; }
+        public IBranchRepository Branches { get; set; }
+        public IProductStore ProductStore{ get; set; }
 
 
         #endregion
-
-
-
-
 
         #endregion
 
