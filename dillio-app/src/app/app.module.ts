@@ -49,6 +49,7 @@ import { PageNotFoundComponent } from './features/page-not-found/page-not-found.
 import { SharedModule } from './shared/shared.module';
 import { StoreAddComponent } from './features/stores/store-add/store-add.component';
 import { UploadComponent } from './shared/upload/upload.component';
+import { UpperHeaderComponent } from './core/header/upper-header/upper-header.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { UploadComponent } from './shared/upload/upload.component';
     FaqComponent,
     PageNotFoundComponent,
     StoreAddComponent,
-    UploadComponent
+    UploadComponent,
+    UpperHeaderComponent
   ],
   imports: [
     BrowserModule,
