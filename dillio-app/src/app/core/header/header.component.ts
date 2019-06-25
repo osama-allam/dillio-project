@@ -1,10 +1,4 @@
-import { ViewActivatorService } from './../../services/view-activator.service';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { CategoryService } from 'src/app/services/category.service';
-import { Category } from 'src/app/_models/category';
-import {NgForm} from '@angular/forms'
-import { Router, ActivatedRoute } from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
 declare var $: any;
 @Component({
   selector: 'app-header',
@@ -12,53 +6,29 @@ declare var $: any;
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-categories:Category[];
-currentCatSearch:{val:Number, name:string};
-txtSearch:string;
-// @Output() outSearch=new EventEmitter<string>();
-  constructor(
-    private viewActivator: ViewActivatorService,
-    private category:CategoryService,
-    private router:Router,
-    private activatedRoute : ActivatedRoute
-    ) {
-    this.categories = category.categories;
-    this.currentCatSearch = {val:-1,name:"All"};
 
-    const txtsendS = this.activatedRoute.snapshot.params.txtSearch;
-    const curVal = this.activatedRoute.snapshot.params.val;
-
-
-    if(curVal != null){
-      this.currentCatSearch.val = parseInt(curVal);
-    }
-
-  }
+  constructor() { }
 
   ngOnInit() {
-    this.viewActivator.headerActivator();
-    this.txtSearch="";
+    this.dropdownActivator();
+  }
+  dropdownActivator() {
+    $('.ht-setting-trigger, .ht-currency-trigger, .ht-language-trigger, .hm-minicart-trigger, .cw-sub-menu').on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('is-active');
+      $(this).siblings('.ht-setting, .ht-currency, .ht-language, .minicart, .cw-sub-menu li').slideToggle();
+    });
+    $('.ht-setting-trigger.is-active').siblings('.catmenu-body').slideDown();
+
+    $(window).on('scroll',function() {
+      if ($(this).scrollTop() > 300) {
+        $('.header-sticky').addClass("sticky");
+      } else {
+        $('.header-sticky').removeClass("sticky");
+      }
+    });
   }
   toggleDrop() {
-    this.viewActivator.niceSelectToggleDrop();
+    $('.nice-select').toggleClass('open');
   }
-
-
-drpsearchclick(cat:Category){
-  this.currentCatSearch.name = cat.name;
-    this.currentCatSearch.val = cat.id;
-}
-
-
-searchbtnClick(){
-  console.log(this.txtSearch);
-  // this.outSearch.emit(this.txtSearch);
-  let params = new URLSearchParams();
-
-  // params.append('txtS', this.txtSearch);
-  // params.append('curVal', this.currentCatSearch.val.toString());
-  this.router.navigate(['/home/',this.txtSearch, this.currentCatSearch.val ]);
-}
-
-
 }
