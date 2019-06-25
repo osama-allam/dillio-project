@@ -13261,6 +13261,7 @@
       "CloudinaryDotNet >= 1.8.0",
       "Dillio-Backend.DAL >= 1.0.0",
       "Dillio-Backend.Entities >= 1.0.0",
+      "Microsoft.AspNet.Identity.Core >= 2.2.2",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
@@ -13323,6 +13324,10 @@
           "CloudinaryDotNet": {
             "target": "Package",
             "version": "[1.8.0, )"
+          },
+          "Microsoft.AspNet.Identity.Core": {
+            "target": "Package",
+            "version": "[2.2.2, )"
           },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
