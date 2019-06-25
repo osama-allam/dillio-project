@@ -12,6 +12,7 @@ namespace Dillio_Backend.API.ViewModel
         public string Name { get; set; }
         public string Email { get; set; }
         public string FK_UserId { get; set; }
+        public float Rating { get; set; }
         //public int FK_ProductId { get; set; }
         //public Product Product { get; set; }
     }

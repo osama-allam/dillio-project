@@ -13,6 +13,10 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 
             builder.HasKey(r => r.Id);
 
+            builder.Property(r => r.ReviewDescription)
+                .HasColumnName("description")
+                .HasColumnType("nvarchar(350)");
+
             builder.Property(r => r.Name)
                 .HasColumnType("nvarchar(250)");
 

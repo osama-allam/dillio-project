@@ -42,6 +42,25 @@ namespace Dillio_Backend.API.Controllers
             return Ok(reviews);
         }
 
+        [HttpGet("store/{storeId}")]
+        [ActionName("Get")]
+        public IActionResult GetAllReviewOfStore(int storeId)
+        {
+            IList<Review> reviews = null;
+
+            reviews = _unitOfWork.Reviews.GetAll().Where(r => r.ProductId == storeId).ToList();
+
+            if (reviews.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(reviews);
+        }
+
+
+
+
 
         [HttpGet("{id}")]
         [ActionName("Get")]
@@ -61,7 +80,7 @@ namespace Dillio_Backend.API.Controllers
 
 
 
-        [HttpPost("{productId}")]
+        [HttpPost("product/{productId}")]
         public IActionResult Post([FromBody] ReviewViewModel rvm,int productId)
         {
 
@@ -74,6 +93,34 @@ namespace Dillio_Backend.API.Controllers
                     ReviewDescription = rvm.ReviewDescription,
                     UserId = User.Identity.GetUserId(),
                     ProductId = productId
+                };
+
+                _unitOfWork.Reviews.Add(review);
+                _unitOfWork.Complete();
+                return Ok();
+            }
+
+            return NotFound();
+
+        }
+
+        [HttpPost("store/{storeId}")]
+        [ActionName("Post")]
+        public IActionResult AddReviewOnStore([FromBody] ReviewViewModel rvm, int storeId)
+        {
+
+            if (rvm != null)
+            {
+                Review review = new Review
+                {
+                    ReviewDescription = rvm.ReviewDescription,
+                    Name = rvm.Name,
+                    Email = rvm.Email,
+                    ProductId = 1,
+                    UserId = User.Identity.GetUserId(),
+                    StoreId = storeId,
+                    ReviewDate = DateTime.Now,
+                    Rating =  rvm.Rating                                                
                 };
 
                 _unitOfWork.Reviews.Add(review);

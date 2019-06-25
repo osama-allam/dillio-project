@@ -133,17 +133,24 @@ namespace Dillio_Backend.API
             }
 
 
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
 
-
-            //app.UseStaticFiles(new StaticFileOptions()
-            //{
-            //    FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", Path.GetFileName(@"images"))),
-            //    RequestPath = new PathString("/images")
-            //});
-            app.UseAuthentication();
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Path.Combine(Directory.GetCurrentDirectory(), @"Resources"))),
+                RequestPath = new PathString("/Resources")
 
-            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+                //FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", @"images")),
+                //RequestPath = new PathString("/images")
+            });
+         
+
+            app.UseCors("SPA");
             app.UseAuthentication();
 
 

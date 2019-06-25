@@ -19,11 +19,12 @@ namespace Dillio_Backend.API.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var folderName = Path.Combine("images", "stores");
-                var pathToSave = Path.Combine(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", folderName));
+                var folderName = Path.Combine("Resources", "Images");
+                var pathToSave = Path.Combine(Path.Combine(Directory.GetCurrentDirectory(), folderName));
 
-                if (file.Length > 0)
+               if (file.Length > 0)
                 {
+
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
                     var fullPath = Path.Combine(pathToSave, fileName);
                     var dbPath = Path.Combine(folderName, fileName);
