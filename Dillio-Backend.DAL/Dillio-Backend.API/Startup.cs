@@ -18,6 +18,9 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IO;
 using System.Text;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace Dillio_Backend.API
 {
@@ -128,7 +131,7 @@ namespace Dillio_Backend.API
             });
 
 
-            app.UseCors("SPA");
+            //app.UseCors("SPA");
             app.UseAuthentication();
 
 
