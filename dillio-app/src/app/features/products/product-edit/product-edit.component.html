@@ -1,11 +1,11 @@
-<!-- <div class="card">
+<div class="card">
   <div class="card-body">
     <p class="card-text">Dirty: {{productForm.dirty}}</p>
     <p class="card-text">Touched: {{productForm.touched}}</p>
     <p class="card-text">Valid: {{productForm.valid}}</p>
     <p class="card-text">{{productForm.value | json}}</p>
   </div>
-</div> -->
+</div>
 
 <div class="container">
   <div class="row justify-content-md-center">
@@ -18,7 +18,7 @@
             <div class="form-group">
               <mat-form-field class="w-100">
                 <mat-label>Product name</mat-label>
-                <input matInput formControlName="productNameFormCtrl">
+                <input matInput formControlName="productNameFormCtrl" >
                 <mat-error>This field is required</mat-error>
               </mat-form-field>
             </div>
@@ -52,7 +52,15 @@
                 This field is required </mat-error>
             </mat-form-field>
             <div>
-              <button mat-button matStepperNext>Next</button>
+              <button type="button" mat-button matStepperNext>Next</button>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">Dirty: {{productForm.dirty}}</p>
+                <p class="card-text">Touched: {{productForm.touched}}</p>
+                <p class="card-text">Valid: {{productForm.valid}}</p>
+                <p class="card-text">{{formArray.get([0]).value | json}}</p>
+              </div>
             </div>
           </mat-step>
           //specs and description step
@@ -64,7 +72,7 @@
                 formControlName="productDescriptionFormCtrl"></textarea>
             </mat-form-field>
             <mat-divider class="mb-10"></mat-divider>
-            <button class="btn btn-success" (click)="addSpecFormGroup()">Add new spec</button>
+            <button type="button" class="btn btn-success" (click)="addSpecFormGroup()">Add new spec</button>
             <div formArrayName="specsArray"
             *ngFor="let spec of specsArray.controls; let i = index">
             <mat-divider class="mb-10 mt-10"></mat-divider>
@@ -72,14 +80,14 @@
                 <div class="col-md-5">
                   <mat-form-field class="w-100">
                     <mat-label>Spec name</mat-label>
-                    <input matInput formControlName="productSpecNameFormCtrl">
+                    <input matInput formControlName="name">
                     <mat-error>This field is required</mat-error>
                   </mat-form-field>
                 </div>
                 <div class="col-md-5">
                   <mat-form-field class="pl-10 w-100">
                     <mat-label>Spec value</mat-label>
-                    <input matInput formControlName="productSpecValueFormCtrl">
+                    <input matInput formControlName="value">
                     <mat-error>This field is required</mat-error>
                   </mat-form-field>
                 </div>
@@ -95,7 +103,16 @@
 
             <mat-divider class="mt-10"></mat-divider>
             <div>
-              <button mat-button matStepperNext>Next</button>
+              <button type="button" mat-button matStepperNext>Next</button>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">Dirty: {{productForm.dirty}}</p>
+                <p class="card-text">Touched: {{productForm.touched}}</p>
+                <p class="card-text">Valid: {{productForm.valid}}</p>
+                <p class="card-text">{{formArray.get([1]).value | json}}</p>
+              </div>
             </div>
           </mat-step>
           //upload product images step
@@ -115,8 +132,8 @@
                           <img class="dragImage" src="assets/images/icons/Download_512px.png" alt="">
                         </div>
                         <div class="pt-30">
-                          <button class="btn btn-warning" (click)="fileInput.click()">
-                            Browse files</button> or <strong>Drag</strong> it here
+                          <a  class="btn btn-warning" (click)="fileInput.click()">
+                            Browse files</a> or <strong>Drag</strong> it here
                         </div>
                       </div>
                       <input hidden type="file" ng2FileSelect [uploader]="uploader" #fileInput multiple /><br />
@@ -206,8 +223,8 @@
 
             </div>
             <div>
-              <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
+              <button type="button" mat-button matStepperPrevious>Back</button>
+              <button type="button" mat-button matStepperNext>Next</button>
             </div>
           </mat-step>
           //confirm all data

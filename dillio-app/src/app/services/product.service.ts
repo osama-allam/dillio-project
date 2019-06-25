@@ -1,11 +1,12 @@
 import { environment } from './../../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { IProduct } from './../_models/product';
 import { Injectable } from '@angular/core';
 import { Product } from '../_models/product';
 import { CategoryService } from './category.service';
 import { Productdetailsviewmodel } from '../_models/product-details-viewmodel';
-import { of, Observable } from 'rxjs';
+import { of, Observable, throwError } from 'rxjs';
+import { tap, catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -260,6 +261,40 @@ getProduct(id: number): Observable<IProduct> {
     return of(this.initializeProduct());
   }
   return this.http.get<IProduct>(this.baseUrl + 'product/' + id);
+}
+createProduct(product: IProduct): Observable<IProduct> {
+  const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  return this.http.post<IProduct>(this.baseUrl + 'product', product, { headers: headers })
+    .pipe(
+      // tap(data => console.log('createProduct: ' + JSON.stringify(data))),
+      catchError(this.handleError)
+    );
+}
+updateProduct(product: IProduct): Observable<IProduct> {
+  const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  return this.http.put<IProduct>(this.baseUrl + 'product/' + product.id, product, { headers: headers })
+    .pipe(
+      // tap(() => console.log('updateProduct: ' + product.id)),
+      // Return the product on an update
+      map(() => product),
+      catchError(this.handleError)
+    );
+}
+private handleError(err) {
+  // in a real world app, we may send the server to some remote logging infrastructure
+  // instead of just logging it to the console
+  let errorMessage: string;
+  if (err.error instanceof ErrorEvent) {
+    // A client-side or network error occurred. Handle it accordingly.
+    errorMessage = `An error occurred: ${err.error.message}`;
+
+  } else {
+    // The backend returned an unsuccessful response code.
+    // The response body may contain clues as to what went wrong,
+    errorMessage = `Backend returned code ${err.status}: ${err.body.error}`;
+  }
+  console.error(err);
+  return throwError(errorMessage);
 }
   initializeProduct(): IProduct {
     return {
