@@ -46,6 +46,7 @@ namespace Dillio_Backend.API
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddRoleManager<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddAuthentication(options =>
@@ -104,11 +105,11 @@ namespace Dillio_Backend.API
            
 
 
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", Path.GetFileName(@"images"))),
-                RequestPath = new PathString("/images")
-            });
+            //app.UseStaticFiles(new StaticFileOptions()
+            //{
+            //    FileProvider = new PhysicalFileProvider(Path.Combine(@"E:\ITI Courses\GP\dillio-front\dillio-project\dillio-app\src\assets", Path.GetFileName(@"images"))),
+            //    RequestPath = new PathString("/images")
+            //});
             app.UseAuthentication();
             app.UseStaticFiles();
 

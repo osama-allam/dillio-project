@@ -20,11 +20,15 @@ namespace Dillio_Backend.API.Controllers
     {
         private SignInManager<ApplicationUser> _signInManager;
         private UserManager<ApplicationUser> _userManager;
+        private RoleManager<IdentityRole> _roleManager;
 
-        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+
+        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
+
 
         }
 
@@ -80,7 +84,9 @@ namespace Dillio_Backend.API.Controllers
                 var claims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Email, model.email),
-                    new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName)
+                    new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName),
+
+
 
                 };
 
@@ -98,11 +104,59 @@ namespace Dillio_Backend.API.Controllers
                     token = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo
                 });
+
+
             }
 
             return Unauthorized();
 
 
         }
+
+        [HttpPost]
+        [Route("Admin")]
+        public async Task<IActionResult> SetAdmin(string email)
+        {
+            var rolesCreated =  CreateRoles();
+            if (rolesCreated.IsCompletedSuccessfully )
+            {
+                var user = await _userManager.FindByEmailAsync(email);
+
+                if (user != null)
+                {
+                  var roleAssigned = await  _userManager.AddToRoleAsync(user, "Admin");
+
+                  if (roleAssigned.Succeeded)
+                  {
+                      return Ok();
+                  }
+
+                  return StatusCode(406,"The user you entered is not found ");
+                }
+            }
+
+            return StatusCode(500);
+        }
+
+        public async Task CreateRoles()
+        {
+            string[] roleNames = { "Admin", "User" };
+
+
+            foreach (var roleName in roleNames)
+            {
+                var roleExist = await _roleManager.RoleExistsAsync(roleName);
+
+                if (!roleExist)
+                {
+                    var roleResult = await _roleManager.CreateAsync(new IdentityRole(roleName));
+                }
+            }
+
+
+        }
     }
+
+
+
 }
