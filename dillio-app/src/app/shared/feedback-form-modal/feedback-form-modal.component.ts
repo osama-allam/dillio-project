@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { IFeedbackModalData, IFeedbackData } from 'src/app/_models/feedback-form';
+import { StoresService } from 'src/app/services/stores.service';
 declare var $: any;
 
 @Component({
@@ -16,7 +17,7 @@ export class FeedbackFormModalComponent implements OnInit {
   submitted = false;
   submittedData: IFeedbackData;
   feedbackForm: FormGroup;
-  constructor() { }
+  constructor(private storeservice:StoresService) { }
 
   ngOnInit() {
     this.initForm();
@@ -25,16 +26,19 @@ export class FeedbackFormModalComponent implements OnInit {
 
   initForm() {
     this.feedbackForm = new FormGroup({
-      customerRating: new FormControl('', Validators.required),
       userReview: new FormControl(null, Validators.required),
       username: new FormControl(null, Validators.required),
-      email: new FormControl(null, [Validators.required, Validators.email])
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      customerRating: new FormControl('', Validators.required)
     });
   }
   onSubmit() {
     if (this.feedbackForm.valid) {
       this.submittedData = this.fillSubmittedData(this.feedbackForm);
       this.formSubmitted.emit(this.submittedData);
+      debugger;
+      this.storeservice.AddReviewOnStore(this.submittedData,1).subscribe( 
+      );
       this.resetForm();
       $('#mymodal').modal('toggle');
     } else {
@@ -48,11 +52,13 @@ export class FeedbackFormModalComponent implements OnInit {
   }
   fillSubmittedData(form: FormGroup): IFeedbackData {
     let data: IFeedbackData;
-    data = {
-      rating: form.value.customerRating,
-      userReview: form.value.userReview,
-      username: form.value.username,
-      email: form.value.email
+    data = {  
+      
+      description:form.value.userReview, 
+      Name: form.value.username,       
+      email: form.value.email,
+      rating: form.value.customerRating
+      
     };
     return data;
   }

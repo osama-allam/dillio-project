@@ -46,7 +46,7 @@
                       <p class="feedback-form">
                         <label for="feedback">Your Review</label>
                         <textarea formControlName="userReview" id="feedback" name="comment" cols="45" rows="8"
-                          aria-required="true">{{formData.feedbackData.userReview}}</textarea>
+                          aria-required="true">{{formData.feedbackData.description}}</textarea>
                         <span *ngIf="!feedbackForm.get('userReview').valid && feedbackForm.get('userReview').touched"
                           class="help-block">
                           Please enter your feedback
@@ -55,7 +55,7 @@
                       <div class="feedback-input">
                         <p class="feedback-form-author">
                           <label for="author">Name</label>
-                          <input formControlName="username" id="author" name="author" value="{{formData.feedbackData.username}}" size="30" aria-required="true"
+                          <input formControlName="username" id="author" name="author" value="{{formData.feedbackData.Name}}" size="30" aria-required="true"
                             type="text">
 
                           <span *ngIf="!feedbackForm.get('username').valid && feedbackForm.get('username').touched"

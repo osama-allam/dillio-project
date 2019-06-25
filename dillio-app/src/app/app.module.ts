@@ -82,7 +82,13 @@ import { SharedModule } from './shared/shared.module';
     ContactFormComponent,
     ContactContentComponent,
     FaqComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    // ProductDetailsComponent,
+    // ProductEditComponent,
+    // ProductListingComponent,
+    StoreAddComponent,
+    UploadComponent,
+    
   ],
   imports: [
     BrowserModule,
