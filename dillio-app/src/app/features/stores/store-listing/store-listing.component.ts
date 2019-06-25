@@ -24,6 +24,7 @@ export class StoreListingComponent implements OnInit {
   ngOnInit() {
     this.storeService.getAll().subscribe(
       stores =>{
+        // debugger;
         this.stores = stores;
       },
       error =>this.errormessage = <any>error
