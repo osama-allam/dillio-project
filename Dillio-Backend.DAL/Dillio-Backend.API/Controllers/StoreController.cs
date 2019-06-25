@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Dillio_Backend.BLL.Core;
@@ -29,16 +30,18 @@ namespace Dillio_Backend.API.Controllers
 
         {
             IList<Store> store = null;
-
+         
             store = _unitOfWork.Stores.GetAll().ToList();
 
             if (store.Count == 0)
             {
                 return NotFound();
             }
+    
 
             return Ok(store);
         }
+
 
         [HttpGet("{id}")]
         public IActionResult Get(int id)

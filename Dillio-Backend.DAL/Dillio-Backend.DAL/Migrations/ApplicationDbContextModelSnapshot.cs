@@ -240,7 +240,13 @@ namespace Dillio_Backend.DAL.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnName("FK_ProductId");
 
-                    b.Property<string>("ReviewDescription");
+                    b.Property<float>("Rating");
+
+                    b.Property<DateTime>("ReviewDate");
+
+                    b.Property<string>("ReviewDescription")
+                        .HasColumnName("description")
+                        .HasColumnType("nvarchar(350)");
 
                     b.Property<int>("StoreId");
 

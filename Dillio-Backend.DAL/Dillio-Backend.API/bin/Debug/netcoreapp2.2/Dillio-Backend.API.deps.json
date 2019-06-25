@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "1f91f1f25bb4348679a9d992674aa89f4792327a"
+    "signature": "4a6fc96df475652af4761109484e1be25ebbc7e2"
   },
   "compilationOptions": {
     "defines": [
@@ -138,6 +138,20 @@
         },
         "compile": {
           "lib/netstandard2.0/IdentityServer4.Storage.dll": {}
+        }
+      },
+      "LazZiya.TagHelpers/1.0.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.TagHelpers": "2.2.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/LazZiya.TagHelpers.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/LazZiya.TagHelpers.dll": {}
         }
       },
       "Microsoft.AspNet.Identity.Core/2.2.2": {
@@ -588,6 +602,7 @@
         "dependencies": {
           "Dillio-Backend.Entities": "1.0.0",
           "IdentityServer4.EntityFramework": "2.4.0",
+          "LazZiya.TagHelpers": "1.0.2",
           "Microsoft.AspNet.Identity.Core": "2.2.2",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
@@ -3756,6 +3771,13 @@
       "sha512": "sha512-Qt48GO1yC2H0dfIUUojJLMoVoOPgyQ/2HU6IMVfeRM1l4ogezG5NR5XhwexzGGzHZ0bOTIhXBpyt0B2ipMDJ2g==",
       "path": "identityserver4.storage/2.4.0",
       "hashPath": "identityserver4.storage.2.4.0.nupkg.sha512"
+    },
+    "LazZiya.TagHelpers/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kdjmgZLdSAzB6z1qzVULl5KUlhnfHnU9SZZ32czQldpuMDpqbsezbLiwewa9MVaXQqcSZJYZiXjSpgvzRtCCkw==",
+      "path": "lazziya.taghelpers/1.0.2",
+      "hashPath": "lazziya.taghelpers.1.0.2.nupkg.sha512"
     },
     "Microsoft.AspNet.Identity.Core/2.2.2": {
       "type": "package",

@@ -102,6 +102,34 @@ namespace Dillio_Backend.API.Controllers
 
         }
 
+        [HttpPost("store/{storeId}")]
+        [ActionName("Post")]
+        public IActionResult AddReviewOnStore([FromBody] ReviewViewModel rvm, int storeId)
+        {
+
+            if (rvm != null)
+            {
+                Review review = new Review
+                {
+                    ReviewDescription = rvm.ReviewDescription,
+                    Name = rvm.Name,
+                    Email = rvm.Email,
+                    ProductId = 1,
+                    UserId = User.Identity.GetUserId(),
+                    StoreId = storeId,
+                    ReviewDate = DateTime.Now,
+                    Rating =  rvm.Rating                                                
+                };
+
+                _unitOfWork.Reviews.Add(review);
+                _unitOfWork.Complete();
+                return Ok();
+            }
+
+            return NotFound();
+
+        }
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
