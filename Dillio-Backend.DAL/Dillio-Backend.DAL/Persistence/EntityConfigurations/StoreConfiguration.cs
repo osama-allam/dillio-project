@@ -18,8 +18,16 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
                 .HasColumnType("nvarchar(50)")
                 .IsRequired();
 
+            builder.HasMany(c => c.Branches)
+                .WithOne(p => p.Store)
+                .HasForeignKey(p => p.StoreId)
+                .OnDelete(DeleteBehavior.Cascade);
 
 
+            builder.HasMany(c => c.Reviews)
+                .WithOne(p => p.Store)
+                .HasForeignKey(p => p.StoreId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
 
