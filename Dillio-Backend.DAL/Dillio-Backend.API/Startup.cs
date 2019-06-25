@@ -34,6 +34,7 @@ namespace Dillio_Backend.API
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddRoleManager<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddAuthentication(options =>
