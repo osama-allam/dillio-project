@@ -54,6 +54,7 @@ import { ProductEditComponent } from './features/products/product-edit/product-e
 import { MaterialModule } from './material.module';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BlogService } from './services/blog.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -107,7 +108,8 @@ import { BlogService } from './services/blog.service';
               ProductReviewService,
               StoresService,
               BlogService,
-              ContactSubjectService
+              ContactSubjectService,
+              AuthService
   ],
   bootstrap: [AppComponent]
 })

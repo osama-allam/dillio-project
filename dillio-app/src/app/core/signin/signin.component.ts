@@ -1,3 +1,4 @@
+import { LoginComponent } from './../login/login.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
+  model: any = {};
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
 
 }
