@@ -1,25 +1,25 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { postService } from './post.service';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { IPost } from 'src/app/_models/post';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-blog-post',
   templateUrl: './blog-post.component.html',
   styleUrls: ['./blog-post.component.css'],
-  providers:[postService]
+  providers:[BlogService]
 })
 export class BlogPostComponent implements OnInit {
  posts: IPost[];
  private subscription: Subscription;
 
 
- constructor(private postService: postService) { }
+ constructor(private blogService: BlogService) { }
 
   ngOnInit() {
     debugger;
-    this.posts = this.postService.getPosts();
-    this.subscription = this.postService.postsChanged
+    this.posts = this.blogService.getPosts();
+    this.subscription = this.blogService.postsChanged
     .subscribe(
       (posts: IPost[]) => {
         this.posts = posts;
@@ -27,7 +27,7 @@ export class BlogPostComponent implements OnInit {
     );
   }
   onEditItem(index: number) {
-    this.postService.startedEditing.next(index);
+    this.blogService.startedEditing.next(index);
   }
 
   ngOnDestroy() {
