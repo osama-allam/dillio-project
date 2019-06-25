@@ -31,6 +31,10 @@ namespace Dillio_Backend.DAL
         public virtual DbSet<Store> Stores { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Review> Reviews { get; set; }
+        public virtual DbSet<Branches> Branches { get; set; }
+        public virtual DbSet<ProductStore> ProductStores{ get; set; }
+
+
 
 
 
@@ -56,6 +60,9 @@ namespace Dillio_Backend.DAL
             builder.ApplyConfiguration(new ReviewConfigurations());
             builder.ApplyConfiguration(new StoreConfiguration());
             builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new ProductStoreConfiguration());
+            builder.ApplyConfiguration(new BranchConfiguration());
+
         }
     }
 }
