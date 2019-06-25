@@ -229,6 +229,28 @@ namespace Dillio_Backend.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Branch",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(250)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    StoreId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Branch", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Branch_Store_StoreId",
+                        column: x => x.StoreId,
+                        principalTable: "Store",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Comment",
                 columns: table => new
                 {
@@ -330,6 +352,30 @@ namespace Dillio_Backend.DAL.Migrations
                         column: x => x.FK_ProductId,
                         principalTable: "Product",
                         principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductStore",
+                columns: table => new
+                {
+                    StoreId = table.Column<int>(nullable: false),
+                    ProductId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductStore", x => new { x.ProductId, x.StoreId });
+                    table.ForeignKey(
+                        name: "FK_ProductStore_Product_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Product",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ProductStore_Store_StoreId",
+                        column: x => x.StoreId,
+                        principalTable: "Store",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -339,11 +385,14 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ReviewDescription = table.Column<string>(nullable: true),
+                    description = table.Column<string>(type: "nvarchar(350)", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(250)", nullable: true),
                     Email = table.Column<string>(nullable: true),
+                    Rating = table.Column<float>(nullable: false),
                     FK_ProductId = table.Column<int>(nullable: false),
-                    FK_UserId = table.Column<string>(nullable: true)
+                    FK_UserId = table.Column<string>(nullable: true),
+                    StoreId = table.Column<int>(nullable: false),
+                    ReviewDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -352,6 +401,12 @@ namespace Dillio_Backend.DAL.Migrations
                         name: "FK_Review_Product_FK_ProductId",
                         column: x => x.FK_ProductId,
                         principalTable: "Product",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Review_Store_StoreId",
+                        column: x => x.StoreId,
+                        principalTable: "Store",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -380,7 +435,7 @@ namespace Dillio_Backend.DAL.Migrations
                         column: x => x.ProductId,
                         principalTable: "Product",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -428,6 +483,11 @@ namespace Dillio_Backend.DAL.Migrations
                 column: "FK_UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Branch_StoreId",
+                table: "Branch",
+                column: "StoreId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Comment_BlogId",
                 table: "Comment",
                 column: "BlogId");
@@ -468,9 +528,19 @@ namespace Dillio_Backend.DAL.Migrations
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ProductStore_StoreId",
+                table: "ProductStore",
+                column: "StoreId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Review_FK_ProductId",
                 table: "Review",
                 column: "FK_ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Review_StoreId",
+                table: "Review",
+                column: "StoreId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Review_FK_UserId",
@@ -501,6 +571,9 @@ namespace Dillio_Backend.DAL.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Branch");
+
+            migrationBuilder.DropTable(
                 name: "Comment");
 
             migrationBuilder.DropTable(
@@ -510,19 +583,22 @@ namespace Dillio_Backend.DAL.Migrations
                 name: "Like");
 
             migrationBuilder.DropTable(
+                name: "ProductStore");
+
+            migrationBuilder.DropTable(
                 name: "Review");
 
             migrationBuilder.DropTable(
                 name: "Specs");
 
             migrationBuilder.DropTable(
-                name: "Store");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "Blog");
+
+            migrationBuilder.DropTable(
+                name: "Store");
 
             migrationBuilder.DropTable(
                 name: "Product");

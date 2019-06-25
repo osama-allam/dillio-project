@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dillio_Backend.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190624113753_InitialModel")]
+    [Migration("20190625170528_InitialModel")]
     partial class InitialModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,6 +45,33 @@ namespace Dillio_Backend.DAL.Migrations
                     b.HasIndex("FK_UserId");
 
                     b.ToTable("Blog");
+                });
+
+            modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Branches", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("StoreId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StoreId");
+
+                    b.ToTable("Branch");
                 });
 
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Category", b =>
@@ -176,6 +203,19 @@ namespace Dillio_Backend.DAL.Migrations
                     b.ToTable("Product");
                 });
 
+            modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.ProductStore", b =>
+                {
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("StoreId");
+
+                    b.HasKey("ProductId", "StoreId");
+
+                    b.HasIndex("StoreId");
+
+                    b.ToTable("ProductStore");
+                });
+
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Review", b =>
                 {
                     b.Property<int>("Id")
@@ -190,7 +230,15 @@ namespace Dillio_Backend.DAL.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnName("FK_ProductId");
 
-                    b.Property<string>("ReviewDescription");
+                    b.Property<float>("Rating");
+
+                    b.Property<DateTime>("ReviewDate");
+
+                    b.Property<string>("ReviewDescription")
+                        .HasColumnName("description")
+                        .HasColumnType("nvarchar(350)");
+
+                    b.Property<int>("StoreId");
 
                     b.Property<string>("UserId")
                         .HasColumnName("FK_UserId");
@@ -198,6 +246,8 @@ namespace Dillio_Backend.DAL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("StoreId");
 
                     b.HasIndex("UserId");
 
@@ -431,6 +481,14 @@ namespace Dillio_Backend.DAL.Migrations
                         .OnDelete(DeleteBehavior.SetNull);
                 });
 
+            modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Branches", b =>
+                {
+                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Store", "Store")
+                        .WithMany("Branches")
+                        .HasForeignKey("StoreId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Comment", b =>
                 {
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Blog", "Blog")
@@ -449,7 +507,7 @@ namespace Dillio_Backend.DAL.Migrations
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Like", b =>
@@ -485,11 +543,29 @@ namespace Dillio_Backend.DAL.Migrations
                         .HasForeignKey("OrderId");
                 });
 
+            modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.ProductStore", b =>
+                {
+                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Product", "Product")
+                        .WithMany("ProductStores")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Store", "Store")
+                        .WithMany("ProductStores")
+                        .HasForeignKey("StoreId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Review", b =>
                 {
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Product", "Product")
                         .WithMany("Reviews")
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Dillio_Backend.BLL.Core.Domain.Store", "Store")
+                        .WithMany("Reviews")
+                        .HasForeignKey("StoreId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.ApplicationUser", "User")
@@ -503,7 +579,7 @@ namespace Dillio_Backend.DAL.Migrations
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Product", "Product")
                         .WithMany("Specs")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
