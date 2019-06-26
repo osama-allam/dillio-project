@@ -46,11 +46,17 @@ import { StoreDetailsComponent } from './features/stores/store-details/store-det
 import { StoresComponent } from './features/stores/stores.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import { SharedModule } from './shared/shared.module';
+import { ProductDetailsComponent } from './features/products/product-details/product-details.component';
+import { ProductListingComponent } from './features/products/product-listing/product-listing.component';
+import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
 import { StoreAddComponent } from './features/stores/store-add/store-add.component';
+import { HttpClient } from 'selenium-webdriver/http';
 import { UploadComponent } from './shared/upload/upload.component';
 import { BlogService } from './services/blog.service';
 import { AuthService } from './services/auth.service';
 import { UpperHeaderComponent } from './core/header/upper-header/upper-header.component';
+
+
 
 @NgModule({
   declarations: [
@@ -98,6 +104,12 @@ import { UpperHeaderComponent } from './core/header/upper-header/upper-header.co
     HttpClientModule,
     ProductModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+   
+    
+    StarRatingModule.forRoot()
   ],
   providers: [CategoryService,
               SubcategoryService,
