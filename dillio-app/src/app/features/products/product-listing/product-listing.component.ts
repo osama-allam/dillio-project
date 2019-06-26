@@ -30,7 +30,18 @@ export class ProductListingComponent implements OnInit {
 
       // }else{
 
+<<<<<<< HEAD
         this.totalproducts = this.productServices.products;
+=======
+      this.totalproducts = [];
+      this.products = [];
+
+        this.productServices.getall().subscribe(pro => {
+          this.totalproducts = pro;
+          this.CurrentPage = 1;
+          this.setPage(this.CurrentPage);
+        });
+>>>>>>> parent of 3bc1ac3d... fixing omar front
       // }
 
     this.CurrentPage = 1;
