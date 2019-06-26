@@ -11,6 +11,7 @@ export class AuthService {
   baseUrl = 'https://localhost:5001/api/auth/';
   decodedToken: any;
   currentUser: User;
+  jwtHelper = new JwtHelperService();
   constructor(private http:HttpClient) { }
 
   login(model: any){
@@ -34,7 +35,7 @@ export class AuthService {
       map((response) => {
         const res = response;
         if(res){
-          console.log(res.succeeded)
+          console.log(res)
         }
       })
     )
