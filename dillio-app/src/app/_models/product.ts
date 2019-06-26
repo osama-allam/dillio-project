@@ -28,7 +28,6 @@ export interface IProduct {
   description: string;
   specs: Spec[];
   images: Image[];
-  categoryName?:string;
 }
 export interface ProductResolved {
   product: IProduct;

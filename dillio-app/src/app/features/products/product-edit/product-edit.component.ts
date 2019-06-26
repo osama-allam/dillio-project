@@ -55,9 +55,7 @@ export class ProductEditComponent implements OnInit {
               private _alertify: AlertifyService,
               private route: ActivatedRoute,
               private router: Router) {
-     _categoryService.getall().subscribe(cate => {
-      this.categories = cate;
-    });
+    this.categories = _categoryService.getall();
   }
 
   ngOnInit() {
@@ -249,7 +247,7 @@ export class ProductEditComponent implements OnInit {
           dateAdded: res.dateAdded,
           publicId: res.publicId,
         };
-         this.images.push(image);
+        this.images.push(image);
         // if (photo.isMain) {
         //   this.authService.changeMemberPhoto(photo.url);
         //   this.authService.currentUser.photoUrl = photo.url;
