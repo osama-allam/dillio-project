@@ -28,14 +28,15 @@ export class ProductDetailsComponent implements OnInit {
   getProductResolvedData() {
     this.productSubscription = this.route.data.subscribe(data => {
       const resolvedData: ProductResolved = data.resolvedProduct;
-      this._alertify.error(resolvedData.error);
+      // this._alertify.error(resolvedData.error);
       this.onProductRetrieved(resolvedData.product);
     });
   }
   getReviewsResolvedData() {
     this.productSubscription = this.route.data.subscribe(data => {
       const resolvedData: ReviewResolved = data.resolvedReviews;
-      this._alertify.error(resolvedData.error);
+      console.log(resolvedData);
+      // this._alertify.error(resolvedData.error);
       this.onReviewRetrieved(resolvedData.reviews);
     });
   }

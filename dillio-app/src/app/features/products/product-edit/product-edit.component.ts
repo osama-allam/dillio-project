@@ -191,7 +191,7 @@ export class ProductEditComponent implements OnInit {
                 this.onSaveComplete( res, `The updated ${this.product.name} was saved`);
             },
               (error: any) => {
-                this._alertify.error(error);
+                // this._alertify.error(error);
               }
             );
       } else {
@@ -201,7 +201,7 @@ export class ProductEditComponent implements OnInit {
             this.onSaveComplete( res, `The updated ${this.product.name} was updated`);
         },
           (error: any) => {
-            this._alertify.error(error);
+            // this._alertify.error(error);
           }
         );
       }
