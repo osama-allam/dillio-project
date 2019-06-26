@@ -10,7 +10,8 @@ namespace Dillio_Backend.API.ViewModel
         public float Price { get; set; }
         public float Discount { get; set; }
         public string Description { get; set; }
-        public IList<Image> Images { get; set; }
-        public Image Image { get; set; }
+        public IEnumerable<ImageListingViewModel> Images{ get; set; }
+        public string categoryName { get; set; }
+        
     }
 }
