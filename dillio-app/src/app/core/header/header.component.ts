@@ -22,7 +22,9 @@ txtSearch:string;
     private router:Router,
     private activatedRoute : ActivatedRoute
     ) {
-    this.categories = category.categories;
+     category.getall().subscribe(cate => {
+      this.categories = cate;
+    });
     this.currentCatSearch = {val:-1,name:"All"};
 
     const txtsendS = this.activatedRoute.snapshot.params.txtSearch;
