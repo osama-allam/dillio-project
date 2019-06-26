@@ -40,7 +40,7 @@
                                       <div class="single-product-wrap">
                                           <div class="product-image">
                                               <a href="single-product.html">
-                                                  <img *ngIf="productlisting.images[0]" [src]="productlisting.images[0].url" alt="Li's Product Image">
+                                                  <img [src]="productlisting.images[0].url" alt="Li's Product Image">
                                               </a>
                                               <!-- <span class="sticker">New</span> -->
                                           </div>
@@ -155,6 +155,7 @@
                                                       </div>
                                                   </div>
                                                   <h4><a class="product_name" href="single-product.html">{{productlisting.name}}</a></h4>
+                                                  
                                                   <div class="price-box">
                                                       <span class="new-price">${{productlisting.price}}</span>
                                                   </div>

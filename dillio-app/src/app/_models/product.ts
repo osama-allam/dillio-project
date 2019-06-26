@@ -28,9 +28,20 @@ export interface IProduct {
   description: string;
   specs: Spec[];
   images: Image[];
-  categoryName?:string;
 }
 export interface ProductResolved {
   product: IProduct;
   error?: any;
+}
+
+
+export interface IProductList {
+  id: number;
+  name: string;
+  price: number;
+  discount: number;
+  description: string;
+  categoryId: number;
+  categoryName:string;
+  images: Image[];
 }

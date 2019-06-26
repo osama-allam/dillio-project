@@ -1,6 +1,6 @@
 import { environment } from './../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { IProduct } from './../_models/product';
+import { IProduct, IProductList } from './../_models/product';
 import { Injectable } from '@angular/core';
 import { Product } from '../_models/product';
 import { CategoryService } from './category.service';
@@ -16,7 +16,7 @@ export class ProductService {
 baseUrl = environment.apiUrl;
 products: Product[];
 
-// categories = new CategoryService().categories;
+categories = new CategoryService().categories;
   constructor(private http: HttpClient) {
 
   //   this.products = [
@@ -244,19 +244,17 @@ products: Product[];
   //   description: 'My Desc 100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.',
   //   category: this.categories[1]
   //   },
-  //     // {id:2,price:360,discount:50,largeimageUrl:[]},
-  //     // {id:3,price:400,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
-  //     // {id:4 ,price:410,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
-  //     // {id:5,price:789,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
-  //     // {id:6,price:780,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
-  //     // {id:7,price:320,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
-  //   ];
+      // {id:2,price:360,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
+      // {id:3,price:400,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
+      // {id:4 ,price:410,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
+      // {id:5,price:789,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
+      // {id:6,price:780,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
+      // {id:7,price:320,discount:50,largeimageUrl:['assets/images/product/large-size/1.jpg']},
+    // ];
 
 }
-getall(): Observable<IProduct[]> {
-//  return this.products.slice();
-
-  return this.http.get<IProduct[]>(this.baseUrl + 'product/');
+getall(): Observable<IProductList[]> {
+  return this.http.get<IProductList[]>(this.baseUrl + 'product/');
 }
 getProduct(id: number): Observable<IProduct> {
   if (id === 0) {
