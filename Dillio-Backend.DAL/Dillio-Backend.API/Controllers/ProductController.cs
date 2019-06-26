@@ -26,37 +26,41 @@ namespace Dillio_Backend.API.Controllers
             _mapper = mapper;
         }
 
-        [Authorize(Roles = Role.Admin)]
+        //[Authorize(Roles = Role.Admin)]
         [HttpGet]
         public IActionResult Get()
         {
-            IList<Product> pro = _unitOfWork.Products.GetAll().ToList();
+            var pro = _unitOfWork.Products.GetAllProductsAllJoins();
 
-            if (pro.Count == 0)
+            if (pro.Count() == 0)
             {
                 return NotFound();
             }
 
-            foreach (var product in pro)
-            {
-                IList<Image> images = _unitOfWork.Images.GetAll().Where(i => i.ProductId == product.Id).ToList();
-                foreach (var productImage in images)
-                {
-                    product.Images.Add(productImage);
-                }
-            }
+            //foreach (var product in pro)
+            //{
+            //    IList<Image> images = _unitOfWork.Images.GetAll().Where(i => i.ProductId == product.Id).ToList();
+            //    foreach (var productImage in images)
+            //    {
+            //        product.Images.Add(productImage);
+            //    }
+            //}
 
-            IList<ProductViewModel> pvm = pro.Select(p => new ProductViewModel
-            {
-                Price = p.Price,
-                Discount = p.Discount,
-                Name = p.Name,
-                Description = p.Description,
-                Image = p.Images.FirstOrDefault(),
-                Images = p.Images.ToList()
+            //IList<ProductViewModel> pvm = pro.Select(p => new ProductViewModel
+            //{
+            //    Price = p.Price,
+            //    Discount = p.Discount,
+            //    Name = p.Name,
+            //    Description = p.Description,
+            //    ImageUrl = p.Images.FirstOrDefault().Url,
+            //    //Image = new Image(),
+            //    //Images = new List<Image>(),
+            //    categoryName = p.Category.Name
 
-            }).ToList();
-            return Ok(pvm);
+            //}).ToList();
+            
+            var productsToReturn = _mapper.Map<List<ProductViewModel>>(pro);
+            return Ok(productsToReturn);
         }
 
         [HttpGet("{id}", Name = "GetProduct")]
@@ -157,38 +161,38 @@ namespace Dillio_Backend.API.Controllers
         [ActionName("Get")]
         public IActionResult GetProductOfCategory(int categoryId)
         {
-            IList<Product> categoryProducts =
-                _unitOfWork.Products.GetAll()
-                    .Where(s => s.CategoryId == categoryId)
-                    .ToList();
+            var categoryProducts =
+                _unitOfWork.Products.GetAllProductsAllJoins()
+                    .Where(s => s.CategoryId == categoryId);
 
-            if (categoryProducts.Count == 0)
+            if (categoryProducts.Count() == 0)
             {
                 return NotFound();
             }
 
-            foreach (var product in categoryProducts)
-            {
-                IList<Image> images = _unitOfWork.Images.GetAll().Where(i => i.ProductId == product.Id).ToList();
-                foreach (var productImage in images)
-                {
-                    product.Images.Add(productImage);
-                }
-            }
+            //foreach (var product in categoryProducts)
+            //{
+            //    IList<Image> images = _unitOfWork.Images.GetAll().Where(i => i.ProductId == product.Id).ToList();
+            //    foreach (var productImage in images)
+            //    {
+            //        product.Images.Add(productImage);
+            //    }
+            //}
 
-            IList<ProductViewModel> pvm = categoryProducts.Select(s => new ProductViewModel()
-            {
-                Id = s.Id,
-                Name = s.Name,
-                Description = s.Description,
-                Price = s.Price,
-                Discount = s.Discount,
-                Images = s.Images.ToList(),
-                Image = s.Images.FirstOrDefault()
+            //IList<ProductViewModel> pvm = categoryProducts.Select(s => new ProductViewModel()
+            //{
+            //    Id = s.Id,
+            //    Name = s.Name,
+            //    Description = s.Description,
+            //    Price = s.Price,
+            //    Discount = s.Discount,
+            //    Images = s.Images.ToList(),
+            //    Image = s.Images.FirstOrDefault()
 
-            }).ToList();
-
-            return Ok(pvm);
+            //}).ToList();
+            
+            var productsToReturn = _mapper.Map<List<ProductViewModel>>(categoryProducts);
+            return Ok(productsToReturn);
         }
 
     }
