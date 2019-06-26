@@ -67,9 +67,10 @@
                                               </div>
                                               <div class="add-actions">
                                                   <ul class="add-actions-link">
-                                                      <li class="add-cart active"><a href="shopping-cart.html">Add to cart</a></li>
-                                                      <li><a href="#" title="Details" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                       <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <!-- data-toggle="modal" data-target="#exampleModalCenter" -->
+                                                      <li><a title="Details" class="quick-view-btn" routerLink="/products/{{productlisting.id}}"><i class="fa fa-eye"></i></a></li>
+                                                      <li><a class="quick-view-btn" title="Edit"  routerLink="/products/{{productlisting.id}}/edit"><i class="fa fa-pencil"></i></a></li>
+                                                      <li><a class="quick-view-btn" (click)=deletePro(productlisting.id)><i class="fa fa-trash"></i></a></li>
                                                   </ul>
                                               </div>
                                           </div>
@@ -166,9 +167,9 @@
                                       <div class="col-lg-4">
                                           <div class="shop-add-action">
                                               <ul class="add-actions-link">
-                                                  <li class="add-cart"><a href="#">Add to cart</a></li>
-                                                  <li class="wishlist"><a href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a></li>
-                                                  <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i>Details</a></li>
+                                                    <li><a title="Details" class="quick-view-btn" routerLink="/products/{{productlisting.id}}"><i class="fa fa-eye"></i> View Product</a></li>
+                                                    <li><a class="quick-view-btn" title="Edit"  routerLink="/products/{{productlisting.id}}/edit"><i class="fa fa-pencil"></i> Edit Product</a></li>
+                                                    <li><a class="quick-view-btn" (click)=deletePro(productlisting.id)><i class="fa fa-trash"></i> Delete Product</a></li>
                                               </ul>
                                           </div>
                                       </div>
