@@ -4,13 +4,13 @@
       <div class="footer-shipping pb-xs-0">
           <div class="row">
               <!-- Begin Li's Shipping Inner Box Area -->
-              <div *ngFor="let store of stores" class="col-lg-2 col-md-2 col-sm-6 pb-xs-45">
+              <div routerLink="{{store.id}}" *ngFor="let store of stores" class="col-lg-2 col-md-2 col-sm-6 pb-xs-45">
                   <div class="li-shipping-inner-box card">
                       <div class="shipping-icon">
                           <img [src]="store.url" alt="Shipping Icon">
                       </div>
                       <div class="shipping-text">
-                          <h2>{{store.name}}</h2>
+                          <a routerLink="{{store.id}}">{{store.name}}</a>
                           <star-rating *ngIf="store.starRating > 0 && store.starRating else addRating" [starType]="'svg'" [showHalfStars]="true" [readOnly]="true" staticColor="ok"
                           rating = {{store.starRating}} ></star-rating>
                           <ng-template #addRating>
