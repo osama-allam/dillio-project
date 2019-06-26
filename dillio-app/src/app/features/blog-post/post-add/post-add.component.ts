@@ -50,7 +50,7 @@ export class PostAddComponent implements OnInit {
     // } else {
       this.blogService.addPost(newPost);
       var poooo = this.blogService.getPosts();
-      debugger ;
+      // debugger ;
     // }
     // this.editMode = false;
     // form.reset();

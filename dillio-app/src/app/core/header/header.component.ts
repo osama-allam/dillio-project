@@ -1,6 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
-
+import { Category } from 'src/app/_models/category';
+import { ViewActivatorService } from 'src/app/services/view-activator.service';
+import { CategoryService } from 'src/app/services/category.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 declare var $: any;
 @Component({
@@ -9,6 +12,9 @@ declare var $: any;
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  ngOnInit(): void {
+    
+  }
 categories:Category[];
 currentCatSearch:{val:Number, name:string};
 txtSearch:string;
@@ -28,10 +34,6 @@ txtSearch:string;
     const curVal = this.activatedRoute.snapshot.params.val;
 
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+}
 
 }

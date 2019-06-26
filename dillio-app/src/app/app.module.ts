@@ -104,9 +104,7 @@ import { UpperHeaderComponent } from './core/header/upper-header/upper-header.co
     HttpClientModule,
     ProductModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,
    
     
     StarRatingModule.forRoot()

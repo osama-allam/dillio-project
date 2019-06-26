@@ -37,7 +37,7 @@ export class ProductListingComponent implements OnInit {
       this.products = [];
 
         this.productServices.getall().subscribe(pro => {
-          debugger;
+          // debugger;
           this.totalproducts = pro;
           this.CurrentPage = 1;
           this.setPage(this.CurrentPage);
@@ -64,7 +64,7 @@ export class ProductListingComponent implements OnInit {
   ngOnInit() {
     //  debugger;
     this.activatedRoute.url.subscribe( url =>{
-      debugger;
+      // debugger;
 
       const txtsendS = this.activatedRoute.snapshot.paramMap.get("txtSearch");
       const curVal = this.activatedRoute.snapshot.paramMap.get("val");
