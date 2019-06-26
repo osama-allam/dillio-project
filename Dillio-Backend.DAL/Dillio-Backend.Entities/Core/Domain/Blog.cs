@@ -9,17 +9,16 @@ namespace Dillio_Backend.BLL.Core.Domain
 
         public Blog()
         {
-            Comments = new HashSet<Comment>();
-            Likes = new HashSet<Like>();
+
         }
 
         public int Id { get; set; }
-        public string Title { get; set; }
+        public string PostName { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
-        public DateTime TimeOfBLog { get; set; }
-        public string ImageURL{ get; set; }
-        public ICollection<Comment> Comments { get; set; }
-        public ICollection<Like> Likes { get; set; }
+        public int CommentNumber { get; set; }
+        public DateTime Date { get; set; }
+        public string ImageUrl { get; set; }
         public string FK_UserId { get; set; }
         public ApplicationUser User{ get; set; }
 
