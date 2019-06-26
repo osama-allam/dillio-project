@@ -102,7 +102,7 @@ namespace Dillio_Backend.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                unitOfWork.EnsureSeedDataForContext();
+                //unitOfWork.EnsureSeedDataForContext();
             }
             else
             {
