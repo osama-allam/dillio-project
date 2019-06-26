@@ -1,4 +1,3 @@
-
 D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.deps.json
 D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.runtimeconfig.json
 D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.runtimeconfig.dev.json
@@ -13,4 +12,3 @@ D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\ne
 D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csproj.CopyComplete
 D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
 D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
-

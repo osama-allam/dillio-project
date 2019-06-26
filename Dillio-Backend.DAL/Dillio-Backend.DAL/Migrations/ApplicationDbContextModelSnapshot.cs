@@ -25,17 +25,24 @@ namespace Dillio_Backend.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CommentNumber")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("FK_UserId");
 
-                    b.Property<string>("ImageURL");
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<DateTime>("TimeOfBLog");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
+                    b.Property<string>("PostName")
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
@@ -490,9 +497,9 @@ namespace Dillio_Backend.DAL.Migrations
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Comment", b =>
                 {
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Blog", "Blog")
-                        .WithMany("Comments")
+                        .WithMany()
                         .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.ApplicationUser", "User")
                         .WithMany("Comments")
@@ -511,7 +518,7 @@ namespace Dillio_Backend.DAL.Migrations
             modelBuilder.Entity("Dillio_Backend.BLL.Core.Domain.Like", b =>
                 {
                     b.HasOne("Dillio_Backend.BLL.Core.Domain.Blog", "Blog")
-                        .WithMany("Likes")
+                        .WithMany()
                         .HasForeignKey("BlogId")
                         .OnDelete(DeleteBehavior.Cascade);
 
