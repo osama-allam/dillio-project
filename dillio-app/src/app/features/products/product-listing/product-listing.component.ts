@@ -33,6 +33,7 @@ export class ProductListingComponent implements OnInit {
       }else{
         this.productServices.getall().subscribe(pro => {
           this.totalproducts = pro;
+          debugger;
           this.CurrentPage = 1;
           this.setPage(this.CurrentPage);
         });
@@ -70,8 +71,9 @@ export class ProductListingComponent implements OnInit {
           this.totalproducts = pro;
           this.CurrentPage = 1;
           this.setPage(this.CurrentPage);
+
         });
-      this.totalproducts = this.searchFunc(parseInt(curVal) ,txtsendS );
+      
       // // debugger;
       // if(!this.totalproducts[0].title){
       //   this.totalproducts = this.productServices.products;
@@ -133,6 +135,7 @@ searchFunc(cate:Number,txtS:string):IProductList[]{
         this.CurrentPage = 1;
         this.setPage(this.CurrentPage);
         window.alert("your search wasn't found");
+
       });
 
     }
@@ -142,5 +145,14 @@ searchFunc(cate:Number,txtS:string):IProductList[]{
   });
 
   return retArr;
+}
+
+
+
+deletePro(proId:Number){
+   var result= window.confirm("Are you sure You want to delete this product ?!!");
+   if(result){
+        this.productServices.DeleteProduct(proId);
+   }
 }
 }
