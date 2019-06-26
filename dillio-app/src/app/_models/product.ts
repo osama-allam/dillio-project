@@ -43,5 +43,6 @@ export interface IProductList {
   description: string;
   categoryId: number;
   categoryName:string;
+  Rate:Number;
   images: Image[];
 }
