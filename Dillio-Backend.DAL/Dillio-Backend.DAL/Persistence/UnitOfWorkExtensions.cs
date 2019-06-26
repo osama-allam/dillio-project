@@ -132,7 +132,7 @@ namespace Dillio_Backend.DAL.Persistence
                         Rating=3,
                         ReviewDate=DateTime.Now,
                         StoreId=storeId,
-                        UserId= new Guid("8743d820-b4a1-432b-885b-84a34c3ecdfc").ToString(),
+                        //UserId= new Guid("").ToString(),
                         Email="admin@dillio.com"
                     },
                     new Review
@@ -143,7 +143,7 @@ namespace Dillio_Backend.DAL.Persistence
                         Rating=3,
                         ReviewDate=DateTime.Now,
                         StoreId=storeId,
-                        UserId= new Guid("8743d820-b4a1-432b-885b-84a34c3ecdfc").ToString(),
+                        //UserId= new Guid("8743d820-b4a1-432b-885b-84a34c3ecdfc").ToString(),
                         Email="admin@dillio.com"
                     },
                     new Review
@@ -154,7 +154,7 @@ namespace Dillio_Backend.DAL.Persistence
                         Rating=3,
                         ReviewDate=DateTime.Now,
                         StoreId=storeId,
-                        UserId= new Guid("8743d820-b4a1-432b-885b-84a34c3ecdfc").ToString(),
+                        //UserId= new Guid("8743d820-b4a1-432b-885b-84a34c3ecdfc").ToString(),
                         Email="admin@dillio.com"
                     },
                 };
