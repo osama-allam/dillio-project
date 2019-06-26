@@ -27,7 +27,7 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
 
             builder.HasMany(u => u.Comments)
                 .WithOne(b => b.User)
-                .HasForeignKey(b => b.UserId)
+                .HasForeignKey(b => b.FK_UserId)
                 .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(u => u.Likes)

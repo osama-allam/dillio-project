@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Dillio_Backend.DAL.Migrations
 {
-    public partial class InitialModel : Migration
+    public partial class initDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -191,10 +191,12 @@ namespace Dillio_Backend.DAL.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Title = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    PostName = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(50)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(200)", nullable: true),
-                    TimeOfBLog = table.Column<DateTime>(nullable: false),
-                    ImageURL = table.Column<string>(nullable: true),
+                    CommentNumber = table.Column<int>(type: "int", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     FK_UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -268,7 +270,7 @@ namespace Dillio_Backend.DAL.Migrations
                         column: x => x.BlogId,
                         principalTable: "Blog",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Comment_AspNetUsers_FK_UserId",
                         column: x => x.FK_UserId,

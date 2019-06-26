@@ -1,57 +1,37 @@
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.deps.json
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.json
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.dev.json
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.dll
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csprojAssemblyReference.cache
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CoreCompileInputs.cache
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cache
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cs
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfoInputs.cache
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfo.cs
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorTargetAssemblyInfo.cache
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CopyComplete
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.dll
-D:\GP Project\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csprojAssemblyReference.cache
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CoreCompileInputs.cache
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cache
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cs
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfoInputs.cache
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfo.cs
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.dll
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.deps.json
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.json
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.dev.json
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.dll
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorTargetAssemblyInfo.cache
-D:\ITI Graduation Project\Dillio GP\dillio backend\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CopyComplete
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.deps.json
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.json
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.dev.json
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.dll
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csprojAssemblyReference.cache
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CoreCompileInputs.cache
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cache
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cs
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfoInputs.cache
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfo.cs
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorTargetAssemblyInfo.cache
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CopyComplete
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.dll
-E:\ITI Courses\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csprojAssemblyReference.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CoreCompileInputs.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorAssemblyInfo.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfoInputs.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.AssemblyInfo.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.deps.json
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.json
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.runtimeconfig.dev.json
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.DAL.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorTargetAssemblyInfo.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.csproj.CopyComplete
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.Views.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\bin\Debug\netcoreapp2.2\Dillio-Backend.API.Views.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.TagHelpers.input.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.TagHelpers.output.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorCoreGenerate.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blogs\Create.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blogs\Delete.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blogs\Details.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blogs\Edit.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blogs\Index.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blog\Create.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blog\Delete.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blog\Details.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blog\Edit.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Blog\Index.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.RazorTargetAssemblyInfo.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.API\obj\Debug\netcoreapp2.2\Dillio-Backend.API.Views.pdb

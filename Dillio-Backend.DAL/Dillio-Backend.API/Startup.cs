@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using AutoMapper;
 using Dillio_Backend.API.Configurations;
 using Dillio_Backend.API.Helpers;
@@ -15,9 +16,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.Http;
-using System.IO;
+using Microsoft.Extensions.FileProviders;
 
 namespace Dillio_Backend.API
 {
@@ -91,9 +91,16 @@ namespace Dillio_Backend.API
             services.AddAutoMapper(typeof(Startup).Assembly);
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
-            
 
-           
+            services.AddCors(options =>
+            {
+                options.AddPolicy("SPA", policy =>
+                {
+                    policy.WithOrigins()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -102,7 +109,7 @@ namespace Dillio_Backend.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                unitOfWork.EnsureSeedDataForContext();
+                //unitOfWork.EnsureSeedDataForContext();
             }
             else
             {
@@ -128,14 +135,14 @@ namespace Dillio_Backend.API
             });
          
 
-            //app.UseCors("SPA");
+            app.UseCors("SPA");
             app.UseAuthentication();
 
 
             app.UseMvcWithDefaultRoute();
 
             // this function is seeding the role table with the required roles and assigns the admin
-            SeedRolesDatabase.CreateRoles(serviceProvider, Configuration).Wait();
+            //SeedRolesDatabase.CreateRoles(serviceProvider, Configuration).Wait();
         }
     }
 }
