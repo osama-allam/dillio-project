@@ -1,3 +1,6 @@
+import { ContactusComponent } from './features/contactus/contactus.component';
+import { FaqComponent } from './features/faq/faq.component';
+import { AboutusComponent } from './features/aboutus/aboutus.component';
 import { SigninComponent } from './core/signin/signin.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -9,6 +12,7 @@ import { StoreListingComponent } from './features/stores/store-listing/store-lis
 import { ProductListingComponent } from './features/products/product-listing/product-listing.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
 import { StoreAddComponent } from './features/stores/store-add/store-add.component';
+import { TermsConditionComponent } from './features/terms-condition/terms-condition.component';
 
 const routes: Routes = [
   { path : 'home' , component: ProductListingComponent },
@@ -16,6 +20,10 @@ const routes: Routes = [
   { path : 'blog' , component: BlogPostComponent },
   { path : 'blog/listing' , component: BlogPostComponent },
   { path : 'blog/add' , component: PostAddComponent },
+  { path : 'about' , component: AboutusComponent },
+  { path : 'faq' , component: FaqComponent },
+  { path : 'terms' , component: TermsConditionComponent },
+  { path : 'contact' , component: ContactusComponent },
   { path : 'blog/:id/edit' , component: PostAddComponent },
   { path : 'blog/:id/details' , component: PostDetailsComponent },
   { path : 'stores/add' , component: StoreAddComponent },

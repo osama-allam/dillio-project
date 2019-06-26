@@ -44,7 +44,7 @@ export class FeedbackFormModalComponent implements OnInit {
     if (this.feedbackForm.valid) {
       this.submittedData = this.fillSubmittedData(this.feedbackForm);
       this.formSubmitted.emit(this.submittedData);
-      debugger;
+      // debugger;
       this.storeservice.AddReviewOnStore(this.submittedData,this.id).subscribe( 
       );
       this.resetForm();

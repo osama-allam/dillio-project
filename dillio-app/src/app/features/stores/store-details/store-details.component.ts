@@ -119,7 +119,7 @@ this.storeservice.getBranchesOfStore(this.id).subscribe(
 
 this.storeservice.getReviewsOfStore(this.id).subscribe(
   review=>{
-    debugger;
+    // debugger;
     this.reviewArr = review;
   },
   error =>this.errormessage = <any>error
