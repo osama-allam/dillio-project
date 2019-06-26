@@ -79,6 +79,15 @@ export class ProductListingComponent implements OnInit {
           this.CurrentPage = 1;
           this.setPage(this.CurrentPage);
         });
+      this.totalproducts = this.searchFunc(parseInt(curVal) ,txtsendS );
+      // // debugger;
+      // if(!this.totalproducts[0].title){
+      //   this.totalproducts = this.productServices.products;
+      //   window.alert("your search wasn't found");
+
+      // }
+      this.CurrentPage = 1;
+      this.setPage(this.CurrentPage);
       }
         });
   }

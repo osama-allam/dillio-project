@@ -12,7 +12,7 @@ import { HeaderRowOutlet } from '@angular/cdk/table';
   providedIn: 'root'
 })
 export class BlogService {
-  baseUrl = environment.apiUrl;
+  baseUrl = "http://localhost:50202/api/";
 
 
   postsChanged = new Subject<IPost[]>();
@@ -32,19 +32,19 @@ private posts: IPost[];
         ];
   }
   getPosts():Observable<IPost[]> {
-    return this.http.get<IPost[]>(this.baseUrl + 'post/');
+    return this.http.get<IPost[]>(this.baseUrl + 'blog/');
     }
   getPost(id: number):Observable<IPost> {
     if(id === 0)
     {
       return of(this.initializePost());
     }
-    return this.http.get<IPost>(this.baseUrl + 'post/' + id);
+    return this.http.get<IPost>(this.baseUrl + 'blog/' + id);
     }
 
     addPost(post: IPost): Observable<IPost> {
       const headers = new HttpHeaders({'Content-Type': 'application/json'});
-      return this.http.post<IPost>(this.baseUrl + 'post',post , {headers:headers})
+      return this.http.post<IPost>(this.baseUrl + 'blog/add',post , {headers:headers})
       .pipe(
         catchError(this.handleError)
       );
@@ -52,7 +52,7 @@ private posts: IPost[];
 
     updatePost(post: IPost):Observable<IPost> {
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' })
-      return this.http.put<IPost>(this.baseUrl + 'post/'+post.id,  post , {headers: headers})
+      return this.http.put<IPost>(this.baseUrl + 'blog/'+post.id,  post , {headers: headers})
       .pipe(
         map(()=>post),
         catchError(this.handleError)

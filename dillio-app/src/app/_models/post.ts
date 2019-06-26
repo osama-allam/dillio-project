@@ -4,8 +4,8 @@ export interface IPost
     postName?: string;
     name?: string;
     description?: string;
-    commentNumber?: number;
     date?: number;
+    commentNumber?: number;
     imageUrls?: string[];
     
 }
