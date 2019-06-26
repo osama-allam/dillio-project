@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Reviews, ReviewResolved } from 'src/app/_models/Review';
+import { Reviews, ReviewResolved, ReviewToDisplay } from 'src/app/_models/Review';
 import { Product, ProductResolved, IProduct } from 'src/app/_models/product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -12,8 +12,8 @@ import { AlertifyService } from 'src/app/services/alertify.service';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  product: Product;
-  reviews: Reviews[];
+  product: IProduct;
+  reviews: ReviewToDisplay[];
   private productSubscription: Subscription;
   private reviewsSubscription: Subscription;
 
@@ -48,7 +48,7 @@ export class ProductDetailsComponent implements OnInit {
       console.log(JSON.stringify(this.product));
     }
   }
-  onReviewRetrieved(reviews: Reviews[]): void {
+  onReviewRetrieved(reviews: ReviewToDisplay[]): void {
     this.reviews = reviews;
     if (!this.reviews) {
       this.router.navigate(['/page-not-found']);

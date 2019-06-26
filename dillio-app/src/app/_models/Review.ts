@@ -11,8 +11,17 @@ export interface Reviews{
     rating?:number;
     // avatarUrl?:string;
 }
-
+export interface ReviewToDisplay{
+  id?:number;
+  reviewDescription?:string;
+  name?:string;
+  email?:string;
+  UserId?:number;
+  reviewDate?:string;
+  rating?:number;
+  // avatarUrl?:string;
+}
 export interface ReviewResolved {
-  reviews: Reviews[];
+  reviews: ReviewToDisplay[];
   error?: any;
 }
