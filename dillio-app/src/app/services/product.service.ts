@@ -1,5 +1,5 @@
 import { environment } from './../../environments/environment';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { IProduct, IProductList } from './../_models/product';
 import { Injectable } from '@angular/core';
 import { Product } from '../_models/product';
@@ -280,6 +280,18 @@ updateProduct(product: IProduct): Observable<IProduct> {
       catchError(this.handleError)
     );
 }
+
+
+DeleteProduct(proId:Number){
+  const params = new HttpParams().set('id', proId.toString());
+
+  this.http.delete<IProduct>(environment.apiUrl,  { params })
+  .subscribe(
+    result => console.log(result),
+    err => console.error(err)
+  );
+}
+
 private handleError(err) {
   // in a real world app, we may send the server to some remote logging infrastructure
   // instead of just logging it to the console
