@@ -104,7 +104,7 @@ this.storeservice.getBranchesOfStore(1).subscribe(
 
   this.storeservice.getStore(1).subscribe(
     stores =>{
-      debugger;
+      // debugger;
       this.newStore = stores;
     },
     error =>this.errormessage = <any>error

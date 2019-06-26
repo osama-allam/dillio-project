@@ -60,7 +60,7 @@ export class ProductListingComponent implements OnInit {
       const curVal = this.activatedRoute.snapshot.paramMap.get("val");
       if(txtsendS != null && curVal !=null){
       this.totalproducts = this.searchFunc(parseInt(curVal) ,txtsendS );
-      debugger;
+      // debugger;
       if(!this.totalproducts[0].title){
         this.totalproducts = this.productServices.products;
         window.alert("your search wasn't found");
