@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { IFeedbackModalData, IFeedbackData } from 'src/app/_models/feedback-form';
+import { StoresService } from 'src/app/services/stores.service';
+import { ActivatedRoute } from '@angular/router';
 declare var $: any;
 
 @Component({
@@ -16,11 +18,18 @@ export class FeedbackFormModalComponent implements OnInit {
   submitted = false;
   submittedData: IFeedbackData;
   feedbackForm: FormGroup;
-  constructor() { }
+  sub: any;
+  id: number;
+  constructor(private storeservice:StoresService,private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.initForm();
     $('#myModal').modal({backdrop: 'static', keyboard: false});
+
+    
+    this.sub = this.route.params.subscribe(params => {
+      this.id = +params['id'];
+   });
   }
 
   initForm() {
@@ -35,6 +44,9 @@ export class FeedbackFormModalComponent implements OnInit {
     if (this.feedbackForm.valid) {
       this.submittedData = this.fillSubmittedData(this.feedbackForm);
       this.formSubmitted.emit(this.submittedData);
+      debugger;
+      this.storeservice.AddReviewOnStore(this.submittedData,this.id).subscribe( 
+      );
       this.resetForm();
       $('#mymodal').modal('toggle');
     } else {
@@ -48,11 +60,14 @@ export class FeedbackFormModalComponent implements OnInit {
   }
   fillSubmittedData(form: FormGroup): IFeedbackData {
     let data: IFeedbackData;
-    data = {
+    data = {  
+      
+      description:form.value.userReview, 
+      Name: form.value.username,       
+      email: form.value.email,
       rating: form.value.customerRating,
-      description: form.value.userReview,
-      Name: form.value.username,
-      email: form.value.email
+      StoreId:this.id
+      
     };
     return data;
   }

@@ -6,9 +6,9 @@ export interface Reviews{
     email?:string;
     productId?:number;
     UserId?:number;
-    StoreId:number;
     Date?:string;
     rating?:number;
+    StoreId?:number;
     // avatarUrl?:string;
 }
 export interface ReviewToDisplay{

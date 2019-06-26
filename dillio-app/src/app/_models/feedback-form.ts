@@ -10,6 +10,5 @@ export class IFeedbackData {
   Name?: string;
   email?: string;
   rating?: number;
-  
-
+  StoreId?:number;
 }

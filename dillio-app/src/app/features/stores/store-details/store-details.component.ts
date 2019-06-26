@@ -6,6 +6,7 @@ import { StoresService } from 'src/app/services/stores.service';
 import { Stores } from 'src/app/_models/stores';
 import { IBranch } from 'src/app/_models/branch';
 import { Reviews } from 'src/app/_models/Review';
+import { ActivatedRoute } from '@angular/router';
 declare var $: any;
 @Component({
   selector: 'app-store-details',
@@ -23,8 +24,10 @@ export class StoreDetailsComponent implements OnInit {
   formData: IFeedbackModalData;
   reviewArr:Reviews[];
   count:number;
+  id: number;
+  private sub: any;
 
-  constructor(private storeservice:StoresService) {
+  constructor(private storeservice:StoresService,private route: ActivatedRoute) {
     this.newStore={branches:[]};
     this.storeDetails = {
       id: 1,
@@ -33,8 +36,8 @@ export class StoreDetailsComponent implements OnInit {
       ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis,' +
       ' earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.',
       logoUrl: 'https://www.logosvgpng.com/wp-content/uploads/2018/04/souq-com-logo-vector.png',
-      siteUrl: 'https://egypt.souq.com/eg-en/',
-      emails: ['email@souq.com', 'email2@souq.com'],
+      siteUrl: 'https://Dillio.com/eg-en/',
+      emails: ['email@Dillio.com', 'email2@Dillio.com'],
       branches: [{
         name: 'Cairo',
         address: 'Building No.2, Cairo, Egypt',
@@ -95,22 +98,26 @@ export class StoreDetailsComponent implements OnInit {
 
   ngOnInit() {
 
-this.storeservice.getBranchesOfStore(1).subscribe(
+    this.sub = this.route.params.subscribe(params => {
+      this.id = +params['id'];
+   });
+
+this.storeservice.getBranchesOfStore(this.id).subscribe(
   branch =>{
     this.branches = branch
   },
   error =>this.errormessage = <any>error
 )
 
-  this.storeservice.getStore(1).subscribe(
+  this.storeservice.getStore(this.id).subscribe(
     stores =>{
-      debugger;
+      // debugger;
       this.newStore = stores;
     },
     error =>this.errormessage = <any>error
   );
 
-this.storeservice.getReviewsOfStore(1).subscribe(
+this.storeservice.getReviewsOfStore(this.id).subscribe(
   review=>{
     debugger;
     this.reviewArr = review;
@@ -123,4 +130,5 @@ this.storeservice.getReviewsOfStore(1).subscribe(
     console.log(event);
   }
 }
+
 

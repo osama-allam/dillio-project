@@ -8,6 +8,7 @@ import { StoreDetailsComponent } from './features/stores/store-details/store-det
 import { StoreListingComponent } from './features/stores/store-listing/store-listing.component';
 import { ProductListingComponent } from './features/products/product-listing/product-listing.component';
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component';
+import { StoreAddComponent } from './features/stores/store-add/store-add.component';
 
 const routes: Routes = [
   { path : 'home' , component: ProductListingComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path : 'blog/add' , component: PostAddComponent },
   { path : 'blog/:id/edit' , component: PostAddComponent },
   { path : 'blog/:id/details' , component: PostDetailsComponent },
+  { path : 'stores/add' , component: StoreAddComponent },
   { path : 'stores/:id' , component: StoreDetailsComponent },
   { path : 'stores' , component: StoreListingComponent },
   { path : 'signin', component: SigninComponent},
