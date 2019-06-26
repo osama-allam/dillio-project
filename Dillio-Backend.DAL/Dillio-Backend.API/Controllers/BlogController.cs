@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dillio_Backend.API.ViewModel;
 using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Domain;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dillio_Backend.API.Controllers
@@ -38,14 +40,24 @@ namespace Dillio_Backend.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult post([FromBody] Blog blog)
+        [Route("Add")]
+        public IActionResult post([FromBody] BlogViewModel bvm)
         {
-            if (blog == null)
+            if (bvm == null)
             {
                 return BadRequest();
             }
 
-            _unitOfWork.Blogs.Add(blog);
+            Blog bg = new Blog()
+            {
+                PostName = bvm.postName,
+                Description = bvm.description,
+                Date = bvm.date,
+                Name = "post 1",
+                FK_UserId = User.Identity.GetUserId()
+            };
+          
+            _unitOfWork.Blogs.Add(bg);
             _unitOfWork.Complete();
             return Ok();
 
