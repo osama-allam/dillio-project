@@ -91,9 +91,16 @@ namespace Dillio_Backend.API
             services.AddAutoMapper(typeof(Startup).Assembly);
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
-            
 
-           
+            services.AddCors(options =>
+            {
+                options.AddPolicy("SPA", policy =>
+                {
+                    policy.WithOrigins()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -135,7 +142,7 @@ namespace Dillio_Backend.API
             app.UseMvcWithDefaultRoute();
 
             // this function is seeding the role table with the required roles and assigns the admin
-            SeedRolesDatabase.CreateRoles(serviceProvider, Configuration).Wait();
+            //SeedRolesDatabase.CreateRoles(serviceProvider, Configuration).Wait();
         }
     }
 }

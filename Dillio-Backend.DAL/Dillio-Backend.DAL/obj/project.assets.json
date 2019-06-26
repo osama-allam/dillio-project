@@ -3793,7 +3793,7 @@
       ]
     },
     "Microsoft.AspNetCore.Routing/2.1.0": {
-      "sha512": "eRdsCvtUlLsh0O2Q8JfcpTUhv0m5VCYkgjZTCdniGAq7F31B3gNrBTn9VMqz14m+ZxPUzNqudfDFVTAQlrI/5Q==",
+      "sha512": "0Bc4HYInQC7GcfZ62bb/hbVqn0mfTqciK9BzK8adrv8fDAXUq/oDB0UrTq2vFcQrImm3NeeJLb0CeFO7eGwwiQ==",
       "type": "package",
       "path": "microsoft.aspnetcore.routing/2.1.0",
       "files": [
@@ -3806,7 +3806,7 @@
       ]
     },
     "Microsoft.AspNetCore.Routing.Abstractions/2.1.0": {
-      "sha512": "LXmnHeb3v+HTfn74M46s+4wLaMkplj1Yl2pRf+2mfDDsQ7PN0+h8AFtgip5jpvBvFHQ/Pei7S+cSVsSTHE67fQ==",
+      "sha512": "xYGvfzjD/pnySaSCsnm0PM5albqQJe2MNoVuILd9hQC/QmyCzccBwL3rjGhYa/tCDfHvQrkAXj0GB6iZVjzeqg==",
       "type": "package",
       "path": "microsoft.aspnetcore.routing.abstractions/2.1.0",
       "files": [
@@ -3976,7 +3976,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore/2.2.4": {
-      "sha512": "aQ0sAe2mOtSp3StjKT2wDA/BO3k8BLfpIXIG1MOlGytjQWQOvW3BzDPfgXOhxbSa7Bhdsx97aYzZUGD3DQAQjQ==",
+      "sha512": "UgvhCfj2e0B1p83f4+juEhkvOP/8vRDZ3HEo2tkX9/wS6uWTPu2WBf5kudXI74ur0AJvHu5phLBIJ1Ob+kMXww==",
       "type": "package",
       "path": "microsoft.entityframeworkcore/2.2.4",
       "files": [
@@ -3989,7 +3989,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Abstractions/2.2.4": {
-      "sha512": "GjtIOANlpy7JcGK0Q169n52713hIHHfxUHq1+xoWlAZYSI0h/n2DrEWwCIsrnInU8FaLq4cIG7UgMTL0CnUUPw==",
+      "sha512": "4HzQsktwPyDJFUS7TMKP/5rR7DQzMNDfyKkTbOaV5I0K5eyG6+668kGQDU8BQVjAVqtBDFW9OTG2Nue+nVD2jg==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.abstractions/2.2.4",
       "files": [
@@ -4002,7 +4002,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Analyzers/2.2.4": {
-      "sha512": "cLJo6dikdFQd2j9cFHhC2M1rzUeYvJLR/m7cBcuKRI6ek5t5ZyGZ0hzEJwCQmKRDV4tAl5p+NIrfDjfqTK8POw==",
+      "sha512": "7rejM6oRqUqNrj1BK4ico0Fb6XMADNn6lqPgYGYg49vJqA0NWxbavLUkMPzcPR0AYznPbHFQPuNHqT6JfCM+kA==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.analyzers/2.2.4",
       "files": [
@@ -4014,7 +4014,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Design/2.2.4": {
-      "sha512": "4SfnD7wYxr+OzcPOZYlzPtKtL1cdXk+a8g4bKc8QcgaGhpvVOTK5ROTZaOe10tmvFXFEJVZSGtXpFAbgiDFtjg==",
+      "sha512": "A/erLygjDeavpkI0W5cqbfIqhm3qz34x1ObW3GQMatxyBEBzmja3P2JNvErWkdiHkojNTxDQADXVuf0YeMotUg==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.design/2.2.4",
       "files": [
@@ -4031,7 +4031,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/2.2.4": {
-      "sha512": "Ga+kJhoSBNYv8C2gQl2sB5bTBkWsLFn92CPjZA5ql/MyxJTWri6lf44/GSYEcOQj0tqF5HhMAaB1HxQMiIPBcQ==",
+      "sha512": "h+M/sXgQSXlcyKLYH5x+Ah7vKE+6JIh2IUPQi9lbUka5rBYIX+B6yBt3uY5/occAbrACVGK/9tU9hy9V01KgBg==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.relational/2.2.4",
       "files": [
@@ -4044,7 +4044,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.SqlServer/2.2.4": {
-      "sha512": "e0rW3jJXunnwUCout+lQicDoyviO53qsuawZa/HZsfRoEF/bWGlGTJxUN0MPZVQkEd5Gx8ypdDSRbGHtrQp/SA==",
+      "sha512": "EyVS75Oyraa1OQ9evjHAABYDcvAx1kAH+5kFfvzYxla71Ka6EC09veQhst+WgA3roLRULQe2hQfcFRsk0GpjlQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.sqlserver/2.2.4",
       "files": [
@@ -4194,7 +4194,7 @@
       ]
     },
     "Microsoft.Extensions.FileSystemGlobbing/2.1.0": {
-      "sha512": "JEwwhwbVTEXJu4W4l/FFx7FG9Fh5R8999mZl6qJImjM/LY4DxQsFYzpSkziMdY022n7TQpNUxJlH9bKZc7TqWw==",
+      "sha512": "yloa7N9Rk+1JFCS/hbr0nj4hNt6RpmuRVYnlbRT3hRVXWCOCsHlTC6cVu3l9o7BwnNEGEdE3B1LwX+i7wlnRtQ==",
       "type": "package",
       "path": "microsoft.extensions.filesystemglobbing/2.1.0",
       "files": [
@@ -4324,7 +4324,7 @@
       ]
     },
     "Microsoft.Extensions.Options.ConfigurationExtensions/2.1.0": {
-      "sha512": "w/MP147fSqlIcCymaNpLbjdJsFVkSJM9Sz+jbWMr1gKMDVxoOS8AuFjJkVyKU/eydYxHIR/K1Hn3wisJBW5gSg==",
+      "sha512": "kqYb+lqnM+pny7F/8ecLFcNN5pGrlmsNPG3Q4ywXNkGdQCyrDFRtHO1mjUOs/9WfKA9hxqtswmtXGXODGDeBgg==",
       "type": "package",
       "path": "microsoft.extensions.options.configurationextensions/2.1.0",
       "files": [
@@ -9612,39 +9612,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\Ashraf\\.nuget\\packages\\": {},
-=======
     "C:\\Users\\DELL\\.nuget\\packages\\": {},
->>>>>>> 0cb456f32da74d0d96b0beb5531cf74d50929032
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "F:\\GP\\backend\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj",
-      "projectName": "Dillio-Backend.DAL",
-      "projectPath": "F:\\GP\\backend\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj",
-      "packagesPath": "C:\\Users\\Ashraf\\.nuget\\packages\\",
-      "outputPath": "F:\\GP\\backend\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\obj\\",
-=======
       "projectUniqueName": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj",
       "projectName": "Dillio-Backend.DAL",
       "projectPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\Dillio-Backend.DAL.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
       "outputPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.DAL\\obj\\",
->>>>>>> 0cb456f32da74d0d96b0beb5531cf74d50929032
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\Ashraf\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 0cb456f32da74d0d96b0beb5531cf74d50929032
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9657,13 +9641,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-<<<<<<< HEAD
-            "F:\\GP\\backend\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj": {
-              "projectPath": "F:\\GP\\backend\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj"
-=======
             "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj": {
               "projectPath": "D:\\ITI\\GP\\dillio-project\\Dillio-Backend.DAL\\Dillio-Backend.Entities\\Dillio-Backend.Entities.csproj"
->>>>>>> 0cb456f32da74d0d96b0beb5531cf74d50929032
             }
           }
         }
