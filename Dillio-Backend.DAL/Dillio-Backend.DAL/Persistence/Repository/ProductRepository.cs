@@ -18,7 +18,14 @@ namespace Dillio_Backend.DAL.Persistence.Repository
                 .Include(p => p.Images)
                 .Include(p => p.Specs);
         }
-
+        public IEnumerable<Product> GetAllProductsAllJoins()
+        {
+            return _entities
+                .Include(p => p.Images)
+                .Include(p=>p.Category)
+                .Include(p=>p.Reviews)
+                .Include(p => p.Specs);
+        }
         public Product GetSingleProductWithJoins(object id)
         {
             return _entities

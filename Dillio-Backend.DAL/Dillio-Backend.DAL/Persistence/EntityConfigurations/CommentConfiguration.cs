@@ -16,7 +16,7 @@ namespace Dillio_Backend.DAL.Persistence.EntityConfigurations
                 .HasColumnType("nvarchar(50)")
                 .IsRequired();
 
-            builder.Property(c => c.UserId)
+            builder.Property(c => c.FK_UserId)
                 .HasColumnName("FK_UserId");
         }
     }
