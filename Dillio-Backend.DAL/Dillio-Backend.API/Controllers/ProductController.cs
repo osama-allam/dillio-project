@@ -157,6 +157,30 @@ namespace Dillio_Backend.API.Controllers
 
         }
 
+
+
+        
+        [HttpDelete("id")]
+        public  IActionResult Delete(int id)
+        {
+            var repoProduct = _unitOfWork.Products.Get(id);
+
+            if (id == 0 || repoProduct == null)
+            {
+                return BadRequest();
+            }
+
+            _unitOfWork.Products.Remove(repoProduct);
+            if (_unitOfWork.Complete()>0)
+            {
+                return Ok();
+            }
+            
+
+            return BadRequest("Failed to delete");
+        }
+
+
         [HttpGet("category/{categoryId}")]
         [ActionName("Get")]
         public IActionResult GetProductOfCategory(int categoryId)
