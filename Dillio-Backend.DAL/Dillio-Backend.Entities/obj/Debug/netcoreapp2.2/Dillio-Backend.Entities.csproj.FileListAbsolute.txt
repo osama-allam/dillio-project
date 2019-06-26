@@ -1,0 +1,14 @@
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.deps.json
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.runtimeconfig.json
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.runtimeconfig.dev.json
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.xml
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csprojAssemblyReference.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csproj.CoreCompileInputs.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.AssemblyInfoInputs.cache
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.AssemblyInfo.cs
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.csproj.CopyComplete
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.dll
+D:\ITI\GP\dillio-project\Dillio-Backend.DAL\Dillio-Backend.Entities\obj\Debug\netcoreapp2.2\Dillio-Backend.Entities.pdb

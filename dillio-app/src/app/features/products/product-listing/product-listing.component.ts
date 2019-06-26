@@ -37,6 +37,7 @@ export class ProductListingComponent implements OnInit {
       this.products = [];
 
         this.productServices.getall().subscribe(pro => {
+          debugger;
           this.totalproducts = pro;
           this.CurrentPage = 1;
           this.setPage(this.CurrentPage);

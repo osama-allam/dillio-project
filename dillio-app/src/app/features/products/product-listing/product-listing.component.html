@@ -40,7 +40,7 @@
                                       <div class="single-product-wrap">
                                           <div class="product-image">
                                               <a href="single-product.html">
-                                                  <img [src]="productlisting.image.url" alt="Li's Product Image">
+                                                  <img *ngIf="productlisting.images[0]" [src]="productlisting.images[0].url" alt="Li's Product Image">
                                               </a>
                                               <!-- <span class="sticker">New</span> -->
                                           </div>
@@ -132,7 +132,7 @@
                                       <div class="col-lg-3 col-md-5 ">
                                           <div class="product-image">
                                               <a href="single-product.html">
-                                                  <img [src]="productlisting.image.url" alt="Li's Product Image">
+                                                  <img [src]="productlisting.images[0].url" alt="Li's Product Image">
                                               </a>
                                               <!-- <span class="sticker">New</span> -->
                                           </div>
