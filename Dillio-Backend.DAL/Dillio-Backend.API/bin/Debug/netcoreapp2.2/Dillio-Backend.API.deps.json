@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "acbe22ee76db8dd38e461997f206b452d8786b8b"
+    "signature": "b4fce6c2d0406b74d8b32dd175dd91319ced8cc9"
   },
   "compilationOptions": {
     "defines": [
@@ -28,6 +28,7 @@
           "CloudinaryDotNet": "1.8.0",
           "Dillio-Backend.DAL": "1.0.0",
           "Dillio-Backend.Entities": "1.0.0",
+          "Microsoft.AspNet.Identity.Core": "2.2.2",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
@@ -169,6 +170,20 @@
         },
         "compile": {
           "lib/netstandard2.0/IdentityServer4.Storage.dll": {}
+        }
+      },
+      "LazZiya.TagHelpers/1.0.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.TagHelpers": "2.2.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/LazZiya.TagHelpers.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/LazZiya.TagHelpers.dll": {}
         }
       },
       "Microsoft.AspNet.Identity.Core/2.2.2": {
@@ -619,6 +634,7 @@
         "dependencies": {
           "Dillio-Backend.Entities": "1.0.0",
           "IdentityServer4.EntityFramework": "2.4.0",
+          "LazZiya.TagHelpers": "1.0.2",
           "Microsoft.AspNet.Identity.Core": "2.2.2",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
@@ -3802,6 +3818,13 @@
       "path": "identityserver4.storage/2.4.0",
       "hashPath": "identityserver4.storage.2.4.0.nupkg.sha512"
     },
+    "LazZiya.TagHelpers/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FVAvnieGE3AT2e6IscJTc+bJ15jHyBT1MV4/z42cmIrr4dwCgKPMBVUVQWydg3ZiHH/CcBhflcL1uNdPYi4m+g==",
+      "path": "lazziya.taghelpers/1.0.2",
+      "hashPath": "lazziya.taghelpers.1.0.2.nupkg.sha512"
+    },
     "Microsoft.AspNet.Identity.Core/2.2.2": {
       "type": "package",
       "serviceable": true,
@@ -5295,7 +5318,6 @@
       "sha512": "sha512-JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
-    },
     "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,

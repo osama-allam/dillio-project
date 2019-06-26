@@ -1,38 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AutoMapper;
 using Dillio_Backend.API.ViewModel;
 using Dillio_Backend.BLL.Core;
 using Dillio_Backend.BLL.Core.Domain;
-using Dillio_Backend.DAL;
-using Dillio_Backend.DAL.Persistence;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Dillio_Backend.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/review")]
     [ApiController]
     public class ReviewController : ControllerBase
     {
 
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public ReviewController(IUnitOfWork unitOfWork)
+        public ReviewController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             this._unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
 
 
-        [HttpGet("product/{productId}")]
-        public IActionResult Get(int productId)
+        [HttpGet("product/{id}")]
+        public IActionResult Get(int id)
+        {
+            if (id == 0 || id == null)
+            {
+                return BadRequest();
+            }
+            var reviews = _unitOfWork.Reviews.GetAll().Where(r => r.ProductId == id);
+            if (reviews.Count() != 0)
+            {
+                var reviewsToReturn = _mapper.Map<IEnumerable<ReviewViewModel>>(reviews);
+                return Ok(reviewsToReturn);
+            }
+
+            return NotFound();
+        }
+
+        [HttpGet("store/{storeId}")]
+        [ActionName("Get")]
+        public IActionResult GetAllReviewOfStore(int storeId)
         {
             IList<Review> reviews = null;
 
-            reviews = _unitOfWork.Reviews.GetAll().Where(r=>r.ProductId == productId).ToList();
+            reviews = _unitOfWork.Reviews.GetAll().Where(r => r.ProductId == storeId).ToList();
 
             if (reviews.Count == 0)
             {
@@ -41,6 +58,9 @@ namespace Dillio_Backend.API.Controllers
 
             return Ok(reviews);
         }
+
+
+
 
 
         [HttpGet("{id}")]
@@ -61,8 +81,8 @@ namespace Dillio_Backend.API.Controllers
 
 
 
-        [HttpPost("{productId}")]
-        public IActionResult Post([FromBody] ReviewViewModel rvm,int productId)
+        [HttpPost("product/{productId}")]
+        public IActionResult Post([FromBody] ReviewViewModel rvm, int productId)
         {
 
             if (rvm != null)
@@ -85,16 +105,44 @@ namespace Dillio_Backend.API.Controllers
 
         }
 
+        [HttpPost("store/{storeId}")]
+        [ActionName("Post")]
+        public IActionResult AddReviewOnStore([FromBody] ReviewViewModel rvm, int storeId)
+        {
+
+            if (rvm != null)
+            {
+                Review review = new Review
+                {
+                    ReviewDescription = rvm.ReviewDescription,
+                    Name = rvm.Name,
+                    Email = rvm.Email,
+                    ProductId = 1,
+                    UserId = User.Identity.GetUserId(),
+                    StoreId = storeId,
+                    ReviewDate = DateTime.Now,
+                    Rating = rvm.Rating
+                };
+
+                _unitOfWork.Reviews.Add(review);
+                _unitOfWork.Complete();
+                return Ok();
+            }
+
+            return NotFound();
+
+        }
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             Review review = _unitOfWork.Reviews.Get(id);
 
             if (review == null)
-            {               
+            {
                 return NotFound();
             }
-            
+
             _unitOfWork.Reviews.Remove(review);
             _unitOfWork.Complete();
             return Ok(review);
