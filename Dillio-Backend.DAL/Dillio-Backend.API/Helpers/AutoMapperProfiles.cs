@@ -18,6 +18,7 @@ namespace Dillio_Backend.API.Helpers
             CreateMap<Product, ProductPartialUpdate>().ReverseMap();
             CreateMap<ProductPartialUpdate, ProductEditViewModel>().ReverseMap();
             CreateMap<Review, ReviewViewModel>().ReverseMap();
+            CreateMap<Review, ReviewListingViewModel>().ReverseMap();
 
         }
     }

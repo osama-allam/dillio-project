@@ -12,6 +12,7 @@ namespace Dillio_Backend.API.ViewModel
         public string Description { get; set; }
         public IEnumerable<ImageListingViewModel> Images{ get; set; }
         public string categoryName { get; set; }
+
         
     }
 }
